@@ -194,7 +194,7 @@ border-bottom-right-radius:10px;</string>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="med_hist_label">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -226,7 +226,7 @@ border-bottom-right-radius:10px;</string>
      <string>1.Blood diasease ?</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="y_label">
     <property name="geometry">
      <rect>
       <x>540</x>
@@ -242,7 +242,7 @@ border-bottom-right-radius:10px;</string>
      <string>Yes</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
+   <widget class="QLabel" name="n_label">
     <property name="geometry">
      <rect>
       <x>570</x>
@@ -410,7 +410,7 @@ border-bottom-right-radius:10px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_8">
+   <widget class="QLabel" name="q5">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -426,7 +426,7 @@ border-bottom-right-radius:10px;</string>
      <string>5.Do you Diabetes ?</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_9">
+   <widget class="QCheckBox" name="q5_y_check">
     <property name="geometry">
      <rect>
       <x>540</x>
@@ -439,7 +439,7 @@ border-bottom-right-radius:10px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_10">
+   <widget class="QCheckBox" name="q5_n_check">
     <property name="geometry">
      <rect>
       <x>570</x>
@@ -452,7 +452,7 @@ border-bottom-right-radius:10px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_9">
+   <widget class="QLabel" name="q6">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -468,7 +468,7 @@ border-bottom-right-radius:10px;</string>
      <string>6.Do you Epilepsy ?</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_11">
+   <widget class="QCheckBox" name="q6_y_check">
     <property name="geometry">
      <rect>
       <x>540</x>
@@ -481,7 +481,7 @@ border-bottom-right-radius:10px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_12">
+   <widget class="QCheckBox" name="q6_n_check">
     <property name="geometry">
      <rect>
       <x>570</x>
@@ -494,7 +494,7 @@ border-bottom-right-radius:10px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_10">
+   <widget class="QLabel" name="q7">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -510,7 +510,7 @@ border-bottom-right-radius:10px;</string>
      <string>7.Do you have any cardiac or kidney diaseases ?</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_13">
+   <widget class="QCheckBox" name="q7_y_check">
     <property name="geometry">
      <rect>
       <x>540</x>
@@ -523,7 +523,7 @@ border-bottom-right-radius:10px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_14">
+   <widget class="QCheckBox" name="q7_n_check">
     <property name="geometry">
      <rect>
       <x>570</x>
@@ -536,7 +536,7 @@ border-bottom-right-radius:10px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_11">
+   <widget class="QLabel" name="q8">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -552,7 +552,7 @@ border-bottom-right-radius:10px;</string>
      <string>8.Do you have any abnormal blood pressure ?</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_15">
+   <widget class="QCheckBox" name="q8_y_check">
     <property name="geometry">
      <rect>
       <x>540</x>
@@ -565,7 +565,7 @@ border-bottom-right-radius:10px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_16">
+   <widget class="QCheckBox" name="q8_n_check">
     <property name="geometry">
      <rect>
       <x>570</x>
@@ -578,7 +578,7 @@ border-bottom-right-radius:10px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_12">
+   <widget class="QLabel" name="q9">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -594,7 +594,7 @@ border-bottom-right-radius:10px;</string>
      <string>9.Are you currently on any medications ?</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_17">
+   <widget class="QCheckBox" name="q9_y_check">
     <property name="geometry">
      <rect>
       <x>540</x>
@@ -607,7 +607,7 @@ border-bottom-right-radius:10px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_18">
+   <widget class="QCheckBox" name="q9_n_check">
     <property name="geometry">
      <rect>
       <x>570</x>
@@ -620,7 +620,7 @@ border-bottom-right-radius:10px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_13">
+   <widget class="QLabel" name="q10">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -636,7 +636,7 @@ border-bottom-right-radius:10px;</string>
      <string>10.Do you have any respitory diasease/ asthma ?</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_19">
+   <widget class="QCheckBox" name="q10_y_check">
     <property name="geometry">
      <rect>
       <x>540</x>
@@ -649,7 +649,7 @@ border-bottom-right-radius:10px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_20">
+   <widget class="QCheckBox" name="q10_n_check">
     <property name="geometry">
      <rect>
       <x>570</x>
@@ -662,7 +662,7 @@ border-bottom-right-radius:10px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_14">
+   <widget class="QLabel" name="q11">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -678,7 +678,7 @@ border-bottom-right-radius:10px;</string>
      <string>11.Do your gums bleed when you brush your teeth ?</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_21">
+   <widget class="QCheckBox" name="q11_y_check">
     <property name="geometry">
      <rect>
       <x>540</x>
@@ -691,7 +691,7 @@ border-bottom-right-radius:10px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_22">
+   <widget class="QCheckBox" name="q11_n_check">
     <property name="geometry">
      <rect>
       <x>570</x>
@@ -704,7 +704,7 @@ border-bottom-right-radius:10px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_15">
+   <widget class="QLabel" name="q12">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -720,7 +720,7 @@ border-bottom-right-radius:10px;</string>
      <string>12.Do your consider yourself to be a nervous person ?</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_23">
+   <widget class="QCheckBox" name="q12_y_check">
     <property name="geometry">
      <rect>
       <x>540</x>
@@ -733,7 +733,7 @@ border-bottom-right-radius:10px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_24">
+   <widget class="QCheckBox" name="q12_n_check">
     <property name="geometry">
      <rect>
       <x>570</x>
@@ -746,7 +746,7 @@ border-bottom-right-radius:10px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_16">
+   <widget class="QLabel" name="q13">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -762,7 +762,7 @@ border-bottom-right-radius:10px;</string>
      <string>13.Allergies (penicillin, aspirin,local anesthesia , codeine ,others ?</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_25">
+   <widget class="QCheckBox" name="q13_y_check">
     <property name="geometry">
      <rect>
       <x>540</x>
@@ -775,7 +775,7 @@ border-bottom-right-radius:10px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_26">
+   <widget class="QCheckBox" name="q13_n_check">
     <property name="geometry">
      <rect>
       <x>570</x>
@@ -788,7 +788,7 @@ border-bottom-right-radius:10px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_17">
+   <widget class="QLabel" name="q14">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -804,7 +804,7 @@ border-bottom-right-radius:10px;</string>
      <string>14.(Female) Currently Pregnant ?</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_27">
+   <widget class="QCheckBox" name="q14_y_check">
     <property name="geometry">
      <rect>
       <x>540</x>
@@ -817,7 +817,7 @@ border-bottom-right-radius:10px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_28">
+   <widget class="QCheckBox" name="q14_n_check">
     <property name="geometry">
      <rect>
       <x>570</x>
@@ -830,7 +830,7 @@ border-bottom-right-radius:10px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_18">
+   <widget class="QLabel" name="q15">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -846,7 +846,7 @@ border-bottom-right-radius:10px;</string>
      <string>15.(Female) Currently breastfeeding ?</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_29">
+   <widget class="QCheckBox" name="q15_y_check">
     <property name="geometry">
      <rect>
       <x>540</x>
@@ -859,7 +859,7 @@ border-bottom-right-radius:10px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_30">
+   <widget class="QCheckBox" name="q15_n_check">
     <property name="geometry">
      <rect>
       <x>570</x>
@@ -872,7 +872,7 @@ border-bottom-right-radius:10px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_19">
+   <widget class="QLabel" name="q16">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -888,7 +888,7 @@ border-bottom-right-radius:10px;</string>
      <string>16.Do you have any other chronic diasease not stated above ?</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_31">
+   <widget class="QCheckBox" name="q16_y_check">
     <property name="geometry">
      <rect>
       <x>540</x>
@@ -901,7 +901,7 @@ border-bottom-right-radius:10px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_32">
+   <widget class="QCheckBox" name="q16_n_check">
     <property name="geometry">
      <rect>
       <x>570</x>
@@ -915,9 +915,9 @@ border-bottom-right-radius:10px;</string>
     </property>
    </widget>
    <zorder>q1</zorder>
-   <zorder>label</zorder>
-   <zorder>label_3</zorder>
-   <zorder>label_4</zorder>
+   <zorder>med_hist_label</zorder>
+   <zorder>y_label</zorder>
+   <zorder>n_label</zorder>
    <zorder>q1_y_check</zorder>
    <zorder>q1_n_check</zorder>
    <zorder>q2</zorder>
@@ -929,56 +929,56 @@ border-bottom-right-radius:10px;</string>
    <zorder>q4</zorder>
    <zorder>q4_y_check</zorder>
    <zorder>q4_n_check</zorder>
-   <zorder>label_8</zorder>
-   <zorder>checkBox_9</zorder>
-   <zorder>checkBox_10</zorder>
-   <zorder>label_9</zorder>
-   <zorder>checkBox_11</zorder>
-   <zorder>checkBox_12</zorder>
-   <zorder>label_10</zorder>
-   <zorder>checkBox_13</zorder>
-   <zorder>checkBox_14</zorder>
-   <zorder>label_11</zorder>
-   <zorder>checkBox_15</zorder>
-   <zorder>checkBox_16</zorder>
-   <zorder>label_12</zorder>
-   <zorder>checkBox_17</zorder>
-   <zorder>checkBox_18</zorder>
-   <zorder>label_13</zorder>
-   <zorder>checkBox_19</zorder>
-   <zorder>checkBox_20</zorder>
-   <zorder>label_14</zorder>
-   <zorder>checkBox_21</zorder>
-   <zorder>checkBox_22</zorder>
-   <zorder>label_15</zorder>
-   <zorder>checkBox_23</zorder>
-   <zorder>checkBox_24</zorder>
-   <zorder>label_16</zorder>
-   <zorder>checkBox_25</zorder>
-   <zorder>checkBox_26</zorder>
-   <zorder>label_17</zorder>
-   <zorder>checkBox_27</zorder>
-   <zorder>checkBox_28</zorder>
-   <zorder>label_18</zorder>
-   <zorder>checkBox_29</zorder>
-   <zorder>checkBox_30</zorder>
-   <zorder>label_19</zorder>
-   <zorder>checkBox_31</zorder>
-   <zorder>checkBox_32</zorder>
+   <zorder>q5</zorder>
+   <zorder>q5_y_check</zorder>
+   <zorder>q5_n_check</zorder>
+   <zorder>q6</zorder>
+   <zorder>q6_y_check</zorder>
+   <zorder>q6_n_check</zorder>
+   <zorder>q7</zorder>
+   <zorder>q7_y_check</zorder>
+   <zorder>q7_n_check</zorder>
+   <zorder>q8</zorder>
+   <zorder>q8_y_check</zorder>
+   <zorder>q8_n_check</zorder>
+   <zorder>q9</zorder>
+   <zorder>q9_y_check</zorder>
+   <zorder>q9_n_check</zorder>
+   <zorder>q10</zorder>
+   <zorder>q10_y_check</zorder>
+   <zorder>q10_n_check</zorder>
+   <zorder>q11</zorder>
+   <zorder>q11_y_check</zorder>
+   <zorder>q11_n_check</zorder>
+   <zorder>q12</zorder>
+   <zorder>q12_y_check</zorder>
+   <zorder>q12_n_check</zorder>
+   <zorder>q13</zorder>
+   <zorder>q13_y_check</zorder>
+   <zorder>q13_n_check</zorder>
+   <zorder>q14</zorder>
+   <zorder>q14_y_check</zorder>
+   <zorder>q14_n_check</zorder>
+   <zorder>q15</zorder>
+   <zorder>q15_y_check</zorder>
+   <zorder>q15_n_check</zorder>
+   <zorder>q16</zorder>
+   <zorder>q16_y_check</zorder>
+   <zorder>q16_n_check</zorder>
   </widget>
   <widget class="QWidget" name="widget_2" native="true">
    <property name="geometry">
     <rect>
      <x>180</x>
      <y>410</y>
-     <width>591</width>
+     <width>601</width>
      <height>111</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
-   <widget class="QLabel" name="label_20">
+   <widget class="QLabel" name="findings_label">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -994,16 +994,58 @@ border-bottom-right-radius:10px;</string>
      <string>Medical Findings</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textEdit">
+   <widget class="QTextEdit" name="med_find_edit">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>30</y>
-      <width>570</width>
+      <width>581</width>
       <height>70</height>
      </rect>
     </property>
    </widget>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>550</y>
+     <width>171</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top-left-radius:10px;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-bottom-left-radius:10px;
+border-top-right-radius:10px;
+border-bottom-right-radius:10px;
+background-color: rgb(170, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Save and add patient</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>550</y>
+     <width>171</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top-left-radius:10px;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-bottom-left-radius:10px;
+border-top-right-radius:10px;
+border-bottom-right-radius:10px;
+background-color: rgb(170, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Restart </string>
+   </property>
   </widget>
  </widget>
  <resources/>
