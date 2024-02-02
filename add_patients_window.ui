@@ -39,6 +39,7 @@
     </property>
     <property name="styleSheet">
      <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255);
 
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
@@ -92,11 +93,13 @@ selection-color: rgb(255, 255, 255);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(255, 255, 255);
+
+
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
-border-bottom-right-radius:10px;</string>
+border-bottom-right-radius:10px;
+</string>
     </property>
     <property name="text">
      <string>Add Patients</string>
@@ -182,41 +185,7 @@ border-bottom-right-radius:10px;</string>
     </property>
    </widget>
   </widget>
-  <widget class="QTableWidget" name="patient_window">
-   <property name="geometry">
-    <rect>
-     <x>220</x>
-     <y>130</y>
-     <width>431</width>
-     <height>431</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
-   </property>
-   <column>
-    <property name="text">
-     <string>First Name</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Last Name</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Age</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Phone</string>
-    </property>
-   </column>
-  </widget>
-  <widget class="QLabel" name="fname_srch">
+  <widget class="QLabel" name="add_fname">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -233,7 +202,7 @@ color: rgb(255, 255, 255);</string>
     <string>First Name</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="fname_srch_edit">
+  <widget class="QTextEdit" name="add_fname_edit">
    <property name="geometry">
     <rect>
      <x>280</x>
@@ -246,7 +215,7 @@ color: rgb(255, 255, 255);</string>
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QLabel" name="lname_srch">
+  <widget class="QLabel" name="add_lname">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -263,7 +232,7 @@ color: rgb(255, 255, 255);</string>
     <string>Last Name</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="lname_srch_edit">
+  <widget class="QTextEdit" name="add_lname_edit">
    <property name="geometry">
     <rect>
      <x>280</x>
@@ -276,7 +245,7 @@ color: rgb(255, 255, 255);</string>
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QLabel" name="phn_srch">
+  <widget class="QLabel" name="add_phn">
    <property name="geometry">
     <rect>
      <x>440</x>
@@ -293,7 +262,7 @@ color: rgb(255, 255, 255);</string>
     <string>Phone</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="phone_srch_edit">
+  <widget class="QTextEdit" name="add_phn_edit">
    <property name="geometry">
     <rect>
      <x>550</x>
@@ -306,18 +275,198 @@ color: rgb(255, 255, 255);</string>
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="srch_btn">
+  <widget class="QLabel" name="add_address">
    <property name="geometry">
     <rect>
-     <x>550</x>
-     <y>70</y>
-     <width>75</width>
-     <height>23</height>
+     <x>440</x>
+     <y>60</y>
+     <width>101</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Address</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="add_address_edit">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>60</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="add_occu">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>100</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Occupation</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="add_occu_edit">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>100</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="add_email">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>100</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Email</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="add_email_edit">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>100</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="add_ref">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>140</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Reference</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="add_ref_edit">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>140</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="add_depart">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>190</y>
+     <width>291</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>If from abroad, date of departure</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="add_depart_edit">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>190</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="add_complain">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>230</y>
+     <width>291</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Chief Complain</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="add_complain_edit">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>270</y>
+     <width>601</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>510</y>
+     <width>201</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(85, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
@@ -325,7 +474,7 @@ border-bottom-right-radius:10px;
 </string>
    </property>
    <property name="text">
-    <string>Search</string>
+    <string>Proceed To Medical History</string>
    </property>
   </widget>
  </widget>
