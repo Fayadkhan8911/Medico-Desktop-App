@@ -229,7 +229,7 @@ border-bottom-right-radius:10px;</string>
    <widget class="QLabel" name="y_label">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>560</x>
       <y>0</y>
       <width>31</width>
       <height>31</height>
@@ -242,39 +242,10 @@ border-bottom-right-radius:10px;</string>
      <string>Yes</string>
     </property>
    </widget>
-   <widget class="QLabel" name="n_label">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>0</y>
-      <width>31</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="text">
-     <string>No</string>
-    </property>
-   </widget>
    <widget class="QCheckBox" name="q1_y_check">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>40</y>
-      <width>16</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="q1_n_check">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
+      <x>560</x>
       <y>40</y>
       <width>16</width>
       <height>20</height>
@@ -303,20 +274,7 @@ border-bottom-right-radius:10px;</string>
    <widget class="QCheckBox" name="q2_y_check">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>60</y>
-      <width>16</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="q2_n_check">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
+      <x>560</x>
       <y>60</y>
       <width>16</width>
       <height>20</height>
@@ -345,20 +303,7 @@ border-bottom-right-radius:10px;</string>
    <widget class="QCheckBox" name="q3_y_check">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>80</y>
-      <width>16</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="q3_n_check">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
+      <x>560</x>
       <y>80</y>
       <width>16</width>
       <height>20</height>
@@ -387,20 +332,7 @@ border-bottom-right-radius:10px;</string>
    <widget class="QCheckBox" name="q4_y_check">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>100</y>
-      <width>16</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="q4_n_check">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
+      <x>560</x>
       <y>100</y>
       <width>16</width>
       <height>20</height>
@@ -429,20 +361,7 @@ border-bottom-right-radius:10px;</string>
    <widget class="QCheckBox" name="q5_y_check">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>120</y>
-      <width>16</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="q5_n_check">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
+      <x>560</x>
       <y>120</y>
       <width>16</width>
       <height>20</height>
@@ -471,20 +390,7 @@ border-bottom-right-radius:10px;</string>
    <widget class="QCheckBox" name="q6_y_check">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>140</y>
-      <width>16</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="q6_n_check">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
+      <x>560</x>
       <y>140</y>
       <width>16</width>
       <height>20</height>
@@ -513,20 +419,7 @@ border-bottom-right-radius:10px;</string>
    <widget class="QCheckBox" name="q7_y_check">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>160</y>
-      <width>16</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="q7_n_check">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
+      <x>560</x>
       <y>160</y>
       <width>16</width>
       <height>20</height>
@@ -555,20 +448,7 @@ border-bottom-right-radius:10px;</string>
    <widget class="QCheckBox" name="q8_y_check">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>180</y>
-      <width>16</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="q8_n_check">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
+      <x>560</x>
       <y>180</y>
       <width>16</width>
       <height>20</height>
@@ -597,20 +477,7 @@ border-bottom-right-radius:10px;</string>
    <widget class="QCheckBox" name="q9_y_check">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>200</y>
-      <width>16</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="q9_n_check">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
+      <x>560</x>
       <y>200</y>
       <width>16</width>
       <height>20</height>
@@ -639,20 +506,7 @@ border-bottom-right-radius:10px;</string>
    <widget class="QCheckBox" name="q10_y_check">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>220</y>
-      <width>16</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="q10_n_check">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
+      <x>560</x>
       <y>220</y>
       <width>16</width>
       <height>20</height>
@@ -681,20 +535,7 @@ border-bottom-right-radius:10px;</string>
    <widget class="QCheckBox" name="q11_y_check">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>240</y>
-      <width>16</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="q11_n_check">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
+      <x>560</x>
       <y>240</y>
       <width>16</width>
       <height>20</height>
@@ -723,20 +564,7 @@ border-bottom-right-radius:10px;</string>
    <widget class="QCheckBox" name="q12_y_check">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>260</y>
-      <width>16</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="q12_n_check">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
+      <x>560</x>
       <y>260</y>
       <width>16</width>
       <height>20</height>
@@ -765,20 +593,7 @@ border-bottom-right-radius:10px;</string>
    <widget class="QCheckBox" name="q13_y_check">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>280</y>
-      <width>16</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="q13_n_check">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
+      <x>560</x>
       <y>280</y>
       <width>16</width>
       <height>20</height>
@@ -807,20 +622,7 @@ border-bottom-right-radius:10px;</string>
    <widget class="QCheckBox" name="q14_y_check">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>300</y>
-      <width>16</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="q14_n_check">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
+      <x>560</x>
       <y>300</y>
       <width>16</width>
       <height>20</height>
@@ -849,20 +651,7 @@ border-bottom-right-radius:10px;</string>
    <widget class="QCheckBox" name="q15_y_check">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>320</y>
-      <width>16</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="q15_n_check">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
+      <x>560</x>
       <y>320</y>
       <width>16</width>
       <height>20</height>
@@ -891,20 +680,7 @@ border-bottom-right-radius:10px;</string>
    <widget class="QCheckBox" name="q16_y_check">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>340</y>
-      <width>16</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="q16_n_check">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
+      <x>560</x>
       <y>340</y>
       <width>16</width>
       <height>20</height>
@@ -917,54 +693,37 @@ border-bottom-right-radius:10px;</string>
    <zorder>q1</zorder>
    <zorder>med_hist_label</zorder>
    <zorder>y_label</zorder>
-   <zorder>n_label</zorder>
    <zorder>q1_y_check</zorder>
-   <zorder>q1_n_check</zorder>
    <zorder>q2</zorder>
    <zorder>q2_y_check</zorder>
-   <zorder>q2_n_check</zorder>
    <zorder>q3</zorder>
    <zorder>q3_y_check</zorder>
-   <zorder>q3_n_check</zorder>
    <zorder>q4</zorder>
    <zorder>q4_y_check</zorder>
-   <zorder>q4_n_check</zorder>
    <zorder>q5</zorder>
    <zorder>q5_y_check</zorder>
-   <zorder>q5_n_check</zorder>
    <zorder>q6</zorder>
    <zorder>q6_y_check</zorder>
-   <zorder>q6_n_check</zorder>
    <zorder>q7</zorder>
    <zorder>q7_y_check</zorder>
-   <zorder>q7_n_check</zorder>
    <zorder>q8</zorder>
    <zorder>q8_y_check</zorder>
-   <zorder>q8_n_check</zorder>
    <zorder>q9</zorder>
    <zorder>q9_y_check</zorder>
-   <zorder>q9_n_check</zorder>
    <zorder>q10</zorder>
    <zorder>q10_y_check</zorder>
-   <zorder>q10_n_check</zorder>
    <zorder>q11</zorder>
    <zorder>q11_y_check</zorder>
-   <zorder>q11_n_check</zorder>
    <zorder>q12</zorder>
    <zorder>q12_y_check</zorder>
-   <zorder>q12_n_check</zorder>
    <zorder>q13</zorder>
    <zorder>q13_y_check</zorder>
-   <zorder>q13_n_check</zorder>
    <zorder>q14</zorder>
    <zorder>q14_y_check</zorder>
-   <zorder>q14_n_check</zorder>
    <zorder>q15</zorder>
    <zorder>q15_y_check</zorder>
-   <zorder>q15_n_check</zorder>
    <zorder>q16</zorder>
    <zorder>q16_y_check</zorder>
-   <zorder>q16_n_check</zorder>
   </widget>
   <widget class="QWidget" name="widget_2" native="true">
    <property name="geometry">
