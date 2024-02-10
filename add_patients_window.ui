@@ -82,7 +82,7 @@ selection-color: rgb(255, 255, 255);</string>
       <normaloff>../Medico_modern/dashboard.png</normaloff>../Medico_modern/dashboard.png</iconset>
     </property>
    </widget>
-   <widget class="QPushButton" name="patient_btn_2">
+   <widget class="QPushButton" name="add_patient_btn">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -455,7 +455,7 @@ color: rgb(255, 255, 255);</string>
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="next_btn">
    <property name="geometry">
     <rect>
      <x>570</x>
