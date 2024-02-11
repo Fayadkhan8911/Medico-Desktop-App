@@ -40,11 +40,34 @@ class _main_window(QDialog):
         self._add_pat.patient_btn.clicked.connect(self._go_patient_window)
         self._add_pat.next_btn.clicked.connect(self._go_med_hist)
 
-    def _go_med_hist(self):
+    """ def _go_med_hist(self):
         self._med_hist = add_pat_med._add_med_hist_win()
         widget.addWidget(self._med_hist)
         widget.setCurrentIndex(widget.currentIndex() + 1)
+        self._med_hist.restart_btn.clicked.connect(self._go_add_pat) """
+        
+    def _go_med_hist(self):
+    # Retrieve patient data from _add_patient_window instance
+        f_name = self._add_pat.add_fname_edit.toPlainText()
+        l_name = self._add_pat.add_lname_edit.toPlainText()
+        phone = self._add_pat.add_phn_edit.toPlainText()
+        address = self._add_pat.add_address_edit.toPlainText()
+        occupation = self._add_pat.add_occu_edit.toPlainText()
+        email = self._add_pat.add_email_edit.toPlainText()
+        age = self._add_pat.add_age_edit.toPlainText()
+        sex = self._add_pat.add_sex_edit.currentText()
+        reference = self._add_pat.add_ref_edit.toPlainText()
+        date_of_departure = self._add_pat.add_depart_edit.toPlainText()
+        chief_complain = self._add_pat.add_complain_edit.toPlainText()
+
+        # Instantiate _add_med_hist_win with the retrieved patient data
+        self._med_hist = add_pat_med._add_med_hist_win(
+            f_name, l_name, phone, address, occupation, email, age, sex, reference, date_of_departure, chief_complain
+        )
+        widget.addWidget(self._med_hist)
+        widget.setCurrentIndex(widget.currentIndex() + 1)
         self._med_hist.restart_btn.clicked.connect(self._go_add_pat)
+
 
     def _go_pat_det(self):
         self._details = pat_detailed._pat_detailed_win()
