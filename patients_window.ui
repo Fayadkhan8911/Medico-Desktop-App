@@ -187,7 +187,7 @@ border-bottom-right-radius:10px;</string>
     <rect>
      <x>220</x>
      <y>130</y>
-     <width>431</width>
+     <width>521</width>
      <height>431</height>
     </rect>
    </property>
@@ -195,6 +195,11 @@ border-bottom-right-radius:10px;</string>
     <string notr="true">background-color: rgb(255, 255, 255);
 font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
+   <column>
+    <property name="text">
+     <string>PatID</string>
+    </property>
+   </column>
    <column>
     <property name="text">
      <string>First Name</string>
@@ -249,8 +254,8 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="lname_srch">
    <property name="geometry">
     <rect>
-     <x>170</x>
-     <y>60</y>
+     <x>460</x>
+     <y>20</y>
      <width>101</width>
      <height>20</height>
     </rect>
@@ -266,8 +271,8 @@ color: rgb(255, 255, 255);</string>
   <widget class="QTextEdit" name="lname_srch_edit">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>60</y>
+     <x>560</x>
+     <y>20</y>
      <width>141</width>
      <height>31</height>
     </rect>
@@ -279,8 +284,8 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="phn_srch">
    <property name="geometry">
     <rect>
-     <x>440</x>
-     <y>20</y>
+     <x>170</x>
+     <y>60</y>
      <width>101</width>
      <height>20</height>
     </rect>
@@ -296,8 +301,8 @@ color: rgb(255, 255, 255);</string>
   <widget class="QTextEdit" name="phone_srch_edit">
    <property name="geometry">
     <rect>
-     <x>550</x>
-     <y>20</y>
+     <x>280</x>
+     <y>60</y>
      <width>141</width>
      <height>31</height>
     </rect>
@@ -309,8 +314,8 @@ color: rgb(255, 255, 255);</string>
   <widget class="QPushButton" name="search_btn">
    <property name="geometry">
     <rect>
-     <x>550</x>
-     <y>70</y>
+     <x>670</x>
+     <y>100</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -326,6 +331,36 @@ border-bottom-right-radius:10px;
    </property>
    <property name="text">
     <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="patid_srch">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>60</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Patient ID</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="patid_srch_edit">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>60</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
  </widget>

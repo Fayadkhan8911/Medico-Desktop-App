@@ -223,16 +223,6 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
    </column>
    <column>
     <property name="text">
-     <string>Institute</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Year of Graduation</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
      <string>Date of Joining</string>
     </property>
    </column>
