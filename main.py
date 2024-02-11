@@ -30,7 +30,31 @@ class _main_window(QDialog):
         widget.setCurrentIndex(widget.currentIndex() + 1)
         self._patients.dash_btn.clicked.connect(self._go_dash)
         self._patients.add_patient_btn.clicked.connect(self._go_add_pat)
-        self._patients.search_btn.clicked.connect(self._go_pat_det)
+        #self._patients.search_btn.clicked.connect(self._go_pat_det)
+        self._patients.search_btn.clicked.connect(self.makemegotopat)
+        
+    def makemegotopat(self):
+        f_name = self._patients.fname_srch_edit.toPlainText()
+        l_name = self._patients.lname_srch_edit.toPlainText()
+        phone = self._patients.phone_srch_edit.toPlainText()
+        patient_id = self._patients.patid_srch_edit.toPlainText()
+        
+        if (f_name and phone):
+            #self._go_pat_det()  # Call the search_patient function
+            self.pat_detailed_win = pat_detailed._pat_detailed_win(f_name, "NULL", phone, "NULL")
+            widget.addWidget(self.pat_detailed_win)
+            widget.setCurrentIndex(widget.currentIndex() + 1)
+            """ self._med_hist.restart_btn.clicked.connect(self._go_add_pat)
+            self._med_hist.patient_btn.clicked.connect(self._go_patient_window)
+            self._med_hist.save_pat.clicked.connect(self._go_patient_window) """
+        elif patient_id:
+            self.pat_detailed_win = pat_detailed._pat_detailed_win("NULL", "NULL", "NULL", patient_id)
+            widget.addWidget(self.pat_detailed_win)
+            widget.setCurrentIndex(widget.currentIndex() + 1)
+        else:
+            print("Please provide either first name and phone number or patient ID")
+
+        
 
     def _go_add_pat(self):
         self._add_pat = add_patients._add_patient_window()
@@ -94,6 +118,8 @@ class _main_window(QDialog):
         widget.addWidget(self._details)
         widget.setCurrentIndex(widget.currentIndex() + 1)
         self._details.return_pat.clicked.connect(self._go_patient_window)
+        self._details.dash_btn.clicked.connect(self._go_dash)
+        self._details.patient_btn.clicked.connect(self._go_patient_window)
 
 
 """     this was for 'only one main.py' file format
