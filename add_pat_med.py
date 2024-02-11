@@ -19,6 +19,7 @@ from PyQt5.uic import loadUi
 from PyQt5.QtWidgets import QDialog, QApplication
 import sqlite3
 from PyQt5.QtWidgets import QDialog, QApplication, QStackedWidget  # Import QStackedWidget
+import _mysql_connector
 
 class _add_med_hist_win(QDialog):
     def __init__(self, f_name, l_name, phone, address, occupation, email, age, sex, reference, date_of_departure, chief_complain):
