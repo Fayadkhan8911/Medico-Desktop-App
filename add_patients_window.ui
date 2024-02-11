@@ -556,36 +556,6 @@ color: rgb(255, 255, 255);</string>
     </property>
    </item>
   </widget>
-  <widget class="QLabel" name="patid_input">
-   <property name="geometry">
-    <rect>
-     <x>440</x>
-     <y>180</y>
-     <width>101</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string>Patient ID</string>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="patid_input_edit">
-   <property name="geometry">
-    <rect>
-     <x>550</x>
-     <y>180</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
-   </property>
-  </widget>
  </widget>
  <resources/>
  <connections/>
