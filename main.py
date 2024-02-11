@@ -17,7 +17,7 @@ class _main_window(QDialog):
         super(_main_window, self).__init__()
         loadUi("main_window.ui", self)
         self.patient_btn.clicked.connect(self._go_patient_window)
-        self.add_patient_btn.clicked.connect(self._go_add_pat)
+        #self.add_patient_btn.clicked.connect(self._go_add_pat)
 
     def _go_dash(self):
         _dash = _main_window()
@@ -38,7 +38,8 @@ class _main_window(QDialog):
         widget.setCurrentIndex(widget.currentIndex() + 1)
         self._add_pat.dash_btn.clicked.connect(self._go_dash)
         self._add_pat.patient_btn.clicked.connect(self._go_patient_window)
-        self._add_pat.next_btn.clicked.connect(self._go_med_hist)
+        self._add_pat.next_btn.clicked.connect(self.chkvalid)
+        self._add_pat.return_btn.clicked.connect(self._go_patient_window)
 
     """ def _go_med_hist(self):
         self._med_hist = add_pat_med._add_med_hist_win()
@@ -46,8 +47,25 @@ class _main_window(QDialog):
         widget.setCurrentIndex(widget.currentIndex() + 1)
         self._med_hist.restart_btn.clicked.connect(self._go_add_pat) """
         
+    def chkvalid(self):
+        #CHECK
+        f_name_input = self._add_pat.add_fname_edit.toPlainText().strip()
+        l_name_input = self._add_pat.add_lname_edit.toPlainText().strip()
+        
+        if not f_name_input or not l_name_input:
+            # Show an error message or handle it appropriately
+            print("First name and last name are required.")
+            """ self._go_backto_addpatients = add_patients._add_patient_window()
+            widget.addWidget(self._go_backto_addpatients)
+            widget.setCurrentIndex(widget.currentIndex() + 1) """
+            return
+        else:
+            self._go_med_hist()
+    
+        
     def _go_med_hist(self):
-    # Retrieve patient data from _add_patient_window instance
+        
+        # Retrieve patient data from _add_patient_window instance
         f_name = self._add_pat.add_fname_edit.toPlainText()
         l_name = self._add_pat.add_lname_edit.toPlainText()
         phone = self._add_pat.add_phn_edit.toPlainText()
@@ -67,6 +85,8 @@ class _main_window(QDialog):
         widget.addWidget(self._med_hist)
         widget.setCurrentIndex(widget.currentIndex() + 1)
         self._med_hist.restart_btn.clicked.connect(self._go_add_pat)
+        self._med_hist.patient_btn.clicked.connect(self._go_patient_window)
+        self._med_hist.save_pat.clicked.connect(self._go_patient_window)
 
 
     def _go_pat_det(self):
