@@ -31,7 +31,7 @@ class _expense_window(QDialog):
         
         self.add_expense_btn.clicked.connect(self._make_expense)
         
-        self.calendar.selectionChanged.connect(self.grab_expense)
+        #self.calendar.clicked.connect(self.grab_expense)
         
     def _make_expense(self):
         #medical_history = self.med_find_edit.toPlainText()
@@ -70,21 +70,6 @@ class _expense_window(QDialog):
         #self.show_error_window("No patient found with First Name and Phone Number.")
         
     
-    def grab_expense(self):
-        dateSelected = self.calendar.selectedDate()
-        expense_date = str(dateSelected.toPyDate())
-        conn = sqlite3.connect("medico.db3")
-        cursor = conn.cursor()
-        cursor.execute("SELECT * FROM expense WHERE expense_date = ?", (expense_date,))
-        # Fetch all rows
-        results = cursor.fetchall()
-
-        # Print the results
-        for row in results:
-            print(row)
-        conn.commit()
-        conn.close()
-        print("Expense Showed")
 
         
     def show_error_window(self, message):

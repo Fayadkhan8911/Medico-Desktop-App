@@ -16,6 +16,7 @@ import expense_window
 import payments_window
 import pytz
 from PyQt5.QtCore import QTimeZone
+import view_expense
 
 
 class _main_window(QDialog):
@@ -209,7 +210,17 @@ class _main_window(QDialog):
         self._spend_money.patient_btn.clicked.connect(self._go_patient_window)
         self._spend_money.payment_btn.clicked.connect(self._go_make_payment)
         self._spend_money.expense_btn.clicked.connect(self._go_spend_money)
+        self._spend_money.calendar.clicked.connect(self.grab_expense)
 
+    def grab_expense(self):
+        dateSelected = self._spend_money.calendar.selectedDate()
+        expense_date = str(dateSelected.toPyDate())
+        self._view_expense_window = view_expense._expense_view_window(expense_date)
+        widget.addWidget(self._view_expense_window)
+        widget.addWidget(self._spend_money)
+        widget.setCurrentIndex(widget.currentIndex() + 1)
+        
+    
 
 """     this was for 'only one main.py' file format
 
