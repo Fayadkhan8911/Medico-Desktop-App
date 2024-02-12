@@ -4,6 +4,7 @@ from PyQt5.QtWidgets import QDialog, QApplication
 import sqlite3
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication, QDialog, QVBoxLayout, QPushButton, QStackedWidget, QLabel
+from PyQt5.QtCore import QDate
 
 
 
@@ -52,6 +53,8 @@ class _add_med_hist_win(QDialog):
 
         # Convert checkbox states to 'yes' or 'no'
         checkbox_values = {key: 'yes' if value else 'no' for key, value in checkbox_states.items()}
+        
+        reg_date = QDate.currentDate().toString("yyyy-MM-dd")
 
         # Insert patient data, medical history, and checkbox values into the database
         conn = sqlite3.connect("medico.db3")
@@ -67,10 +70,10 @@ class _add_med_hist_win(QDialog):
         cursor.execute("""
             INSERT INTO patients (p_id, f_name, l_name, phone, address, email, age, sex, reference, date_of_departure, complain, occupation, med_find_, 
             blood_diseases, smoker, bleeding_disorder, hepatitis, diabetes, epilepsy, kidney_cardiac_diseases, abnormal_bp, currently_medicated, respiratory_diseases, gum_bleed_brush, nervous, allergies, pregnant, breastfeeding, none_prb_above, reg_date)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, DATE('now'))
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """, (
             new_p_id, self.f_name, self.l_name, self.phone, self.address, self.email, self.age, self.sex, self.reference, self.date_of_departure,
-            self.chief_complain, self.occupation, medical_history, *checkbox_values.values()
+            self.chief_complain, self.occupation, medical_history, *checkbox_values.values(), reg_date
         ))
         conn.commit()
         conn.close()

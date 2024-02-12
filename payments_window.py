@@ -7,19 +7,19 @@ from PyQt5.QtGui import QPixmap
 import sqlite3
 
 
-class _patient_window(QDialog):
+class _payments_window(QDialog):
     def __init__(self):
-        super(_patient_window, self).__init__()
-        loadUi("patients_window.ui", self)
+        super(_payments_window, self).__init__()
+        loadUi("payments_window.ui", self)
 
 
 """
 app = QApplication(sys.argv)
 
 widget = QtWidgets.QStackedWidget()
-_patient = _patient_window()
+_payment = _payments_window()
 
-widget.addWidget(_patient)
+widget.addWidget(_payment)
 
 
 widget.setFixedWidth(800)

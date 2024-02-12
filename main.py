@@ -11,6 +11,11 @@ import add_patients
 import patients
 import add_pat_med
 import pat_detailed
+import error
+import expense_window
+import payments_window
+import pytz
+from PyQt5.QtCore import QTimeZone
 
 
 class _main_window(QDialog):
@@ -19,6 +24,8 @@ class _main_window(QDialog):
         loadUi("main_window.ui", self)
 
         self.patient_btn.clicked.connect(self._go_patient_window)
+        self.payment_btn.clicked.connect(self._go_make_payment)
+        self.expense_btn.clicked.connect(self._go_spend_money)
         # self.add_patient_btn.clicked.connect(self._go_add_pat)
         current_day = self.current_date()
         print(current_day)
@@ -41,6 +48,12 @@ class _main_window(QDialog):
         self._patients.add_patient_btn.clicked.connect(self._go_add_pat)
         # self._patients.search_btn.clicked.connect(self._go_pat_det)
         self._patients.search_btn.clicked.connect(self.makemegotopat)
+        self._patients.payment_btn.clicked.connect(self._go_make_payment)
+        self._patients.expense_btn.clicked.connect(self._go_spend_money)
+    
+    def show_error_window(self, message):
+        error_window = error._error_window(message)  # Adjusted to use the error module
+        error_window.exec_()
             
 
     def makemegotopat(self):
@@ -58,7 +71,8 @@ class _main_window(QDialog):
             if result:
                 self._go_pat_det()
             else:
-                print("No User Found")
+                self.show_error_window("No patient found with First Name and Phone Number.")
+                print("No patient found with First Name and Phone Number.")
 
         elif patient_id:
             
@@ -71,8 +85,10 @@ class _main_window(QDialog):
             if result:
                 self._go_pat_det()
             else:
-                print("No User Found")
+                self.show_error_window("No patient found with Patient ID")
+                print("No patient found with Patient ID")
         else:
+            self.show_error_window("Please provide either First Name and Phone Number or Patient ID")
             print("Please provide either first name and phone number or patient ID")
         
 
@@ -84,19 +100,47 @@ class _main_window(QDialog):
         self._add_pat.patient_btn.clicked.connect(self._go_patient_window)
         self._add_pat.next_btn.clicked.connect(self.chkvalid)
         self._add_pat.return_btn.clicked.connect(self._go_patient_window)
+        self._add_pat.payment_btn.clicked.connect(self._go_make_payment)
+        self._add_pat.expense_btn.clicked.connect(self._go_spend_money)
 
 
     def chkvalid(self):
         # CHECK
         f_name_input = self._add_pat.add_fname_edit.toPlainText().strip()
         l_name_input = self._add_pat.add_lname_edit.toPlainText().strip()
+        phone_input = self._add_pat.add_phn_edit.toPlainText().strip()
+        address_input = self._add_pat.add_address_edit.toPlainText().strip()
+        age_input = self._add_pat.add_age_edit.toPlainText().strip()
 
-        if not f_name_input or not l_name_input:
-            # Show an error message or handle it appropriately
-            print("First name and last name are required.")
-            return
+        if not f_name_input or not l_name_input or not phone_input or not address_input or not age_input:
+            if not f_name_input:
+                self.show_error_window("You Must Enter First Name")
+                print("You Must Enter First Name")
+            elif not l_name_input:
+                self.show_error_window("You Must Enter Last Name")
+                print("You Must Enter Last Name")
+            elif not phone_input:
+                self.show_error_window("You Must Enter Phone Number")
+                print("You Must Enter Phone Number")
+            elif not address_input:
+                self.show_error_window("You Must Enter Address")
+                print("You Must Enter Address")
+            elif not age_input:
+                self.show_error_window("You Must Enter Age")
+                print("You Must Enter Age")
+            print("Missing Information")
         else:
-            self._go_med_hist()
+            conn = sqlite3.connect('medico.db3')
+            c = conn.cursor()
+            # Search for the patient using first name and phone number
+            c.execute("SELECT * FROM patients WHERE f_name=? AND phone=?", (f_name_input, phone_input))
+            existing_patient = c.fetchone()
+            if existing_patient:
+                patient_id = existing_patient[0]
+                message = f"Patient Already Exists with First Name = {f_name_input} and Phone Number = {phone_input}. Patient ID = {patient_id}"
+                self.show_error_window(message)
+            else:
+                self._go_med_hist()
 
     def _go_med_hist(self):
 
@@ -132,6 +176,8 @@ class _main_window(QDialog):
         self._med_hist.restart_btn.clicked.connect(self._go_add_pat)
         self._med_hist.patient_btn.clicked.connect(self._go_patient_window)
         self._med_hist.save_pat.clicked.connect(self._go_patient_window)
+        self._med_hist.payment_btn.clicked.connect(self._go_make_payment)
+        self._med_hist.expense_btn.clicked.connect(self._go_spend_money)
 
     def _go_pat_det(self):
         f_name = self._patients.fname_srch_edit.toPlainText()
@@ -144,6 +190,25 @@ class _main_window(QDialog):
         self._details.return_pat.clicked.connect(self._go_patient_window)
         self._details.dash_btn.clicked.connect(self._go_dash)
         self._details.patient_btn.clicked.connect(self._go_patient_window)
+        self._details.payment_btn.clicked.connect(self._go_make_payment)
+        self._details.expense_btn.clicked.connect(self._go_spend_money)
+        
+    def _go_make_payment(self):
+        self._make_payment = payments_window._payments_window()
+        widget.addWidget(self._make_payment)
+        widget.setCurrentIndex(widget.currentIndex() + 1)
+        self._make_payment.dash_btn.clicked.connect(self._go_dash)
+        self._make_payment.patient_btn.clicked.connect(self._go_patient_window)
+        self._make_payment.expense_btn.clicked.connect(self._go_spend_money)
+        
+    def _go_spend_money(self):
+        self._spend_money = expense_window._expense_window()
+        widget.addWidget(self._spend_money)
+        widget.setCurrentIndex(widget.currentIndex() + 1)
+        self._spend_money.dash_btn.clicked.connect(self._go_dash)
+        self._spend_money.patient_btn.clicked.connect(self._go_patient_window)
+        self._spend_money.payment_btn.clicked.connect(self._go_make_payment)
+        self._spend_money.expense_btn.clicked.connect(self._go_spend_money)
 
 
 """     this was for 'only one main.py' file format

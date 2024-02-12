@@ -1,1 +1,1 @@
-self.add_patient_btn.clicked.connect(self._go_add_pat
+current_date

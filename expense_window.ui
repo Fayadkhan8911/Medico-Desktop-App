@@ -131,7 +131,7 @@ border-bottom-right-radius:10px;</string>
       <normaloff>../Medico_modern/dentistimages.png</normaloff>../Medico_modern/dentistimages.png</iconset>
     </property>
    </widget>
-   <widget class="QPushButton" name="bills_btn_2">
+   <widget class="QPushButton" name="payment_btn">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -156,7 +156,7 @@ border-bottom-right-radius:10px;</string>
       <normaloff>../Medico_modern/billingdownload (1).png</normaloff>../Medico_modern/billingdownload (1).png</iconset>
     </property>
    </widget>
-   <widget class="QPushButton" name="bills_btn_3">
+   <widget class="QPushButton" name="expense_btn">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -271,7 +271,7 @@ color: rgb(255, 255, 255);</string>
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="add_expense_btn">
    <property name="geometry">
     <rect>
      <x>480</x>
@@ -291,6 +291,38 @@ border-bottom-right-radius:10px;</string>
    </property>
    <property name="text">
     <string>Add Expense</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="select_date">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>290</y>
+     <width>271</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Select a Date To See Expenses:</string>
+   </property>
+  </widget>
+  <widget class="QCalendarWidget" name="calendarWidget">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>330</y>
+     <width>371</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+background-color: rgb(170, 255, 255);</string>
    </property>
   </widget>
  </widget>
