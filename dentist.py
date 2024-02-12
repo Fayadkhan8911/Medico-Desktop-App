@@ -13,9 +13,11 @@ class _dentist_window(QDialog):
         loadUi("dentists_window.ui", self)
         self.dentist_table.setColumnWidth(6, 200)
 
-        self.dentist_table.setColumnWidth(7, 200)
+        self.dentist_table.setColumnWidth(5, 200)
+        
+        
 
-        self.dentist_table.setColumnWidth(8, 200)
+    # self.dentist_table.setColumnWidth(8, 200)
 
 
 # """
