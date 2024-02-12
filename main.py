@@ -49,21 +49,37 @@ class _main_window(QDialog):
         patient_id = self._patients.patid_srch_edit.toPlainText()
 
         if f_name and phone:
-            # self._go_pat_det()  # Call the search_patient function
-            self.pat_detailed_win = pat_detailed._pat_detailed_win(
-                f_name, "NULL", phone, "NULL"
-            )
-            widget.addWidget(self.pat_detailed_win)
-            widget.setCurrentIndex(widget.currentIndex() + 1)
-            """ self._med_hist.restart_btn.clicked.connect(self._go_add_pat)
-            self._med_hist.patient_btn.clicked.connect(self._go_patient_window)
-            self._med_hist.save_pat.clicked.connect(self._go_patient_window) """
+            conn = sqlite3.connect('medico.db3')
+            c = conn.cursor()
+            c.execute("SELECT * FROM patients WHERE f_name=? AND phone=?", (f_name, phone))
+            result = c.fetchone()
+            conn.close()
+            if result:
+                # If patient is found, redirect to detailed window
+                self.pat_detailed_win = pat_detailed._pat_detailed_win(
+                    f_name, "NULL", phone, "NULL"
+                )
+                widget.addWidget(self.pat_detailed_win)
+                widget.setCurrentIndex(widget.currentIndex() + 1)
+            else:
+                print("No User Found")
+
         elif patient_id:
-            self.pat_detailed_win = pat_detailed._pat_detailed_win(
-                "NULL", "NULL", "NULL", patient_id
-            )
-            widget.addWidget(self.pat_detailed_win)
-            widget.setCurrentIndex(widget.currentIndex() + 1)
+            
+            conn = sqlite3.connect('medico.db3')
+            c = conn.cursor()
+            c.execute("SELECT * FROM patients WHERE p_id=?", (patient_id,))
+            result = c.fetchone()
+            conn.close()
+
+            if result:
+                self.pat_detailed_win = pat_detailed._pat_detailed_win(
+                    "NULL", "NULL", "NULL", patient_id
+                )
+                widget.addWidget(self.pat_detailed_win)
+                widget.setCurrentIndex(widget.currentIndex() + 1)
+            else:
+                print("No User Found")
         else:
             print("Please provide either first name and phone number or patient ID")
 
