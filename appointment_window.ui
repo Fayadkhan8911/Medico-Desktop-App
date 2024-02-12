@@ -70,6 +70,8 @@ border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;
 border-bottom-color: rgb(0, 0, 0);
+background-color: rgb(85, 255, 255);
+background-color: rgb(255, 255, 255);
 selection-color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
@@ -91,7 +93,7 @@ selection-color: rgb(255, 255, 255);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(255, 255, 255);
+
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
@@ -181,41 +183,169 @@ border-bottom-right-radius:10px;</string>
     </property>
    </widget>
   </widget>
-  <widget class="QCalendarWidget" name="calendarWidget">
+  <widget class="QLabel" name="fname">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>40</y>
-     <width>312</width>
-     <height>171</height>
+     <x>200</x>
+     <y>30</y>
+     <width>101</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);
-background-color: rgb(170, 255, 255);</string>
+    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
    </property>
-   <property name="gridVisible">
-    <bool>false</bool>
+   <property name="text">
+    <string>First Name</string>
    </property>
   </widget>
-  <widget class="QTableWidget" name="appointmen_table">
+  <widget class="QTextEdit" name="fname_edit">
    <property name="geometry">
     <rect>
-     <x>480</x>
-     <y>40</y>
-     <width>311</width>
+     <x>320</x>
+     <y>30</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="phone">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>70</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Phone</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="phone_edit">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>70</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="visit_time">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>30</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Visit Time</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="visit_time_edit">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>30</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="visit_date">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>70</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Visit Date</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="visit_date_edit">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>70</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>110</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(85, 255, 255);
+
+border-top-left-radius:10px;
+border-bottom-left-radius:10px;
+border-top-right-radius:10px;
+border-bottom-right-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>Add Appointment</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="appointment_table">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>260</y>
+     <width>581</width>
      <height>321</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 255, 255);
-font: 14pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(255, 255, 255);
+font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
    <column>
     <property name="text">
-     <string>First Name</string>
+     <string>Date Registered</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Visitor First Name</string>
     </property>
    </column>
    <column>
@@ -225,74 +355,65 @@ background-color: rgb(255, 255, 255);</string>
    </column>
    <column>
     <property name="text">
-     <string>Visit Time</string>
+     <string>Visit Date</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Visit time</string>
     </property>
    </column>
   </widget>
-  <widget class="QTableWidget" name="appointmen_table_2">
+  <widget class="QLabel" name="visit_date_2">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>370</y>
-     <width>601</width>
-     <height>211</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 255, 255);
-font: 14pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(255, 255, 255);</string>
-   </property>
-   <column>
-    <property name="text">
-     <string>Description</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Remarks</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Amount</string>
-    </property>
-   </column>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>190</x>
-     <y>340</y>
+     <x>210</x>
+     <y>220</y>
      <width>201</width>
-     <height>31</height>
+     <height>20</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
-font: 16pt &quot;MS Shell Dlg 2&quot;;
+    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
 color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>Expenses of Today</string>
+    <string>Appointment Table</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QTextEdit" name="visit_time_edit_2">
    <property name="geometry">
     <rect>
-     <x>480</x>
-     <y>10</y>
-     <width>251</width>
+     <x>630</x>
+     <y>170</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>210</y>
+     <width>101</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
-font: 16pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(255, 255, 255);</string>
+background-color: rgb(85, 255, 255);
+
+border-top-left-radius:10px;
+border-bottom-left-radius:10px;
+border-top-right-radius:10px;
+border-bottom-right-radius:10px;</string>
    </property>
    <property name="text">
-    <string>Appointments of Today</string>
+    <string>Search Date</string>
    </property>
   </widget>
  </widget>
