@@ -17,15 +17,16 @@ class _main_window(QDialog):
     def __init__(self):
         super(_main_window, self).__init__()
         loadUi("main_window.ui", self)
-        _current_day = self._current_date()
-        print(_current_day)
-
-    def _current_date(self):
-        current_date = QDate.currentDate()
-        return f"Today is: {current_date.toString()}"
 
         self.patient_btn.clicked.connect(self._go_patient_window)
         # self.add_patient_btn.clicked.connect(self._go_add_pat)
+        current_day = self.current_date()
+        print(current_day)
+
+    def current_date(self):
+        current_date = QDate.currentDate()
+        # print(f"Current date is: {current_date.toString()}")
+        return f"Today is: {current_date.toString()}"
 
     def _go_dash(self):
         _dash = _main_window()
