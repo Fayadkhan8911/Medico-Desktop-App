@@ -183,7 +183,7 @@ border-bottom-right-radius:10px;</string>
    <property name="geometry">
     <rect>
      <x>170</x>
-     <y>70</y>
+     <y>100</y>
      <width>621</width>
      <height>441</height>
     </rect>
@@ -215,6 +215,23 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
      <string>Expense Remarks</string>
     </property>
    </column>
+  </widget>
+  <widget class="QLabel" name="expense_title">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>30</y>
+     <width>361</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Expense History of Date: </string>
+   </property>
   </widget>
  </widget>
  <resources/>

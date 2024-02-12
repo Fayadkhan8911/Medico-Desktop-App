@@ -38,19 +38,27 @@ class _expense_view_window(QDialog):
         for row in results:
             print(row)
         conn.close()
+        # Clear existing rows
+        self.expenseTable.setRowCount(0)
+        
+        # Set number of rows in the table
+        self.expenseTable.setRowCount(len(results))
         
         print("Expense Showed")
         self.expenseTable.setColumnWidth(0, 120)  # Expense Date
         self.expenseTable.setColumnWidth(1, 140)  # Expense Amount
         self.expenseTable.setColumnWidth(2, 180)  # Expense Description
         self.expenseTable.setColumnWidth(3, 180)  # Expense Remarks
+
         
-        tablerow=0
-        for row in results:
-            self.expenseTable.setItem(tablerow, 0, QtWidgets.QTableWidgetItem(row[0]))
-            self.expenseTable.setItem(tablerow, 1, QtWidgets.QTableWidgetItem(row[1]))
-            self.expenseTable.setItem(tablerow, 2, QtWidgets.QTableWidgetItem(row[2]))
-            tablerow+=1
+        # Populate the table
+        for row_index, row_data in enumerate(results):
+            for col_index, data in enumerate(row_data):
+                item = QtWidgets.QTableWidgetItem(str(data))
+                self.expenseTable.setItem(row_index, col_index, item)
+                
+        self.expenseTable.resizeColumnsToContents()
+        self.expense_title.setText(f"Expense History of Date: {expense_date}")
 
 
 
@@ -58,7 +66,7 @@ class _expense_view_window(QDialog):
 app = QApplication(sys.argv)
 
 widget = QtWidgets.QStackedWidget()
-__view_window = _expense_view_window()
+__view_window = _expense_view_window("2024-02-12")
 
 widget.addWidget(__view_window)
 
