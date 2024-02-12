@@ -194,18 +194,17 @@ border-bottom-right-radius:10px;</string>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
-   <widget class="QLabel" name="add_fname">
+   <widget class="QLabel" name="f_name_labl">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>81</width>
+      <width>71</width>
       <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
-text-decoration: underline;
 
 color: rgb(0, 0, 0);</string>
     </property>
@@ -213,10 +212,10 @@ color: rgb(0, 0, 0);</string>
      <string>First Name:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_2">
+   <widget class="QLabel" name="updt_f_name">
     <property name="geometry">
      <rect>
-      <x>80</x>
+      <x>90</x>
       <y>10</y>
       <width>71</width>
       <height>20</height>
@@ -227,10 +226,10 @@ color: rgb(0, 0, 0);</string>
 color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>First Name</string>
+     <string>N/A</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_3">
+   <widget class="QLabel" name="l_name_labl">
     <property name="geometry">
      <rect>
       <x>170</x>
@@ -241,7 +240,6 @@ color: rgb(0, 0, 0);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
-text-decoration: underline;
 
 color: rgb(0, 0, 0);</string>
     </property>
@@ -249,7 +247,7 @@ color: rgb(0, 0, 0);</string>
      <string>Last Name:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_4">
+   <widget class="QLabel" name="updt_l_name">
     <property name="geometry">
      <rect>
       <x>240</x>
@@ -263,10 +261,10 @@ color: rgb(0, 0, 0);</string>
 color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>Last Name</string>
+     <string>N/A</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_5">
+   <widget class="QLabel" name="phn_labl">
     <property name="geometry">
      <rect>
       <x>330</x>
@@ -277,7 +275,6 @@ color: rgb(0, 0, 0);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
-text-decoration: underline;
 
 color: rgb(0, 0, 0);</string>
     </property>
@@ -285,10 +282,10 @@ color: rgb(0, 0, 0);</string>
      <string>Phone:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_6">
+   <widget class="QLabel" name="updt_phn">
     <property name="geometry">
      <rect>
-      <x>380</x>
+      <x>410</x>
       <y>10</y>
       <width>81</width>
       <height>20</height>
@@ -299,21 +296,20 @@ color: rgb(0, 0, 0);</string>
 color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>Phone</string>
+     <string>N/A</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_7">
+   <widget class="QLabel" name="email_labl">
     <property name="geometry">
      <rect>
-      <x>460</x>
+      <x>490</x>
       <y>10</y>
-      <width>81</width>
+      <width>41</width>
       <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
-text-decoration: underline;
 
 color: rgb(0, 0, 0);</string>
     </property>
@@ -321,12 +317,12 @@ color: rgb(0, 0, 0);</string>
      <string>Email:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_8">
+   <widget class="QLabel" name="updt_email">
     <property name="geometry">
      <rect>
-      <x>500</x>
+      <x>540</x>
       <y>10</y>
-      <width>111</width>
+      <width>131</width>
       <height>20</height>
      </rect>
     </property>
@@ -335,21 +331,20 @@ color: rgb(0, 0, 0);</string>
 color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>email</string>
+     <string>N/A</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_9">
+   <widget class="QLabel" name="addr_labl">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>40</y>
-      <width>81</width>
+      <width>71</width>
       <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
-text-decoration: underline;
 
 color: rgb(0, 0, 0);</string>
     </property>
@@ -357,10 +352,10 @@ color: rgb(0, 0, 0);</string>
      <string>Address:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_10">
+   <widget class="QLabel" name="updt_addr">
     <property name="geometry">
      <rect>
-      <x>70</x>
+      <x>90</x>
       <y>40</y>
       <width>191</width>
       <height>20</height>
@@ -371,13 +366,13 @@ color: rgb(0, 0, 0);</string>
 color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>address</string>
+     <string>N/A</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_11">
+   <widget class="QLabel" name="occu_labl">
     <property name="geometry">
      <rect>
-      <x>300</x>
+      <x>330</x>
       <y>40</y>
       <width>81</width>
       <height>20</height>
@@ -385,7 +380,6 @@ color: rgb(0, 0, 0);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
-text-decoration: underline;
 
 color: rgb(0, 0, 0);</string>
     </property>
@@ -393,10 +387,10 @@ color: rgb(0, 0, 0);</string>
      <string>Occupation:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_12">
+   <widget class="QLabel" name="updt_occu">
     <property name="geometry">
      <rect>
-      <x>380</x>
+      <x>410</x>
       <y>40</y>
       <width>81</width>
       <height>20</height>
@@ -407,10 +401,10 @@ color: rgb(0, 0, 0);</string>
 color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>Occupation</string>
+     <string>N/A</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_13">
+   <widget class="QLabel" name="refr_labl">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -421,7 +415,6 @@ color: rgb(0, 0, 0);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
-text-decoration: underline;
 
 color: rgb(0, 0, 0);</string>
     </property>
@@ -429,10 +422,10 @@ color: rgb(0, 0, 0);</string>
      <string>Reference:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_14">
+   <widget class="QLabel" name="updr_refr">
     <property name="geometry">
      <rect>
-      <x>80</x>
+      <x>90</x>
       <y>70</y>
       <width>191</width>
       <height>20</height>
@@ -443,13 +436,13 @@ color: rgb(0, 0, 0);</string>
 color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>reference</string>
+     <string>N/A</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_15">
+   <widget class="QLabel" name="depart_labl">
     <property name="geometry">
      <rect>
-      <x>300</x>
+      <x>330</x>
       <y>70</y>
       <width>201</width>
       <height>20</height>
@@ -457,7 +450,6 @@ color: rgb(0, 0, 0);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
-text-decoration: underline;
 
 color: rgb(0, 0, 0);</string>
     </property>
@@ -465,10 +457,10 @@ color: rgb(0, 0, 0);</string>
      <string>If from abroad, date of departure:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_16">
+   <widget class="QLabel" name="updt_depart">
     <property name="geometry">
      <rect>
-      <x>500</x>
+      <x>530</x>
       <y>70</y>
       <width>81</width>
       <height>20</height>
@@ -479,10 +471,10 @@ color: rgb(0, 0, 0);</string>
 color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>depart</string>
+     <string>N/A</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_17">
+   <widget class="QLabel" name="comp_labl">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -493,7 +485,6 @@ color: rgb(0, 0, 0);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
-text-decoration: underline;
 
 color: rgb(0, 0, 0);</string>
     </property>
@@ -501,12 +492,12 @@ color: rgb(0, 0, 0);</string>
      <string>Complain:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_18">
+   <widget class="QLabel" name="updt_comp">
     <property name="geometry">
      <rect>
-      <x>80</x>
+      <x>90</x>
       <y>100</y>
-      <width>531</width>
+      <width>221</width>
       <height>20</height>
      </rect>
     </property>
@@ -515,7 +506,7 @@ color: rgb(0, 0, 0);</string>
 color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>complain</string>
+     <string>N/A</string>
     </property>
    </widget>
    <widget class="QLabel" name="q1">
@@ -534,10 +525,10 @@ color: rgb(0, 0, 0);</string>
      <string>1.Blood diasease ?</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_19">
+   <widget class="QLabel" name="updt_q1">
     <property name="geometry">
      <rect>
-      <x>270</x>
+      <x>250</x>
       <y>140</y>
       <width>31</width>
       <height>20</height>
@@ -567,10 +558,10 @@ color: rgb(0, 0, 0);</string>
      <string>2.Smoker ?</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_20">
+   <widget class="QLabel" name="updt_q2">
     <property name="geometry">
      <rect>
-      <x>270</x>
+      <x>250</x>
       <y>160</y>
       <width>31</width>
       <height>20</height>
@@ -600,10 +591,10 @@ color: rgb(0, 0, 0);</string>
      <string>3.Bleeding disorder ?</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_21">
+   <widget class="QLabel" name="updt_q3">
     <property name="geometry">
      <rect>
-      <x>270</x>
+      <x>250</x>
       <y>180</y>
       <width>31</width>
       <height>20</height>
@@ -633,10 +624,10 @@ color: rgb(0, 0, 0);</string>
      <string>4.Hepatitis ?</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_22">
+   <widget class="QLabel" name="updt_q4">
     <property name="geometry">
      <rect>
-      <x>270</x>
+      <x>250</x>
       <y>200</y>
       <width>31</width>
       <height>20</height>
@@ -666,10 +657,10 @@ color: rgb(0, 0, 0);</string>
      <string>5.Diabetes ?</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_23">
+   <widget class="QLabel" name="updt_q5">
     <property name="geometry">
      <rect>
-      <x>270</x>
+      <x>250</x>
       <y>220</y>
       <width>31</width>
       <height>20</height>
@@ -699,10 +690,10 @@ color: rgb(0, 0, 0);</string>
      <string>6.Epilepsy ?</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_24">
+   <widget class="QLabel" name="updt_q6">
     <property name="geometry">
      <rect>
-      <x>270</x>
+      <x>250</x>
       <y>240</y>
       <width>31</width>
       <height>20</height>
@@ -732,10 +723,10 @@ color: rgb(0, 0, 0);</string>
      <string>7.Cardiac or kidney diaseases ?</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_25">
+   <widget class="QLabel" name="updt_q7">
     <property name="geometry">
      <rect>
-      <x>270</x>
+      <x>250</x>
       <y>260</y>
       <width>31</width>
       <height>20</height>
@@ -754,7 +745,7 @@ color: rgb(0, 0, 0);</string>
      <rect>
       <x>10</x>
       <y>280</y>
-      <width>271</width>
+      <width>181</width>
       <height>20</height>
      </rect>
     </property>
@@ -765,10 +756,10 @@ color: rgb(0, 0, 0);</string>
      <string>8.Abnormal blood pressure ?</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_26">
+   <widget class="QLabel" name="updt_q8">
     <property name="geometry">
      <rect>
-      <x>270</x>
+      <x>250</x>
       <y>280</y>
       <width>31</width>
       <height>20</height>
@@ -798,7 +789,7 @@ color: rgb(0, 0, 0);</string>
      <string>9.Currently on any medications ?</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_27">
+   <widget class="QLabel" name="updt_q9">
     <property name="geometry">
      <rect>
       <x>570</x>
@@ -831,7 +822,7 @@ color: rgb(0, 0, 0);</string>
      <string>10.Any respitory diasease/ asthma ?</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_28">
+   <widget class="QLabel" name="updt_q10">
     <property name="geometry">
      <rect>
       <x>570</x>
@@ -864,7 +855,7 @@ color: rgb(0, 0, 0);</string>
      <string>11.Bleeding gums  during brushing teeth ?</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_29">
+   <widget class="QLabel" name="updt_q11">
     <property name="geometry">
      <rect>
       <x>570</x>
@@ -886,7 +877,7 @@ color: rgb(0, 0, 0);</string>
      <rect>
       <x>300</x>
       <y>200</y>
-      <width>131</width>
+      <width>81</width>
       <height>20</height>
      </rect>
     </property>
@@ -894,10 +885,10 @@ color: rgb(0, 0, 0);</string>
      <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
     <property name="text">
-     <string>12. Nervous person ?</string>
+     <string>12. Allergies ?</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_30">
+   <widget class="QLabel" name="updt_q12">
     <property name="geometry">
      <rect>
       <x>570</x>
@@ -919,7 +910,7 @@ color: rgb(0, 0, 0);</string>
      <rect>
       <x>300</x>
       <y>220</y>
-      <width>81</width>
+      <width>131</width>
       <height>20</height>
      </rect>
     </property>
@@ -927,10 +918,10 @@ color: rgb(0, 0, 0);</string>
      <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
     <property name="text">
-     <string>13.Allergies ?</string>
+     <string>13.Nervous Person ?</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_31">
+   <widget class="QLabel" name="updt_q13">
     <property name="geometry">
      <rect>
       <x>570</x>
@@ -963,7 +954,7 @@ color: rgb(0, 0, 0);</string>
      <string>14.(Female) Currently Pregnant ?</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_32">
+   <widget class="QLabel" name="updt_q14">
     <property name="geometry">
      <rect>
       <x>570</x>
@@ -1012,7 +1003,7 @@ color: rgb(0, 0, 0);</string>
      <string>16.Any chronic diasease not stated above ?</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_33">
+   <widget class="QLabel" name="updt_q15">
     <property name="geometry">
      <rect>
       <x>570</x>
@@ -1029,7 +1020,7 @@ color: rgb(0, 0, 0);</string>
      <string>y/n</string>
     </property>
    </widget>
-   <widget class="QLabel" name="add_fname_34">
+   <widget class="QLabel" name="updt_q16">
     <property name="geometry">
      <rect>
       <x>570</x>
@@ -1046,16 +1037,6 @@ color: rgb(0, 0, 0);</string>
      <string>y/n</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="med_find_edit">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>400</y>
-      <width>601</width>
-      <height>70</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QLabel" name="findings_label">
     <property name="geometry">
      <rect>
@@ -1070,6 +1051,167 @@ color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
      <string>Medical Findings</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="updt_med_findings">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>400</y>
+      <width>601</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="pat_id_labl">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>100</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>Patient ID:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="updt_pat_id">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>100</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>N/A</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="age_labl">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>320</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>Age:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="updt_age">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>320</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>N/A</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gender_labl">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>320</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>Gender:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="updt_gender">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>320</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>N/A</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="reg_dt_labl">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>330</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>Date of Reg:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="updt_reg_dt">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>330</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>N/A</string>
     </property>
    </widget>
   </widget>

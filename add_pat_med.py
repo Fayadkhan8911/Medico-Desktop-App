@@ -84,12 +84,12 @@ class _add_med_hist_win(QDialog):
         # Increment the last patient ID
         new_p_id = last_p_id + 1
         cursor.execute("""
-            INSERT INTO patients (p_id, f_name, l_name, phone, address, email, age, sex, reference, date_of_departure, complain, med_find_, 
+            INSERT INTO patients (p_id, f_name, l_name, phone, address, email, age, sex, reference, date_of_departure, complain, occupation, med_find_, 
             blood_diseases, smoker, bleeding_disorder, hepatitis, diabetes, epilepsy, kidney_cardiac_diseases, abnormal_bp, currently_medicated, respiratory_diseases, gum_bleed_brush, nervous, allergies, pregnant, breastfeeding, none_prb_above, reg_date)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, DATE('now'))
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, DATE('now'))
         """, (
             new_p_id, self.f_name, self.l_name, self.phone, self.address, self.email, self.age, self.sex, self.reference, self.date_of_departure,
-            self.chief_complain, medical_history, *checkbox_values.values()
+            self.chief_complain, self.occupation, medical_history, *checkbox_values.values()
         ))
         conn.commit()
         conn.close()
