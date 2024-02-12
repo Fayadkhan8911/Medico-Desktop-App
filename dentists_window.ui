@@ -199,6 +199,11 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
    <column>
     <property name="text">
+     <string>Dentist ID</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
      <string>First Name</string>
     </property>
    </column>
@@ -209,7 +214,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
    </column>
    <column>
     <property name="text">
-     <string>Age</string>
+     <string>Email</string>
     </property>
    </column>
    <column>
@@ -219,7 +224,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
    </column>
    <column>
     <property name="text">
-     <string>Email</string>
+     <string>Date of Birth</string>
     </property>
    </column>
    <column>

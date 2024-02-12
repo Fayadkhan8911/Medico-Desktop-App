@@ -13,11 +13,30 @@ class _dentist_window(QDialog):
         loadUi("dentists_window.ui", self)
         self.dentist_table.setColumnWidth(6, 200)
 
-        self.dentist_table.setColumnWidth(5, 200)
-        
-        
+        self.dentist_table.setColumnWidth(7, 200)
 
-    # self.dentist_table.setColumnWidth(8, 200)
+        self.load_table()
+
+    def load_table(self):
+        _connect = sqlite3.connect("MEDICO.db3")
+        _cur = _connect.cursor()
+        _query = "SELECT * FROM dentists"
+        # data = _cur.fetchall()  # Fetch data
+        _tablerow = 0
+        self.dentist_table.setRowCount(50)
+
+        for col in _cur.execute(_query):
+            self.dentist_table.setItem(_tablerow, 0, QtWidgets.QTableWidgetItem(col[0]))
+            self.dentist_table.setItem(_tablerow, 1, QtWidgets.QTableWidgetItem(col[1]))
+            self.dentist_table.setItem(_tablerow, 2, QtWidgets.QTableWidgetItem(col[2]))
+            self.dentist_table.setItem(_tablerow, 3, QtWidgets.QTableWidgetItem(col[3]))
+            self.dentist_table.setItem(_tablerow, 4, QtWidgets.QTableWidgetItem(col[4]))
+            self.dentist_table.setItem(_tablerow, 5, QtWidgets.QTableWidgetItem(col[5]))
+            self.dentist_table.setItem(_tablerow, 6, QtWidgets.QTableWidgetItem(col[6]))
+            self.dentist_table.setItem(_tablerow, 7, QtWidgets.QTableWidgetItem(col[7]))
+            # self.dentist_table.setItem(_tablerow, 5, QtWidgets.QTableWidgetItem(col[2]))6
+            _tablerow += 1
+            pass
 
 
 # """
