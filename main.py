@@ -3,7 +3,8 @@ from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication, QWidget
 from PyQt5.QtGui import QPixmap
-
+from PyQt5.QtWidgets import QApplication, QCalendarWidget
+from PyQt5.QtCore import QDate
 import sqlite3
 
 import add_patients
@@ -16,8 +17,15 @@ class _main_window(QDialog):
     def __init__(self):
         super(_main_window, self).__init__()
         loadUi("main_window.ui", self)
+        _current_day = self._current_date()
+        print(_current_day)
+
+    def _current_date(self):
+        current_date = QDate.currentDate()
+        return f"Today is: {current_date.toString()}"
+
         self.patient_btn.clicked.connect(self._go_patient_window)
-        #self.add_patient_btn.clicked.connect(self._go_add_pat)
+        # self.add_patient_btn.clicked.connect(self._go_add_pat)
 
     def _go_dash(self):
         _dash = _main_window()
@@ -30,31 +38,33 @@ class _main_window(QDialog):
         widget.setCurrentIndex(widget.currentIndex() + 1)
         self._patients.dash_btn.clicked.connect(self._go_dash)
         self._patients.add_patient_btn.clicked.connect(self._go_add_pat)
-        #self._patients.search_btn.clicked.connect(self._go_pat_det)
+        # self._patients.search_btn.clicked.connect(self._go_pat_det)
         self._patients.search_btn.clicked.connect(self.makemegotopat)
-        
+
     def makemegotopat(self):
         f_name = self._patients.fname_srch_edit.toPlainText()
         l_name = self._patients.lname_srch_edit.toPlainText()
         phone = self._patients.phone_srch_edit.toPlainText()
         patient_id = self._patients.patid_srch_edit.toPlainText()
-        
-        if (f_name and phone):
-            #self._go_pat_det()  # Call the search_patient function
-            self.pat_detailed_win = pat_detailed._pat_detailed_win(f_name, "NULL", phone, "NULL")
+
+        if f_name and phone:
+            # self._go_pat_det()  # Call the search_patient function
+            self.pat_detailed_win = pat_detailed._pat_detailed_win(
+                f_name, "NULL", phone, "NULL"
+            )
             widget.addWidget(self.pat_detailed_win)
             widget.setCurrentIndex(widget.currentIndex() + 1)
             """ self._med_hist.restart_btn.clicked.connect(self._go_add_pat)
             self._med_hist.patient_btn.clicked.connect(self._go_patient_window)
             self._med_hist.save_pat.clicked.connect(self._go_patient_window) """
         elif patient_id:
-            self.pat_detailed_win = pat_detailed._pat_detailed_win("NULL", "NULL", "NULL", patient_id)
+            self.pat_detailed_win = pat_detailed._pat_detailed_win(
+                "NULL", "NULL", "NULL", patient_id
+            )
             widget.addWidget(self.pat_detailed_win)
             widget.setCurrentIndex(widget.currentIndex() + 1)
         else:
             print("Please provide either first name and phone number or patient ID")
-
-        
 
     def _go_add_pat(self):
         self._add_pat = add_patients._add_patient_window()
@@ -70,12 +80,12 @@ class _main_window(QDialog):
         widget.addWidget(self._med_hist)
         widget.setCurrentIndex(widget.currentIndex() + 1)
         self._med_hist.restart_btn.clicked.connect(self._go_add_pat) """
-        
+
     def chkvalid(self):
-        #CHECK
+        # CHECK
         f_name_input = self._add_pat.add_fname_edit.toPlainText().strip()
         l_name_input = self._add_pat.add_lname_edit.toPlainText().strip()
-        
+
         if not f_name_input or not l_name_input:
             # Show an error message or handle it appropriately
             print("First name and last name are required.")
@@ -85,10 +95,9 @@ class _main_window(QDialog):
             return
         else:
             self._go_med_hist()
-    
-        
+
     def _go_med_hist(self):
-        
+
         # Retrieve patient data from _add_patient_window instance
         f_name = self._add_pat.add_fname_edit.toPlainText()
         l_name = self._add_pat.add_lname_edit.toPlainText()
@@ -104,14 +113,23 @@ class _main_window(QDialog):
 
         # Instantiate _add_med_hist_win with the retrieved patient data
         self._med_hist = add_pat_med._add_med_hist_win(
-            f_name, l_name, phone, address, occupation, email, age, sex, reference, date_of_departure, chief_complain
+            f_name,
+            l_name,
+            phone,
+            address,
+            occupation,
+            email,
+            age,
+            sex,
+            reference,
+            date_of_departure,
+            chief_complain,
         )
         widget.addWidget(self._med_hist)
         widget.setCurrentIndex(widget.currentIndex() + 1)
         self._med_hist.restart_btn.clicked.connect(self._go_add_pat)
         self._med_hist.patient_btn.clicked.connect(self._go_patient_window)
         self._med_hist.save_pat.clicked.connect(self._go_patient_window)
-
 
     def _go_pat_det(self):
         self._details = pat_detailed._pat_detailed_win()
