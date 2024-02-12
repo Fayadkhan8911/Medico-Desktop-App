@@ -41,13 +41,14 @@ class _main_window(QDialog):
         self._patients.add_patient_btn.clicked.connect(self._go_add_pat)
         # self._patients.search_btn.clicked.connect(self._go_pat_det)
         self._patients.search_btn.clicked.connect(self.makemegotopat)
+            
 
     def makemegotopat(self):
         f_name = self._patients.fname_srch_edit.toPlainText()
         l_name = self._patients.lname_srch_edit.toPlainText()
         phone = self._patients.phone_srch_edit.toPlainText()
         patient_id = self._patients.patid_srch_edit.toPlainText()
-
+        
         if f_name and phone:
             conn = sqlite3.connect('medico.db3')
             c = conn.cursor()
@@ -55,12 +56,7 @@ class _main_window(QDialog):
             result = c.fetchone()
             conn.close()
             if result:
-                # If patient is found, redirect to detailed window
-                self.pat_detailed_win = pat_detailed._pat_detailed_win(
-                    f_name, "NULL", phone, "NULL"
-                )
-                widget.addWidget(self.pat_detailed_win)
-                widget.setCurrentIndex(widget.currentIndex() + 1)
+                self._go_pat_det()
             else:
                 print("No User Found")
 
@@ -73,15 +69,12 @@ class _main_window(QDialog):
             conn.close()
 
             if result:
-                self.pat_detailed_win = pat_detailed._pat_detailed_win(
-                    "NULL", "NULL", "NULL", patient_id
-                )
-                widget.addWidget(self.pat_detailed_win)
-                widget.setCurrentIndex(widget.currentIndex() + 1)
+                self._go_pat_det()
             else:
                 print("No User Found")
         else:
             print("Please provide either first name and phone number or patient ID")
+        
 
     def _go_add_pat(self):
         self._add_pat = add_patients._add_patient_window()
@@ -92,11 +85,6 @@ class _main_window(QDialog):
         self._add_pat.next_btn.clicked.connect(self.chkvalid)
         self._add_pat.return_btn.clicked.connect(self._go_patient_window)
 
-    """ def _go_med_hist(self):
-        self._med_hist = add_pat_med._add_med_hist_win()
-        widget.addWidget(self._med_hist)
-        widget.setCurrentIndex(widget.currentIndex() + 1)
-        self._med_hist.restart_btn.clicked.connect(self._go_add_pat) """
 
     def chkvalid(self):
         # CHECK
@@ -106,9 +94,6 @@ class _main_window(QDialog):
         if not f_name_input or not l_name_input:
             # Show an error message or handle it appropriately
             print("First name and last name are required.")
-            """ self._go_backto_addpatients = add_patients._add_patient_window()
-            widget.addWidget(self._go_backto_addpatients)
-            widget.setCurrentIndex(widget.currentIndex() + 1) """
             return
         else:
             self._go_med_hist()
@@ -149,7 +134,11 @@ class _main_window(QDialog):
         self._med_hist.save_pat.clicked.connect(self._go_patient_window)
 
     def _go_pat_det(self):
-        self._details = pat_detailed._pat_detailed_win()
+        f_name = self._patients.fname_srch_edit.toPlainText()
+        l_name = self._patients.lname_srch_edit.toPlainText()
+        phone = self._patients.phone_srch_edit.toPlainText()
+        patient_id = self._patients.patid_srch_edit.toPlainText()
+        self._details = pat_detailed._pat_detailed_win(f_name, l_name, phone, patient_id)
         widget.addWidget(self._details)
         widget.setCurrentIndex(widget.currentIndex() + 1)
         self._details.return_pat.clicked.connect(self._go_patient_window)
