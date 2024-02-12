@@ -1,19 +1,3 @@
-""" import sys
-from PyQt5.uic import loadUi
-from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QDialog, QApplication, QWidget
-from PyQt5.QtGui import QPixmap
-
-import sqlite3
-
-
-class _add_med_hist_win(QDialog):
-    def __init__(self):
-        super(_add_med_hist_win, self).__init__()
-        loadUi("add_patients_med_hist_window.ui", self)
- """
-
-
 import sys
 from PyQt5.uic import loadUi
 from PyQt5.QtWidgets import QDialog, QApplication
@@ -40,10 +24,7 @@ class _add_med_hist_win(QDialog):
         self.chief_complain = chief_complain
 
         self.save_pat.clicked.connect(self.save_medical_history)
-        
-        
 
-        
 
     def save_medical_history(self):
         # Retrieve medical history data

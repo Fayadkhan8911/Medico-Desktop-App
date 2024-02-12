@@ -53,11 +53,15 @@ class _pat_detailed_win(QDialog):
                     self.updt_gender.setText(str(result[4]))
                     self.updt_phn.setText(str(result[5]))
                     self.updt_addr.setText(str(result[6]))
-                    self.updt_email.setText(str(result[7]))
+                    if result[7] is not None:
+                        self.updt_email.setText(str(result[7]))
                     self.updt_reg_dt.setText(str(result[8]))
-                    self.updt_depart.setText(str(result[9]))
-                    self.updr_refr.setText(str(result[10]))
-                    self.updt_comp.setText(str(result[11]))
+                    if result[9] is not None:
+                        self.updt_depart.setText(str(result[9]))
+                    if result[10] is not None:
+                        self.updr_refr.setText(str(result[10]))
+                    if result[11] is not None:
+                        self.updt_comp.setText(str(result[11]))
                     self.updt_q1.setText(str(result[12]))
                     self.updt_q2.setText(str(result[13]))
                     self.updt_q3.setText(str(result[14]))
@@ -75,7 +79,8 @@ class _pat_detailed_win(QDialog):
                     self.updt_q15.setText(str(result[26]))
                     self.updt_q16.setText(str(result[27]))
                     self.updt_med_findings.setText(str(result[28]))
-                    self.updt_occu.setText(str(result[29]))
+                    if result[29] is not None:
+                        self.updt_occu.setText(str(result[29]))
                 print(result)
             else:
                 print("Patient not found")
@@ -85,44 +90,6 @@ class _pat_detailed_win(QDialog):
         # Close the connection
         conn.close()
 
-
-
-
-        
-"""         
-        
-        pat_patient_id = result[0]
-        pat_first_name = result[1]
-        pat_last_name = result[2]
-        pat_age = result[3]
-        pat_gender = result[4]
-        pat_phone = result[5]
-        pat_address = result[6]
-        pat_email = result[7]
-        pat_reg_date = result[8]
-        pat_date_of_depart = result[9]
-        pat_reference = result[10]
-        pat_complain = result[11]
-        pat_blood_diseases = result[12]
-        pat_smoker = result[13]
-        pat_bleeding_disorder = result[14]
-        pat_hepatitis = result[15]
-        pat_diabetes = result[16]
-        pat_epilepsy = result[17]
-        pat_kidney_cardiac_diseases = result[18]
-        pat_abnormal_bp = result[19]
-        pat_currently_medicated = result[20]
-        pat_respiratory_diseases = result[21]
-        pat_gum_bleed_brush = result[22]
-        pat_allergies = result[23]
-        pat_nervous = result[24]
-        pat_pregnant = result[25]
-        pat_breast_feeding = result[26]
-        pat_none_prb_above = result[27]
-        pat_med_find = result[28]
-        
- """
-        
         
     
     

@@ -1,35 +1,10 @@
-""" import sys
-from PyQt5.uic import loadUi
-from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QDialog, QApplication, QWidget
-from PyQt5.QtGui import QPixmap
-
-import sqlite3
-
-
-class _add_patient_window(QDialog):
-    def __init__(self):
-        super(_add_patient_window, self).__init__()
-        loadUi("add_patients_window.ui", self)
-
-
- """
-
-
 import sys
 from PyQt5.uic import loadUi
 from PyQt5.QtWidgets import QDialog, QApplication
 from PyQt5.QtWidgets import QDialog, QApplication, QStackedWidget  # Import QStackedWidget
 from add_pat_med import _add_med_hist_win
 
-# Assuming 'widget' is an instance of QStackedWidget
 
-
-""" class _add_patient_window(QDialog):
-    def __init__(self):
-        super(_add_patient_window, self).__init__()
-        loadUi("add_patients_window.ui", self)
-        self.next_btn.clicked.connect(self.proceed_to_medical_history) """
         
 class _add_patient_window(QDialog):
     def __init__(self):
@@ -54,16 +29,6 @@ class _add_patient_window(QDialog):
 
     def proceed_to_medical_history(self):
         
-        """ f_name_input = self.add_fname_edit.toPlainText().strip()
-        l_name_input = self.add_lname_edit.toPlainText().strip()
-        
-        if not f_name_input or not l_name_input:
-            # Show an error message or handle it appropriately
-            print("First name and last name are required.")
-            self.add_patient_window = _add_patient_window()
-            widget = QStackedWidget()
-            widget.addWidget(self.add_patient_window)
-            widget.setCurrentIndex(widget.currentIndex() + 1) """
             
             
         # Retrieve patient data
@@ -78,17 +43,10 @@ class _add_patient_window(QDialog):
         reference = self.add_ref_edit.toPlainText()
         date_of_departure = self.add_depart_edit.toPlainText()
         chief_complain = self.add_complain_edit.toPlainText()
-       
-        """ # Open the medical history window after saving patient data
-        self.medical_history_window = _add_med_hist_win(
-            f_name, l_name, phone, address, occupation, email, age, sex, reference, date_of_departure, chief_complain
-        )
-        #self.medical_history_window.exec_()
-        widget = QStackedWidget()
-        widget.addWidget(self.medical_history_window)
-        widget.setCurrentIndex(widget.currentIndex() + 1) """
 
-        
+
+
+
         
     
 """ 
