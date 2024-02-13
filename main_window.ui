@@ -80,7 +80,7 @@ selection-color: rgb(255, 255, 255);</string>
       <normaloff>../Medico_modern/dashboard.png</normaloff>../Medico_modern/dashboard.png</iconset>
     </property>
    </widget>
-   <widget class="QPushButton" name="appoint_btn">
+   <widget class="QPushButton" name="appointment_btn">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -199,7 +199,7 @@ background-color: rgb(170, 255, 255);</string>
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QTableWidget" name="appointmen_table">
+  <widget class="QTableWidget" name="appointment_table">
    <property name="geometry">
     <rect>
      <x>480</x>
@@ -210,7 +210,7 @@ background-color: rgb(170, 255, 255);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(0, 255, 255);
-font: 14pt &quot;MS Shell Dlg 2&quot;;
+font: 12pt &quot;MS Shell Dlg 2&quot;;
 background-color: rgb(255, 255, 255);</string>
    </property>
    <column>
@@ -229,7 +229,7 @@ background-color: rgb(255, 255, 255);</string>
     </property>
    </column>
   </widget>
-  <widget class="QTableWidget" name="appointmen_table_2">
+  <widget class="QTableWidget" name="expense_table">
    <property name="geometry">
     <rect>
      <x>190</x>
@@ -240,7 +240,7 @@ background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(0, 255, 255);
-font: 14pt &quot;MS Shell Dlg 2&quot;;
+font: 12pt &quot;MS Shell Dlg 2&quot;;
 background-color: rgb(255, 255, 255);</string>
    </property>
    <column>

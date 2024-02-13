@@ -183,12 +183,12 @@ border-bottom-right-radius:10px;</string>
     </property>
    </widget>
   </widget>
-  <widget class="QLabel" name="fname">
+  <widget class="QLabel" name="vname">
    <property name="geometry">
     <rect>
      <x>200</x>
      <y>30</y>
-     <width>101</width>
+     <width>111</width>
      <height>20</height>
     </rect>
    </property>
@@ -197,10 +197,10 @@ border-bottom-right-radius:10px;</string>
 color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>First Name</string>
+    <string>Visitor Name</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="fname_edit">
+  <widget class="QTextEdit" name="vname_edit">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -303,7 +303,7 @@ color: rgb(255, 255, 255);</string>
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="add_btn">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -345,7 +345,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
    </column>
    <column>
     <property name="text">
-     <string>Visitor First Name</string>
+     <string>First Name</string>
     </property>
    </column>
    <column>
@@ -381,7 +381,7 @@ color: rgb(255, 255, 255);</string>
     <string>Appointment Table</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="visit_time_edit_2">
+  <widget class="QTextEdit" name="search_date_edit">
    <property name="geometry">
     <rect>
      <x>630</x>
@@ -394,7 +394,7 @@ color: rgb(255, 255, 255);</string>
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="seach_btn">
    <property name="geometry">
     <rect>
      <x>670</x>
