@@ -10,7 +10,7 @@ import sqlite3
 class _pat_detailed_win(QDialog):
     def __init__(self, f_name=None, l_name=None, phone=None, patient_id=None):
         super(_pat_detailed_win, self).__init__()
-        loadUi("patients_window_detailed.ui", self)
+        loadUi("patients_window_detailed.ui", self)        
         self.f_name = f_name
         self.l_name = l_name
         self.phone = phone
@@ -89,6 +89,7 @@ class _pat_detailed_win(QDialog):
          
         # Close the connection
         conn.close()
+        
 
         
     

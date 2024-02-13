@@ -18,14 +18,17 @@ class _dentist_window(QDialog):
         self.load_table()
 
     def load_table(self):
-        _connect = sqlite3.connect("MEDICO.db3")
-        _cur = _connect.cursor()
-        _query = "SELECT * FROM dentists"
+
         # data = _cur.fetchall()  # Fetch data
         _tablerow = 0
         self.dentist_table.setRowCount(50)
+        conn = sqlite3.connect("medico.db3")
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM dentists")
+        # Fetch all rows
+        results = cursor.fetchall()
 
-        for col in _cur.execute(_query):
+        for col in results:
             self.dentist_table.setItem(_tablerow, 0, QtWidgets.QTableWidgetItem(col[0]))
             self.dentist_table.setItem(_tablerow, 1, QtWidgets.QTableWidgetItem(col[1]))
             self.dentist_table.setItem(_tablerow, 2, QtWidgets.QTableWidgetItem(col[2]))
@@ -39,7 +42,7 @@ class _dentist_window(QDialog):
             pass
 
 
-# """
+"""
 app = QApplication(sys.argv)
 
 widget = QtWidgets.QStackedWidget()
