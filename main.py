@@ -336,7 +336,6 @@ class _main_window(QDialog):
         expense_date = str(dateSelected.toPyDate())
         self._view_expense_window = view_expense._expense_view_window(expense_date)
         widget.addWidget(self._view_expense_window)
-        widget.addWidget(self._spend_money)
         widget.setCurrentIndex(widget.currentIndex() + 1)
 
 
