@@ -25,6 +25,27 @@ class appointment_window(QDialog):
 
         # self._appointment.add_btn.clicked.connect(self.save_appointment)
         self.add_btn.clicked.connect(self.save_appointment)
+        self.search_btn.clicked.connect(self.search_date)
+
+    def search_date(self):
+        self.date_input = self.search_date_edit.toPlainText()
+
+        _connect = sqlite3.connect("MEDICO.db3")
+        _cur = _connect.cursor()
+        _query = "SELECT * FROM appointments WHERE appnt_date=?"  # Correct query syntax
+        _cur.execute(_query, (self.date_input,))  # Pass parameters correctly
+
+        _tablerow = 0
+        self.appointment_table.setRowCount(50)
+
+        for col in _cur.fetchall():
+            for col_index, col_data in enumerate(col):
+                self.appointment_table.setItem(
+                    _tablerow, col_index, QtWidgets.QTableWidgetItem(str(col_data))
+                )
+            _tablerow += 1
+
+        _connect.close()
 
     def save_appointment(self):
         v_name_input = self.vname_edit.toPlainText()
