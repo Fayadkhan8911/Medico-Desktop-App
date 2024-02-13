@@ -257,7 +257,7 @@ border-bottom-right-radius:10px;
 </string>
    </property>
    <property name="text">
-    <string>Customize</string>
+    <string>Add Dentist</string>
    </property>
   </widget>
  </widget>

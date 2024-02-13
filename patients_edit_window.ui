@@ -372,23 +372,6 @@ color: rgb(0, 0, 0);</string>
      <string>1.Blood diasease ?</string>
     </property>
    </widget>
-   <widget class="QLabel" name="updt_q1">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>140</y>
-      <width>31</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string>y/n</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="q2">
     <property name="geometry">
      <rect>
@@ -403,23 +386,6 @@ color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
      <string>2.Smoker ?</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="updt_q2">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>160</y>
-      <width>31</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string>y/n</string>
     </property>
    </widget>
    <widget class="QLabel" name="q3">
@@ -438,23 +404,6 @@ color: rgb(0, 0, 0);</string>
      <string>3.Bleeding disorder ?</string>
     </property>
    </widget>
-   <widget class="QLabel" name="updt_q3">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>180</y>
-      <width>31</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string>y/n</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="q4">
     <property name="geometry">
      <rect>
@@ -469,23 +418,6 @@ color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
      <string>4.Hepatitis ?</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="updt_q4">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>200</y>
-      <width>31</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string>y/n</string>
     </property>
    </widget>
    <widget class="QLabel" name="q5">
@@ -504,23 +436,6 @@ color: rgb(0, 0, 0);</string>
      <string>5.Diabetes ?</string>
     </property>
    </widget>
-   <widget class="QLabel" name="updt_q5">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>220</y>
-      <width>31</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string>y/n</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="q6">
     <property name="geometry">
      <rect>
@@ -535,23 +450,6 @@ color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
      <string>6.Epilepsy ?</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="updt_q6">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>240</y>
-      <width>31</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string>y/n</string>
     </property>
    </widget>
    <widget class="QLabel" name="q7">
@@ -570,23 +468,6 @@ color: rgb(0, 0, 0);</string>
      <string>7.Cardiac or kidney diaseases ?</string>
     </property>
    </widget>
-   <widget class="QLabel" name="updt_q7">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>260</y>
-      <width>31</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string>y/n</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="q8">
     <property name="geometry">
      <rect>
@@ -601,23 +482,6 @@ color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
      <string>8.Abnormal blood pressure ?</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="updt_q8">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>280</y>
-      <width>31</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string>y/n</string>
     </property>
    </widget>
    <widget class="QLabel" name="q9">
@@ -636,23 +500,6 @@ color: rgb(0, 0, 0);</string>
      <string>9.Currently on any medications ?</string>
     </property>
    </widget>
-   <widget class="QLabel" name="updt_q9">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>140</y>
-      <width>31</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string>y/n</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="q10">
     <property name="geometry">
      <rect>
@@ -667,23 +514,6 @@ color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
      <string>10.Any respitory diasease/ asthma ?</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="updt_q10">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>160</y>
-      <width>31</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string>y/n</string>
     </property>
    </widget>
    <widget class="QLabel" name="q11">
@@ -702,23 +532,6 @@ color: rgb(0, 0, 0);</string>
      <string>11.Bleeding gums  during brushing teeth ?</string>
     </property>
    </widget>
-   <widget class="QLabel" name="updt_q11">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>180</y>
-      <width>31</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string>y/n</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="q12">
     <property name="geometry">
      <rect>
@@ -733,23 +546,6 @@ color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
      <string>12. Allergies ?</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="updt_q12">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>200</y>
-      <width>31</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string>y/n</string>
     </property>
    </widget>
    <widget class="QLabel" name="q13">
@@ -768,23 +564,6 @@ color: rgb(0, 0, 0);</string>
      <string>13.Nervous Person ?</string>
     </property>
    </widget>
-   <widget class="QLabel" name="updt_q13">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>220</y>
-      <width>31</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string>y/n</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="q14">
     <property name="geometry">
      <rect>
@@ -799,23 +578,6 @@ color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
      <string>14.(Female) Currently Pregnant ?</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="updt_q14">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>240</y>
-      <width>31</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string>y/n</string>
     </property>
    </widget>
    <widget class="QLabel" name="q15">
@@ -850,40 +612,6 @@ color: rgb(0, 0, 0);</string>
      <string>16.Any chronic diasease not stated above ?</string>
     </property>
    </widget>
-   <widget class="QLabel" name="updt_q15">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>260</y>
-      <width>31</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string>y/n</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="updt_q16">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>280</y>
-      <width>31</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string>y/n</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="findings_label">
     <property name="geometry">
      <rect>
@@ -898,23 +626,6 @@ color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
      <string>Medical Findings</string>
-    </property>
-   </widget>
-   <widget class="QTextBrowser" name="updt_med_findings">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>400</y>
-      <width>601</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <property name="html">
-     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QLabel" name="pat_id_labl">
@@ -935,24 +646,6 @@ color: rgb(0, 0, 0);</string>
      <string>Patient ID:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="updt_pat_id">
-    <property name="geometry">
-     <rect>
-      <x>410</x>
-      <y>100</y>
-      <width>81</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
-
-color: rgb(0, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string>N/A</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="age_labl">
     <property name="geometry">
      <rect>
@@ -969,24 +662,6 @@ color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
      <string>Age:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="updt_age">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>320</y>
-      <width>81</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
-
-color: rgb(0, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string>N/A</string>
     </property>
    </widget>
    <widget class="QLabel" name="gender_labl">
@@ -1007,10 +682,10 @@ color: rgb(0, 0, 0);</string>
      <string>Gender:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="updt_gender">
+   <widget class="QLabel" name="reg_dt_labl">
     <property name="geometry">
      <rect>
-      <x>300</x>
+      <x>410</x>
       <y>320</y>
       <width>81</width>
       <height>20</height>
@@ -1022,43 +697,7 @@ color: rgb(0, 0, 0);</string>
 color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>N/A</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="reg_dt_labl">
-    <property name="geometry">
-     <rect>
-      <x>410</x>
-      <y>330</y>
-      <width>81</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
-
-color: rgb(0, 0, 0);</string>
-    </property>
-    <property name="text">
      <string>Date of Reg:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="updt_reg_dt">
-    <property name="geometry">
-     <rect>
-      <x>500</x>
-      <y>330</y>
-      <width>81</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
-
-color: rgb(0, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string>N/A</string>
     </property>
    </widget>
    <widget class="QTextEdit" name="updt_f_name">
@@ -1141,7 +780,7 @@ color: rgb(0, 0, 0);</string>
      </rect>
     </property>
    </widget>
-   <widget class="QTextEdit" name="updt_ref_2">
+   <widget class="QTextEdit" name="updt_comp">
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -1149,6 +788,232 @@ color: rgb(0, 0, 0);</string>
       <width>211</width>
       <height>20</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="updt_q1">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>140</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="updt_q2">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>160</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="updt_q5">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>220</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="updt_q6">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>240</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="updt_q3">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>180</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="updt_q4">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>200</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="updt_q7">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>260</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="updt_q8">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>280</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="updt_q14">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>240</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="updt_q9">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>140</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="updt_q16">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>280</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="updt_q10">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>160</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="updt_q13">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>220</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="updt_q15">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>260</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="updt_q12">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>200</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="updt_q11">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>180</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="updt_age">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>320</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="updt_gender">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>320</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="updt_comp_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>400</y>
+      <width>601</width>
+      <height>100</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="updt_reg_dt">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>320</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>N/A</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="updt_pat_id_2">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>100</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>N/A</string>
     </property>
    </widget>
   </widget>
