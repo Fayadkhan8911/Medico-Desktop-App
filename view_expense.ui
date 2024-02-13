@@ -53,7 +53,7 @@ border-bottom-right-radius:10px;</string>
       <normaloff>../Medico_modern/patientdownload .png</normaloff>../Medico_modern/patientdownload .png</iconset>
     </property>
    </widget>
-   <widget class="QPushButton" name="appoint_btn">
+   <widget class="QPushButton" name="appointment_btn">
     <property name="geometry">
      <rect>
       <x>10</x>

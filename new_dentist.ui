@@ -184,80 +184,171 @@ background-color: rgb(255, 255, 255);</string>
     </property>
    </widget>
   </widget>
-  <widget class="QTableWidget" name="dentist_table">
+  <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>30</y>
-     <width>601</width>
-     <height>491</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
-   </property>
-   <column>
-    <property name="text">
-     <string>Dentist ID</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>First Name</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Last Name</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Email</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Phone</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Date of Birth</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Date of Joining</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Date of Leave</string>
-    </property>
-   </column>
-  </widget>
-  <widget class="QPushButton" name="add_dentist_btn">
-   <property name="geometry">
-    <rect>
-     <x>674</x>
-     <y>550</y>
+     <x>170</x>
+     <y>20</y>
      <width>101</width>
-     <height>23</height>
+     <height>20</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(85, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>Add Dentist</string>
+    <string>First Name</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="add_fname">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>20</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>85</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Last Name</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>150</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Email</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>20</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Phone</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>85</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Date of Birth</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="add_lname">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>85</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="add_email">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>150</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="add_phone">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>20</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="add_dob">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>85</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>260</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Submit</string>
    </property>
   </widget>
  </widget>
