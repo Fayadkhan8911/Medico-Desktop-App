@@ -21,7 +21,8 @@ import appoinment
 import dentist
 import new_dentist
 
-#import sys
+# import sys
+
 
 class _main_window(QDialog):
     def __init__(self):
@@ -72,6 +73,10 @@ class _main_window(QDialog):
 
         for col in _cur.execute("SELECT * FROM appointments"):
             # self.appointment_table.setItem(_tablerow, 0, QtWidgets.QTableWidgetItem(col[0]))
+
+            self.appointment_table.setItem(
+                _tablerow, 0, QtWidgets.QTableWidgetItem(col[0])
+            )
             self.appointment_table.setItem(
                 _tablerow, 1, QtWidgets.QTableWidgetItem(col[1])
             )
@@ -294,17 +299,19 @@ class _main_window(QDialog):
         self._make_payment.pushButton.clicked.connect(self.createpayment)
         self._make_payment.appointment_btn.clicked.connect(self._go_appoinment)
         self._make_payment.dentist_btn.clicked.connect(self.get_dentist)
-    
+
     def createpayment(self):
         f_name = self._make_payment.fname_srch_edit.toPlainText()
         phone = self._make_payment.phone_srch_edit.toPlainText()
         amount = self._make_payment.payment_edit.toPlainText()
         remarks = self._make_payment.remarks_edit.toPlainText()
-        
+
         conn = sqlite3.connect("medico.db3")
         cursor = conn.cursor()
         # Retrieve the p_id using the provided first name and phone number
-        cursor.execute("SELECT p_id FROM patients WHERE f_name = ? AND phone = ?", (f_name, phone))
+        cursor.execute(
+            "SELECT p_id FROM patients WHERE f_name = ? AND phone = ?", (f_name, phone)
+        )
         result = cursor.fetchone()
         if result:
             p_id = result[0]
@@ -314,7 +321,9 @@ class _main_window(QDialog):
             return
 
         # Retrieve the last payment_id
-        cursor.execute("SELECT MAX(CAST(SUBSTR(payment_id, 5) AS INTEGER)) FROM payment_history")
+        cursor.execute(
+            "SELECT MAX(CAST(SUBSTR(payment_id, 5) AS INTEGER)) FROM payment_history"
+        )
         result = cursor.fetchone()
         if result[0] is not None:
             last_payment_id = result[0]
@@ -325,16 +334,20 @@ class _main_window(QDialog):
         payment_id = last_payment_id + 1
 
         # Get the current date
-        payment_date = QDate.currentDate().toString("yyyy-MM-dd")  # You need to implement this function
+        payment_date = QDate.currentDate().toString(
+            "yyyy-MM-dd"
+        )  # You need to implement this function
 
         # Insert the payment record into the payment_history table
-        cursor.execute("INSERT INTO payment_history (payment_id, p_id, payment_date, payment_amount, payment_remarks) VALUES (?, ?, ?, ?, ?)",
-                    (payment_id, p_id, payment_date, int(amount), remarks))
+        cursor.execute(
+            "INSERT INTO payment_history (payment_id, p_id, payment_date, payment_amount, payment_remarks) VALUES (?, ?, ?, ?, ?)",
+            (payment_id, p_id, payment_date, int(amount), remarks),
+        )
 
         # Commit the transaction
         conn.commit()
 
-        print("Payment record inserted successfully.")    
+        print("Payment record inserted successfully.")
 
     def _go_spend_money(self):
         self._spend_money = expense_window._expense_window()
@@ -354,7 +367,7 @@ class _main_window(QDialog):
         self._view_expense_window = view_expense._expense_view_window(expense_date)
         widget.addWidget(self._view_expense_window)
         widget.setCurrentIndex(widget.currentIndex() + 1)
-        
+
     def get_dentist(self):
         self.dentist_tab = dentist._dentist_window()
         widget.addWidget(self.dentist_tab)
@@ -366,8 +379,7 @@ class _main_window(QDialog):
         self.dentist_tab.expense_btn.clicked.connect(self._go_spend_money)
         self.dentist_tab.appointment_btn.clicked.connect(self._go_appoinment)
         self.dentist_tab.add_dentist_btn.clicked.connect(self.add_new_dentist)
-        
-        
+
     def add_new_dentist(self):
         self.new_dentist_tab = new_dentist.new_dentist_window()
         widget.addWidget(self.new_dentist_tab)

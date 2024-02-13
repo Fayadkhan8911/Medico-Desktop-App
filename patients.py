@@ -11,6 +11,28 @@ class _patient_window(QDialog):
     def __init__(self):
         super(_patient_window, self).__init__()
         loadUi("patients_window.ui", self)
+        self.load_patients_table()
+
+    def load_patients_table(self):
+        _connect = sqlite3.connect("MEDICO.db3")
+        _cur = _connect.cursor()
+        # _query = ("SELECT * FROM appointments WHERE appnt_date = ?",(self.current_date,),)
+
+        # data = _cur.fetchall()  # Fetch data
+        _tablerow = 0
+        self.patient_table.setRowCount(50)
+        # cursor.execute("SELECT * FROM patientss WHERE appnt_date = ?", (self.current_date,))
+
+        for col in _cur.execute("SELECT * FROM patients"):
+            # self.patient_table.setItem(_tablerow, 0, QtWidgets.QTableWidgetItem(col[0]))
+            item = str(col[0])
+            self.patient_table.setItem(_tablerow, 0, QtWidgets.QTableWidgetItem(item))
+            self.patient_table.setItem(_tablerow, 1, QtWidgets.QTableWidgetItem(col[1]))
+            self.patient_table.setItem(_tablerow, 2, QtWidgets.QTableWidgetItem(col[2]))
+            self.patient_table.setItem(_tablerow, 3, QtWidgets.QTableWidgetItem(col[3]))
+            self.patient_table.setItem(_tablerow, 4, QtWidgets.QTableWidgetItem(col[4]))
+            _tablerow += 1
+            pass
 
 
 """

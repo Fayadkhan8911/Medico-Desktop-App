@@ -1215,27 +1215,6 @@ color: rgb(0, 0, 0);</string>
     </property>
    </widget>
   </widget>
-  <widget class="QPushButton" name="edit_pat">
-   <property name="geometry">
-    <rect>
-     <x>610</x>
-     <y>550</y>
-     <width>171</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-top-left-radius:10px;
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-background-color: rgb(85, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string>Customize</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="return_pat">
    <property name="geometry">
     <rect>

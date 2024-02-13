@@ -182,7 +182,7 @@ border-bottom-right-radius:10px;</string>
     </property>
    </widget>
   </widget>
-  <widget class="QTableWidget" name="patient_window">
+  <widget class="QTableWidget" name="patient_table">
    <property name="geometry">
     <rect>
      <x>220</x>
