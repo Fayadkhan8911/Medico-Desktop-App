@@ -81,7 +81,7 @@ selection-color: rgb(255, 255, 255);</string>
       <normaloff>../Medico_modern/dashboard.png</normaloff>../Medico_modern/dashboard.png</iconset>
     </property>
    </widget>
-   <widget class="QPushButton" name="appoint_btn">
+   <widget class="QPushButton" name="appointment_btn">
     <property name="geometry">
      <rect>
       <x>10</x>
