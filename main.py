@@ -21,6 +21,8 @@ import appoinment
 import dentist
 import new_dentist
 
+#import sys
+
 class _main_window(QDialog):
     def __init__(self):
         super(_main_window, self).__init__()
