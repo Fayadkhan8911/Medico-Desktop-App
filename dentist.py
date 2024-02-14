@@ -29,7 +29,8 @@ class _dentist_window(QDialog):
         results = cursor.fetchall()
 
         for col in results:
-            self.dentist_table.setItem(_tablerow, 0, QtWidgets.QTableWidgetItem(col[0]))
+            item = str(col[0])
+            self.dentist_table.setItem(_tablerow, 0, QtWidgets.QTableWidgetItem(item))
             self.dentist_table.setItem(_tablerow, 1, QtWidgets.QTableWidgetItem(col[1]))
             self.dentist_table.setItem(_tablerow, 2, QtWidgets.QTableWidgetItem(col[2]))
             self.dentist_table.setItem(_tablerow, 3, QtWidgets.QTableWidgetItem(col[3]))

@@ -367,6 +367,13 @@ class _main_window(QDialog):
         self._view_expense_window = view_expense._expense_view_window(expense_date)
         widget.addWidget(self._view_expense_window)
         widget.setCurrentIndex(widget.currentIndex() + 1)
+        self._view_expense_window.dash_btn.clicked.connect(self._go_dash)
+        self._view_expense_window.patient_btn.clicked.connect(self._go_patient_window)
+        self._view_expense_window.payment_btn.clicked.connect(self._go_make_payment)
+        self._view_expense_window.expense_btn.clicked.connect(self._go_spend_money)
+        # self._view_expense_window.calendar.clicked.connect(self.grab_expense)
+        self._view_expense_window.appointment_btn.clicked.connect(self._go_appoinment)
+        self._view_expense_window.dentist_btn.clicked.connect(self.get_dentist)
 
     def get_dentist(self):
         self.dentist_tab = dentist._dentist_window()
@@ -384,6 +391,12 @@ class _main_window(QDialog):
         self.new_dentist_tab = new_dentist.new_dentist_window()
         widget.addWidget(self.new_dentist_tab)
         widget.setCurrentIndex(widget.currentIndex() + 1)
+        self.new_dentist_tab.dash_btn.clicked.connect(self._go_dash)
+        self.new_dentist_tab.patient_btn.clicked.connect(self._go_patient_window)
+        self.new_dentist_tab.payment_btn.clicked.connect(self._go_make_payment)
+        self.new_dentist_tab.expense_btn.clicked.connect(self._go_spend_money)
+        self.new_dentist_tab.appointment_btn.clicked.connect(self._go_appoinment)
+        self.new_dentist_tab.dentist_btn.clicked.connect(self.get_dentist)
 
 
 """     this was for 'only one main.py' file format
