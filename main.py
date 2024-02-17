@@ -35,8 +35,9 @@ class _main_window(QDialog):
         self.appointment_btn.clicked.connect(self._go_appoinment)
         self.dentist_btn.clicked.connect(self.get_dentist)
         # self.add_patient_btn.clicked.connect(self._go_add_pat)
-        current_day = self.current_date()
-        print(current_day)
+        current_day = QDate.currentDate()
+        formatted_date = current_day.toString("yyyy-MM-dd")
+        print(formatted_date)
         self.load_appointment_table()
         self.load_expense_table()
 
@@ -363,6 +364,7 @@ class _main_window(QDialog):
 
     def grab_expense(self):
         dateSelected = self._spend_money.calendar.selectedDate()
+        print(dateSelected)
         expense_date = str(dateSelected.toPyDate())
         self._view_expense_window = view_expense._expense_view_window(expense_date)
         widget.addWidget(self._view_expense_window)
@@ -423,7 +425,7 @@ _main = _main_window()
 widget.addWidget(_main)
 
 
-widget.setFixedWidth(800)
+widget.setFixedWidth(1200)
 widget.setFixedHeight(600)
 widget.show()
 try:

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>1200</width>
     <height>600</height>
    </rect>
   </property>
@@ -26,7 +26,8 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(170, 255, 255);</string>
+    <string notr="true">background-color: rgb(160, 160, 160);
+background-color: rgb(170, 170, 255);</string>
    </property>
    <widget class="QPushButton" name="patient_btn">
     <property name="geometry">
@@ -70,7 +71,8 @@ border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;
 border-bottom-color: rgb(0, 0, 0);
-selection-color: rgb(255, 255, 255);</string>
+selection-color: rgb(255, 255, 255);
+background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Dashboard</string>
@@ -185,15 +187,13 @@ border-bottom-right-radius:10px;</string>
    <property name="geometry">
     <rect>
      <x>160</x>
-     <y>40</y>
-     <width>312</width>
-     <height>171</height>
+     <y>20</y>
+     <width>401</width>
+     <height>231</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);
-background-color: rgb(170, 255, 255);</string>
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="gridVisible">
     <bool>false</bool>
@@ -202,16 +202,20 @@ background-color: rgb(170, 255, 255);</string>
   <widget class="QTableWidget" name="appointment_table">
    <property name="geometry">
     <rect>
-     <x>480</x>
-     <y>40</y>
-     <width>311</width>
-     <height>321</height>
+     <x>580</x>
+     <y>50</y>
+     <width>600</width>
+     <height>251</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(0, 255, 255);
 font: 12pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgba(255, 255, 255,50);
+
+border-bottom-left-radius:20px;
+
+border-bottom-right-radius:20px;</string>
    </property>
    <column>
     <property name="text">
@@ -232,16 +236,20 @@ background-color: rgb(255, 255, 255);</string>
   <widget class="QTableWidget" name="expense_table">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>370</y>
+     <x>580</x>
+     <y>340</y>
      <width>601</width>
-     <height>211</height>
+     <height>250</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(0, 255, 255);
 font: 12pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(255, 255, 255);
+
+border-bottom-left-radius:20px;
+
+border-bottom-right-radius:20px;</string>
    </property>
    <column>
     <property name="text">
@@ -262,16 +270,21 @@ background-color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>340</y>
-     <width>201</width>
+     <x>580</x>
+     <y>310</y>
+     <width>601</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
 font: 16pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(255, 255, 255);</string>
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+
+border-top-right-radius:20px;
+border-bottom-right-radius:20px;</string>
    </property>
    <property name="text">
     <string>Expenses of Today</string>
@@ -280,21 +293,52 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>480</x>
-     <y>10</y>
-     <width>251</width>
+     <x>580</x>
+     <y>20</y>
+     <width>601</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
 font: 16pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(255, 255, 255);</string>
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+
+border-top-right-radius:20px;
+border-bottom-right-radius:20px;</string>
    </property>
    <property name="text">
     <string>Appointments of Today</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>0</y>
+     <width>1041</width>
+     <height>601</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>Images/ozkan-guner-aFqSRokmw2E-unsplash.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>label_3</zorder>
+  <zorder>side_bar</zorder>
+  <zorder>calendarWidget</zorder>
+  <zorder>appointment_table</zorder>
+  <zorder>expense_table</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
  </widget>
  <resources/>
  <connections/>
