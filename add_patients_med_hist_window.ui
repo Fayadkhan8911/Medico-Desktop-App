@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>1200</width>
     <height>600</height>
    </rect>
   </property>
@@ -26,7 +26,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(170, 255, 255);</string>
+    <string notr="true">background-color: rgb(170, 170, 255);</string>
    </property>
    <widget class="QPushButton" name="dash_btn">
     <property name="geometry">
@@ -168,12 +168,13 @@ border-bottom-right-radius:10px;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(255, 255, 255);
 
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
-border-bottom-right-radius:10px;</string>
+border-bottom-right-radius:10px;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Patients</string>
@@ -186,71 +187,51 @@ border-bottom-right-radius:10px;</string>
   <widget class="QWidget" name="widget" native="true">
    <property name="geometry">
     <rect>
-     <x>180</x>
+     <x>190</x>
      <y>20</y>
-     <width>601</width>
-     <height>381</height>
+     <width>521</width>
+     <height>521</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+border-top-left-radius:10px;
+border-bottom-left-radius:10px;
+border-top-right-radius:10px;
+border-bottom-right-radius:10px;
+background-color: rgba(0, 0, 0,.5);
+color: rgb(255, 255, 255);</string>
    </property>
-   <widget class="QLabel" name="med_hist_label">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>0</y>
-      <width>121</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="text">
-     <string>Medical History</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="q1">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>40</y>
-      <width>431</width>
+      <width>481</width>
       <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>1.Blood diasease ?</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="y_label">
-    <property name="geometry">
-     <rect>
-      <x>560</x>
-      <y>0</y>
-      <width>31</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="text">
-     <string>Yes</string>
+     <string>  1.Blood diasease ?</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="q1_y_check">
     <property name="geometry">
      <rect>
-      <x>560</x>
+      <x>500</x>
       <y>40</y>
       <width>16</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
     </property>
     <property name="text">
      <string/>
@@ -259,27 +240,32 @@ border-bottom-right-radius:10px;</string>
    <widget class="QLabel" name="q2">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>60</y>
-      <width>431</width>
+      <x>10</x>
+      <y>70</y>
+      <width>481</width>
       <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>2.Do You Smoke ?</string>
+     <string>  2.Do You Smoke ?</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="q2_y_check">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>60</y>
+      <x>500</x>
+      <y>70</y>
       <width>16</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
     </property>
     <property name="text">
      <string/>
@@ -288,27 +274,32 @@ border-bottom-right-radius:10px;</string>
    <widget class="QLabel" name="q3">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>80</y>
-      <width>431</width>
+      <x>10</x>
+      <y>100</y>
+      <width>481</width>
       <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>3.Bleeding disorder ?</string>
+     <string>  3.Bleeding disorder ?</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="q3_y_check">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>80</y>
+      <x>500</x>
+      <y>100</y>
       <width>16</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
     </property>
     <property name="text">
      <string/>
@@ -317,27 +308,32 @@ border-bottom-right-radius:10px;</string>
    <widget class="QLabel" name="q4">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>100</y>
-      <width>431</width>
+      <x>10</x>
+      <y>130</y>
+      <width>481</width>
       <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>4.Do you have Hepatitis ?</string>
+     <string>  4.Do you have Hepatitis ?</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="q4_y_check">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>100</y>
+      <x>500</x>
+      <y>130</y>
       <width>16</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
     </property>
     <property name="text">
      <string/>
@@ -346,27 +342,32 @@ border-bottom-right-radius:10px;</string>
    <widget class="QLabel" name="q5">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>120</y>
-      <width>431</width>
+      <x>10</x>
+      <y>160</y>
+      <width>481</width>
       <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>5.Do you have Diabetes ?</string>
+     <string>  5.Do you have Diabetes ?</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="q5_y_check">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>120</y>
+      <x>500</x>
+      <y>160</y>
       <width>16</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
     </property>
     <property name="text">
      <string/>
@@ -375,27 +376,32 @@ border-bottom-right-radius:10px;</string>
    <widget class="QLabel" name="q6">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>140</y>
-      <width>431</width>
+      <x>10</x>
+      <y>190</y>
+      <width>481</width>
       <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>6.Do you Epilepsy ?</string>
+     <string>  6.Do you Epilepsy ?</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="q6_y_check">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>140</y>
+      <x>500</x>
+      <y>190</y>
       <width>16</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
     </property>
     <property name="text">
      <string/>
@@ -404,27 +410,32 @@ border-bottom-right-radius:10px;</string>
    <widget class="QLabel" name="q7">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>160</y>
-      <width>431</width>
+      <x>10</x>
+      <y>220</y>
+      <width>481</width>
       <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>7.Do you have any cardiac or kidney diaseases ?</string>
+     <string>  7.Do you have any cardiac or kidney diaseases ?</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="q7_y_check">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>160</y>
+      <x>500</x>
+      <y>220</y>
       <width>16</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
     </property>
     <property name="text">
      <string/>
@@ -433,27 +444,32 @@ border-bottom-right-radius:10px;</string>
    <widget class="QLabel" name="q8">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>180</y>
-      <width>431</width>
+      <x>10</x>
+      <y>250</y>
+      <width>481</width>
       <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>8.Do you have any abnormal blood pressure ?</string>
+     <string>  8.Do you have any abnormal blood pressure ?</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="q8_y_check">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>180</y>
+      <x>500</x>
+      <y>250</y>
       <width>16</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
     </property>
     <property name="text">
      <string/>
@@ -462,27 +478,32 @@ border-bottom-right-radius:10px;</string>
    <widget class="QLabel" name="q9">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>200</y>
-      <width>431</width>
+      <x>10</x>
+      <y>280</y>
+      <width>481</width>
       <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>9.Are you currently on any medications ?</string>
+     <string>  9.Are you currently on any medications ?</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="q9_y_check">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>200</y>
+      <x>500</x>
+      <y>280</y>
       <width>16</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
     </property>
     <property name="text">
      <string/>
@@ -491,27 +512,32 @@ border-bottom-right-radius:10px;</string>
    <widget class="QLabel" name="q10">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>220</y>
-      <width>431</width>
+      <x>10</x>
+      <y>310</y>
+      <width>481</width>
       <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>10.Do you have any respitory diasease/ asthma ?</string>
+     <string>  10.Do you have any respitory diasease/ asthma ?</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="q10_y_check">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>220</y>
+      <x>500</x>
+      <y>310</y>
       <width>16</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
     </property>
     <property name="text">
      <string/>
@@ -520,27 +546,32 @@ border-bottom-right-radius:10px;</string>
    <widget class="QLabel" name="q11">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>240</y>
-      <width>431</width>
+      <x>10</x>
+      <y>340</y>
+      <width>481</width>
       <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>11.Do your gums bleed when you brush your teeth ?</string>
+     <string>  11.Do your gums bleed when you brush your teeth ?</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="q11_y_check">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>240</y>
+      <x>500</x>
+      <y>340</y>
       <width>16</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
     </property>
     <property name="text">
      <string/>
@@ -549,27 +580,32 @@ border-bottom-right-radius:10px;</string>
    <widget class="QLabel" name="q12">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>260</y>
-      <width>431</width>
+      <x>10</x>
+      <y>370</y>
+      <width>481</width>
       <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>12.Do your consider yourself to be a nervous person ?</string>
+     <string>  12.Do your consider yourself to be a nervous person ?</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="q12_y_check">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>260</y>
+      <x>500</x>
+      <y>370</y>
       <width>16</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
     </property>
     <property name="text">
      <string/>
@@ -578,27 +614,32 @@ border-bottom-right-radius:10px;</string>
    <widget class="QLabel" name="q13">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>280</y>
-      <width>431</width>
+      <x>10</x>
+      <y>400</y>
+      <width>481</width>
       <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>13.Allergies (penicillin, aspirin,local anesthesia , codeine ,others ?</string>
+     <string>  13.Allergies (penicillin, aspirin,local anesthesia , codeine ,others ?</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="q13_y_check">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>280</y>
+      <x>500</x>
+      <y>400</y>
       <width>16</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
     </property>
     <property name="text">
      <string/>
@@ -607,27 +648,32 @@ border-bottom-right-radius:10px;</string>
    <widget class="QLabel" name="q14">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>300</y>
-      <width>431</width>
+      <x>10</x>
+      <y>430</y>
+      <width>481</width>
       <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>14.(Female) Currently Pregnant ?</string>
+     <string>  14.(Female) Currently Pregnant ?</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="q14_y_check">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>300</y>
+      <x>500</x>
+      <y>430</y>
       <width>16</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
     </property>
     <property name="text">
      <string/>
@@ -636,27 +682,32 @@ border-bottom-right-radius:10px;</string>
    <widget class="QLabel" name="q15">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>320</y>
-      <width>431</width>
+      <x>10</x>
+      <y>460</y>
+      <width>481</width>
       <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>15.(Female) Currently breastfeeding ?</string>
+     <string>  15.(Female) Currently breastfeeding ?</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="q15_y_check">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>320</y>
+      <x>500</x>
+      <y>460</y>
       <width>16</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
     </property>
     <property name="text">
      <string/>
@@ -665,24 +716,26 @@ border-bottom-right-radius:10px;</string>
    <widget class="QLabel" name="q16">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>340</y>
-      <width>431</width>
+      <x>10</x>
+      <y>490</y>
+      <width>481</width>
       <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>16.Do you have any other chronic diasease not stated above ?</string>
+     <string>  16.Do you have any other chronic diasease not stated above ?</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="q16_y_check">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>340</y>
+      <x>500</x>
+      <y>490</y>
       <width>16</width>
       <height>20</height>
      </rect>
@@ -691,59 +744,43 @@ border-bottom-right-radius:10px;</string>
      <string/>
     </property>
    </widget>
-   <zorder>q1</zorder>
-   <zorder>med_hist_label</zorder>
-   <zorder>y_label</zorder>
-   <zorder>q1_y_check</zorder>
-   <zorder>q2</zorder>
-   <zorder>q2_y_check</zorder>
-   <zorder>q3</zorder>
-   <zorder>q3_y_check</zorder>
-   <zorder>q4</zorder>
-   <zorder>q4_y_check</zorder>
-   <zorder>q5</zorder>
-   <zorder>q5_y_check</zorder>
-   <zorder>q6</zorder>
-   <zorder>q6_y_check</zorder>
-   <zorder>q7</zorder>
-   <zorder>q7_y_check</zorder>
-   <zorder>q8</zorder>
-   <zorder>q8_y_check</zorder>
-   <zorder>q9</zorder>
-   <zorder>q9_y_check</zorder>
-   <zorder>q10</zorder>
-   <zorder>q10_y_check</zorder>
-   <zorder>q11</zorder>
-   <zorder>q11_y_check</zorder>
-   <zorder>q12</zorder>
-   <zorder>q12_y_check</zorder>
-   <zorder>q13</zorder>
-   <zorder>q13_y_check</zorder>
-   <zorder>q14</zorder>
-   <zorder>q14_y_check</zorder>
-   <zorder>q15</zorder>
-   <zorder>q15_y_check</zorder>
-   <zorder>q16</zorder>
-   <zorder>q16_y_check</zorder>
+   <widget class="QLabel" name="findings_label_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>521</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>  Medical History</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QWidget" name="widget_2" native="true">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>410</y>
-     <width>601</width>
-     <height>111</height>
+     <x>810</x>
+     <y>20</y>
+     <width>351</width>
+     <height>381</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);</string>
    </property>
    <widget class="QLabel" name="findings_label">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>0</x>
       <y>0</y>
-      <width>121</width>
+      <width>351</width>
       <height>31</height>
      </rect>
     </property>
@@ -751,36 +788,42 @@ border-bottom-right-radius:10px;</string>
      <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
     <property name="text">
-     <string>Medical Findings</string>
+     <string>  Medical Findings</string>
     </property>
    </widget>
    <widget class="QTextEdit" name="med_find_edit">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>30</y>
-      <width>581</width>
-      <height>70</height>
+      <x>0</x>
+      <y>40</y>
+      <width>351</width>
+      <height>341</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
    </widget>
+   <zorder>med_find_edit</zorder>
+   <zorder>findings_label</zorder>
   </widget>
   <widget class="QPushButton" name="save_pat">
    <property name="geometry">
     <rect>
-     <x>580</x>
-     <y>550</y>
+     <x>990</x>
+     <y>530</y>
      <width>171</width>
      <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-top-left-radius:10px;
-font: 10pt &quot;MS Shell Dlg 2&quot;;
+    <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;
-background-color: rgb(85, 255, 255);</string>
+</string>
    </property>
    <property name="text">
     <string>Save and add patient</string>
@@ -791,23 +834,97 @@ background-color: rgb(85, 255, 255);</string>
     <rect>
      <x>190</x>
      <y>550</y>
-     <width>171</width>
-     <height>41</height>
+     <width>101</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-top-left-radius:10px;
-font: 10pt &quot;MS Shell Dlg 2&quot;;
+    <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;
- 
-background-color: rgb(85, 255, 255);</string>
+</string>
    </property>
    <property name="text">
     <string>Restart </string>
    </property>
   </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>0</y>
+     <width>1041</width>
+     <height>601</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>Images/daniel-frank-wKbWAMlHgNo-unsplash.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>195</x>
+     <y>555</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 0);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+border-top-left-radius:10px;
+border-bottom-left-radius:10px;
+border-top-right-radius:10px;
+border-bottom-right-radius:10px;
+color: rgb(255, 255, 255);
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>995</x>
+     <y>535</y>
+     <width>170</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 0);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+border-top-left-radius:10px;
+border-bottom-left-radius:10px;
+border-top-right-radius:10px;
+border-bottom-right-radius:10px;
+color: rgb(255, 255, 255);
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>side_bar</zorder>
+  <zorder>patient_btn</zorder>
+  <zorder>widget</zorder>
+  <zorder>widget_2</zorder>
+  <zorder>label_4</zorder>
+  <zorder>restart_btn</zorder>
+  <zorder>label_5</zorder>
+  <zorder>save_pat</zorder>
  </widget>
  <resources/>
  <connections/>

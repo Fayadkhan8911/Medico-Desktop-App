@@ -1,7 +1,13 @@
 import sys
 from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QDialog, QApplication, QWidget
+from PyQt5.QtWidgets import (
+    QDialog,
+    QApplication,
+    QWidget,
+    QTableWidget,
+    QTableWidgetItem,
+)
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QApplication, QCalendarWidget
 from PyQt5.QtCore import QDate
@@ -40,25 +46,37 @@ class _main_window(QDialog):
         print(formatted_date)
         self.load_appointment_table()
         self.load_expense_table()
+        # self.show_expenses()
+        # Get the current date
+
+    current_date = QDate.currentDate()
+
+    # Convert to 'yyyy-MM-dd' format
+    formatted_date = current_date.toString("yyyy-MM-dd")
 
     def load_expense_table(self):
         _connect = sqlite3.connect("MEDICO.db3")
         _cur = _connect.cursor()
         # _query = ("SELECT * FROM appointments WHERE appnt_date = ?",(self.current_date,),)
+        self.expense_table.setColumnWidth(1, 200)
+        self.expense_table.setColumnWidth(0, 200)
 
         # data = _cur.fetchall()  # Fetch data
         tablerow = 0
         self.expense_table.setRowCount(50)
         # cursor.execute("SELECT * FROM appointments WHERE appnt_date = ?", (self.current_date,))
 
-        for col in _cur.execute("SELECT * FROM expense"):
-            # self.expense_table.setItem(_tablerow, 0, QtWidgets.QTableWidgetItem(col[0]))
-            self.expense_table.setItem(tablerow, 0, QtWidgets.QTableWidgetItem(col[2]))
-            self.expense_table.setItem(tablerow, 1, QtWidgets.QTableWidgetItem(col[3]))
-            item_text = str(col[1])
+        for col in _cur.execute(
+            "SELECT expense_description, expense_remarks, expense_cost FROM expense WHERE expense_date=?",
+            (self.formatted_date,),
+        ):
+            int_cost = str(col[2])
+            self.expense_table.setItem(tablerow, 0, QtWidgets.QTableWidgetItem(col[0]))
+            self.expense_table.setItem(tablerow, 1, QtWidgets.QTableWidgetItem(col[1]))
             self.expense_table.setItem(
-                tablerow, 2, QtWidgets.QTableWidgetItem(item_text)
+                tablerow, 2, QtWidgets.QTableWidgetItem(int_cost)
             )
+
             tablerow += 1
             pass
 
@@ -66,13 +84,17 @@ class _main_window(QDialog):
         _connect = sqlite3.connect("MEDICO.db3")
         _cur = _connect.cursor()
         # _query = ("SELECT * FROM appointments WHERE appnt_date = ?",(self.current_date,),)
-
+        self.appointment_table.setColumnWidth(0, 200)
+        self.appointment_table.setColumnWidth(1, 200)
         # data = _cur.fetchall()  # Fetch data
         _tablerow = 0
         self.appointment_table.setRowCount(50)
         # cursor.execute("SELECT * FROM appointments WHERE appnt_date = ?", (self.current_date,))
 
-        for col in _cur.execute("SELECT * FROM appointments"):
+        for col in _cur.execute(
+            "SELECT visitor_name, visitor_phone, visit_time FROM appointments WHERE visit_date=?",
+            (self.formatted_date,),
+        ):
             # self.appointment_table.setItem(_tablerow, 0, QtWidgets.QTableWidgetItem(col[0]))
 
             self.appointment_table.setItem(
@@ -84,12 +106,7 @@ class _main_window(QDialog):
             self.appointment_table.setItem(
                 _tablerow, 2, QtWidgets.QTableWidgetItem(col[2])
             )
-            self.appointment_table.setItem(
-                _tablerow, 3, QtWidgets.QTableWidgetItem(col[3])
-            )
-            self.appointment_table.setItem(
-                _tablerow, 4, QtWidgets.QTableWidgetItem(col[4])
-            )
+
             _tablerow += 1
             pass
 
