@@ -11,6 +11,7 @@ import error_for_expense
 
 import pytz
 from PyQt5.QtCore import QTimeZone
+import requests
 
 
 class _expense_window(QDialog):
@@ -57,6 +58,18 @@ class _expense_window(QDialog):
                     conn.commit()
                     conn.close()
                     print("Expense Added")
+                    message = "New Expense of " + str(expense_date) + "\n" + "Description: " + expense_description + "\n" + "Amount: " + str(expense_amount) + "\n" + "Remarks: " + expense_remarks
+                    url = f'https://api.telegram.org/bot6966315301:AAF79OPk17hjJ_dN75FOXnt_VmrFNePY7Hs/sendMessage'
+                    params = {
+                        'chat_id': -1002137636697,
+                        'text': message
+                    }
+                    response = requests.post(url, params=params)
+                    if response.status_code == 200:
+                        print('Message sent successfully!')
+                    else:
+                        print(f'Failed to send message. Status code: {response.status_code}')
+                        print(response.text)  # Print the error response if any
                     
             except ValueError:
                 self.show_error_window("Invalid Amount Input. Please Use Number Only.")

@@ -5,6 +5,7 @@ import sqlite3
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication, QDialog, QVBoxLayout, QPushButton, QStackedWidget, QLabel
 from PyQt5.QtCore import QDate
+import requests
 
 
 
@@ -78,6 +79,23 @@ class _add_med_hist_win(QDialog):
         conn.commit()
         conn.close()
         print("Patient data and medical history saved successfully.")
+        message = "New Patient Added." + "\n" + "Registration Date: " + str(QDate.currentDate().toString("yyyy-MM-dd")) + "\n" + "Patient ID: " + str(new_p_id) + "\n" + "First Name: " + self.f_name + "\n" + "Last Name: " + self.l_name + "\n" + "Phone Number: " + str(self.phone) + "\n" + "Age: " + str(self.age) + "\n" + "Sex: " + self.sex + "\n" + "Address: " + self.address + "\n" + "Email: " + self.email + "\n" + "Departure Date: " + self.date_of_departure + "\n" + "Reference: " + self.reference + "\n" + "Complain " + self.chief_complain  + "\n"
+        # Send the message to your channel using the bot
+        url = f'https://api.telegram.org/bot6966315301:AAF79OPk17hjJ_dN75FOXnt_VmrFNePY7Hs/sendMessage'
+        params = {
+            'chat_id': -1002137636697,
+            'text': message
+        }
+        response = requests.post(url, params=params)
+
+        # Check if the message was sent successfully
+        if response.status_code == 200:
+            print('Message sent successfully!')
+        else:
+            print(f'Failed to send message. Status code: {response.status_code}')
+            print(response.text)  # Print the error response if any
+
+        
         
         # Clear the variables
         self.f_name = ""
