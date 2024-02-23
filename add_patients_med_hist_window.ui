@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
-    <height>600</height>
+    <width>1280</width>
+    <height>680</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,7 +22,7 @@
      <x>0</x>
      <y>0</y>
      <width>160</width>
-     <height>600</height>
+     <height>681</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -32,7 +32,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>30</y>
+      <y>80</y>
       <width>140</width>
       <height>40</height>
      </rect>
@@ -60,7 +60,7 @@ selection-color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>430</y>
+      <y>480</y>
       <width>140</width>
       <height>40</height>
      </rect>
@@ -85,7 +85,7 @@ border-bottom-right-radius:10px;</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>530</y>
+      <y>580</y>
       <width>140</width>
       <height>40</height>
      </rect>
@@ -110,7 +110,7 @@ border-bottom-right-radius:10px;</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>230</y>
+      <y>280</y>
       <width>140</width>
       <height>40</height>
      </rect>
@@ -135,7 +135,7 @@ border-bottom-right-radius:10px;</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>330</y>
+      <y>380</y>
       <width>140</width>
       <height>40</height>
      </rect>
@@ -156,12 +156,34 @@ border-bottom-right-radius:10px;</string>
       <normaloff>../Medico_modern/billingdownload (1).png</normaloff>../Medico_modern/billingdownload (1).png</iconset>
     </property>
    </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>161</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 20pt &quot;MS Shell Dlg 2&quot;;
+font: 75 20pt &quot;MS Shell Dlg 2&quot;;
+text-decoration: underline;
+font: 22pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgba(255, 255, 255,0);
+color: rgb(255, 255, 255);
+</string>
+    </property>
+    <property name="text">
+     <string> Medico App </string>
+    </property>
+   </widget>
   </widget>
   <widget class="QPushButton" name="patient_btn">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>130</y>
+     <y>180</y>
      <width>140</width>
      <height>40</height>
     </rect>
@@ -765,9 +787,9 @@ background-color: rgb(0, 0, 0);</string>
   <widget class="QWidget" name="widget_2" native="true">
    <property name="geometry">
     <rect>
-     <x>810</x>
+     <x>740</x>
      <y>20</y>
-     <width>351</width>
+     <width>421</width>
      <height>381</height>
     </rect>
    </property>
@@ -796,7 +818,7 @@ background-color: rgb(0, 0, 0);</string>
      <rect>
       <x>0</x>
       <y>40</y>
-      <width>351</width>
+      <width>421</width>
       <height>341</height>
      </rect>
     </property>
@@ -854,10 +876,10 @@ border-bottom-right-radius:10px;
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>0</y>
-     <width>1041</width>
-     <height>601</height>
+     <x>20</x>
+     <y>-20</y>
+     <width>1280</width>
+     <height>720</height>
     </rect>
    </property>
    <property name="text">
