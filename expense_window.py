@@ -53,7 +53,7 @@ class _expense_window(QDialog):
                 else:
                     conn = sqlite3.connect("medico.db3")
                     cursor = conn.cursor()
-                    cursor.execute("INSERT INTO expense (expense_amount, expense_description, expense_remarks, expense_date) VALUES (?, ?, ?, ?)",
+                    cursor.execute("INSERT INTO expense (expense_cost, expense_description, expense_remarks, expense_date) VALUES (?, ?, ?, ?)",
                       (expense_amount, expense_description, expense_remarks, expense_date))
                     conn.commit()
                     conn.close()
