@@ -22,8 +22,12 @@ class _patient_window(QDialog):
         _tablerow = 0
         self.patient_table.setRowCount(50)
         # cursor.execute("SELECT * FROM patientss WHERE appnt_date = ?", (self.current_date,))
-
-        for col in _cur.execute("SELECT * FROM patients"):
+        self.patient_table.setColumnWidth(5, 200)
+        self.patient_table.setColumnWidth(1, 200)
+        self.patient_table.setColumnWidth(2, 200)
+        for col in _cur.execute(
+            "SELECT p_id,f_name,l_name,sex,age,phone FROM patients"
+        ):
             # self.patient_table.setItem(_tablerow, 0, QtWidgets.QTableWidgetItem(col[0]))
             item = str(col[0])
             self.patient_table.setItem(_tablerow, 0, QtWidgets.QTableWidgetItem(item))
@@ -31,6 +35,7 @@ class _patient_window(QDialog):
             self.patient_table.setItem(_tablerow, 2, QtWidgets.QTableWidgetItem(col[2]))
             self.patient_table.setItem(_tablerow, 3, QtWidgets.QTableWidgetItem(col[3]))
             self.patient_table.setItem(_tablerow, 4, QtWidgets.QTableWidgetItem(col[4]))
+            self.patient_table.setItem(_tablerow, 5, QtWidgets.QTableWidgetItem(col[5]))
             _tablerow += 1
             pass
 

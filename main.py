@@ -442,8 +442,8 @@ _main = _main_window()
 widget.addWidget(_main)
 
 
-widget.setFixedWidth(1200)
-widget.setFixedHeight(600)
+widget.setFixedWidth(1280)
+widget.setFixedHeight(680)
 widget.show()
 try:
     sys.exit(app.exec_())

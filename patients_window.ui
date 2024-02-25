@@ -211,7 +211,7 @@ color: rgb(255, 255, 255);
     <rect>
      <x>260</x>
      <y>150</y>
-     <width>701</width>
+     <width>911</width>
      <height>431</height>
     </rect>
    </property>
@@ -232,6 +232,11 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
    <column>
     <property name="text">
      <string>Last Name</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Sex</string>
     </property>
    </column>
    <column>
@@ -395,7 +400,7 @@ background-color: rgb(0, 0, 0);</string>
    <property name="geometry">
     <rect>
      <x>1025</x>
-     <y>545</y>
+     <y>615</y>
      <width>140</width>
      <height>30</height>
     </rect>
@@ -462,7 +467,7 @@ color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>1030</x>
-     <y>550</y>
+     <y>620</y>
      <width>140</width>
      <height>30</height>
     </rect>
