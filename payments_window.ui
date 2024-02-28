@@ -495,6 +495,19 @@ color: rgb(255, 255, 255);</string>
     <string/>
    </property>
   </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>340</y>
+     <width>1041</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255,.8);</string>
+   </property>
+  </widget>
   <zorder>label</zorder>
   <zorder>side_bar</zorder>
   <zorder>fname_srch</zorder>
@@ -511,6 +524,7 @@ color: rgb(255, 255, 255);</string>
   <zorder>remarks_edit</zorder>
   <zorder>label_2</zorder>
   <zorder>pushButton</zorder>
+  <zorder>tableWidget</zorder>
  </widget>
  <resources/>
  <connections/>

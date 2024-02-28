@@ -58,8 +58,8 @@ class _main_window(QDialog):
         _connect = sqlite3.connect("MEDICO.db3")
         _cur = _connect.cursor()
         # _query = ("SELECT * FROM appointments WHERE appnt_date = ?",(self.current_date,),)
-        self.expense_table.setColumnWidth(1, 200)
-        self.expense_table.setColumnWidth(0, 200)
+        self.expense_table.setColumnWidth(1, 125)
+        self.expense_table.setColumnWidth(0, 125)
 
         # data = _cur.fetchall()  # Fetch data
         tablerow = 0
