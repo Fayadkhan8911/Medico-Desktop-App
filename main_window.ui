@@ -401,11 +401,6 @@ gridline-color: rgba(0, 0, 0,.4);</string>
    </column>
    <column>
     <property name="text">
-     <string>Remarks</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
      <string>Payment</string>
     </property>
    </column>

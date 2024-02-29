@@ -46,6 +46,7 @@ class _main_window(QDialog):
         print(formatted_date)
         self.load_appointment_table()
         self.load_expense_table()
+        self.load_payment_table()
         # self.show_expenses()
         # Get the current date
 
@@ -53,6 +54,34 @@ class _main_window(QDialog):
 
     # Convert to 'yyyy-MM-dd' format
     formatted_date = current_date.toString("yyyy-MM-dd")
+
+    def load_payment_table(self):
+        _connect = sqlite3.connect("MEDICO.db3")
+        _cur = _connect.cursor()
+        # _query = ("SELECT * FROM appointments WHERE appnt_date = ?",(self.current_date,),)
+        self.expense_table.setColumnWidth(1, 125)
+        self.expense_table.setColumnWidth(0, 125)
+
+        # data = _cur.fetchall()  # Fetch data
+        tablerow = 0
+        self.expense_table.setRowCount(50)
+        # cursor.execute("SELECT * FROM appointments WHERE appnt_date = ?", (self.current_date,))
+
+        for col in _cur.execute(
+            "SELECT patients.p_id, patients.f_name, patients.phone, payment_history.payment_amount FROM patients JOIN  payment_history ON patients.p_id=payment_history.p_id WHERE payment_history.payment_date=?",
+            (self.formatted_date,),
+        ):
+            int_cost = str(col[2])
+            self.expense_table.setItem(tablerow, 0, QtWidgets.QTableWidgetItem(col[0]))
+            self.expense_table.setItem(tablerow, 1, QtWidgets.QTableWidgetItem(col[1]))
+            self.expense_table.setItem(
+                tablerow, 2, QtWidgets.QTableWidgetItem(int_cost)
+            )
+
+            self.expense_table.setItem(tablerow, 3, QtWidgets.QTableWidgetItem(col[3]))
+
+            tablerow += 1
+            pass
 
     def load_expense_table(self):
         _connect = sqlite3.connect("MEDICO.db3")

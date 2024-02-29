@@ -505,8 +505,34 @@ color: rgb(255, 255, 255);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgba(255, 255, 255,.8);</string>
+    <string notr="true">background-color: rgba(255, 255, 255,.8);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
+   <column>
+    <property name="text">
+     <string>Patient ID</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>First Name</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Phone</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Payment</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Remarks</string>
+    </property>
+   </column>
   </widget>
   <zorder>label</zorder>
   <zorder>side_bar</zorder>
