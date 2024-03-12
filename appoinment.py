@@ -24,7 +24,7 @@ class appointment_window(QDialog):
         self.load_table()
 
         # self._appointment.add_btn.clicked.connect(self.save_appointment)
-        self.add_btn.clicked.connect(self.save_appointment)
+        self.add_appointment_btn.clicked.connect(self.save_appointment)
         self.search_btn.clicked.connect(self.search_date)
 
     def search_date(self):
