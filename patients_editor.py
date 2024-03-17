@@ -1,12 +1,24 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, QTextEdit, QPushButton
+from PyQt5.QtWidgets import (
+    QApplication,
+    QWidget,
+    QVBoxLayout,
+    QHBoxLayout,
+    QLabel,
+    QLineEdit,
+    QTextEdit,
+    QPushButton,
+)
 import sqlite3
+
 
 class PatientEditor(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Patient Information Editor")
-        self.setGeometry(100, 100, 800, 600)  # Set window geometry (x-position, y-position, width, height)
+        self.setGeometry(
+            100, 100, 800, 600
+        )  # Set window geometry (x-position, y-position, width, height)
         self.setup_ui()
         self.show()
 
@@ -56,7 +68,9 @@ class PatientEditor(QWidget):
         # Fetch patient data from database
         conn = sqlite3.connect("medico.db3")
         cursor = conn.cursor()
-        cursor.execute("SELECT * FROM patients WHERE f_name = ? AND phone = ?", (first_name, phone))
+        cursor.execute(
+            "SELECT * FROM patients WHERE f_name = ? AND phone = ?", (first_name, phone)
+        )
         patient_data = cursor.fetchone()
         conn.close()
 
@@ -66,7 +80,48 @@ class PatientEditor(QWidget):
 
         # Display patient data in text boxes
         self.info_label.setText("Patient Information:")
-        self.info_textbox.setText("\n".join([f"{key}: {value}" for key, value in zip(["p_id", "f_name", "l_name", "age", "sex", "phone", "address", "email", "reg_date", "date_of_departure", "reference", "complain", "blood_diseases", "smoker", "bleeding_disorder", "hepatitis", "diabetes", "epilepsy", "kidney_cardiac_diseases", "abnormal_bp", "currently_medicated", "respiratory_diseases", "gum_bleed_brush", "allergies", "nervous", "pregnant", "breastfeeding", "none_prb_above", "med_find_", "occupation"], patient_data)]))
+        self.info_textbox.setText(
+            "\n".join(
+                [
+                    f"{key}: {value}"
+                    for key, value in zip(
+                        [
+                            "p_id",
+                            "f_name",
+                            "l_name",
+                            "age",
+                            "sex",
+                            "phone",
+                            "address",
+                            "email",
+                            "reg_date",
+                            "date_of_departure",
+                            "reference",
+                            "complain",
+                            "blood_diseases",
+                            "smoker",
+                            "bleeding_disorder",
+                            "hepatitis",
+                            "diabetes",
+                            "epilepsy",
+                            "kidney_cardiac_diseases",
+                            "abnormal_bp",
+                            "currently_medicated",
+                            "respiratory_diseases",
+                            "gum_bleed_brush",
+                            "allergies",
+                            "nervous",
+                            "pregnant",
+                            "breastfeeding",
+                            "none_prb_above",
+                            "med_find_",
+                            "occupation",
+                        ],
+                        patient_data,
+                    )
+                ]
+            )
+        )
 
     def save_patient_data(self):
         first_name = self.first_name_input.text().strip()
@@ -82,7 +137,7 @@ class PatientEditor(QWidget):
         # Update patient data in database
         conn = sqlite3.connect("medico.db3")
         cursor = conn.cursor()
-        #cursor.execute("UPDATE patients SET " + ", ".join([f"{item[0]} = ?" for item in new_patient_data]) + " WHERE f_name = ? AND phone = ?", ([item[1].strip() for item in new_patient_data], first_name, phone))
+        # cursor.execute("UPDATE patients SET " + ", ".join([f"{item[0]} = ?" for item in new_patient_data]) + " WHERE f_name = ? AND phone = ?", ([item[1].strip() for item in new_patient_data], first_name, phone))
         placeholders = ", ".join([f"{item[0]} = ?" for item in new_patient_data])
         values = [item[1].strip() for item in new_patient_data]
         values.extend([first_name, phone])  # Add first_name and phone to values list
@@ -95,9 +150,10 @@ class PatientEditor(QWidget):
 
         self.info_label.setText("Patient information updated.")
 
-#""" 
+
+# """
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     editor = PatientEditor()
     sys.exit(app.exec_())
- #"""
+# """

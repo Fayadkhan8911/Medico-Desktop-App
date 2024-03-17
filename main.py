@@ -350,7 +350,7 @@ class _main_window(QDialog):
     def createpayment(self):
         f_name = self._make_payment.fname_srch_edit.toPlainText()
         phone = self._make_payment.phone_srch_edit.toPlainText()
-        amount = self._make_payment.payment_edit.toPlainText()
+        amount = self._make_payment.payment_git.toPlainText()
         remarks = self._make_payment.remarks_edit.toPlainText()
 
         conn = sqlite3.connect("medico.db3")
