@@ -823,7 +823,9 @@ background-color: rgb(0, 0, 0);</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(255, 255, 255);
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 0, 0);</string>
     </property>
    </widget>
    <zorder>med_find_edit</zorder>

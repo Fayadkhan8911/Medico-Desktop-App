@@ -150,6 +150,7 @@ class _main_window(QDialog):
         self._appointment.payment_btn.clicked.connect(self._go_make_payment)
         self._appointment.expense_btn.clicked.connect(self._go_spend_money)
         self._appointment.dentist_btn.clicked.connect(self.get_dentist)
+        self._appointment.appointment_btn.clicked.connect(self._go_appoinment)
 
     def current_date(self):
         current_date = QDate.currentDate()

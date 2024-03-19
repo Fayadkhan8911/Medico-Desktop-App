@@ -56,7 +56,7 @@ class appointment_window(QDialog):
         cursor = conn.cursor()
         cursor.execute(
             """
-            INSERT INTO appointments (appnt_date,visitor_name,visitor_phone,visit_time,visit_date)
+            INSERT INTO appointments (appointment_date,visitor_name,visitor_phone,visit_time,visit_date)
             VALUES (DATE('now'), ?, ?, ?,?)
         """,
             (v_name_input, phone_input, v_time_input, v_date_input),
@@ -67,10 +67,12 @@ class appointment_window(QDialog):
     def load_table(self):
         _connect = sqlite3.connect("MEDICO.db3")
         _cur = _connect.cursor()
-        _query = "SELECT * FROM appointments"
+        _query = "SELECT appointment_date , visitor_name, visitor_phone,visit_date,visit_time FROM appointments ORDER BY visit_date DESC"
         # data = _cur.fetchall()  # Fetch data
         _tablerow = 0
         self.appointment_table.setRowCount(50)
+        self.appointment_table.setColumnWidth(4, 200)
+        self.appointment_table.setColumnWidth(3, 200)
 
         for col in _cur.execute(_query):
             self.appointment_table.setItem(
