@@ -226,14 +226,14 @@ class _main_window(QDialog):
         widget.setCurrentIndex(widget.currentIndex() + 1)
         self._add_pat.dash_btn.clicked.connect(self._go_dash)
         self._add_pat.patient_btn.clicked.connect(self._go_patient_window)
-        self._add_pat.next_btn.clicked.connect(self.chkvalid)
+        self._add_pat.next_btn.clicked.connect(self.checkvalid)
         self._add_pat.return_btn.clicked.connect(self._go_patient_window)
         self._add_pat.payment_btn.clicked.connect(self._go_make_payment)
         self._add_pat.expense_btn.clicked.connect(self._go_spend_money)
         self._add_pat.appointment_btn.clicked.connect(self._go_appoinment)
         self._add_pat.dentist_btn.clicked.connect(self.get_dentist)
 
-    def chkvalid(self):
+    def checkvalid(self):
         # CHECK
         f_name_input = self._add_pat.add_fname_edit.toPlainText().strip()
         l_name_input = self._add_pat.add_lname_edit.toPlainText().strip()
