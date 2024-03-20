@@ -26,6 +26,7 @@ import view_expense
 import appoinment
 import dentist
 import new_dentist
+import appointment_individual
 
 # import sys
 
@@ -38,7 +39,7 @@ class _main_window(QDialog):
         self.patient_btn.clicked.connect(self._go_patient_window)
         self.payment_btn.clicked.connect(self._go_make_payment)
         self.expense_btn.clicked.connect(self._go_spend_money)
-        self.appointment_btn.clicked.connect(self._go_appoinment)
+        self.appointment_btn.clicked.connect(self._go_appointment)
         self.dentist_btn.clicked.connect(self.get_dentist)
         # self.add_patient_btn.clicked.connect(self._go_add_pat)
         current_day = QDate.currentDate()
@@ -113,15 +114,17 @@ class _main_window(QDialog):
         _connect = sqlite3.connect("MEDICO.db3")
         _cur = _connect.cursor()
         # _query = ("SELECT * FROM appointments WHERE appnt_date = ?",(self.current_date,),)
-        self.appointment_table.setColumnWidth(0, 200)
-        self.appointment_table.setColumnWidth(1, 200)
+        self.appointment_table.setColumnWidth(0, 150)
+        self.appointment_table.setColumnWidth(1, 150)
+        self.appointment_table.setColumnWidth(2, 100)
+        self.appointment_table.setColumnWidth(3, 150)
         # data = _cur.fetchall()  # Fetch data
         _tablerow = 0
         self.appointment_table.setRowCount(50)
         # cursor.execute("SELECT * FROM appointments WHERE appnt_date = ?", (self.current_date,))
 
         for col in _cur.execute(
-            "SELECT visitor_name, visitor_phone, visit_time FROM appointments WHERE visit_date=?",
+            "SELECT visitor_name, visitor_phone, visit_time,dentist_name FROM appointments WHERE visit_date=? ORDER BY visit_time ",
             (self.formatted_date,),
         ):
             # self.appointment_table.setItem(_tablerow, 0, QtWidgets.QTableWidgetItem(col[0]))
@@ -135,11 +138,14 @@ class _main_window(QDialog):
             self.appointment_table.setItem(
                 _tablerow, 2, QtWidgets.QTableWidgetItem(col[2])
             )
+            self.appointment_table.setItem(
+                _tablerow, 3, QtWidgets.QTableWidgetItem(col[3])
+            )
 
             _tablerow += 1
             pass
 
-    def _go_appoinment(self):
+    def _go_appointment(self):
         self._appointment = appoinment.appointment_window()
         widget.addWidget(self._appointment)
         widget.setCurrentIndex(widget.currentIndex() + 1)
@@ -150,7 +156,17 @@ class _main_window(QDialog):
         self._appointment.payment_btn.clicked.connect(self._go_make_payment)
         self._appointment.expense_btn.clicked.connect(self._go_spend_money)
         self._appointment.dentist_btn.clicked.connect(self.get_dentist)
-        self._appointment.appointment_btn.clicked.connect(self._go_appoinment)
+        self._appointment.appointment_btn.clicked.connect(self._go_appointment)
+        self._appointment.search_btn.clicked.connect(self.appointment_individual)
+
+    def appointment_individual(self):
+        self._indi_app = appointment_individual.appointment_individual()
+        widget.addWidget(self._indi_app)
+        widget.setCurrentIndex(widget.currentIndex() + 1)
+        v_name = self._go_appointment.search_name_edit.toPlainText()
+        v_phone = self._go_appointment.search_phone_edit.toPlainText()
+        # self._indi_app.load_table(v_name, v_phone)
+        print(v_name)
 
     def current_date(self):
         current_date = QDate.currentDate()
@@ -172,7 +188,7 @@ class _main_window(QDialog):
         self._patients.search_btn.clicked.connect(self.makemegotopat)
         self._patients.payment_btn.clicked.connect(self._go_make_payment)
         self._patients.expense_btn.clicked.connect(self._go_spend_money)
-        self._patients.appointment_btn.clicked.connect(self._go_appoinment)
+        self._patients.appointment_btn.clicked.connect(self._go_appointment)
         self._patients.dentist_btn.clicked.connect(self.get_dentist)
 
     def show_error_window(self, message):
@@ -230,7 +246,7 @@ class _main_window(QDialog):
         self._add_pat.return_btn.clicked.connect(self._go_patient_window)
         self._add_pat.payment_btn.clicked.connect(self._go_make_payment)
         self._add_pat.expense_btn.clicked.connect(self._go_spend_money)
-        self._add_pat.appointment_btn.clicked.connect(self._go_appoinment)
+        self._add_pat.appointment_btn.clicked.connect(self._go_appointment)
         self._add_pat.dentist_btn.clicked.connect(self.get_dentist)
 
     def checkvalid(self):
@@ -316,7 +332,7 @@ class _main_window(QDialog):
         self._med_hist.save_pat.clicked.connect(self._go_patient_window)
         self._med_hist.payment_btn.clicked.connect(self._go_make_payment)
         self._med_hist.expense_btn.clicked.connect(self._go_spend_money)
-        self._med_hist.appointment_btn.clicked.connect(self._go_appoinment)
+        self._med_hist.appointment_btn.clicked.connect(self._go_appointment)
         self._med_hist.dentist_btn.clicked.connect(self.get_dentist)
 
     def _go_pat_det(self):
@@ -334,7 +350,7 @@ class _main_window(QDialog):
         self._details.patient_btn.clicked.connect(self._go_patient_window)
         self._details.payment_btn.clicked.connect(self._go_make_payment)
         self._details.expense_btn.clicked.connect(self._go_spend_money)
-        self._details.appointment_btn.clicked.connect(self._go_appoinment)
+        self._details.appointment_btn.clicked.connect(self._go_appointment)
         self._details.dentist_btn.clicked.connect(self.get_dentist)
 
     def _go_make_payment(self):
@@ -345,7 +361,7 @@ class _main_window(QDialog):
         self._make_payment.patient_btn.clicked.connect(self._go_patient_window)
         self._make_payment.expense_btn.clicked.connect(self._go_spend_money)
         self._make_payment.pushButton.clicked.connect(self.createpayment)
-        self._make_payment.appointment_btn.clicked.connect(self._go_appoinment)
+        self._make_payment.appointment_btn.clicked.connect(self._go_appointment)
         self._make_payment.dentist_btn.clicked.connect(self.get_dentist)
 
     def createpayment(self):
@@ -406,7 +422,7 @@ class _main_window(QDialog):
         self._spend_money.payment_btn.clicked.connect(self._go_make_payment)
         self._spend_money.expense_btn.clicked.connect(self._go_spend_money)
         self._spend_money.calendar.clicked.connect(self.grab_expense)
-        self._spend_money.appointment_btn.clicked.connect(self._go_appoinment)
+        self._spend_money.appointment_btn.clicked.connect(self._go_appointment)
         self._spend_money.dentist_btn.clicked.connect(self.get_dentist)
 
     def grab_expense(self):
@@ -421,7 +437,7 @@ class _main_window(QDialog):
         self._view_expense_window.payment_btn.clicked.connect(self._go_make_payment)
         self._view_expense_window.expense_btn.clicked.connect(self._go_spend_money)
         # self._view_expense_window.calendar.clicked.connect(self.grab_expense)
-        self._view_expense_window.appointment_btn.clicked.connect(self._go_appoinment)
+        self._view_expense_window.appointment_btn.clicked.connect(self._go_appointment)
         self._view_expense_window.dentist_btn.clicked.connect(self.get_dentist)
 
     def get_dentist(self):
@@ -433,7 +449,7 @@ class _main_window(QDialog):
         self.dentist_tab.patient_btn.clicked.connect(self._go_patient_window)
         self.dentist_tab.payment_btn.clicked.connect(self._go_make_payment)
         self.dentist_tab.expense_btn.clicked.connect(self._go_spend_money)
-        self.dentist_tab.appointment_btn.clicked.connect(self._go_appoinment)
+        self.dentist_tab.appointment_btn.clicked.connect(self._go_appointment)
         self.dentist_tab.add_dentist_btn.clicked.connect(self.add_new_dentist)
 
     def add_new_dentist(self):
@@ -444,7 +460,7 @@ class _main_window(QDialog):
         self.new_dentist_tab.patient_btn.clicked.connect(self._go_patient_window)
         self.new_dentist_tab.payment_btn.clicked.connect(self._go_make_payment)
         self.new_dentist_tab.expense_btn.clicked.connect(self._go_spend_money)
-        self.new_dentist_tab.appointment_btn.clicked.connect(self._go_appoinment)
+        self.new_dentist_tab.appointment_btn.clicked.connect(self._go_appointment)
         self.new_dentist_tab.dentist_btn.clicked.connect(self.get_dentist)
 
 

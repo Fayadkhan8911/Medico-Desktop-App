@@ -22,12 +22,11 @@
      <x>0</x>
      <y>0</y>
      <width>160</width>
-     <height>721</height>
+     <height>681</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(160, 160, 160);
-background-color: rgb(170, 170, 255);</string>
+    <string notr="true">background-color: rgb(170, 170, 255);</string>
    </property>
    <widget class="QPushButton" name="patient_btn">
     <property name="geometry">
@@ -71,9 +70,9 @@ border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;
 border-bottom-color: rgb(0, 0, 0);
-selection-color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);
-color: rgb(255, 255, 255);</string>
+background-color: rgb(85, 255, 255);
+background-color: rgb(255, 255, 255);
+selection-color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Dashboard</string>
@@ -94,11 +93,13 @@ color: rgb(255, 255, 255);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(255, 255, 255);
+
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
-border-bottom-right-radius:10px;</string>
+border-bottom-right-radius:10px;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Appointments</string>
@@ -206,45 +207,24 @@ color: rgb(255, 255, 255);
     </property>
    </widget>
   </widget>
-  <widget class="QCalendarWidget" name="calendarWidget">
+  <widget class="QTableWidget" name="appointment_table">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>20</y>
-     <width>401</width>
-     <height>231</height>
+     <x>200</x>
+     <y>60</y>
+     <width>901</width>
+     <height>561</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
-color: rgba(0, 0, 0,.9);
-</string>
+font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
-   <property name="gridVisible">
-    <bool>false</bool>
-   </property>
-  </widget>
-  <widget class="QTableWidget" name="appointment_table">
-   <property name="geometry">
-    <rect>
-     <x>640</x>
-     <y>50</y>
-     <width>611</width>
-     <height>240</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">alternate-background-color: rgba(255, 255, 255,.7);
-selection-color: rgba(255, 255, 255,.5);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgba(255, 255, 255,.9);
-border-left-color: rgba(255, 255, 255,.7);
-selection-background-color: rgba(255, 255, 255,.7);
-border-bottom-left-radius:20px;
-border-top-color: rgba(255, 255, 255,.5);
-border-bottom-right-radius:20px;
-gridline-color: rgba(0, 0, 0,.4);</string>
-   </property>
+   <column>
+    <property name="text">
+     <string>Date Registered</string>
+    </property>
+   </column>
    <column>
     <property name="text">
      <string>First Name</string>
@@ -257,7 +237,12 @@ gridline-color: rgba(0, 0, 0,.4);</string>
    </column>
    <column>
     <property name="text">
-     <string>Visit Time</string>
+     <string>Visit Date</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Visit time</string>
     </property>
    </column>
    <column>
@@ -266,182 +251,159 @@ gridline-color: rgba(0, 0, 0,.4);</string>
     </property>
    </column>
   </widget>
-  <widget class="QTableWidget" name="expense_table">
+  <widget class="QLabel" name="visit_date_2">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>340</y>
-     <width>401</width>
-     <height>281</height>
+     <x>200</x>
+     <y>30</y>
+     <width>901</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">alternate-background-color: rgba(255, 255, 255,.7);
-selection-color: rgba(255, 255, 255,.5);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgba(255, 255, 255,.9);
-border-left-color: rgba(255, 255, 255,.7);
-selection-background-color: rgba(255, 255, 255,.7);
-border-bottom-left-radius:20px;
-border-top-color: rgba(255, 255, 255,.5);
-border-bottom-right-radius:20px;
-gridline-color: rgba(0, 0, 0,.4);</string>
+    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);</string>
    </property>
-   <column>
-    <property name="text">
-     <string>Description</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Remarks</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Cost</string>
-    </property>
-   </column>
+   <property name="text">
+    <string>Appointment Table</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="search_name_edit">
+   <property name="geometry">
+    <rect>
+     <x>1030</x>
+     <y>30</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="search_btn">
+   <property name="geometry">
+    <rect>
+     <x>1030</x>
+     <y>110</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255);
+border-top-left-radius:10px;
+border-bottom-left-radius:10px;
+border-top-right-radius:10px;
+border-bottom-right-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>Search </string>
+   </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>310</y>
-     <width>401</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
-font: 16pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);
-
-
-border-top-right-radius:20px;
-border-bottom-right-radius:20px;</string>
-   </property>
-   <property name="text">
-    <string>Expenses of Today</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>640</x>
-     <y>20</y>
-     <width>611</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
-font: 16pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);
-
-
-border-top-right-radius:20px;
-border-bottom-right-radius:20px;</string>
-   </property>
-   <property name="text">
-    <string>Appointments of Today</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
+     <x>160</x>
      <y>0</y>
-     <width>1280</width>
-     <height>720</height>
+     <width>1121</width>
+     <height>680</height>
     </rect>
    </property>
    <property name="text">
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Images/ozkan-guner-aFqSRokmw2E-unsplash.jpg</pixmap>
+    <pixmap>Images/the-humble-co-cADflhZzgyo-unsplash.jpg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QTableWidget" name="tableWidget">
-   <property name="geometry">
-    <rect>
-     <x>640</x>
-     <y>340</y>
-     <width>611</width>
-     <height>281</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">alternate-background-color: rgba(255, 255, 255,.7);
-selection-color: rgba(255, 255, 255,.5);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgba(255, 255, 255,.9);
-border-left-color: rgba(255, 255, 255,.7);
-selection-background-color: rgba(255, 255, 255,.7);
-border-bottom-left-radius:20px;
-border-top-color: rgba(255, 255, 255,.5);
-border-bottom-right-radius:20px;
-gridline-color: rgba(0, 0, 0,.4);</string>
-   </property>
-   <column>
-    <property name="text">
-     <string>Patient ID</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>First Name</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Phone</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Payment</string>
-    </property>
-   </column>
-  </widget>
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>640</x>
-     <y>310</y>
-     <width>611</width>
+     <x>1035</x>
+     <y>120</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 0);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+border-top-left-radius:10px;
+border-bottom-left-radius:10px;
+border-top-right-radius:10px;
+border-bottom-right-radius:10px;
+color: rgb(255, 255, 255);
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="visit_date_3">
+   <property name="geometry">
+    <rect>
+     <x>930</x>
+     <y>30</y>
+     <width>101</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
-font: 16pt &quot;MS Shell Dlg 2&quot;;
+    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
 color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);
-
-
-border-top-right-radius:20px;
-border-bottom-right-radius:20px;</string>
+background-color: rgb(0, 0, 0);</string>
    </property>
    <property name="text">
-    <string>Payments of Today</string>
+    <string>Fisrt Name</string>
    </property>
   </widget>
-  <zorder>label_3</zorder>
-  <zorder>side_bar</zorder>
-  <zorder>calendarWidget</zorder>
-  <zorder>appointment_table</zorder>
-  <zorder>expense_table</zorder>
+  <widget class="QLabel" name="visit_date_4">
+   <property name="geometry">
+    <rect>
+     <x>930</x>
+     <y>70</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>Phone</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="search_phone_edit">
+   <property name="geometry">
+    <rect>
+     <x>1030</x>
+     <y>70</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
   <zorder>label</zorder>
-  <zorder>label_2</zorder>
-  <zorder>tableWidget</zorder>
+  <zorder>side_bar</zorder>
+  <zorder>appointment_table</zorder>
+  <zorder>visit_date_2</zorder>
+  <zorder>search_name_edit</zorder>
   <zorder>label_5</zorder>
+  <zorder>search_btn</zorder>
+  <zorder>visit_date_3</zorder>
+  <zorder>visit_date_4</zorder>
+  <zorder>search_phone_edit</zorder>
  </widget>
  <resources/>
  <connections/>

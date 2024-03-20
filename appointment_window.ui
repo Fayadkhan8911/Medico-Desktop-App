@@ -369,6 +369,11 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
      <string>Visit time</string>
     </property>
    </column>
+   <column>
+    <property name="text">
+     <string>Dentist Name</string>
+    </property>
+   </column>
   </widget>
   <widget class="QLabel" name="visit_date_2">
    <property name="geometry">
@@ -419,7 +424,7 @@ border-top-right-radius:10px;
 border-bottom-right-radius:10px;</string>
    </property>
    <property name="text">
-    <string>Search Date</string>
+    <string>Search </string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
