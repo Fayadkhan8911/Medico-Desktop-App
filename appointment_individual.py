@@ -28,6 +28,7 @@ class appointment_individual(QDialog):
         # self._appointment.add_btn.clicked.connect(self.save_appointment)
         # self.add_appointment_btn.clicked.connect(self.save_appointment)
         # self.search_btn.clicked.connect(self.search_date)
+        #self
 
     def load_table(self, v_name, v_phone):
         v_name = self.v_name
