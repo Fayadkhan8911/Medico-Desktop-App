@@ -9,25 +9,30 @@ import sqlite3
 
 
 class appointment_individual(QDialog):
-    def __init__(self):
+    def __init__(self, v_name, v_phone):
         super(appointment_individual, self).__init__()
         loadUi("appointment_individual.ui", self)
         """self.v_name = ""
         self.v_time = ""
         self.phone = ""
         self.v_date = ""
-"""
+        """
+        self.v_name = v_name
+        self.v_phone = v_phone
         self.appointment_table.setColumnWidth(0, 150)
 
         self.appointment_table.setColumnWidth(1, 150)
 
-        # self.load_table()
+        self.load_table(self.v_name, self.v_phone)
 
         # self._appointment.add_btn.clicked.connect(self.save_appointment)
         # self.add_appointment_btn.clicked.connect(self.save_appointment)
         # self.search_btn.clicked.connect(self.search_date)
 
     def load_table(self, v_name, v_phone):
+        v_name = self.v_name
+        v_phone = self.v_phone
+        print(f"v_name = {self.v_name}")
         _connect = sqlite3.connect("MEDICO.db3")
         _cur = _connect.cursor()
         # _query = "SELECT appointment_date , visitor_name, visitor_phone,visit_date,visit_time FROM appointments ORDER BY visit_date DESC"

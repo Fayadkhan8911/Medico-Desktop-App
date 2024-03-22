@@ -160,11 +160,11 @@ class _main_window(QDialog):
         self._appointment.search_btn.clicked.connect(self.appointment_individual)
 
     def appointment_individual(self):
-        self._indi_app = appointment_individual.appointment_individual()
+        v_name = self._appointment.search_name_edit.toPlainText()
+        v_phone = self._appointment.search_phone_edit.toPlainText()
+        self._indi_app = appointment_individual.appointment_individual(v_name, v_phone)
         widget.addWidget(self._indi_app)
         widget.setCurrentIndex(widget.currentIndex() + 1)
-        v_name = self._go_appointment.search_name_edit.toPlainText()
-        v_phone = self._go_appointment.search_phone_edit.toPlainText()
         # self._indi_app.load_table(v_name, v_phone)
         print(v_name)
 
