@@ -1,1 +1,1 @@
-new_dentist_window
+show

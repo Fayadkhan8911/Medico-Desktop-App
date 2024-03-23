@@ -4,6 +4,7 @@ from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication, QWidget
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtCore import QTimer
+from PyQt5.QtWidgets import QStackedWidget
 from PyQt5.QtWidgets import (
     QApplication,
     QWidget,
@@ -18,12 +19,14 @@ import sqlite3
 
 
 class _warning_window(QDialog):
-    def __init__(self, f_name, l_name, phone):
+    def __init__(self, f_name, l_name, phone, dlt_callback_function):
         super(_warning_window, self).__init__()
         loadUi("confirm_delete.ui", self)
         self.f_name = f_name
         self.l_name = l_name
         self.phone = phone
+        
+        self.dlt_callback_function = dlt_callback_function  # Store the callback function
         self.cnf_no_btn.clicked.connect(self.close_warning)
         self.cnf_yes_btn.clicked.connect(self.delete_patient)
 
@@ -32,6 +35,7 @@ class _warning_window(QDialog):
     def close_warning(self):
         print("Why close me?")
         self.close()
+        
         
     def delete_patient(self):
         print(f"f_name = {self.f_name} l_name = {self.l_name} phone = {self.phone}")
@@ -44,6 +48,10 @@ class _warning_window(QDialog):
             else:
                 timer.stop()  # Stop the timer when countdown reaches 0
                 self.close()  # Close the window
+                self.dlt_callback_function()
+                
+                
+                
         
         try:
             conn = sqlite3.connect("medico.db3")

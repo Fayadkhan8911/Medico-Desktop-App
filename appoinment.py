@@ -37,10 +37,10 @@ class appointment_window(QDialog):
         cursor = conn.cursor()
         cursor.execute(
             """
-            INSERT INTO appointments (reg_date,visitor_name,visitor_phone,visit_time,visit_date)
+            INSERT INTO appointments (reg_date,visitor_name,visitor_phone,visit_time,visit_date,status)
             VALUES (DATE('now'), ?, ?, ?,?)
         """,
-            (v_name_input, phone_input, v_time_input, v_date_input),
+            (v_name_input, phone_input, v_time_input, v_date_input, "Active"),
         )
         conn.commit()
         conn.close()
