@@ -614,7 +614,7 @@ background-color: rgb(255, 255, 255);
 color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>  12.Do your consider yourself to be a nervous person ?</string>
+     <string>  12.Allergies (penicillin, aspirin,local anesthesia , codeine ,others ?</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="q12_y_check">
@@ -648,7 +648,7 @@ background-color: rgb(255, 255, 255);
 color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>  13.Allergies (penicillin, aspirin,local anesthesia , codeine ,others ?</string>
+     <string>  13.Do your consider yourself to be a nervous person ?</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="q13_y_check">

@@ -425,7 +425,7 @@ border-bottom-right-radius:20px;</string>
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="makepayment">
    <property name="geometry">
     <rect>
      <x>295</x>
@@ -549,7 +549,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
   <zorder>remarks</zorder>
   <zorder>remarks_edit</zorder>
   <zorder>label_2</zorder>
-  <zorder>pushButton</zorder>
+  <zorder>makepayment</zorder>
   <zorder>tableWidget</zorder>
  </widget>
  <resources/>

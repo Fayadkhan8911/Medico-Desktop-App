@@ -70,6 +70,8 @@ class _main_window(QDialog):
         self.expense_table.setRowCount(50)
         # cursor.execute("SELECT * FROM appointments WHERE appnt_date = ?", (self.current_date,))
 
+        
+        
         for col in _cur.execute(
             "SELECT patients.p_id, patients.f_name, patients.phone, payment_history.payment_amount FROM patients JOIN  payment_history ON patients.p_id=payment_history.p_id WHERE payment_history.payment_date=?",
             (self.formatted_date,),
@@ -85,6 +87,9 @@ class _main_window(QDialog):
 
             tablerow += 1
             pass
+        
+        
+        
 
     def load_expense_table(self):
         _connect = sqlite3.connect("MEDICO.db3")
@@ -203,7 +208,24 @@ class _main_window(QDialog):
         phone = self._patients.phone_srch_edit.toPlainText()
         patient_id = self._patients.patid_srch_edit.toPlainText()
 
-        if f_name and phone:
+        
+
+        if patient_id:
+
+            conn = sqlite3.connect("medico.db3")
+            c = conn.cursor()
+            c.execute("SELECT * FROM patients WHERE p_id=?", (patient_id,))
+            result = c.fetchone()
+            conn.close()
+
+            if result:
+                self._go_pat_det()
+            else:
+                self.show_error_window("No patient found with Patient ID")
+                print("No patient found with Patient ID")
+        
+            
+        elif f_name and phone:
             conn = sqlite3.connect("medico.db3")
             c = conn.cursor()
             c.execute(
@@ -218,20 +240,7 @@ class _main_window(QDialog):
                     "No patient found with First Name and Phone Number."
                 )
                 print("No patient found with First Name and Phone Number.")
-
-        elif patient_id:
-
-            conn = sqlite3.connect("medico.db3")
-            c = conn.cursor()
-            c.execute("SELECT * FROM patients WHERE p_id=?", (patient_id,))
-            result = c.fetchone()
-            conn.close()
-
-            if result:
-                self._go_pat_det()
-            else:
-                self.show_error_window("No patient found with Patient ID")
-                print("No patient found with Patient ID")
+                
         else:
             self.show_error_window(
                 "Please provide either First Name and Phone Number or Patient ID"
@@ -381,14 +390,14 @@ class _main_window(QDialog):
         self._make_payment.dash_btn.clicked.connect(self._go_dash)
         self._make_payment.patient_btn.clicked.connect(self._go_patient_window)
         self._make_payment.expense_btn.clicked.connect(self._go_spend_money)
-        self._make_payment.pushButton.clicked.connect(self.createpayment)
+        self._make_payment.makepayment.clicked.connect(self.createpayment)
         self._make_payment.appointment_btn.clicked.connect(self._go_appointment)
         self._make_payment.dentist_btn.clicked.connect(self.get_dentist)
 
     def createpayment(self):
         f_name = self._make_payment.fname_srch_edit.toPlainText()
         phone = self._make_payment.phone_srch_edit.toPlainText()
-        amount = self._make_payment.payment_git.toPlainText()
+        amount = self._make_payment.payment_edit.toPlainText()
         remarks = self._make_payment.remarks_edit.toPlainText()
 
         conn = sqlite3.connect("medico.db3")
@@ -400,6 +409,11 @@ class _main_window(QDialog):
         result = cursor.fetchone()
         if result:
             p_id = result[0]
+            try:
+                amount = int(amount)
+            except Exception as e:
+                print("Enter Valid Amount")
+                return
         else:
             # Handle the case where the patient is not found
             print("Patient not found.")
@@ -407,16 +421,20 @@ class _main_window(QDialog):
 
         # Retrieve the last payment_id
         cursor.execute(
-            "SELECT MAX(CAST(SUBSTR(payment_id, 5) AS INTEGER)) FROM payment_history"
+            "SELECT MAX(CAST(payment_id AS INTEGER)) FROM payment_history"
         )
         result = cursor.fetchone()
+        print(f"paymentresult = {result}")
         if result[0] is not None:
             last_payment_id = result[0]
+            print(f"last payment id: {last_payment_id}")
         else:
             last_payment_id = 0
+            print(f"last payment id: {last_payment_id}")
 
         # Increment the last_payment_id
         payment_id = last_payment_id + 1
+        print(f"payment id: {payment_id}")
 
         # Get the current date
         payment_date = QDate.currentDate().toString(
@@ -426,13 +444,14 @@ class _main_window(QDialog):
         # Insert the payment record into the payment_history table
         cursor.execute(
             "INSERT INTO payment_history (payment_id, p_id, payment_date, payment_amount, payment_remarks) VALUES (?, ?, ?, ?, ?)",
-            (payment_id, p_id, payment_date, int(amount), remarks),
+            (payment_id, p_id, payment_date, amount, remarks),
         )
 
         # Commit the transaction
         conn.commit()
 
         print("Payment record inserted successfully.")
+        self._go_make_payment()
 
     def _go_spend_money(self):
         self._spend_money = expense_window._expense_window()

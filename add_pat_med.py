@@ -91,7 +91,7 @@ class _add_med_hist_win(QDialog):
         cursor.execute(
             """
             INSERT INTO patients (p_id, f_name, l_name, phone, address, email, age, sex, reference, date_of_departure, complain, occupation, med_find_, 
-            blood_diseases, smoker, bleeding_disorder, hepatitis, diabetes, epilepsy, kidney_cardiac_diseases, abnormal_bp, currently_medicated, respiratory_diseases, gum_bleed_brush, nervous, allergies, pregnant, breastfeeding, none_prb_above, reg_date)
+            blood_diseases, smoker, bleeding_disorder, hepatitis, diabetes, epilepsy, kidney_cardiac_diseases, abnormal_bp, currently_medicated, respiratory_diseases, gum_bleed_brush, allergies, nervous, pregnant, breastfeeding, none_prb_above, reg_date)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """,
             (
