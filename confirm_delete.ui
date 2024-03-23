@@ -16,7 +16,7 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(170, 170, 255);</string>
   </property>
-  <widget class="QPushButton" name="yes_btn">
+  <widget class="QPushButton" name="cnf_yes_btn">
    <property name="geometry">
     <rect>
      <x>80</x>
@@ -63,7 +63,7 @@ color: rgb(255, 255, 255);
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="warning_label">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -79,7 +79,7 @@ color: rgb(255, 255, 255);
     <string>Are you sure you want to delete this patient and their information</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="no_btn">
+  <widget class="QPushButton" name="cnf_no_btn">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -127,10 +127,10 @@ color: rgb(255, 255, 255);
    </property>
   </widget>
   <zorder>label_7</zorder>
-  <zorder>yes_btn</zorder>
-  <zorder>label</zorder>
+  <zorder>cnf_yes_btn</zorder>
+  <zorder>warning_label</zorder>
   <zorder>label_8</zorder>
-  <zorder>no_btn</zorder>
+  <zorder>cnf_no_btn</zorder>
  </widget>
  <resources/>
  <connections/>
