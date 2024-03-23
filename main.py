@@ -7,6 +7,7 @@ from PyQt5.QtWidgets import (
     QWidget,
     QTableWidget,
     QTableWidgetItem,
+    QPushButton
 )
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QApplication, QCalendarWidget
@@ -27,6 +28,7 @@ import appoinment
 import dentist
 import new_dentist
 import appointment_individual
+import confirm_delete
 
 # import sys
 
@@ -352,6 +354,22 @@ class _main_window(QDialog):
         self._details.expense_btn.clicked.connect(self._go_spend_money)
         self._details.appointment_btn.clicked.connect(self._go_appointment)
         self._details.dentist_btn.clicked.connect(self.get_dentist)
+        self._details.delete_pat.clicked.connect(self._confirm_delete)
+        
+    def _confirm_delete(self):
+        f_name = self._details.updt_f_name.text()
+        l_name = self._details.updt_l_name.text()
+        phone = self._details.updt_phn.text()
+        print(f"f_name = {f_name} l_name = {l_name} phone = {phone}")
+        self.show_warning_window(f_name, l_name, phone)
+        
+    def show_warning_window(self, f_name, l_name, phone):
+        self.f_name = f_name
+        self.l_name = l_name
+        self.phone = phone
+        self.warning_window = confirm_delete._warning_window(f_name, l_name, phone)
+
+        self.warning_window.show()
 
     def _go_make_payment(self):
         self._make_payment = payments_window._payments_window()

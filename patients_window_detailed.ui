@@ -1302,7 +1302,7 @@ color: rgb(255, 255, 255);
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="return_pat_2">
+  <widget class="QPushButton" name="delete_pat">
    <property name="geometry">
     <rect>
      <x>710</x>
@@ -1352,7 +1352,7 @@ color: rgb(255, 255, 255);
   <zorder>side_bar</zorder>
   <zorder>widget</zorder>
   <zorder>label_5</zorder>
-  <zorder>return_pat_2</zorder>
+  <zorder>delete_pat</zorder>
   <zorder>label_6</zorder>
   <zorder>return_pat</zorder>
  </widget>
