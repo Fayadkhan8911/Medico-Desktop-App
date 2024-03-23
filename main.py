@@ -367,9 +367,12 @@ class _main_window(QDialog):
         self.f_name = f_name
         self.l_name = l_name
         self.phone = phone
-        self.warning_window = confirm_delete._warning_window(f_name, l_name, phone)
+        self.warning_window = confirm_delete._warning_window(f_name, l_name, phone, self.pat_dlt_callback_fnc)
 
         self.warning_window.show()
+        
+    def pat_dlt_callback_fnc(self):
+        self._go_patient_window()
 
     def _go_make_payment(self):
         self._make_payment = payments_window._payments_window()
