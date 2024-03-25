@@ -7,7 +7,7 @@ from PyQt5.QtWidgets import (
     QWidget,
     QTableWidget,
     QTableWidgetItem,
-    QPushButton
+    QPushButton,
 )
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QApplication, QCalendarWidget
@@ -70,8 +70,6 @@ class _main_window(QDialog):
         self.expense_table.setRowCount(50)
         # cursor.execute("SELECT * FROM appointments WHERE appnt_date = ?", (self.current_date,))
 
-        
-        
         for col in _cur.execute(
             "SELECT patients.p_id, patients.f_name, patients.phone, payment_history.payment_amount FROM patients JOIN  payment_history ON patients.p_id=payment_history.p_id WHERE payment_history.payment_date=?",
             (self.formatted_date,),
@@ -87,9 +85,6 @@ class _main_window(QDialog):
 
             tablerow += 1
             pass
-        
-        
-        
 
     def load_expense_table(self):
         _connect = sqlite3.connect("MEDICO.db3")
@@ -208,8 +203,6 @@ class _main_window(QDialog):
         phone = self._patients.phone_srch_edit.toPlainText()
         patient_id = self._patients.patid_srch_edit.toPlainText()
 
-        
-
         if patient_id:
 
             conn = sqlite3.connect("medico.db3")
@@ -223,8 +216,7 @@ class _main_window(QDialog):
             else:
                 self.show_error_window("No patient found with Patient ID")
                 print("No patient found with Patient ID")
-        
-            
+
         elif f_name and phone:
             conn = sqlite3.connect("medico.db3")
             c = conn.cursor()
@@ -240,7 +232,7 @@ class _main_window(QDialog):
                     "No patient found with First Name and Phone Number."
                 )
                 print("No patient found with First Name and Phone Number.")
-                
+
         else:
             self.show_error_window(
                 "Please provide either First Name and Phone Number or Patient ID"
@@ -364,22 +356,24 @@ class _main_window(QDialog):
         self._details.appointment_btn.clicked.connect(self._go_appointment)
         self._details.dentist_btn.clicked.connect(self.get_dentist)
         self._details.delete_pat.clicked.connect(self._confirm_delete)
-        
+
     def _confirm_delete(self):
         f_name = self._details.updt_f_name.text()
         l_name = self._details.updt_l_name.text()
         phone = self._details.updt_phn.text()
         print(f"f_name = {f_name} l_name = {l_name} phone = {phone}")
         self.show_warning_window(f_name, l_name, phone)
-        
+
     def show_warning_window(self, f_name, l_name, phone):
         self.f_name = f_name
         self.l_name = l_name
         self.phone = phone
-        self.warning_window = confirm_delete._warning_window(f_name, l_name, phone, self.pat_dlt_callback_fnc)
+        self.warning_window = confirm_delete._warning_window(
+            f_name, l_name, phone, self.pat_dlt_callback_fnc
+        )
 
         self.warning_window.show()
-        
+
     def pat_dlt_callback_fnc(self):
         self._go_patient_window()
 
@@ -420,9 +414,7 @@ class _main_window(QDialog):
             return
 
         # Retrieve the last payment_id
-        cursor.execute(
-            "SELECT MAX(CAST(payment_id AS INTEGER)) FROM payment_history"
-        )
+        cursor.execute("SELECT MAX(CAST(payment_id AS INTEGER)) FROM payment_history")
         result = cursor.fetchone()
         print(f"paymentresult = {result}")
         if result[0] is not None:
