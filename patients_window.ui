@@ -56,10 +56,6 @@ QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }
-QPushButton:focus{
-	background-color: rgb(0, 0, 0);
-	color: rgb(255, 255, 255);
-}
 </string>
     </property>
     <property name="text">
@@ -178,7 +174,7 @@ border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;}
 QPushButton:hover{
-	background-color: rgb(161, 161, 161);
+	background-color: rgba(161, 161, 161,.7);
 	color: rgb(255, 255, 255);
 }</string>
     </property>
@@ -471,7 +467,7 @@ border-bottom-right-radius:10px;</string>
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Images/quang-tri-nguyen-6SAzfKla3IE-unsplash.jpg</pixmap>
+    <pixmap>Images/sam-moghadam-khamseh-I-kDEBUMAaQ-unsplash.jpg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
