@@ -6,10 +6,11 @@ from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QApplication, QCalendarWidget
 from PyQt5.QtCore import QDate
 import sqlite3
-
+import appt_success
+import error
 
 class appointment_window(QDialog):
-    def __init__(self):
+    def __init__(self, appt_callback_fnc):
         super(appointment_window, self).__init__()
         loadUi("appointment_window.ui", self)
         """self.v_name = ""
@@ -17,6 +18,7 @@ class appointment_window(QDialog):
         self.phone = ""
         self.v_date = ""
 """
+        self.appt_callback_fnc = appt_callback_fnc
         self.appointment_table.setColumnWidth(0, 150)
 
         self.appointment_table.setColumnWidth(1, 150)
@@ -38,12 +40,21 @@ class appointment_window(QDialog):
         cursor.execute(
             """
             INSERT INTO appointments (reg_date,visitor_name,visitor_phone,visit_time,visit_date,status)
-            VALUES (DATE('now'), ?, ?, ?,?)
+            VALUES (DATE('now'), ?, ?, ?, ?, ?)
         """,
             (v_name_input, phone_input, v_time_input, v_date_input, "Active"),
         )
         conn.commit()
         conn.close()
+        self.show_appt_success_dialog()
+        
+    def show_appt_success_dialog(self):
+        success_dialog = appt_success._error_window("Appointment Success")
+        success_dialog.ok_btn.clicked.connect(self.trigger_callback)
+        success_dialog.exec_()
+        
+    def trigger_callback(self):
+        self.appt_callback_fnc()
 
     def load_table(self):
         _connect = sqlite3.connect("MEDICO.db3")
