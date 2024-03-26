@@ -148,7 +148,7 @@ class _main_window(QDialog):
             pass
 
     def _go_appointment(self):
-        self._appointment = appoinment.appointment_window()
+        self._appointment = appoinment.appointment_window(self._go_appointment_callback_fnc)
         widget.addWidget(self._appointment)
         widget.setCurrentIndex(widget.currentIndex() + 1)
         self._appointment.dash_btn.clicked.connect(self._go_dash)
@@ -376,6 +376,9 @@ class _main_window(QDialog):
 
     def pat_dlt_callback_fnc(self):
         self._go_patient_window()
+        
+    def _go_appointment_callback_fnc(self):
+        self._go_appointment()
 
     def _go_make_payment(self):
         self._make_payment = payments_window._payments_window()
