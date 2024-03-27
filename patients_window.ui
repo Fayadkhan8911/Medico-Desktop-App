@@ -40,8 +40,11 @@ background-color: rgba(170, 170, 255,.5);
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+     <string notr="true">
+QPushButton{
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
@@ -77,7 +80,9 @@ QPushButton:hover{
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
@@ -107,7 +112,9 @@ QPushButton:hover{
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
@@ -137,7 +144,9 @@ QPushButton:hover{
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
@@ -167,14 +176,16 @@ QPushButton:hover{
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;}
 QPushButton:hover{
-	background-color: rgba(161, 161, 161,.7);
+	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>
     </property>
@@ -197,7 +208,9 @@ QPushButton:hover{
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
@@ -226,8 +239,7 @@ QPushButton:hover{
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 20pt &quot;MS Shell Dlg 2&quot;;
-font: 75 20pt &quot;MS Shell Dlg 2&quot;;
+     <string notr="true">
 text-decoration: underline;
 font: 22pt &quot;MS Shell Dlg 2&quot;;
 background-color: rgba(255, 255, 255,0);
@@ -243,13 +255,13 @@ color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>260</x>
-     <y>150</y>
+     <y>180</y>
      <width>911</width>
      <height>431</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgba(255, 255, 255,.9);
+    <string notr="true">background-color: rgba(255, 255, 255,.85);
 font:  12pt &quot;Segoe UI &quot;;</string>
    </property>
    <column>
@@ -293,9 +305,11 @@ font:  12pt &quot;Segoe UI &quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+    <string notr="true">
 color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);</string>
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>First Name</string>
@@ -331,9 +345,11 @@ background-color: rgb(255, 255, 255);
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+    <string notr="true">
 color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);</string>
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>Last Name</string>
@@ -369,9 +385,11 @@ background-color: rgb(255, 255, 255);
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+    <string notr="true">
 color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);</string>
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>Phone</string>
@@ -408,7 +426,9 @@ background-color: rgb(255, 255, 255);
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
@@ -433,9 +453,11 @@ QPushButton:hover{
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+    <string notr="true">
 color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);</string>
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>Patient ID</string>
@@ -472,7 +494,9 @@ background-color: rgb(255, 255, 255);
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
@@ -556,6 +580,26 @@ color: rgb(255, 255, 255);
     <string/>
    </property>
   </widget>
+  <widget class="QLabel" name="patient_list">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>150</y>
+     <width>911</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
+   </property>
+   <property name="text">
+    <string>Patients List</string>
+   </property>
+  </widget>
   <zorder>label</zorder>
   <zorder>side_bar</zorder>
   <zorder>patient_table</zorder>
@@ -571,6 +615,7 @@ color: rgb(255, 255, 255);
   <zorder>search_btn</zorder>
   <zorder>label_3</zorder>
   <zorder>add_patient_btn</zorder>
+  <zorder>patient_list</zorder>
  </widget>
  <resources/>
  <connections/>
