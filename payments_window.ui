@@ -369,7 +369,7 @@ border-bottom-right-radius:20px;
 </string>
    </property>
    <property name="text">
-    <string>File no.</string>
+    <string>File.</string>
    </property>
   </widget>
   <widget class="QTextEdit" name="file_srch_edit">
