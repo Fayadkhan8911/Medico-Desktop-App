@@ -475,6 +475,7 @@ class _main_window(QDialog):
         self._view_expense_window.expense_btn.clicked.connect(self._go_spend_money)
         # self._view_expense_window.calendar.clicked.connect(self.grab_expense)
         self._view_expense_window.appointment_btn.clicked.connect(self._go_appointment)
+        self._view_expense_window.return_btn.clicked.connect(self._go_spend_money)
         self._view_expense_window.dentist_btn.clicked.connect(self.get_dentist)
 
     def get_dentist(self):
