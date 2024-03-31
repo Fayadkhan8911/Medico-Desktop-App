@@ -26,7 +26,9 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(170, 170, 255);</string>
+    <string notr="true">
+background-color: rgba(170, 170, 255,.5);
+</string>
    </property>
    <widget class="QPushButton" name="patient_btn">
     <property name="geometry">
@@ -38,13 +40,19 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+     <string notr="true">QPushButton{
 
+
+font:  14pt &quot;Segoe UI &quot;;
+background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-background-color: rgb(255, 255, 255);</string>
+border-bottom-right-radius:10px;}
+QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
     </property>
     <property name="text">
      <string>Patients</string>
@@ -64,15 +72,19 @@ background-color: rgb(255, 255, 255);</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+     <string notr="true">QPushButton{
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
-border-color: rgb(0, 0, 0);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-border-bottom-color: rgb(0, 0, 0);
-selection-color: rgb(255, 255, 255);</string>
+border-bottom-right-radius:10px;}
+QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
     </property>
     <property name="text">
      <string>Dashboard</string>
@@ -92,12 +104,19 @@ selection-color: rgb(255, 255, 255);</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+     <string notr="true">QPushButton{
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
-border-bottom-right-radius:10px;</string>
+border-bottom-right-radius:10px;}
+QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
     </property>
     <property name="text">
      <string>Appointments</string>
@@ -117,14 +136,26 @@ border-bottom-right-radius:10px;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+     <string notr="true">
+QPushButton{
 
+
+font:  14pt &quot;Segoe UI &quot;;
+background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;
-background-color: rgb(0, 0, 0);
-color: rgb(255, 255, 255);</string>
+
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
+</string>
     </property>
     <property name="text">
      <string>Dentists</string>
@@ -144,12 +175,19 @@ color: rgb(255, 255, 255);</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+     <string notr="true">QPushButton{
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
-border-bottom-right-radius:10px;</string>
+border-bottom-right-radius:10px;}
+QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
     </property>
     <property name="text">
      <string>Expense</string>
@@ -169,13 +207,19 @@ border-bottom-right-radius:10px;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+     <string notr="true">QPushButton{
 
+
+font:  14pt &quot;Segoe UI &quot;;
+background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-background-color: rgb(255, 255, 255);</string>
+border-bottom-right-radius:10px;}
+QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
     </property>
     <property name="text">
      <string>Payments</string>
@@ -196,9 +240,11 @@ background-color: rgb(255, 255, 255);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+    <string notr="true">
 color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);</string>
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>First Name</string>
@@ -227,9 +273,11 @@ background-color: rgb(0, 0, 0);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+    <string notr="true">
 color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);</string>
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>Last Name</string>
@@ -245,9 +293,11 @@ background-color: rgb(0, 0, 0);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+    <string notr="true">
 color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);</string>
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>Email</string>
@@ -263,9 +313,11 @@ background-color: rgb(0, 0, 0);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+    <string notr="true">
 color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);</string>
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>Phone</string>
@@ -281,9 +333,11 @@ background-color: rgb(0, 0, 0);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+    <string notr="true">
 color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);</string>
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>Date of Birth</string>
@@ -351,13 +405,19 @@ background-color: rgb(0, 0, 0);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+    <string notr="true">QPushButton{
+
+
+font:  14pt &quot;Segoe UI &quot;;
+background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+border-bottom-right-radius:10px;}
+QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
    </property>
    <property name="text">
     <string>Submit</string>

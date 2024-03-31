@@ -26,7 +26,9 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(170, 170, 255);</string>
+    <string notr="true">
+background-color: rgba(170, 170, 255,.5);
+</string>
    </property>
    <widget class="QPushButton" name="dash_btn">
     <property name="geometry">
@@ -38,15 +40,19 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+     <string notr="true">QPushButton{
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
-border-color: rgb(0, 0, 0);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-border-bottom-color: rgb(0, 0, 0);
-selection-color: rgb(255, 255, 255);</string>
+border-bottom-right-radius:10px;}
+QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
     </property>
     <property name="text">
      <string>Dashboard</string>
@@ -66,12 +72,19 @@ selection-color: rgb(255, 255, 255);</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+     <string notr="true">QPushButton{
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
-border-bottom-right-radius:10px;</string>
+border-bottom-right-radius:10px;}
+QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
     </property>
     <property name="text">
      <string>Appointments</string>
@@ -91,12 +104,19 @@ border-bottom-right-radius:10px;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+     <string notr="true">QPushButton{
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
-border-bottom-right-radius:10px;</string>
+border-bottom-right-radius:10px;}
+QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
     </property>
     <property name="text">
      <string>Dentists</string>
@@ -116,12 +136,19 @@ border-bottom-right-radius:10px;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+     <string notr="true">QPushButton{
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
-border-bottom-right-radius:10px;</string>
+border-bottom-right-radius:10px;}
+QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
     </property>
     <property name="text">
      <string>Payments</string>
@@ -141,12 +168,19 @@ border-bottom-right-radius:10px;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+     <string notr="true">QPushButton{
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
-border-bottom-right-radius:10px;</string>
+border-bottom-right-radius:10px;}
+QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
     </property>
     <property name="text">
      <string>Expense</string>
@@ -822,7 +856,7 @@ background-color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>0</x>
      <y>-20</y>
      <width>1280</width>
      <height>720</height>
@@ -848,13 +882,11 @@ background-color: rgb(255, 255, 255);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>First Name:</string>
@@ -863,20 +895,15 @@ border-bottom-right-radius:10px;
   <widget class="QPushButton" name="updt_f_name">
    <property name="geometry">
     <rect>
-     <x>306</x>
+     <x>290</x>
      <y>15</y>
-     <width>101</width>
+     <width>151</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+font:  12pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -887,18 +914,16 @@ border-bottom-right-radius:10px;
     <rect>
      <x>457</x>
      <y>15</y>
-     <width>101</width>
+     <width>111</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>Last Name:</string>
@@ -907,7 +932,7 @@ border-bottom-right-radius:10px;
   <widget class="QPushButton" name="updt_l_name">
    <property name="geometry">
     <rect>
-     <x>573</x>
+     <x>570</x>
      <y>15</y>
      <width>101</width>
      <height>31</height>
@@ -915,12 +940,7 @@ border-bottom-right-radius:10px;
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+font:  12pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -936,13 +956,11 @@ border-bottom-right-radius:10px;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>Phone:</string>
@@ -953,18 +971,16 @@ border-bottom-right-radius:10px;
     <rect>
      <x>457</x>
      <y>107</y>
-     <width>101</width>
+     <width>111</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>Email:</string>
@@ -973,20 +989,15 @@ border-bottom-right-radius:10px;
   <widget class="QPushButton" name="updt_phn">
    <property name="geometry">
     <rect>
-     <x>310</x>
+     <x>290</x>
      <y>107</y>
-     <width>101</width>
+     <width>151</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+font:  12pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -995,7 +1006,7 @@ border-bottom-right-radius:10px;
   <widget class="QPushButton" name="updt_email">
    <property name="geometry">
     <rect>
-     <x>573</x>
+     <x>570</x>
      <y>107</y>
      <width>101</width>
      <height>31</height>
@@ -1003,12 +1014,7 @@ border-bottom-right-radius:10px;
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+font:  12pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -1017,20 +1023,15 @@ border-bottom-right-radius:10px;
   <widget class="QPushButton" name="updt_addr">
    <property name="geometry">
     <rect>
-     <x>310</x>
+     <x>290</x>
      <y>199</y>
-     <width>101</width>
+     <width>151</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+font:  12pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -1046,13 +1047,11 @@ border-bottom-right-radius:10px;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>Address:</string>
@@ -1061,7 +1060,7 @@ border-bottom-right-radius:10px;
   <widget class="QPushButton" name="updt_occu">
    <property name="geometry">
     <rect>
-     <x>573</x>
+     <x>570</x>
      <y>199</y>
      <width>101</width>
      <height>31</height>
@@ -1069,12 +1068,7 @@ border-bottom-right-radius:10px;
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+font:  12pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -1083,20 +1077,15 @@ border-bottom-right-radius:10px;
   <widget class="QPushButton" name="updr_refr">
    <property name="geometry">
     <rect>
-     <x>310</x>
+     <x>290</x>
      <y>245</y>
-     <width>101</width>
+     <width>151</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+font:  12pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -1107,18 +1096,16 @@ border-bottom-right-radius:10px;
     <rect>
      <x>457</x>
      <y>199</y>
-     <width>101</width>
+     <width>111</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>Occupation:</string>
@@ -1134,13 +1121,11 @@ border-bottom-right-radius:10px;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>Reference:</string>
@@ -1151,18 +1136,16 @@ border-bottom-right-radius:10px;
     <rect>
      <x>190</x>
      <y>291</y>
-     <width>251</width>
+     <width>301</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>(If lives abroad) Date of Departure:</string>
@@ -1171,20 +1154,15 @@ border-bottom-right-radius:10px;
   <widget class="QPushButton" name="updt_depart">
    <property name="geometry">
     <rect>
-     <x>456</x>
+     <x>490</x>
      <y>291</y>
-     <width>101</width>
+     <width>181</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+font:  12pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -1200,13 +1178,11 @@ border-bottom-right-radius:10px;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>Complain:</string>
@@ -1215,20 +1191,15 @@ border-bottom-right-radius:10px;
   <widget class="QPushButton" name="updt_comp">
    <property name="geometry">
     <rect>
-     <x>310</x>
+     <x>290</x>
      <y>337</y>
-     <width>101</width>
-     <height>31</height>
+     <width>381</width>
+     <height>101</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+font:  12pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -1244,13 +1215,11 @@ border-bottom-right-radius:10px;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>Patient ID:</string>
@@ -1259,20 +1228,15 @@ border-bottom-right-radius:10px;
   <widget class="QPushButton" name="updt_pat_id">
    <property name="geometry">
     <rect>
-     <x>310</x>
+     <x>290</x>
      <y>153</y>
-     <width>101</width>
+     <width>151</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+font:  12pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -1288,13 +1252,11 @@ border-bottom-right-radius:10px;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>Age:</string>
@@ -1303,20 +1265,15 @@ border-bottom-right-radius:10px;
   <widget class="QPushButton" name="updt_age">
    <property name="geometry">
     <rect>
-     <x>310</x>
+     <x>290</x>
      <y>61</y>
-     <width>101</width>
+     <width>151</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+font:  12pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -1327,18 +1284,16 @@ border-bottom-right-radius:10px;
     <rect>
      <x>457</x>
      <y>61</y>
-     <width>101</width>
+     <width>111</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>Gender:</string>
@@ -1347,7 +1302,7 @@ border-bottom-right-radius:10px;
   <widget class="QPushButton" name="updt_gender">
    <property name="geometry">
     <rect>
-     <x>573</x>
+     <x>570</x>
      <y>61</y>
      <width>101</width>
      <height>31</height>
@@ -1355,12 +1310,7 @@ border-bottom-right-radius:10px;
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+font:  12pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -1371,18 +1321,16 @@ border-bottom-right-radius:10px;
     <rect>
      <x>457</x>
      <y>153</y>
-     <width>101</width>
+     <width>111</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>Date of Reg:</string>
@@ -1391,20 +1339,15 @@ border-bottom-right-radius:10px;
   <widget class="QPushButton" name="updt_reg_dt">
    <property name="geometry">
     <rect>
-     <x>573</x>
-     <y>153</y>
+     <x>570</x>
+     <y>155</y>
      <width>101</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+font:  12pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -1414,19 +1357,17 @@ border-bottom-right-radius:10px;
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>383</y>
-     <width>131</width>
+     <y>450</y>
+     <width>151</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>Medical Findings</string>
@@ -1435,9 +1376,9 @@ border-bottom-right-radius:10px;
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>830</x>
+     <x>710</x>
      <y>600</y>
-     <width>170</width>
+     <width>171</width>
      <height>40</height>
     </rect>
    </property>
@@ -1458,19 +1399,26 @@ color: rgb(255, 255, 255);
   <widget class="QPushButton" name="return_pat">
    <property name="geometry">
     <rect>
-     <x>820</x>
+     <x>700</x>
      <y>595</y>
      <width>171</width>
      <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+    <string notr="true">QPushButton{
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
-border-bottom-right-radius:10px;</string>
+border-bottom-right-radius:10px;}
+QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
    </property>
    <property name="text">
     <string>Return</string>
@@ -1509,14 +1457,20 @@ color: rgb(255, 255, 255);
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(255, 255, 255);
+    <string notr="true">QPushButton{
+	background-color: rgb(255, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;
+	color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-background-color: rgb(255, 0, 0);
-color: rgb(255, 255, 255);</string>
+border-bottom-right-radius:10px;}
+QPushButton:hover{
+	background-color: rgb(255, 0, 0);
+	background-color: rgb(255, 85, 0);
+	color: rgb(255, 255, 255);
+}</string>
    </property>
    <property name="text">
     <string>Delete</string>
@@ -1526,25 +1480,21 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>429</y>
-     <width>431</width>
-     <height>91</height>
+     <y>480</y>
+     <width>481</width>
+     <height>141</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgba(255, 255, 255, .9);
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-</string>
+    <string notr="true">background-color: rgb(255, 255, 255);
+font:  12pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="html">
     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI '; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:8.25pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <zorder>label</zorder>

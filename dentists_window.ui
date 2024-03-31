@@ -26,7 +26,9 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(170, 170, 255);</string>
+    <string notr="true">
+background-color: rgba(170, 170, 255,.5);
+</string>
    </property>
    <widget class="QPushButton" name="patient_btn">
     <property name="geometry">
@@ -39,7 +41,9 @@
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
@@ -69,7 +73,9 @@ QPushButton:hover{
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
@@ -99,7 +105,9 @@ QPushButton:hover{
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
@@ -128,20 +136,26 @@ QPushButton:hover{
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+     <string notr="true">
+QPushButton{
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;
+
 	background-color: rgb(0, 0, 0);
 	color: rgb(255, 255, 255);
 }
+
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
-}</string>
+}
+</string>
     </property>
     <property name="text">
      <string>Dentists</string>
@@ -162,7 +176,9 @@ QPushButton:hover{
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
@@ -192,7 +208,9 @@ QPushButton:hover{
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
@@ -238,7 +256,7 @@ color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>30</y>
+     <y>50</y>
      <width>1061</width>
      <height>491</height>
     </rect>
@@ -292,7 +310,7 @@ font:  12pt &quot;Segoe UI &quot;;</string>
    <property name="geometry">
     <rect>
      <x>1130</x>
-     <y>560</y>
+     <y>605</y>
      <width>101</width>
      <height>23</height>
     </rect>
@@ -337,7 +355,7 @@ QPushButton:hover{
    <property name="geometry">
     <rect>
      <x>1135</x>
-     <y>565</y>
+     <y>610</y>
      <width>100</width>
      <height>25</height>
     </rect>
@@ -356,11 +374,32 @@ color: rgb(255, 255, 255);
     <string/>
    </property>
   </widget>
+  <widget class="QLabel" name="patient_list">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>20</y>
+     <width>1061</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
+   </property>
+   <property name="text">
+    <string>Patients List</string>
+   </property>
+  </widget>
   <zorder>label</zorder>
   <zorder>side_bar</zorder>
   <zorder>dentist_table</zorder>
   <zorder>label_5</zorder>
   <zorder>add_dentist_btn</zorder>
+  <zorder>patient_list</zorder>
  </widget>
  <resources/>
  <connections/>

@@ -14,7 +14,7 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(170, 170, 255);</string>
+   <string notr="true">background-color: rgba(170, 170, 255,.4);</string>
   </property>
   <widget class="QLabel" name="vname">
    <property name="geometry">
@@ -277,6 +277,9 @@ border-bottom-right-radius:10px;</string>
      <height>183</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
   </widget>
   <widget class="QPushButton" name="return_btn">
    <property name="geometry">
@@ -288,12 +291,19 @@ border-bottom-right-radius:10px;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+    <string notr="true">QPushButton{
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
-border-bottom-right-radius:10px;</string>
+border-bottom-right-radius:10px;}
+QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
    </property>
    <property name="text">
     <string>Return</string>
@@ -336,12 +346,19 @@ color: rgb(255, 255, 255);
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+    <string notr="true">QPushButton{
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
-border-bottom-right-radius:10px;</string>
+border-bottom-right-radius:10px;}
+QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
    </property>
    <property name="text">
     <string>Update</string>
@@ -434,6 +451,20 @@ color: rgb(255, 255, 255);
     <string>v_phone</string>
    </property>
   </widget>
+  <widget class="QTimeEdit" name="timeEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>120</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Segoe UI&quot;;
+background-color: rgba(255, 255, 255,.5);</string>
+   </property>
+  </widget>
   <zorder>label_7</zorder>
   <zorder>vname</zorder>
   <zorder>phone</zorder>
@@ -454,6 +485,7 @@ color: rgb(255, 255, 255);
   <zorder>comboBox</zorder>
   <zorder>v_name</zorder>
   <zorder>v_phone</zorder>
+  <zorder>timeEdit</zorder>
  </widget>
  <resources/>
  <connections/>
