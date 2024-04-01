@@ -333,7 +333,7 @@ background-color: rgb(255, 255, 255);
   <widget class="QLabel" name="add_phn">
    <property name="geometry">
     <rect>
-     <x>450</x>
+     <x>490</x>
      <y>20</y>
      <width>101</width>
      <height>30</height>
@@ -353,7 +353,7 @@ font:  14pt &quot;Segoe UI &quot;;</string>
   <widget class="QTextEdit" name="add_phn_edit">
    <property name="geometry">
     <rect>
-     <x>550</x>
+     <x>590</x>
      <y>20</y>
      <width>141</width>
      <height>31</height>
@@ -373,7 +373,7 @@ background-color: rgb(255, 255, 255);
   <widget class="QLabel" name="add_address">
    <property name="geometry">
     <rect>
-     <x>450</x>
+     <x>490</x>
      <y>60</y>
      <width>101</width>
      <height>30</height>
@@ -393,7 +393,7 @@ font:  14pt &quot;Segoe UI &quot;;</string>
   <widget class="QTextEdit" name="add_address_edit">
    <property name="geometry">
     <rect>
-     <x>550</x>
+     <x>590</x>
      <y>60</y>
      <width>141</width>
      <height>31</height>
@@ -453,7 +453,7 @@ background-color: rgb(255, 255, 255);
   <widget class="QLabel" name="add_email">
    <property name="geometry">
     <rect>
-     <x>450</x>
+     <x>490</x>
      <y>100</y>
      <width>101</width>
      <height>30</height>
@@ -473,7 +473,7 @@ font:  14pt &quot;Segoe UI &quot;;</string>
   <widget class="QTextEdit" name="add_email_edit">
    <property name="geometry">
     <rect>
-     <x>550</x>
+     <x>590</x>
      <y>100</y>
      <width>141</width>
      <height>31</height>
@@ -535,7 +535,7 @@ background-color: rgb(255, 255, 255);
     <rect>
      <x>180</x>
      <y>220</y>
-     <width>291</width>
+     <width>411</width>
      <height>31</height>
     </rect>
    </property>
@@ -547,27 +547,7 @@ background-color: rgb(0, 0, 0);
 font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
-    <string>If from abroad, date of departure</string>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="add_depart_edit">
-   <property name="geometry">
-    <rect>
-     <x>470</x>
-     <y>220</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QTextEdit:focus{
-background-color: rgb(255, 255, 255);
-}
-QTextEdit{
-background-color: rgb(255, 255, 255);
-	font: 12pt &quot;Segoe UI&quot;;
-}
-</string>
+    <string>If from abroad, date of departure (mm/dd/yyyy):</string>
    </property>
   </widget>
   <widget class="QLabel" name="add_complain">
@@ -641,7 +621,7 @@ QPushButton:hover{
   <widget class="QLabel" name="add_age">
    <property name="geometry">
     <rect>
-     <x>450</x>
+     <x>490</x>
      <y>140</y>
      <width>101</width>
      <height>30</height>
@@ -661,7 +641,7 @@ font:  14pt &quot;Segoe UI &quot;;</string>
   <widget class="QTextEdit" name="add_age_edit">
    <property name="geometry">
     <rect>
-     <x>550</x>
+     <x>590</x>
      <y>140</y>
      <width>141</width>
      <height>31</height>
@@ -835,7 +815,7 @@ color: rgb(255, 255, 255);
   <widget class="QLabel" name="add_pat_id">
    <property name="geometry">
     <rect>
-     <x>450</x>
+     <x>490</x>
      <y>180</y>
      <width>101</width>
      <height>30</height>
@@ -855,7 +835,7 @@ font:  14pt &quot;Segoe UI &quot;;</string>
   <widget class="QTextEdit" name="add_pat_id_edit">
    <property name="geometry">
     <rect>
-     <x>550</x>
+     <x>590</x>
      <y>180</y>
      <width>141</width>
      <height>31</height>
@@ -870,6 +850,20 @@ background-color: rgb(255, 255, 255);
 	font: 12pt &quot;Segoe UI&quot;;
 }
 </string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="new_date_edit">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>220</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+	font: 12pt &quot;Segoe UI&quot;;</string>
    </property>
   </widget>
   <zorder>label</zorder>
@@ -889,7 +883,6 @@ background-color: rgb(255, 255, 255);
   <zorder>add_ref</zorder>
   <zorder>add_ref_edit</zorder>
   <zorder>add_depart</zorder>
-  <zorder>add_depart_edit</zorder>
   <zorder>add_complain</zorder>
   <zorder>add_complain_edit</zorder>
   <zorder>add_age</zorder>
@@ -902,6 +895,7 @@ background-color: rgb(255, 255, 255);
   <zorder>return_btn</zorder>
   <zorder>add_pat_id</zorder>
   <zorder>add_pat_id_edit</zorder>
+  <zorder>new_date_edit</zorder>
  </widget>
  <resources/>
  <connections/>
