@@ -382,7 +382,7 @@ background-color: rgb(255, 255, 255);
 color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>7.Cardiac or Kidney Diseases?</string>
+     <string>  7.Cardiac or Kidney Diseases?</string>
     </property>
    </widget>
    <widget class="QLabel" name="q8">
@@ -1199,7 +1199,7 @@ font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
-font:  12pt &quot;Segoe UI &quot;;</string>
+font:  10pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -1482,25 +1482,25 @@ QPushButton:hover{
      <x>190</x>
      <y>480</y>
      <width>481</width>
-     <height>141</height>
+     <height>121</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
-font:  12pt &quot;Segoe UI &quot;;</string>
+font:  10pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="html">
     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI '; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI '; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:8.25pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="return_pat_2">
+  <widget class="QPushButton" name="customize_btn">
    <property name="geometry">
     <rect>
-     <x>930</x>
+     <x>990</x>
      <y>620</y>
      <width>120</width>
      <height>30</height>
@@ -1528,7 +1528,58 @@ QPushButton:hover{
   <widget class="QLabel" name="label_7">
    <property name="geometry">
     <rect>
-     <x>935</x>
+     <x>995</x>
+     <y>625</y>
+     <width>120</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 0);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+border-top-left-radius:10px;
+border-bottom-left-radius:10px;
+border-top-right-radius:10px;
+border-bottom-right-radius:10px;
+color: rgb(255, 255, 255);
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="File_btn">
+   <property name="geometry">
+    <rect>
+     <x>845</x>
+     <y>620</y>
+     <width>120</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+
+
+font:  14pt &quot;Segoe UI &quot;;
+background-color: rgb(255, 255, 255);
+border-top-left-radius:10px;
+border-bottom-left-radius:10px;
+border-top-right-radius:10px;
+border-bottom-right-radius:10px;}
+QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Files</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>850</x>
      <y>625</y>
      <width>120</width>
      <height>30</height>
@@ -1585,7 +1636,9 @@ color: rgb(255, 255, 255);
   <zorder>delete_pat</zorder>
   <zorder>updt_med_findings</zorder>
   <zorder>label_7</zorder>
-  <zorder>return_pat_2</zorder>
+  <zorder>customize_btn</zorder>
+  <zorder>label_8</zorder>
+  <zorder>File_btn</zorder>
  </widget>
  <resources/>
  <connections/>

@@ -30,45 +30,6 @@
 background-color: rgba(170, 170, 255,.5);
 </string>
    </property>
-   <widget class="QPushButton" name="patient_btn">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>180</y>
-      <width>140</width>
-      <height>40</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">
-QPushButton{
-
-
-font:  14pt &quot;Segoe UI &quot;;
-background-color: rgb(255, 255, 255);
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-
-	background-color: rgb(0, 0, 0);
-	color: rgb(255, 255, 255);
-}
-
-QPushButton:hover{
-	background-color: rgb(161, 161, 161);
-	color: rgb(255, 255, 255);
-}
-</string>
-    </property>
-    <property name="text">
-     <string>Patients</string>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>../Medico_modern/patientdownload .png</normaloff>../Medico_modern/patientdownload .png</iconset>
-    </property>
-   </widget>
    <widget class="QPushButton" name="dash_btn">
     <property name="geometry">
      <rect>
@@ -239,7 +200,8 @@ QPushButton:hover{
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">
+     <string notr="true">font: 20pt &quot;MS Shell Dlg 2&quot;;
+font: 75 20pt &quot;MS Shell Dlg 2&quot;;
 text-decoration: underline;
 font: 22pt &quot;MS Shell Dlg 2&quot;;
 background-color: rgba(255, 255, 255,0);
@@ -251,54 +213,56 @@ color: rgb(255, 255, 255);
     </property>
    </widget>
   </widget>
-  <widget class="QTableWidget" name="patient_table">
+  <widget class="QPushButton" name="patient_btn">
    <property name="geometry">
     <rect>
-     <x>260</x>
+     <x>10</x>
      <y>180</y>
-     <width>911</width>
-     <height>431</height>
+     <width>140</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgba(255, 255, 255,.85);
-font:  12pt &quot;Segoe UI &quot;;</string>
+    <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+border-top-left-radius:10px;
+border-bottom-left-radius:10px;
+border-top-right-radius:10px;
+border-bottom-right-radius:10px;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);</string>
    </property>
-   <column>
-    <property name="text">
-     <string>PatID</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>First Name</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Last Name</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Sex</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Age</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Phone</string>
-    </property>
-   </column>
+   <property name="text">
+    <string>Patients</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Medico_modern/patientdownload .png</normaloff>../Medico_modern/patientdownload .png</iconset>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1280</width>
+     <height>720</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>Images/daniel-frank-wKbWAMlHgNo-unsplash.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QLabel" name="fname_srch">
    <property name="geometry">
     <rect>
-     <x>180</x>
+     <x>190</x>
      <y>20</y>
      <width>101</width>
      <height>31</height>
@@ -312,15 +276,15 @@ background-color: rgb(0, 0, 0);
 font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
-    <string>First Name</string>
+    <string>File Name:</string>
    </property>
   </widget>
   <widget class="QTextEdit" name="fname_srch_edit">
    <property name="geometry">
     <rect>
-     <x>280</x>
+     <x>290</x>
      <y>20</y>
-     <width>141</width>
+     <width>601</width>
      <height>31</height>
     </rect>
    </property>
@@ -335,12 +299,32 @@ background-color: rgb(255, 255, 255);
 </string>
    </property>
   </widget>
-  <widget class="QLabel" name="lname_srch">
+  <widget class="QTextEdit" name="add_complain_edit">
    <property name="geometry">
     <rect>
-     <x>460</x>
-     <y>20</y>
-     <width>101</width>
+     <x>190</x>
+     <y>100</y>
+     <width>700</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTextEdit:focus{
+background-color: rgb(255, 255, 255);
+}
+QTextEdit{
+background-color: rgb(255, 255, 255);
+	font: 12pt &quot;Segoe UI&quot;;
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="add_complain">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>70</y>
+     <width>700</width>
      <height>31</height>
     </rect>
    </property>
@@ -352,35 +336,15 @@ background-color: rgb(0, 0, 0);
 font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
-    <string>Last Name</string>
+    <string>Chief Complain</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="lname_srch_edit">
+  <widget class="QLabel" name="est_cost">
    <property name="geometry">
     <rect>
-     <x>560</x>
-     <y>20</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QTextEdit:focus{
-background-color: rgb(255, 255, 255);
-}
-QTextEdit{
-background-color: rgb(255, 255, 255);
-	font: 12pt &quot;Segoe UI&quot;;
-}
-</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="phn_srch">
-   <property name="geometry">
-    <rect>
-     <x>180</x>
-     <y>60</y>
-     <width>101</width>
+     <x>200</x>
+     <y>440</y>
+     <width>161</width>
      <height>31</height>
     </rect>
    </property>
@@ -392,14 +356,14 @@ background-color: rgb(0, 0, 0);
 font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
-    <string>Phone</string>
+    <string>Estimated Cost:</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="phone_srch_edit">
+  <widget class="QTextEdit" name="fname_srch_edit_2">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>60</y>
+     <x>360</x>
+     <y>440</y>
      <width>141</width>
      <height>31</height>
     </rect>
@@ -415,40 +379,12 @@ background-color: rgb(255, 255, 255);
 </string>
    </property>
   </widget>
-  <widget class="QPushButton" name="search_btn">
+  <widget class="QLabel" name="est_cost_2">
    <property name="geometry">
     <rect>
-     <x>195</x>
-     <y>105</y>
-     <width>75</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton{
-
-
-font:  14pt &quot;Segoe UI &quot;;
-background-color: rgb(255, 255, 255);
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;}
-QPushButton:hover{
-	background-color: rgb(161, 161, 161);
-	color: rgb(255, 255, 255);
-}</string>
-   </property>
-   <property name="text">
-    <string>Search</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="patid_srch">
-   <property name="geometry">
-    <rect>
-     <x>460</x>
-     <y>60</y>
-     <width>101</width>
+     <x>200</x>
+     <y>480</y>
+     <width>161</width>
      <height>31</height>
     </rect>
    </property>
@@ -460,14 +396,14 @@ background-color: rgb(0, 0, 0);
 font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
-    <string>Patient ID</string>
+    <string>Discount:</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="patid_srch_edit">
+  <widget class="QTextEdit" name="fname_srch_edit_3">
    <property name="geometry">
     <rect>
-     <x>560</x>
-     <y>60</y>
+     <x>360</x>
+     <y>480</y>
      <width>141</width>
      <height>31</height>
     </rect>
@@ -483,12 +419,12 @@ background-color: rgb(255, 255, 255);
 </string>
    </property>
   </widget>
-  <widget class="QPushButton" name="add_patient_btn">
+  <widget class="QPushButton" name="add_file_btn">
    <property name="geometry">
     <rect>
-     <x>1025</x>
-     <y>615</y>
-     <width>140</width>
+     <x>205</x>
+     <y>545</y>
+     <width>150</width>
      <height>30</height>
     </rect>
    </property>
@@ -510,61 +446,15 @@ QPushButton:hover{
 }</string>
    </property>
    <property name="text">
-    <string>Add Patients</string>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>../Medico_modern/patientdownload .png</normaloff>../Medico_modern/patientdownload .png</iconset>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1281</width>
-     <height>720</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>Images/sam-moghadam-khamseh-I-kDEBUMAaQ-unsplash.jpg</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>200</x>
-     <y>110</y>
-     <width>75</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 0, 0);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-color: rgb(255, 255, 255);
-</string>
-   </property>
-   <property name="text">
-    <string/>
+    <string>Add File</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>1030</x>
-     <y>620</y>
-     <width>140</width>
+     <x>210</x>
+     <y>550</y>
+     <width>150</width>
      <height>30</height>
     </rect>
    </property>
@@ -582,42 +472,19 @@ color: rgb(255, 255, 255);
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="patient_list">
-   <property name="geometry">
-    <rect>
-     <x>260</x>
-     <y>150</y>
-     <width>911</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">
-color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);
-
-font:  14pt &quot;Segoe UI &quot;;</string>
-   </property>
-   <property name="text">
-    <string>Patients List</string>
-   </property>
-  </widget>
   <zorder>label</zorder>
   <zorder>side_bar</zorder>
-  <zorder>patient_table</zorder>
+  <zorder>patient_btn</zorder>
   <zorder>fname_srch</zorder>
   <zorder>fname_srch_edit</zorder>
-  <zorder>lname_srch</zorder>
-  <zorder>lname_srch_edit</zorder>
-  <zorder>phn_srch</zorder>
-  <zorder>phone_srch_edit</zorder>
-  <zorder>patid_srch</zorder>
-  <zorder>patid_srch_edit</zorder>
-  <zorder>label_2</zorder>
-  <zorder>search_btn</zorder>
+  <zorder>add_complain_edit</zorder>
+  <zorder>add_complain</zorder>
+  <zorder>est_cost</zorder>
+  <zorder>fname_srch_edit_2</zorder>
+  <zorder>est_cost_2</zorder>
+  <zorder>fname_srch_edit_3</zorder>
   <zorder>label_3</zorder>
-  <zorder>add_patient_btn</zorder>
-  <zorder>patient_list</zorder>
+  <zorder>add_file_btn</zorder>
  </widget>
  <resources/>
  <connections/>
