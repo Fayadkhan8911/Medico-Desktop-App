@@ -1173,7 +1173,7 @@ font:  12pt &quot;Segoe UI &quot;;</string>
     <rect>
      <x>190</x>
      <y>337</y>
-     <width>101</width>
+     <width>481</width>
      <height>31</height>
     </rect>
    </property>
@@ -1188,28 +1188,11 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     <string>Complain:</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="updt_comp">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>337</y>
-     <width>381</width>
-     <height>101</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  10pt &quot;Segoe UI &quot;;</string>
-   </property>
-   <property name="text">
-    <string>N/A</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="pat_id_labl">
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>153</y>
+     <y>60</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -1229,7 +1212,7 @@ font:  14pt &quot;Segoe UI &quot;;</string>
    <property name="geometry">
     <rect>
      <x>290</x>
-     <y>153</y>
+     <y>60</y>
      <width>151</width>
      <height>31</height>
     </rect>
@@ -1246,7 +1229,7 @@ font:  12pt &quot;Segoe UI &quot;;</string>
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>61</y>
+     <y>155</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -1266,7 +1249,7 @@ font:  14pt &quot;Segoe UI &quot;;</string>
    <property name="geometry">
     <rect>
      <x>290</x>
-     <y>61</y>
+     <y>155</y>
      <width>151</width>
      <height>31</height>
     </rect>
@@ -1320,7 +1303,7 @@ font:  12pt &quot;Segoe UI &quot;;</string>
    <property name="geometry">
     <rect>
      <x>457</x>
-     <y>153</y>
+     <y>155</y>
      <width>111</width>
      <height>31</height>
     </rect>
@@ -1357,8 +1340,8 @@ font:  12pt &quot;Segoe UI &quot;;</string>
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>450</y>
-     <width>151</width>
+     <y>480</y>
+     <width>481</width>
      <height>31</height>
     </rect>
    </property>
@@ -1480,9 +1463,9 @@ QPushButton:hover{
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>480</y>
+     <y>510</y>
      <width>481</width>
-     <height>121</height>
+     <height>141</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -1599,6 +1582,27 @@ color: rgb(255, 255, 255);
     <string/>
    </property>
   </widget>
+  <widget class="QTextBrowser" name="updt_comp">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>370</y>
+     <width>481</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+font:  10pt &quot;Segoe UI &quot;;</string>
+   </property>
+   <property name="html">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI '; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:8.25pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
   <zorder>label</zorder>
   <zorder>side_bar</zorder>
   <zorder>patient_btn</zorder>
@@ -1620,7 +1624,6 @@ color: rgb(255, 255, 255);
   <zorder>depart_labl</zorder>
   <zorder>updt_depart</zorder>
   <zorder>comp_labl</zorder>
-  <zorder>updt_comp</zorder>
   <zorder>pat_id_labl</zorder>
   <zorder>updt_pat_id</zorder>
   <zorder>age_labl</zorder>
@@ -1639,6 +1642,7 @@ color: rgb(255, 255, 255);
   <zorder>customize_btn</zorder>
   <zorder>label_8</zorder>
   <zorder>File_btn</zorder>
+  <zorder>updt_comp</zorder>
  </widget>
  <resources/>
  <connections/>

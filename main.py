@@ -261,6 +261,7 @@ class _main_window(QDialog):
         phone_input = self._add_pat.add_phn_edit.toPlainText().strip()
         address_input = self._add_pat.add_address_edit.toPlainText().strip()
         age_input = self._add_pat.add_age_edit.toPlainText().strip()
+        pat_id_input = self._add_pat.add_pat_id_edit.toPlainText().strip()
 
         if (
             not f_name_input
@@ -268,6 +269,7 @@ class _main_window(QDialog):
             or not phone_input
             or not address_input
             or not age_input
+            or not pat_id_input
         ):
             if not f_name_input:
                 self.show_error_window("You Must Enter First Name")
@@ -284,11 +286,16 @@ class _main_window(QDialog):
             elif not age_input:
                 self.show_error_window("You Must Enter Age")
                 print("You Must Enter Age")
+            elif not pat_id_input:
+                self.show_error_window("You Must Enter a new valid Patient ID")
+                print("You Must Enter Pat ID")
+
             print("Missing Information")
+
         else:
             conn = sqlite3.connect("medico.db3")
             c = conn.cursor()
-            # Search for the patient using first name and phone number
+            # Search for the patient using first name , phone number
             c.execute(
                 "SELECT * FROM patients WHERE f_name=? AND phone=?",
                 (f_name_input, phone_input),
@@ -315,6 +322,7 @@ class _main_window(QDialog):
         reference = self._add_pat.add_ref_edit.toPlainText()
         date_of_departure = self._add_pat.add_depart_edit.toPlainText()
         chief_complain = self._add_pat.add_complain_edit.toPlainText()
+        pat_id = self._add_pat.add_pat_id_edit.toPlainText()
 
         # Instantiate _add_med_hist_win with the retrieved patient data
         self._med_hist = add_pat_med._add_med_hist_win(
@@ -326,6 +334,7 @@ class _main_window(QDialog):
             email,
             age,
             sex,
+            pat_id,
             reference,
             date_of_departure,
             chief_complain,

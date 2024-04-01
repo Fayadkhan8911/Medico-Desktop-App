@@ -26,6 +26,7 @@ class _add_med_hist_win(QDialog):
         email,
         age,
         sex,
+        pat_id,
         reference,
         date_of_departure,
         chief_complain,
@@ -43,6 +44,7 @@ class _add_med_hist_win(QDialog):
         self.reference = reference
         self.date_of_departure = date_of_departure
         self.chief_complain = chief_complain
+        self.pat_id = pat_id
 
         self.save_pat.clicked.connect(self.save_medical_history)
 
@@ -81,13 +83,13 @@ class _add_med_hist_win(QDialog):
         conn = sqlite3.connect("medico.db3")
         cursor = conn.cursor()
         # Fetch the last patient ID
-        cursor.execute("SELECT MAX(p_id) FROM patients")
-        last_p_id = cursor.fetchone()[0]
-        if last_p_id is None:
-            last_p_id = 0
+        # cursor.execute("SELECT MAX(p_id) FROM patients")
+        # last_p_id = cursor.fetchone()[0]
+        # if last_p_id is None:
+        #     last_p_id = 0
 
-        # Increment the last patient ID
-        new_p_id = last_p_id + 1
+        # # Increment the last patient ID
+        # new_p_id = last_p_id + 1
         cursor.execute(
             """
             INSERT INTO patients (p_id, f_name, l_name, phone, address, email, age, sex, reference, date_of_departure, complain, occupation, med_find_, 
@@ -95,7 +97,7 @@ class _add_med_hist_win(QDialog):
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """,
             (
-                new_p_id,
+                self.pat_id,
                 self.f_name,
                 self.l_name,
                 self.phone,
@@ -122,7 +124,7 @@ class _add_med_hist_win(QDialog):
             + str(QDate.currentDate().toString("yyyy-MM-dd"))
             + "\n"
             + "Patient ID: "
-            + str(new_p_id)
+            + self.pat_id
             + "\n"
             + "First Name: "
             + self.f_name
