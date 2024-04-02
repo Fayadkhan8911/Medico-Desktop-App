@@ -34,8 +34,8 @@ class appointment_window(QDialog):
     def save_appointment(self):
         v_name_input = self.vname_edit.toPlainText()
         phone_input = self.phone_edit.toPlainText()
-        v_time_input = self.visit_time_edit.toPlainText()
-        v_date_input = self.visit_date_edit.toPlainText()
+        v_time_input = self.timeEdit.time().toString()
+        v_date_input = self.dateEdit.date().toString("dd-MM-yyyy")
         conn = sqlite3.connect("medico.db3")
         cursor = conn.cursor()
         cursor.execute(
