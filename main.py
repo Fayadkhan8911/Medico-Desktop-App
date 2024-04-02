@@ -45,7 +45,7 @@ class _main_window(QDialog):
         self.dentist_btn.clicked.connect(self.get_dentist)
         # self.add_patient_btn.clicked.connect(self._go_add_pat)
         current_day = QDate.currentDate()
-        formatted_date = current_day.toString("yyyy-MM-dd")
+        formatted_date = current_day.toString("dd-MM-yyyy")
         print(formatted_date)
         self.load_appointment_table()
         self.load_expense_table()
@@ -56,7 +56,7 @@ class _main_window(QDialog):
     current_date = QDate.currentDate()
 
     # Convert to 'yyyy-MM-dd' format
-    formatted_date = current_date.toString("yyyy-MM-dd")
+    formatted_date = current_date.toString("dd-MM-yyyy")
 
     def load_payment_table(self):
         _connect = sqlite3.connect("MEDICO.db3")

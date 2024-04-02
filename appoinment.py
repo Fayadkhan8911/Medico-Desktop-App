@@ -9,6 +9,7 @@ import sqlite3
 import appt_success
 import error
 
+
 class appointment_window(QDialog):
     def __init__(self, appt_callback_fnc):
         super(appointment_window, self).__init__()
@@ -47,19 +48,19 @@ class appointment_window(QDialog):
         conn.commit()
         conn.close()
         self.show_appt_success_dialog()
-        
+
     def show_appt_success_dialog(self):
         success_dialog = appt_success._error_window("Appointment Success")
         success_dialog.ok_btn.clicked.connect(self.trigger_callback)
         success_dialog.exec_()
-        
+
     def trigger_callback(self):
         self.appt_callback_fnc()
 
     def load_table(self):
         _connect = sqlite3.connect("MEDICO.db3")
         _cur = _connect.cursor()
-        _query = "SELECT reg_date , visitor_name, visitor_phone,visit_date,visit_time FROM appointments ORDER BY visit_date DESC"
+        _query = "SELECT reg_date , visitor_name, visitor_phone,visit_date,visit_time,dentist_name FROM appointments ORDER BY visit_date DESC"
         # data = _cur.fetchall()  # Fetch data
         _tablerow = 0
         self.appointment_table.setRowCount(50)
@@ -82,6 +83,10 @@ class appointment_window(QDialog):
             self.appointment_table.setItem(
                 _tablerow, 4, QtWidgets.QTableWidgetItem(col[4])
             )
+            self.appointment_table.setItem(
+                _tablerow, 5, QtWidgets.QTableWidgetItem(col[5])
+            )
+
             _tablerow += 1
             pass
 

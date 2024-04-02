@@ -352,26 +352,6 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     <string>Visit Time</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="visit_time_edit">
-   <property name="geometry">
-    <rect>
-     <x>630</x>
-     <y>30</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QTextEdit:focus{
-background-color: rgb(255, 255, 255);
-}
-QTextEdit{
-background-color: rgb(255, 255, 255);
-	font: 12pt &quot;Segoe UI&quot;;
-}
-</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="visit_date">
    <property name="geometry">
     <rect>
@@ -390,26 +370,6 @@ font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>Visit Date</string>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="visit_date_edit">
-   <property name="geometry">
-    <rect>
-     <x>630</x>
-     <y>70</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QTextEdit:focus{
-background-color: rgb(255, 255, 255);
-}
-QTextEdit{
-background-color: rgb(255, 255, 255);
-	font: 12pt &quot;Segoe UI&quot;;
-}
-</string>
    </property>
   </widget>
   <widget class="QTableWidget" name="appointment_table">
@@ -775,6 +735,34 @@ background-color: rgb(255, 255, 255);
 </string>
    </property>
   </widget>
+  <widget class="QTimeEdit" name="timeEdit">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>30</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Segoe UI&quot;;
+background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="dateEdit">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>70</y>
+     <width>131</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Segoe UI&quot;;
+background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
   <zorder>label</zorder>
   <zorder>side_bar</zorder>
   <zorder>vname</zorder>
@@ -782,9 +770,7 @@ background-color: rgb(255, 255, 255);
   <zorder>phone</zorder>
   <zorder>phone_edit</zorder>
   <zorder>visit_time</zorder>
-  <zorder>visit_time_edit</zorder>
   <zorder>visit_date</zorder>
-  <zorder>visit_date_edit</zorder>
   <zorder>appointment_table</zorder>
   <zorder>visit_date_2</zorder>
   <zorder>search_name_edit</zorder>
@@ -799,6 +785,8 @@ background-color: rgb(255, 255, 255);
   <zorder>cancel_appointment</zorder>
   <zorder>dname</zorder>
   <zorder>dname_edit</zorder>
+  <zorder>timeEdit</zorder>
+  <zorder>dateEdit</zorder>
  </widget>
  <resources/>
  <connections/>
