@@ -763,6 +763,26 @@ background-color: rgb(255, 255, 255);</string>
 background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
+  <widget class="QLabel" name="visit_date_5">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>100</y>
+     <width>131</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  8pt &quot;Segoe UI &quot;;</string>
+   </property>
+   <property name="text">
+    <string>mm/dd/yyyy</string>
+   </property>
+  </widget>
   <zorder>label</zorder>
   <zorder>side_bar</zorder>
   <zorder>vname</zorder>
@@ -787,6 +807,7 @@ background-color: rgb(255, 255, 255);</string>
   <zorder>dname_edit</zorder>
   <zorder>timeEdit</zorder>
   <zorder>dateEdit</zorder>
+  <zorder>visit_date_5</zorder>
  </widget>
  <resources/>
  <connections/>
