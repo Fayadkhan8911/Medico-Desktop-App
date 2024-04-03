@@ -1556,7 +1556,7 @@ QPushButton:hover{
 }</string>
    </property>
    <property name="text">
-    <string>Files</string>
+    <string>Add New File</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_8">
