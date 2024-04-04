@@ -23,86 +23,28 @@ background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0.
     <rect>
      <x>25</x>
      <y>20</y>
-     <width>101</width>
-     <height>31</height>
+     <width>700</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">
-color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);
+    <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
 
-font:  14pt &quot;Segoe UI &quot;;</string>
+font: 75 bold 14pt &quot;Segoe UI&quot;;</string>
    </property>
    <property name="text">
-    <string>File Name:</string>
+    <string>Fill only the field you want to update.</string>
    </property>
-  </widget>
-  <widget class="QTextEdit" name="fname_srch_edit">
-   <property name="geometry">
-    <rect>
-     <x>125</x>
-     <y>20</y>
-     <width>601</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QTextEdit:focus{
-background-color: rgb(255, 255, 255);
-}
-QTextEdit{
-background-color: rgb(255, 255, 255);
-	font: 12pt &quot;Segoe UI&quot;;
-}
-</string>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="file_desc_edit">
-   <property name="geometry">
-    <rect>
-     <x>25</x>
-     <y>100</y>
-     <width>700</width>
-     <height>291</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QTextEdit:focus{
-background-color: rgb(255, 255, 255);
-}
-QTextEdit{
-background-color: rgb(255, 255, 255);
-	font: 12pt &quot;Segoe UI&quot;;
-}
-</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="add_complain">
-   <property name="geometry">
-    <rect>
-     <x>25</x>
-     <y>70</y>
-     <width>700</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">
-color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);
-
-font:  14pt &quot;Segoe UI &quot;;</string>
-   </property>
-   <property name="text">
-    <string>File Description</string>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="est_cost">
    <property name="geometry">
     <rect>
      <x>35</x>
-     <y>440</y>
+     <y>81</y>
      <width>161</width>
      <height>31</height>
     </rect>
@@ -122,7 +64,7 @@ font:  14pt &quot;Segoe UI &quot;;</string>
    <property name="geometry">
     <rect>
      <x>195</x>
-     <y>440</y>
+     <y>81</y>
      <width>141</width>
      <height>31</height>
     </rect>
@@ -142,7 +84,7 @@ background-color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>35</x>
-     <y>480</y>
+     <y>132</y>
      <width>161</width>
      <height>31</height>
     </rect>
@@ -162,7 +104,7 @@ font:  14pt &quot;Segoe UI &quot;;</string>
    <property name="geometry">
     <rect>
      <x>195</x>
-     <y>480</y>
+     <y>132</y>
      <width>141</width>
      <height>31</height>
     </rect>
@@ -283,9 +225,6 @@ QPushButton:hover{
    </property>
   </widget>
   <zorder>fname_srch</zorder>
-  <zorder>fname_srch_edit</zorder>
-  <zorder>file_desc_edit</zorder>
-  <zorder>add_complain</zorder>
   <zorder>est_cost</zorder>
   <zorder>estd_cost_edit</zorder>
   <zorder>discount</zorder>

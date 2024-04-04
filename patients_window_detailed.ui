@@ -1135,7 +1135,7 @@ font:  14pt &quot;Segoe UI &quot;;</string>
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>291</y>
+     <y>322</y>
      <width>301</width>
      <height>31</height>
     </rect>
@@ -1155,7 +1155,7 @@ font:  14pt &quot;Segoe UI &quot;;</string>
    <property name="geometry">
     <rect>
      <x>490</x>
-     <y>291</y>
+     <y>322</y>
      <width>181</width>
      <height>31</height>
     </rect>
@@ -1172,7 +1172,7 @@ font:  12pt &quot;Segoe UI &quot;;</string>
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>337</y>
+     <y>368</y>
      <width>481</width>
      <height>31</height>
     </rect>
@@ -1340,7 +1340,7 @@ font:  12pt &quot;Segoe UI &quot;;</string>
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>480</y>
+     <y>511</y>
      <width>481</width>
      <height>31</height>
     </rect>
@@ -1463,9 +1463,9 @@ QPushButton:hover{
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>510</y>
+     <y>541</y>
      <width>481</width>
-     <height>141</height>
+     <height>110</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -1531,7 +1531,7 @@ color: rgb(255, 255, 255);
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="File_btn">
+  <widget class="QPushButton" name="new_file_btn">
    <property name="geometry">
     <rect>
      <x>845</x>
@@ -1586,7 +1586,7 @@ color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>370</y>
+     <y>401</y>
      <width>481</width>
      <height>101</height>
     </rect>
@@ -1601,6 +1601,94 @@ font:  10pt &quot;Segoe UI &quot;;</string>
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI '; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:8.25pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="file_name_labl">
+   <property name="geometry">
+    <rect>
+     <x>457</x>
+     <y>245</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
+   </property>
+   <property name="text">
+    <string>File Name:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="updt_file_name">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>245</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+font:  12pt &quot;Segoe UI &quot;;</string>
+   </property>
+   <property name="text">
+    <string>N/A</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="updt_file">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>280</y>
+     <width>120</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+
+
+font:  14pt &quot;Segoe UI &quot;;
+background-color: rgb(255, 255, 255);
+border-top-left-radius:10px;
+border-bottom-left-radius:10px;
+border-top-right-radius:10px;
+border-bottom-right-radius:10px;}
+QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Update File</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>505</x>
+     <y>285</y>
+     <width>120</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 0);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+border-top-left-radius:10px;
+border-bottom-left-radius:10px;
+border-top-right-radius:10px;
+border-bottom-right-radius:10px;
+color: rgb(255, 255, 255);
+</string>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
   <zorder>label</zorder>
@@ -1641,8 +1729,12 @@ p, li { white-space: pre-wrap; }
   <zorder>label_7</zorder>
   <zorder>customize_btn</zorder>
   <zorder>label_8</zorder>
-  <zorder>File_btn</zorder>
+  <zorder>new_file_btn</zorder>
   <zorder>updt_comp</zorder>
+  <zorder>file_name_labl</zorder>
+  <zorder>updt_file_name</zorder>
+  <zorder>label_9</zorder>
+  <zorder>updt_file</zorder>
  </widget>
  <resources/>
  <connections/>

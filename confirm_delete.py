@@ -54,7 +54,7 @@ class _warning_window(QDialog):
                 
         
         try:
-            conn = sqlite3.connect("medico.db3")
+            conn = sqlite3.connect("MEDICO.db3")
             cursor = conn.cursor()
 
             cursor.execute(

@@ -81,6 +81,8 @@ class _pat_detailed_win(QDialog):
                     self.updt_med_findings.setText(" "+str(result[28]))
                     if result[29] is not None:
                         self.updt_occu.setText(str(result[29]))
+                    if result[30] is not None:
+                        self.updt_file_name.setText(str(result[30]))
                 print(result)
             else:
                 print("Patient not found")
