@@ -172,6 +172,30 @@ class _main_window(QDialog):
         # self._indi_app.load_table(v_name, v_phone)
         print(v_name)
 
+    def checkvalid_appnt(self):
+        # CHECK
+        vname_input = self._appointment.vname_edit.toPlainText().strip()
+        phone_input = self._appointment.phone_edit.toPlainText().strip()
+        # date_input = self._appointment.add_address_edit.toPlainText().strip()
+        # time_input = self._appointment.add_age_edit.toPlainText().strip()
+        dentist_input = self._appointment.add_pat_id_edit.toPlainText().strip()
+
+        if not vname_input or not phone_input or len(phone_input) != 11:
+            if not vname_input:
+                self.show_error_window("You Must Enter Visitor Name")
+                print("You Must Enter Visitor Name")
+            elif not phone_input:
+                self.show_error_window("You Must Enter Visitor Phone number")
+                print("You Must Enter Visitor Phone number")
+            elif len(phone_input) != 11:
+                self.show_error_window("You Must Enter a valid Phone Number")
+                print("You Must Enter a valid Phone Number")
+
+            print("Missing Information")
+
+        else:
+            pass
+
     def current_date(self):
         current_date = QDate.currentDate()
         # print(f"Current date is: {current_date.toString()}")
@@ -199,7 +223,8 @@ class _main_window(QDialog):
         error_window = error._error_window(message)  # Adjusted to use the error module
         error_window.exec_()
 
-    def makemegotopat(self):
+    def makemegotopat(self):  # for adding patient details
+
         f_name = self._patients.fname_srch_edit.toPlainText()
         l_name = self._patients.lname_srch_edit.toPlainText()
         phone = self._patients.phone_srch_edit.toPlainText()
