@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>740</width>
-    <height>636</height>
+    <height>286</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,7 +16,8 @@
   <property name="styleSheet">
    <string notr="true">
 background-color: rgba(170, 170, 255,.6);
-background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0.333333 rgba(170, 170, 255, 255), stop:0.988701 rgba(128, 255, 164, 255));</string>
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(170, 170, 255, 255), stop:1 rgba(255, 255, 255, 255));
+background-color: qlineargradient(spread:pad, x1:0.403, y1:0.3125, x2:1, y2:1, stop:0 rgba(170, 170, 255, 255), stop:1 rgba(169, 255, 185, 255));</string>
   </property>
   <widget class="QLabel" name="fname_srch">
    <property name="geometry">
@@ -120,11 +121,11 @@ background-color: rgb(255, 255, 255);
 </string>
    </property>
   </widget>
-  <widget class="QPushButton" name="add_file_btn">
+  <widget class="QPushButton" name="updt_file_btn">
    <property name="geometry">
     <rect>
      <x>525</x>
-     <y>430</y>
+     <y>115</y>
      <width>150</width>
      <height>30</height>
     </rect>
@@ -147,14 +148,14 @@ QPushButton:hover{
 }</string>
    </property>
    <property name="text">
-    <string>Add File</string>
+    <string>Update File</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
      <x>530</x>
-     <y>435</y>
+     <y>120</y>
      <width>150</width>
      <height>30</height>
     </rect>
@@ -177,7 +178,7 @@ color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>530</x>
-     <y>500</y>
+     <y>170</y>
      <width>150</width>
      <height>30</height>
     </rect>
@@ -200,7 +201,7 @@ color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>525</x>
-     <y>495</y>
+     <y>165</y>
      <width>150</width>
      <height>30</height>
     </rect>
@@ -230,7 +231,7 @@ QPushButton:hover{
   <zorder>discount</zorder>
   <zorder>discount_edit</zorder>
   <zorder>label_3</zorder>
-  <zorder>add_file_btn</zorder>
+  <zorder>updt_file_btn</zorder>
   <zorder>label_6</zorder>
   <zorder>cancel_btn</zorder>
  </widget>

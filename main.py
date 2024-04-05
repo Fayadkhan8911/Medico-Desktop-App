@@ -30,6 +30,7 @@ import new_dentist
 import appointment_individual
 import confirm_delete
 import files_add
+import files_updt
 
 # import sys
 
@@ -394,13 +395,19 @@ class _main_window(QDialog):
         self._details.dentist_btn.clicked.connect(self.get_dentist)
         self._details.delete_pat.clicked.connect(self._confirm_delete)
         self._details.new_file_btn.clicked.connect(self._new_patient_file)
+        self._details.updt_file_btn.clicked.connect(self._update_existing_file)
+        
+    def _update_existing_file(self):
+        self.patient_id = self._patients.patid_srch_edit.toPlainText()
+        self.updatefile_popup = files_updt._updt_file_window(self.patient_id, self._call_back_go_pat_det_fnc)
+        self.updatefile_popup.show()
         
     def _new_patient_file(self):
         self.patient_id = self._patients.patid_srch_edit.toPlainText()
-        self.addfile_popup = files_add._add_file_window(self.patient_id, self.addfile_popup_callback_fnc)
+        self.addfile_popup = files_add._add_file_window(self.patient_id, self._call_back_go_pat_det_fnc)
         self.addfile_popup.show()
         
-    def addfile_popup_callback_fnc(self):
+    def _call_back_go_pat_det_fnc(self):
         self._go_pat_det()
 
     def _confirm_delete(self):

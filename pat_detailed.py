@@ -83,6 +83,8 @@ class _pat_detailed_win(QDialog):
                         self.updt_occu.setText(str(result[29]))
                     if result[30] is not None:
                         self.updt_file_name.setText(str(result[30]))
+                    if result[30] is None:
+                        self.updt_file_btn.setEnabled(False)
                 print(result)
             else:
                 print("Patient not found")

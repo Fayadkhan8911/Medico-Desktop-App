@@ -1640,7 +1640,7 @@ font:  12pt &quot;Segoe UI &quot;;</string>
     <string>N/A</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="updt_file">
+  <widget class="QPushButton" name="updt_file_btn">
    <property name="geometry">
     <rect>
      <x>500</x>
@@ -1734,7 +1734,7 @@ color: rgb(255, 255, 255);
   <zorder>file_name_labl</zorder>
   <zorder>updt_file_name</zorder>
   <zorder>label_9</zorder>
-  <zorder>updt_file</zorder>
+  <zorder>updt_file_btn</zorder>
  </widget>
  <resources/>
  <connections/>

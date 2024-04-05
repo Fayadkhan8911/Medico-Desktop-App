@@ -20,11 +20,11 @@ import value_error
 
 
 class _add_file_window(QDialog):
-    def __init__(self, patient_id, addfile_popup_callback_fnc):
+    def __init__(self, patient_id, _call_back_go_pat_det_fnc):
         super(_add_file_window, self).__init__()
         loadUi("files_add.ui", self)
         self.patient_id = patient_id
-        self.addfile_popup_callback_fnc = addfile_popup_callback_fnc
+        self._call_back_go_pat_det_fnc = _call_back_go_pat_det_fnc
         #self.add_file_btn.clicked.connect(self.addfile_popup_callback_fnc)
         self.add_file_btn.clicked.connect(self.add_new_pat_file)
         self.cancel_btn.clicked.connect(self.cancel_new_pat_file)
@@ -66,7 +66,7 @@ class _add_file_window(QDialog):
                 conn.close()
         
         self.close()
-        self.addfile_popup_callback_fnc()
+        self._call_back_go_pat_det_fnc()
         
     def cancel_new_pat_file(self):
         print("Add file cancelled")
