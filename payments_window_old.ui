@@ -348,12 +348,49 @@ border-bottom-right-radius:20px;</string>
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
+  <widget class="QLabel" name="file_srch">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>80</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+font: 16pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+
+border-top-right-radius:20px;
+border-bottom-right-radius:20px;
+</string>
+   </property>
+   <property name="text">
+    <string>File.</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="file_srch_edit">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>80</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
   <widget class="QLabel" name="payment">
    <property name="geometry">
     <rect>
      <x>190</x>
      <y>130</y>
-     <width>181</width>
+     <width>101</width>
      <height>31</height>
     </rect>
    </property>
@@ -368,13 +405,13 @@ border-top-right-radius:20px;
 border-bottom-right-radius:20px;</string>
    </property>
    <property name="text">
-    <string>Payment Amount:</string>
+    <string>Payment</string>
    </property>
   </widget>
   <widget class="QTextEdit" name="payment_edit">
    <property name="geometry">
     <rect>
-     <x>371</x>
+     <x>290</x>
      <y>130</y>
      <width>141</width>
      <height>31</height>
@@ -420,10 +457,10 @@ border-bottom-right-radius:20px;</string>
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="makepayment_btn">
+  <widget class="QPushButton" name="makepayment">
    <property name="geometry">
     <rect>
-     <x>190</x>
+     <x>295</x>
      <y>245</y>
      <width>191</width>
      <height>41</height>
@@ -468,7 +505,7 @@ QPushButton:hover{
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>195</x>
+     <x>300</x>
      <y>250</y>
      <width>190</width>
      <height>40</height>
@@ -537,12 +574,14 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
   <zorder>phone_srch_edit</zorder>
   <zorder>patid_srch</zorder>
   <zorder>patid_srch_edit</zorder>
+  <zorder>file_srch</zorder>
+  <zorder>file_srch_edit</zorder>
   <zorder>payment</zorder>
   <zorder>payment_edit</zorder>
   <zorder>remarks</zorder>
   <zorder>remarks_edit</zorder>
   <zorder>label_2</zorder>
-  <zorder>makepayment_btn</zorder>
+  <zorder>makepayment</zorder>
   <zorder>tableWidget</zorder>
  </widget>
  <resources/>

@@ -37,6 +37,11 @@ class _add_file_window(QDialog):
         estimated_cost = self.estd_cost_edit.toPlainText()
         discount = self.discount_edit.toPlainText()
         
+        if(file_name == '' or file_desc == '' or estimated_cost == ''):
+            error_msg = "Please Fill ALL of the Field Stated Below:\nFile Name\nFile Description\nEstimated Cost"
+            self.show_error_window(error_msg)
+            return
+        
         try:
             calc_estimated_cost = float(estimated_cost)
             calc_discount = float(discount)

@@ -432,15 +432,17 @@ class _main_window(QDialog):
 
     def _go_appointment_callback_fnc(self):
         self._go_appointment()
+        
+    def _call_back_go_make_payment(self):
+        self._go_make_payment()
 
     def _go_make_payment(self):
-        self._make_payment = payments_window._payments_window()
+        self._make_payment = payments_window._payments_window(self._call_back_go_make_payment)
         widget.addWidget(self._make_payment)
         widget.setCurrentIndex(widget.currentIndex() + 1)
         self._make_payment.dash_btn.clicked.connect(self._go_dash)
         self._make_payment.patient_btn.clicked.connect(self._go_patient_window)
         self._make_payment.expense_btn.clicked.connect(self._go_spend_money)
-        self._make_payment.makepayment.clicked.connect(self.createpayment)
         self._make_payment.appointment_btn.clicked.connect(self._go_appointment)
         self._make_payment.dentist_btn.clicked.connect(self.get_dentist)
 
