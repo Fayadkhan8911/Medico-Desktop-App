@@ -82,13 +82,24 @@ class _payments_window(QDialog):
             "yyyy-MM-dd"
         )  # You need to implement this function
         
-        cursor.execute(
-            
-        )
+        
+        # Step 1: Retrieve file_add_date from the patients table using p_id
+        
+        cursor.execute("SELECT file_add_date FROM patients WHERE p_id = ?", (self.patient_id,))
+        file_add_date_init = cursor.fetchone()[0]
+        print(f"file_add_date_init = {file_add_date_init}")
+        
+        # Step 2: Perform search statement on payment_history
+        
+        cursor.execute("SELECT * FROM payment_history WHERE p_id = ? AND payment_date >= ? ORDER BY payment_date DESC", (self.patient_id, file_add_date_init))
+        result = cursor.fetchall()
+        
+        for row in result:
+            print(row)
 
         # Insert the payment record into the payment_history table
         cursor.execute(
-            "INSERT INTO payment_history (payment_id, p_id, payment_date, payment_amount, payment_remarks) VALUES (?, ?, ?, ?, ?)",
+            "INSERT INTO payment_history (payments_id, ps_id, psayment_date, payment_amount, payment_remarks) VALUES (?, ?, ?, ?, ?)",
             (payment_id, self.patient_id, payment_date, amount, self.remarks),
         )
 
