@@ -445,6 +445,8 @@ class _main_window(QDialog):
         self._make_payment.expense_btn.clicked.connect(self._go_spend_money)
         self._make_payment.appointment_btn.clicked.connect(self._go_appointment)
         self._make_payment.dentist_btn.clicked.connect(self.get_dentist)
+        
+    """ 
 
     def createpayment(self):
         f_name = self._make_payment.fname_srch_edit.toPlainText()
@@ -502,6 +504,8 @@ class _main_window(QDialog):
 
         print("Payment record inserted successfully.")
         self._go_make_payment()
+        
+     """
 
     def _go_spend_money(self):
         self._spend_money = expense_window._expense_window()
