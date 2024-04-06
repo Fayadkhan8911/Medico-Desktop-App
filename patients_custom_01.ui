@@ -898,26 +898,6 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     <string>Phone:</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="gender_labl_2">
-   <property name="geometry">
-    <rect>
-     <x>1020</x>
-     <y>55</y>
-     <width>111</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">
-color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);
-
-font:  14pt &quot;Segoe UI &quot;;</string>
-   </property>
-   <property name="text">
-    <string>Gender:</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="l_name_labl_2">
    <property name="geometry">
     <rect>
@@ -1022,7 +1002,7 @@ font:  14pt &quot;Segoe UI &quot;;</string>
    <property name="geometry">
     <rect>
      <x>1020</x>
-     <y>150</y>
+     <y>100</y>
      <width>111</width>
      <height>31</height>
     </rect>
@@ -1062,7 +1042,7 @@ font:  14pt &quot;Segoe UI &quot;;</string>
    <property name="geometry">
     <rect>
      <x>1020</x>
-     <y>100</y>
+     <y>50</y>
      <width>111</width>
      <height>31</height>
     </rect>
@@ -1158,31 +1138,11 @@ background-color: rgb(255, 255, 255);
 </string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="new_gender_edit">
-   <property name="geometry">
-    <rect>
-     <x>1130</x>
-     <y>55</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QTextEdit:focus{
-background-color: rgb(255, 255, 255);
-}
-QTextEdit{
-background-color: rgb(255, 255, 255);
-	font: 12pt &quot;Segoe UI&quot;;
-}
-</string>
-   </property>
-  </widget>
   <widget class="QTextEdit" name="new_email_edit">
    <property name="geometry">
     <rect>
      <x>1130</x>
-     <y>100</y>
+     <y>50</y>
      <width>141</width>
      <height>31</height>
     </rect>
@@ -1262,7 +1222,7 @@ background-color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>1130</x>
-     <y>150</y>
+     <y>100</y>
      <width>141</width>
      <height>31</height>
     </rect>
@@ -1367,7 +1327,6 @@ background-color: rgb(255, 255, 255);
   <zorder>updt_comp</zorder>
   <zorder>age_labl_2</zorder>
   <zorder>phn_labl_2</zorder>
-  <zorder>gender_labl_2</zorder>
   <zorder>l_name_labl_2</zorder>
   <zorder>comp_labl_2</zorder>
   <zorder>depart_labl_2</zorder>
@@ -1380,7 +1339,6 @@ background-color: rgb(255, 255, 255);
   <zorder>comp_labl_4</zorder>
   <zorder>add_fname_edit</zorder>
   <zorder>add_lname_edit</zorder>
-  <zorder>new_gender_edit</zorder>
   <zorder>new_email_edit</zorder>
   <zorder>new_phone_edit</zorder>
   <zorder>new_age_edit</zorder>
