@@ -1074,7 +1074,7 @@ font:  12pt &quot;Segoe UI &quot;;</string>
     <string>N/A</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="updr_refr">
+  <widget class="QPushButton" name="updt_refr">
    <property name="geometry">
     <rect>
      <x>290</x>
@@ -1706,7 +1706,7 @@ color: rgb(255, 255, 255);
   <zorder>updt_addr</zorder>
   <zorder>addr_labl</zorder>
   <zorder>updt_occu</zorder>
-  <zorder>updr_refr</zorder>
+  <zorder>updt_refr</zorder>
   <zorder>occu_labl</zorder>
   <zorder>refr_labl</zorder>
   <zorder>depart_labl</zorder>

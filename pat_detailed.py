@@ -59,7 +59,7 @@ class _pat_detailed_win(QDialog):
                     if result[9] is not None:
                         self.updt_depart.setText(str(result[9]))
                     if result[10] is not None:
-                        self.updr_refr.setText(str(result[10]))
+                        self.updt_refr.setText(str(result[10]))
                     if result[11] is not None:
                         self.updt_comp.setText(str(result[11]))
                     self.updt_q1.setText("  "+str(result[12]))

@@ -13,7 +13,7 @@ from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QApplication, QCalendarWidget
 from PyQt5.QtCore import QDate
 import sqlite3
-
+import re
 import add_patients
 import patients
 import add_pat_med
@@ -272,6 +272,8 @@ class _main_window(QDialog):
         self._add_pat = add_patients._add_patient_window()
         widget.addWidget(self._add_pat)
         widget.setCurrentIndex(widget.currentIndex() + 1)
+        self._add_pat.date_edit.setVisible(False)
+
         self._add_pat.dash_btn.clicked.connect(self._go_dash)
         self._add_pat.patient_btn.clicked.connect(self._go_patient_window)
         self._add_pat.next_btn.clicked.connect(self.checkvalid)
@@ -280,6 +282,32 @@ class _main_window(QDialog):
         self._add_pat.expense_btn.clicked.connect(self._go_spend_money)
         self._add_pat.appointment_btn.clicked.connect(self._go_appointment)
         self._add_pat.dentist_btn.clicked.connect(self.get_dentist)
+        self._add_pat.abroad_check.stateChanged.connect(
+            self._goto_abroad_checked
+        )  # checkbox call for abroad
+        self._add_pat.add_check.stateChanged.connect(self._goto_address_checked)
+
+    def _goto_address_checked(
+        self,
+    ):  # visibility of address field fixed and other options
+        if self._add_pat.add_check.isChecked():
+            self._add_pat.address_combo.setVisible(False)
+
+        else:
+            self._add_pat.address_combo.setVisible(True)
+
+    def _goto_abroad_checked(self):  # checkbox function
+        if self._add_pat.abroad_check.isChecked():
+            self._add_pat.date_edit.setVisible(True)
+            print("yes")
+            # date = self._add_pat.date_edit.date().toPyDate()
+            # date_of_departure = self.convert_date_format(str(date))
+
+        else:
+            self._add_pat.date_edit.setVisible(False)
+            print("no")
+
+            # date_of_departure = None
 
     def checkvalid(self):
         # CHECK
@@ -335,8 +363,27 @@ class _main_window(QDialog):
             else:
                 self._go_med_hist()
 
+    def convert_date_format(self, date_str):
+        # Use regex to match yyyy-mm-dd format
+        match = re.match(r"(\d{4})-(\d{2})-(\d{2})", date_str)
+        if match:
+            year, month, day = match.groups()
+            return f"{day}-{month}-{year}"
+        else:
+            return "Invalid date format"
+
     def _go_med_hist(self):  # inserting to DB
 
+        if self._add_pat.date_edit.setVisible(True):
+
+            print("yes visible")
+            date = self._add_pat.date_edit.date().toPyDate()
+            date_of_departure = self.convert_date_format(str(date))
+
+        else:
+            print("not visible")
+            # self._add_pat.date_edit.setVisible(False)
+            date_of_departure = ""
         # Retrieve patient data from _add_patient_window instance
         f_name = self._add_pat.add_fname_edit.toPlainText()
         l_name = self._add_pat.add_lname_edit.toPlainText()
@@ -347,7 +394,7 @@ class _main_window(QDialog):
         age = self._add_pat.add_age_edit.toPlainText()
         sex = self._add_pat.add_sex_edit.currentText()
         reference = self._add_pat.add_ref_edit.toPlainText()
-        date_of_departure = self._add_pat.add_depart_edit.toPlainText()
+        # date_of_departure = self._add_pat.add_depart_edit.toPlainText()
         chief_complain = self._add_pat.add_complain_edit.toPlainText()
         pat_id = self._add_pat.add_pat_id_edit.toPlainText()
 
@@ -396,17 +443,21 @@ class _main_window(QDialog):
         self._details.delete_pat.clicked.connect(self._confirm_delete)
         self._details.new_file_btn.clicked.connect(self._new_patient_file)
         self._details.updt_file_btn.clicked.connect(self._update_existing_file)
-        
+
     def _update_existing_file(self):
         self.patient_id = self._patients.patid_srch_edit.toPlainText()
-        self.updatefile_popup = files_updt._updt_file_window(self.patient_id, self._call_back_go_pat_det_fnc)
+        self.updatefile_popup = files_updt._updt_file_window(
+            self.patient_id, self._call_back_go_pat_det_fnc
+        )
         self.updatefile_popup.show()
-        
+
     def _new_patient_file(self):
         self.patient_id = self._patients.patid_srch_edit.toPlainText()
-        self.addfile_popup = files_add._add_file_window(self.patient_id, self._call_back_go_pat_det_fnc)
+        self.addfile_popup = files_add._add_file_window(
+            self.patient_id, self._call_back_go_pat_det_fnc
+        )
         self.addfile_popup.show()
-        
+
     def _call_back_go_pat_det_fnc(self):
         self._go_pat_det()
 
@@ -432,12 +483,14 @@ class _main_window(QDialog):
 
     def _go_appointment_callback_fnc(self):
         self._go_appointment()
-        
+
     def _call_back_go_make_payment(self):
         self._go_make_payment()
 
     def _go_make_payment(self):
-        self._make_payment = payments_window._payments_window(self._call_back_go_make_payment)
+        self._make_payment = payments_window._payments_window(
+            self._call_back_go_make_payment
+        )
         widget.addWidget(self._make_payment)
         widget.setCurrentIndex(widget.currentIndex() + 1)
         self._make_payment.dash_btn.clicked.connect(self._go_dash)
@@ -445,7 +498,7 @@ class _main_window(QDialog):
         self._make_payment.expense_btn.clicked.connect(self._go_spend_money)
         self._make_payment.appointment_btn.clicked.connect(self._go_appointment)
         self._make_payment.dentist_btn.clicked.connect(self.get_dentist)
-        
+
     """ 
 
     def createpayment(self):

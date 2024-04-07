@@ -533,7 +533,7 @@ background-color: rgb(255, 255, 255);
   <widget class="QLabel" name="add_depart">
    <property name="geometry">
     <rect>
-     <x>180</x>
+     <x>200</x>
      <y>220</y>
      <width>411</width>
      <height>31</height>
@@ -852,10 +852,10 @@ background-color: rgb(255, 255, 255);
 </string>
    </property>
   </widget>
-  <widget class="QDateEdit" name="new_date_edit">
+  <widget class="QDateEdit" name="date_edit">
    <property name="geometry">
     <rect>
-     <x>590</x>
+     <x>610</x>
      <y>220</y>
      <width>131</width>
      <height>31</height>
@@ -865,6 +865,67 @@ background-color: rgb(255, 255, 255);
     <string notr="true">background-color: rgb(255, 255, 255);
 	font: 12pt &quot;Segoe UI&quot;;</string>
    </property>
+  </widget>
+  <widget class="QCheckBox" name="abroad_check">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>220</y>
+     <width>21</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="add_check">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>60</y>
+     <width>21</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="address_combo">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>60</y>
+     <width>141</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+	font: 12pt &quot;Segoe UI&quot;;</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>Basaboo</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Goran</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Mugda</string>
+    </property>
+   </item>
   </widget>
   <zorder>label</zorder>
   <zorder>side_bar</zorder>
@@ -895,7 +956,10 @@ background-color: rgb(255, 255, 255);
   <zorder>return_btn</zorder>
   <zorder>add_pat_id</zorder>
   <zorder>add_pat_id_edit</zorder>
-  <zorder>new_date_edit</zorder>
+  <zorder>date_edit</zorder>
+  <zorder>abroad_check</zorder>
+  <zorder>add_check</zorder>
+  <zorder>address_combo</zorder>
  </widget>
  <resources/>
  <connections/>

@@ -250,63 +250,6 @@ QPushButton:hover{
      <normaloff>../Medico_modern/patientdownload .png</normaloff>../Medico_modern/patientdownload .png</iconset>
    </property>
   </widget>
-  <widget class="QWidget" name="widget_2" native="true">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>40</y>
-     <width>421</width>
-     <height>451</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);</string>
-   </property>
-   <widget class="QLabel" name="findings_label">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>351</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">
-color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);
-
-font:  14pt &quot;Segoe UI &quot;;</string>
-    </property>
-    <property name="text">
-     <string>Old  Medical Findings</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="med_find_edit">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>40</y>
-      <width>421</width>
-      <height>411</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QTextEdit:focus{
-background-color: rgb(255, 255, 255);
-}
-QTextEdit{
-background-color: rgb(255, 255, 255);
-	font: 12pt &quot;Segoe UI&quot;;
-	color: rgb(0, 0, 0);
-}
-</string>
-    </property>
-   </widget>
-   <zorder>med_find_edit</zorder>
-   <zorder>findings_label</zorder>
-  </widget>
   <widget class="QPushButton" name="save_pat">
    <property name="geometry">
     <rect>
@@ -366,7 +309,7 @@ QPushButton:hover{
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>0</x>
      <y>-20</y>
      <width>1280</width>
      <height>720</height>
@@ -431,10 +374,10 @@ color: rgb(255, 255, 255);
   <widget class="QWidget" name="widget_3" native="true">
    <property name="geometry">
     <rect>
-     <x>750</x>
-     <y>40</y>
-     <width>421</width>
-     <height>451</height>
+     <x>260</x>
+     <y>50</y>
+     <width>621</width>
+     <height>461</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -461,37 +404,42 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <string>  New  Medical Findings</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="med_find_edit_2">
+   <widget class="QTextBrowser" name="textBrowser">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>40</y>
-      <width>421</width>
+      <x>5</x>
+      <y>41</y>
+      <width>611</width>
       <height>411</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QTextEdit:focus{
-background-color: rgb(255, 255, 255);
-}
-QTextEdit{
-background-color: rgb(255, 255, 255);
-	font: 12pt &quot;Segoe UI&quot;;
-	color: rgb(0, 0, 0);
-}
-</string>
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
    </widget>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>520</y>
+     <width>481</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ager findings place holder hisebe ekhane asbe</string>
+   </property>
   </widget>
   <zorder>label</zorder>
   <zorder>side_bar</zorder>
   <zorder>patient_btn</zorder>
-  <zorder>widget_2</zorder>
   <zorder>label_4</zorder>
   <zorder>restart_btn</zorder>
   <zorder>label_5</zorder>
   <zorder>save_pat</zorder>
   <zorder>widget_3</zorder>
+  <zorder>label_2</zorder>
  </widget>
  <resources/>
  <connections/>
