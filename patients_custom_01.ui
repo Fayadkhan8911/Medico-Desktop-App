@@ -291,27 +291,10 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     <string>First Name:</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="updt_f_name">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>50</y>
-     <width>151</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  12pt &quot;Segoe UI &quot;;</string>
-   </property>
-   <property name="text">
-    <string>N/A</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="l_name_labl">
    <property name="geometry">
     <rect>
-     <x>457</x>
+     <x>455</x>
      <y>50</y>
      <width>111</width>
      <height>31</height>
@@ -328,28 +311,11 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     <string>Last Name:</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="updt_l_name">
-   <property name="geometry">
-    <rect>
-     <x>570</x>
-     <y>50</y>
-     <width>101</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  12pt &quot;Segoe UI &quot;;</string>
-   </property>
-   <property name="text">
-    <string>N/A</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="phn_labl">
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>142</y>
+     <y>90</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -368,8 +334,8 @@ font:  14pt &quot;Segoe UI &quot;;</string>
   <widget class="QPushButton" name="email_labl">
    <property name="geometry">
     <rect>
-     <x>457</x>
-     <y>142</y>
+     <x>455</x>
+     <y>130</y>
      <width>111</width>
      <height>31</height>
     </rect>
@@ -385,62 +351,11 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     <string>Email:</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="updt_phn">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>142</y>
-     <width>151</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  12pt &quot;Segoe UI &quot;;</string>
-   </property>
-   <property name="text">
-    <string>N/A</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="updt_email">
-   <property name="geometry">
-    <rect>
-     <x>570</x>
-     <y>142</y>
-     <width>101</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  12pt &quot;Segoe UI &quot;;</string>
-   </property>
-   <property name="text">
-    <string>N/A</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="updt_addr">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>234</y>
-     <width>151</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  12pt &quot;Segoe UI &quot;;</string>
-   </property>
-   <property name="text">
-    <string>N/A</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="addr_labl">
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>234</y>
+     <y>170</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -456,45 +371,11 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     <string>Address:</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="updt_occu">
-   <property name="geometry">
-    <rect>
-     <x>570</x>
-     <y>234</y>
-     <width>101</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  12pt &quot;Segoe UI &quot;;</string>
-   </property>
-   <property name="text">
-    <string>N/A</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="updr_refr">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>280</y>
-     <width>151</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  12pt &quot;Segoe UI &quot;;</string>
-   </property>
-   <property name="text">
-    <string>N/A</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="occu_labl">
    <property name="geometry">
     <rect>
-     <x>457</x>
-     <y>234</y>
+     <x>455</x>
+     <y>170</y>
      <width>111</width>
      <height>31</height>
     </rect>
@@ -514,7 +395,7 @@ font:  14pt &quot;Segoe UI &quot;;</string>
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>280</y>
+     <y>210</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -550,23 +431,6 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     <string>(If lives abroad) Date of Departure:</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="updt_depart">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>320</y>
-     <width>181</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  12pt &quot;Segoe UI &quot;;</string>
-   </property>
-   <property name="text">
-    <string>N/A</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="comp_labl">
    <property name="geometry">
     <rect>
@@ -590,9 +454,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
   <widget class="QPushButton" name="pat_id_labl">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>95</y>
-     <width>101</width>
+     <x>455</x>
+     <y>250</y>
+     <width>111</width>
      <height>31</height>
     </rect>
    </property>
@@ -607,28 +471,11 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     <string>Patient ID:</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="updt_pat_id">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>95</y>
-     <width>151</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  12pt &quot;Segoe UI &quot;;</string>
-   </property>
-   <property name="text">
-    <string>N/A</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="age_labl">
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>190</y>
+     <y>130</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -644,28 +491,11 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     <string>Age:</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="updt_age">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>190</y>
-     <width>151</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  12pt &quot;Segoe UI &quot;;</string>
-   </property>
-   <property name="text">
-    <string>N/A</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="gender_labl">
    <property name="geometry">
     <rect>
-     <x>457</x>
-     <y>96</y>
+     <x>455</x>
+     <y>90</y>
      <width>111</width>
      <height>31</height>
     </rect>
@@ -681,28 +511,11 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     <string>Gender:</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="updt_gender">
-   <property name="geometry">
-    <rect>
-     <x>570</x>
-     <y>96</y>
-     <width>101</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  12pt &quot;Segoe UI &quot;;</string>
-   </property>
-   <property name="text">
-    <string>N/A</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="reg_dt_labl">
    <property name="geometry">
     <rect>
-     <x>457</x>
-     <y>190</y>
+     <x>455</x>
+     <y>210</y>
      <width>111</width>
      <height>31</height>
     </rect>
@@ -716,23 +529,6 @@ font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>Date of Reg:</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="updt_reg_dt">
-   <property name="geometry">
-    <rect>
-     <x>570</x>
-     <y>190</y>
-     <width>101</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  12pt &quot;Segoe UI &quot;;</string>
-   </property>
-   <property name="text">
-    <string>N/A</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_6">
@@ -758,7 +554,7 @@ color: rgb(255, 255, 255);
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="return_pat">
+  <widget class="QPushButton" name="return_btn">
    <property name="geometry">
     <rect>
      <x>190</x>
@@ -837,7 +633,7 @@ color: rgb(255, 255, 255);
     <string/>
    </property>
   </widget>
-  <widget class="QTextBrowser" name="updt_comp">
+  <widget class="QTextBrowser" name="old_comp">
    <property name="geometry">
     <rect>
      <x>190</x>
@@ -1063,7 +859,7 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     <rect>
      <x>190</x>
      <y>10</y>
-     <width>481</width>
+     <width>531</width>
      <height>31</height>
     </rect>
    </property>
@@ -1292,39 +1088,231 @@ background-color: rgb(255, 255, 255);
 </string>
    </property>
   </widget>
+  <widget class="QLabel" name="old_fname">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>50</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+font:  12pt &quot;Segoe UI &quot;;</string>
+   </property>
+   <property name="text">
+    <string>N/A</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="old_lname">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>50</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+font:  12pt &quot;Segoe UI &quot;;</string>
+   </property>
+   <property name="text">
+    <string>N/A</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="old_phone">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>90</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+font:  12pt &quot;Segoe UI &quot;;</string>
+   </property>
+   <property name="text">
+    <string>N/A</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="old_age">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>130</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+font:  12pt &quot;Segoe UI &quot;;</string>
+   </property>
+   <property name="text">
+    <string>N/A</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="old_address">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>170</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+font:  12pt &quot;Segoe UI &quot;;</string>
+   </property>
+   <property name="text">
+    <string>N/A</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="old_ref">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>210</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+font:  12pt &quot;Segoe UI &quot;;</string>
+   </property>
+   <property name="text">
+    <string>N/A</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="gender">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>90</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+font:  12pt &quot;Segoe UI &quot;;</string>
+   </property>
+   <property name="text">
+    <string>N/A</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="old_email">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>130</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+font:  12pt &quot;Segoe UI &quot;;</string>
+   </property>
+   <property name="text">
+    <string>N/A</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="reg_date">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>210</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+font:  12pt &quot;Segoe UI &quot;;</string>
+   </property>
+   <property name="text">
+    <string>N/A</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="old_job">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>170</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+font:  12pt &quot;Segoe UI &quot;;</string>
+   </property>
+   <property name="text">
+    <string>N/A</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="old_depart">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>320</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+font:  12pt &quot;Segoe UI &quot;;</string>
+   </property>
+   <property name="text">
+    <string>N/A</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="updt_pat_id">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>250</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+font:  12pt &quot;Segoe UI &quot;;</string>
+   </property>
+   <property name="text">
+    <string>N/A</string>
+   </property>
+  </widget>
   <zorder>label</zorder>
   <zorder>side_bar</zorder>
   <zorder>patient_btn</zorder>
   <zorder>f_name_labl</zorder>
-  <zorder>updt_f_name</zorder>
   <zorder>l_name_labl</zorder>
-  <zorder>updt_l_name</zorder>
   <zorder>phn_labl</zorder>
   <zorder>email_labl</zorder>
-  <zorder>updt_phn</zorder>
-  <zorder>updt_email</zorder>
-  <zorder>updt_addr</zorder>
   <zorder>addr_labl</zorder>
-  <zorder>updt_occu</zorder>
-  <zorder>updr_refr</zorder>
   <zorder>occu_labl</zorder>
   <zorder>refr_labl</zorder>
   <zorder>depart_labl</zorder>
-  <zorder>updt_depart</zorder>
   <zorder>comp_labl</zorder>
   <zorder>pat_id_labl</zorder>
-  <zorder>updt_pat_id</zorder>
   <zorder>age_labl</zorder>
-  <zorder>updt_age</zorder>
   <zorder>gender_labl</zorder>
-  <zorder>updt_gender</zorder>
   <zorder>reg_dt_labl</zorder>
-  <zorder>updt_reg_dt</zorder>
   <zorder>label_6</zorder>
-  <zorder>return_pat</zorder>
+  <zorder>return_btn</zorder>
   <zorder>label_8</zorder>
   <zorder>next_btn</zorder>
-  <zorder>updt_comp</zorder>
+  <zorder>old_comp</zorder>
   <zorder>age_labl_2</zorder>
   <zorder>phn_labl_2</zorder>
   <zorder>l_name_labl_2</zorder>
@@ -1347,6 +1335,18 @@ background-color: rgb(255, 255, 255);
   <zorder>new_ref_edit</zorder>
   <zorder>new_date_edit</zorder>
   <zorder>new_complain_edit</zorder>
+  <zorder>old_fname</zorder>
+  <zorder>old_lname</zorder>
+  <zorder>old_phone</zorder>
+  <zorder>old_age</zorder>
+  <zorder>old_address</zorder>
+  <zorder>old_ref</zorder>
+  <zorder>gender</zorder>
+  <zorder>old_email</zorder>
+  <zorder>reg_date</zorder>
+  <zorder>old_job</zorder>
+  <zorder>old_depart</zorder>
+  <zorder>updt_pat_id</zorder>
  </widget>
  <resources/>
  <connections/>

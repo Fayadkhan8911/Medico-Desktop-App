@@ -31,6 +31,7 @@ import appointment_individual
 import confirm_delete
 import files_add
 import files_updt
+import patient_edit01
 
 # import sys
 
@@ -225,7 +226,7 @@ class _main_window(QDialog):
         error_window = error._error_window(message)  # Adjusted to use the error module
         error_window.exec_()
 
-    def makemegotopat(self):  # for adding patient details
+    def makemegotopat(self):  # for  patient details
 
         f_name = self._patients.fname_srch_edit.toPlainText()
         l_name = self._patients.lname_srch_edit.toPlainText()
@@ -443,6 +444,17 @@ class _main_window(QDialog):
         self._details.delete_pat.clicked.connect(self._confirm_delete)
         self._details.new_file_btn.clicked.connect(self._new_patient_file)
         self._details.updt_file_btn.clicked.connect(self._update_existing_file)
+        self._details.customize_btn.clicked.connect(self.pat_custom1)
+
+    def pat_custom1(self):
+        f_name = self._patients.fname_srch_edit.toPlainText()
+        l_name = self._patients.lname_srch_edit.toPlainText()
+        phone = self._patients.phone_srch_edit.toPlainText()
+        patient_id = self._patients.patid_srch_edit.toPlainText()
+        self.pat_cus1 = patient_edit01.pat_edit1(f_name, l_name, phone, patient_id)
+        widget.addWidget(self.pat_cus1)
+        widget.setCurrentIndex(widget.currentIndex() + 1)
+        self.pat_cus1.return_btn.clicked.connect(self._go_pat_det)
 
     def _update_existing_file(self):
         self.patient_id = self._patients.patid_srch_edit.toPlainText()
