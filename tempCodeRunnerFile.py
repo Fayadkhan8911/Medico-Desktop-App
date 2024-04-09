@@ -1,1 +1,1 @@
-            date_of_departure = None
+_med_hist

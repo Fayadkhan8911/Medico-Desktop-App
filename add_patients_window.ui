@@ -927,6 +927,26 @@ background-color: rgb(255, 255, 255);
     </property>
    </item>
   </widget>
+  <widget class="QTextEdit" name="add_depart_edit">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>220</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTextEdit:focus{
+background-color: rgb(255, 255, 255);
+}
+QTextEdit{
+background-color: rgb(255, 255, 255);
+	font: 12pt &quot;Segoe UI&quot;;
+}
+</string>
+   </property>
+  </widget>
   <zorder>label</zorder>
   <zorder>side_bar</zorder>
   <zorder>add_fname</zorder>
@@ -960,6 +980,7 @@ background-color: rgb(255, 255, 255);
   <zorder>abroad_check</zorder>
   <zorder>add_check</zorder>
   <zorder>address_combo</zorder>
+  <zorder>add_depart_edit</zorder>
  </widget>
  <resources/>
  <connections/>

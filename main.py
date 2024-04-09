@@ -374,16 +374,16 @@ class _main_window(QDialog):
 
     def _go_med_hist(self):  # inserting to DB
 
-        if self._add_pat.date_edit.setVisible(True):
+        # if self._add_pat.date_edit.setVisible(True):
 
-            print("yes visible")
-            date = self._add_pat.date_edit.date().toPyDate()
-            date_of_departure = self.convert_date_format(str(date))
+        #     print("yes visible")
+        #     date = self._add_pat.date_edit.date().toPyDate()
+        #     date_of_departure = self.convert_date_format(str(date))
 
-        else:
-            print("not visible")
-            # self._add_pat.date_edit.setVisible(False)
-            date_of_departure = ""
+        # else:
+        #     print("not visible")
+        #     # self._add_pat.date_edit.setVisible(False)
+        #     date_of_departure = ""
         # Retrieve patient data from _add_patient_window instance
         f_name = self._add_pat.add_fname_edit.toPlainText()
         l_name = self._add_pat.add_lname_edit.toPlainText()
@@ -394,7 +394,7 @@ class _main_window(QDialog):
         age = self._add_pat.add_age_edit.toPlainText()
         sex = self._add_pat.add_sex_edit.currentText()
         reference = self._add_pat.add_ref_edit.toPlainText()
-        # date_of_departure = self._add_pat.add_depart_edit.toPlainText()
+        date_of_departure = self._add_pat.add_depart_edit.toPlainText()
         chief_complain = self._add_pat.add_complain_edit.toPlainText()
         pat_id = self._add_pat.add_pat_id_edit.toPlainText()
 

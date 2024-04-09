@@ -117,6 +117,8 @@ class _add_med_hist_win(QDialog):
         conn.commit()
         conn.close()
         print("Patient data and medical history saved successfully.")
+        
+        
         message = (
             "New Patient Added."
             + "\n"
@@ -157,17 +159,17 @@ class _add_med_hist_win(QDialog):
             + self.chief_complain
             + "\n"
         )
-        # Send the message to your channel using the bot
-        url = f"https://api.telegram.org/bot6966315301:AAF79OPk17hjJ_dN75FOXnt_VmrFNePY7Hs/sendMessage"
-        params = {"chat_id": -1002137636697, "text": message}
-        response = requests.post(url, params=params)
+        # # Send the message to your channel using the bot
+        # url = f"https://api.telegram.org/bot6966315301:AAF79OPk17hjJ_dN75FOXnt_VmrFNePY7Hs/sendMessage"
+        # params = {"chat_id": -1002137636697, "text": message}
+        # response = requests.post(url, params=params)
 
-        # Check if the message was sent successfully
-        if response.status_code == 200:
-            print("Message sent successfully!")
-        else:
-            print(f"Failed to send message. Status code: {response.status_code}")
-            print(response.text)  # Print the error response if any
+        # # Check if the message was sent successfully
+        # if response.status_code == 200:
+        #     print("Message sent successfully!")
+        # else:
+        #     print(f"Failed to send message. Status code: {response.status_code}")
+        #     print(response.text)  # Print the error response if any
 
         # Clear the variables
         self.f_name = ""
