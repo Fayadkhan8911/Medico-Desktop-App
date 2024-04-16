@@ -32,6 +32,7 @@ import confirm_delete
 import files_add
 import files_updt
 import patient_edit01
+import patient_edit02
 
 # import sys
 
@@ -273,7 +274,6 @@ class _main_window(QDialog):
         self._add_pat = add_patients._add_patient_window()
         widget.addWidget(self._add_pat)
         widget.setCurrentIndex(widget.currentIndex() + 1)
-        self._add_pat.date_edit.setVisible(False)
 
         self._add_pat.dash_btn.clicked.connect(self._go_dash)
         self._add_pat.patient_btn.clicked.connect(self._go_patient_window)
@@ -283,39 +283,13 @@ class _main_window(QDialog):
         self._add_pat.expense_btn.clicked.connect(self._go_spend_money)
         self._add_pat.appointment_btn.clicked.connect(self._go_appointment)
         self._add_pat.dentist_btn.clicked.connect(self.get_dentist)
-        self._add_pat.abroad_check.stateChanged.connect(
-            self._goto_abroad_checked
-        )  # checkbox call for abroad
-        self._add_pat.add_check.stateChanged.connect(self._goto_address_checked)
-
-    def _goto_address_checked(
-        self,
-    ):  # visibility of address field fixed and other options
-        if self._add_pat.add_check.isChecked():
-            self._add_pat.address_combo.setVisible(False)
-
-        else:
-            self._add_pat.address_combo.setVisible(True)
-
-    def _goto_abroad_checked(self):  # checkbox function
-        if self._add_pat.abroad_check.isChecked():
-            self._add_pat.date_edit.setVisible(True)
-            print("yes")
-            # date = self._add_pat.date_edit.date().toPyDate()
-            # date_of_departure = self.convert_date_format(str(date))
-
-        else:
-            self._add_pat.date_edit.setVisible(False)
-            print("no")
-
-            # date_of_departure = None
 
     def checkvalid(self):
         # CHECK
         f_name_input = self._add_pat.add_fname_edit.toPlainText().strip()
         l_name_input = self._add_pat.add_lname_edit.toPlainText().strip()
         phone_input = self._add_pat.add_phn_edit.toPlainText().strip()
-        address_input = self._add_pat.add_address_edit.toPlainText().strip()
+        # address_input = self._add_pat.add_address_edit.toPlainText().strip()
         age_input = self._add_pat.add_age_edit.toPlainText().strip()
         pat_id_input = self._add_pat.add_pat_id_edit.toPlainText().strip()
 
@@ -323,7 +297,7 @@ class _main_window(QDialog):
             not f_name_input
             or not l_name_input
             or not phone_input
-            or not address_input
+            # or not address_input
             or not age_input
             or not pat_id_input
         ):
@@ -336,9 +310,9 @@ class _main_window(QDialog):
             elif not phone_input:
                 self.show_error_window("You Must Enter Phone Number")
                 print("You Must Enter Phone Number")
-            elif not address_input:
-                self.show_error_window("You Must Enter Address")
-                print("You Must Enter Address")
+            # elif not address_input:
+            #     self.show_error_window("You Must Enter Address")
+            #     print("You Must Enter Address")
             elif not age_input:
                 self.show_error_window("You Must Enter Age")
                 print("You Must Enter Age")
@@ -389,7 +363,7 @@ class _main_window(QDialog):
         f_name = self._add_pat.add_fname_edit.toPlainText()
         l_name = self._add_pat.add_lname_edit.toPlainText()
         phone = self._add_pat.add_phn_edit.toPlainText()
-        address = self._add_pat.add_address_edit.toPlainText()
+        address = self._add_pat.address_combo.currentText()
         occupation = self._add_pat.add_occu_edit.toPlainText()
         email = self._add_pat.add_email_edit.toPlainText()
         age = self._add_pat.add_age_edit.toPlainText()
@@ -455,6 +429,43 @@ class _main_window(QDialog):
         widget.addWidget(self.pat_cus1)
         widget.setCurrentIndex(widget.currentIndex() + 1)
         self.pat_cus1.return_btn.clicked.connect(self._go_pat_det)
+        self.pat_cus1.next_btn.clicked.connect(self.pat_custom2)
+
+    def pat_custom2(self):
+        f_name = self.pat_cus1.add_fname_edit.toPlainText()
+        l_name = self.pat_cus1.add_lname_edit.toPlainText()
+        phone = self.pat_cus1.add_phn_edit.toPlainText()
+        address = self.pat_cus1.address_combo.currentText()
+        occupation = self.pat_cus1.add_occu_edit.toPlainText()
+        email = self.pat_cus1.add_email_edit.toPlainText()
+        age = self.pat_cus1.add_age_edit.toPlainText()
+
+        reference = self.pat_cus1.add_ref_edit.toPlainText()
+        date_of_departure = self.pat_cus1.add_depart_edit.toPlainText()
+        chief_complain = self.pat_cus1.add_complain_edit.toPlainText()
+        pat_id = self._patients.patid_srch_edit.toPlainText()
+        self._med_hist = add_pat_med._add_med_hist_win(
+            f_name,
+            l_name,
+            phone,
+            address,
+            occupation,
+            email,
+            age,
+            pat_id,
+            reference,
+            date_of_departure,
+            chief_complain,
+        )
+        widget.addWidget(self._med_hist)
+        widget.setCurrentIndex(widget.currentIndex() + 1)
+        self._med_hist.restart_btn.clicked.connect(self.pat_custom1)
+        self._med_hist.patient_btn.clicked.connect(self._go_patient_window)
+        self._med_hist.save_pat.clicked.connect(self._go_patient_window)
+        self._med_hist.payment_btn.clicked.connect(self._go_make_payment)
+        self._med_hist.expense_btn.clicked.connect(self._go_spend_money)
+        self._med_hist.appointment_btn.clicked.connect(self._go_appointment)
+        self._med_hist.dentist_btn.clicked.connect(self.get_dentist)
 
     def _update_existing_file(self):
         self.patient_id = self._patients.patid_srch_edit.toPlainText()

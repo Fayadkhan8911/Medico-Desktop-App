@@ -16,9 +16,8 @@ class pat_edit1(QDialog):
         self.lname = lname
         self.phone = phone
         self.pat_id = pat_id
-        self.search_patient()
+        # self.search_patient()
 
-    def search_patient(self):
         # Connect to the database
         conn = sqlite3.connect("medico.db3")
         c = conn.cursor()
@@ -92,6 +91,21 @@ class pat_edit1(QDialog):
 
         # Close the connection
         conn.close()
+
+    def proceed_to_medical_history(self):
+
+        # Retrieve patient data
+        f_name = self.add_fname_edit.toPlainText()  # Change text() to toPlainText()
+        l_name = self.add_lname_edit.toPlainText()
+        phone = self.add_phn_edit.toPlainText()
+        occupation = self.add_occu_edit.toPlainText()
+        email = self.add_email_edit.toPlainText()
+        age = self.add_age_edit.toPlainText()
+        sex = self.add_sex_edit.currentText()
+        reference = self.add_ref_edit.toPlainText()
+        date_of_departure = self.add_depart_edit.toPlainText()
+        chief_complain = self.add_complain_edit.toPlainText()
+        address = self.address_combo.currentText()
 
 
 """

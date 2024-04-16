@@ -934,160 +934,6 @@ background-color: rgb(255, 255, 255);
 </string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="new_email_edit">
-   <property name="geometry">
-    <rect>
-     <x>1130</x>
-     <y>50</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QTextEdit:focus{
-background-color: rgb(255, 255, 255);
-}
-QTextEdit{
-background-color: rgb(255, 255, 255);
-	font: 12pt &quot;Segoe UI&quot;;
-}
-</string>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="new_phone_edit">
-   <property name="geometry">
-    <rect>
-     <x>830</x>
-     <y>140</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QTextEdit:focus{
-background-color: rgb(255, 255, 255);
-}
-QTextEdit{
-background-color: rgb(255, 255, 255);
-	font: 12pt &quot;Segoe UI&quot;;
-}
-</string>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="new_age_edit">
-   <property name="geometry">
-    <rect>
-     <x>830</x>
-     <y>190</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QTextEdit:focus{
-background-color: rgb(255, 255, 255);
-}
-QTextEdit{
-background-color: rgb(255, 255, 255);
-	font: 12pt &quot;Segoe UI&quot;;
-}
-</string>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="new_add_edit">
-   <property name="geometry">
-    <rect>
-     <x>830</x>
-     <y>235</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QTextEdit:focus{
-background-color: rgb(255, 255, 255);
-}
-QTextEdit{
-background-color: rgb(255, 255, 255);
-	font: 12pt &quot;Segoe UI&quot;;
-}
-</string>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="new_job_edit">
-   <property name="geometry">
-    <rect>
-     <x>1130</x>
-     <y>100</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QTextEdit:focus{
-background-color: rgb(255, 255, 255);
-}
-QTextEdit{
-background-color: rgb(255, 255, 255);
-	font: 12pt &quot;Segoe UI&quot;;
-}
-</string>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="new_ref_edit">
-   <property name="geometry">
-    <rect>
-     <x>830</x>
-     <y>280</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QTextEdit:focus{
-background-color: rgb(255, 255, 255);
-}
-QTextEdit{
-background-color: rgb(255, 255, 255);
-	font: 12pt &quot;Segoe UI&quot;;
-}
-</string>
-   </property>
-  </widget>
-  <widget class="QDateEdit" name="new_date_edit">
-   <property name="geometry">
-    <rect>
-     <x>1140</x>
-     <y>320</y>
-     <width>131</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-	font: 12pt &quot;Segoe UI&quot;;</string>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="new_complain_edit">
-   <property name="geometry">
-    <rect>
-     <x>730</x>
-     <y>390</y>
-     <width>530</width>
-     <height>221</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QTextEdit:focus{
-background-color: rgb(255, 255, 255);
-}
-QTextEdit{
-background-color: rgb(255, 255, 255);
-	font: 12pt &quot;Segoe UI&quot;;
-}
-</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="old_fname">
    <property name="geometry">
     <rect>
@@ -1292,6 +1138,520 @@ font:  12pt &quot;Segoe UI &quot;;</string>
     <string>N/A</string>
    </property>
   </widget>
+  <widget class="QComboBox" name="address_combo">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>235</y>
+     <width>141</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+	font: 12pt &quot;Segoe UI&quot;;</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>Abdullahpur</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Adabor</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Agargaon</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Ahmadbag</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Badda</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Baganbari</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Banani</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Baridhara</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Basaboo</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Bashundhara</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Banasree</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Bawnia</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Beraid</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Bochila</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>BRAC Bank</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Cantonment area</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Dakkhin Gao</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Dakshinkhan</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Dania</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Demra</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Dhanmondi</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Farmgate</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Gabtali</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Goran</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Gulshan</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Hazaribagh</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Islampur</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Jurain</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Kadamtala</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Kafrul</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Kakrail</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Kamalapur</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Kamrangirchar</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Kazipara</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Khilgaon</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Khilkhet</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Kotwali</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Lalbagh</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Madartek</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Manda</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Manikdi</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Matuail</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Mayakanon</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Mohakhali</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Mohammadpur</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Motijheel</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Mirpur</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Mugda</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Nandipara</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Niketan, Gulshan</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Nimtoli</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Outter Dhaka</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Pallabi</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Paltan</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Paribagh</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Rajarbag</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Ramna</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Rampura</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Sabujbag</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Sadarghat</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Satarkul</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Segunbagicha</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Shahbagh</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Sher-e-Bangla Nagar</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Shyampur</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Sutrapur</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Tejgaon</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>UCBL Bank</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Uttara</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Uttarkhan</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Vatara</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Wari</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QTextEdit" name="add_phn_edit">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>140</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTextEdit:focus{
+background-color: rgb(255, 255, 255);
+}
+QTextEdit{
+background-color: rgb(255, 255, 255);
+	font: 12pt &quot;Segoe UI&quot;;
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="add_age_edit">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>190</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTextEdit:focus{
+background-color: rgb(255, 255, 255);
+}
+QTextEdit{
+background-color: rgb(255, 255, 255);
+	font: 12pt &quot;Segoe UI&quot;;
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="add_ref_edit">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>280</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTextEdit:focus{
+background-color: rgb(255, 255, 255);
+}
+QTextEdit{
+background-color: rgb(255, 255, 255);
+	font: 12pt &quot;Segoe UI&quot;;
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="add_email_edit">
+   <property name="geometry">
+    <rect>
+     <x>1130</x>
+     <y>50</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTextEdit:focus{
+background-color: rgb(255, 255, 255);
+}
+QTextEdit{
+background-color: rgb(255, 255, 255);
+	font: 12pt &quot;Segoe UI&quot;;
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="add_occu_edit">
+   <property name="geometry">
+    <rect>
+     <x>1130</x>
+     <y>100</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTextEdit:focus{
+background-color: rgb(255, 255, 255);
+}
+QTextEdit{
+background-color: rgb(255, 255, 255);
+	font: 12pt &quot;Segoe UI&quot;;
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="add_depart_edit">
+   <property name="geometry">
+    <rect>
+     <x>1140</x>
+     <y>320</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTextEdit:focus{
+background-color: rgb(255, 255, 255);
+}
+QTextEdit{
+background-color: rgb(255, 255, 255);
+	font: 12pt &quot;Segoe UI&quot;;
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="add_complain_edit">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>390</y>
+     <width>531</width>
+     <height>221</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTextEdit:focus{
+background-color: rgb(255, 255, 255);
+}
+QTextEdit{
+background-color: rgb(255, 255, 255);
+	font: 12pt &quot;Segoe UI&quot;;
+}
+</string>
+   </property>
+  </widget>
   <zorder>label</zorder>
   <zorder>side_bar</zorder>
   <zorder>patient_btn</zorder>
@@ -1327,14 +1687,6 @@ font:  12pt &quot;Segoe UI &quot;;</string>
   <zorder>comp_labl_4</zorder>
   <zorder>add_fname_edit</zorder>
   <zorder>add_lname_edit</zorder>
-  <zorder>new_email_edit</zorder>
-  <zorder>new_phone_edit</zorder>
-  <zorder>new_age_edit</zorder>
-  <zorder>new_add_edit</zorder>
-  <zorder>new_job_edit</zorder>
-  <zorder>new_ref_edit</zorder>
-  <zorder>new_date_edit</zorder>
-  <zorder>new_complain_edit</zorder>
   <zorder>old_fname</zorder>
   <zorder>old_lname</zorder>
   <zorder>old_phone</zorder>
@@ -1347,6 +1699,14 @@ font:  12pt &quot;Segoe UI &quot;;</string>
   <zorder>old_job</zorder>
   <zorder>old_depart</zorder>
   <zorder>updt_pat_id</zorder>
+  <zorder>address_combo</zorder>
+  <zorder>add_phn_edit</zorder>
+  <zorder>add_age_edit</zorder>
+  <zorder>add_ref_edit</zorder>
+  <zorder>add_email_edit</zorder>
+  <zorder>add_occu_edit</zorder>
+  <zorder>add_depart_edit</zorder>
+  <zorder>add_complain_edit</zorder>
  </widget>
  <resources/>
  <connections/>

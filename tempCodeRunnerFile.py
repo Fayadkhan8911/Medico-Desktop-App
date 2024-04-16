@@ -1,1 +1,10 @@
-self.appointment_table.setColumnWidth(1, 150)
+    def pat_custom2(self):
+        f_name = self._patients.fname_srch_edit.toPlainText()
+        l_name = self._patients.lname_srch_edit.toPlainText()
+        phone = self._patients.phone_srch_edit.toPlainText()
+        patient_id = self._patients.patid_srch_edit.toPlainText()
+        self.pat_cus2 = patient_edit02.pat_edit2(f_name, l_name, phone, patient_id)
+        widget.addWidget(self.pat_cus2)
+        widget.setCurrentIndex(widget.currentIndex() + 1)
+        self.pat_cus2.return_btn.clicked.connect(self.pat_custom1)
+        self.pat_cus2.next_btn.clicked.connect(self.pat_custom3)

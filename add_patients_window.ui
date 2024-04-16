@@ -882,22 +882,6 @@ background-color: rgb(255, 255, 255);
     <string/>
    </property>
   </widget>
-  <widget class="QCheckBox" name="add_check">
-   <property name="geometry">
-    <rect>
-     <x>570</x>
-     <y>60</y>
-     <width>21</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 0, 0);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
   <widget class="QComboBox" name="address_combo">
    <property name="geometry">
     <rect>
@@ -913,7 +897,117 @@ background-color: rgb(255, 255, 255);
    </property>
    <item>
     <property name="text">
+     <string>Abdullahpur</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Adabor</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Agargaon</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Ahmadbag</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Badda</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Baganbari</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Banani</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Baridhara</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
      <string>Basaboo</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Bashundhara</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Banasree</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Bawnia</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Beraid</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Bochila</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>BRAC Bank</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Cantonment area</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Dakkhin Gao</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Dakshinkhan</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Dania</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Demra</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Dhanmondi</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Farmgate</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Gabtali</string>
     </property>
    </item>
    <item>
@@ -923,7 +1017,242 @@ background-color: rgb(255, 255, 255);
    </item>
    <item>
     <property name="text">
+     <string>Gulshan</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Hazaribagh</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Islampur</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Jurain</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Kadamtala</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Kafrul</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Kakrail</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Kamalapur</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Kamrangirchar</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Kazipara</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Khilgaon</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Khilkhet</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Kotwali</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Lalbagh</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Madartek</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Manda</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Manikdi</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Matuail</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Mayakanon</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Mohakhali</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Mohammadpur</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Motijheel</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Mirpur</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
      <string>Mugda</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Nandipara</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Niketan, Gulshan</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Nimtoli</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Outter Dhaka</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Pallabi</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Paltan</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Paribagh</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Rajarbag</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Ramna</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Rampura</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Sabujbag</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Sadarghat</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Satarkul</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Segunbagicha</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Shahbagh</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Sher-e-Bangla Nagar</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Shyampur</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Sutrapur</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Tejgaon</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>UCBL Bank</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Uttara</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Uttarkhan</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Vatara</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Wari</string>
     </property>
    </item>
   </widget>
@@ -978,7 +1307,6 @@ background-color: rgb(255, 255, 255);
   <zorder>add_pat_id_edit</zorder>
   <zorder>date_edit</zorder>
   <zorder>abroad_check</zorder>
-  <zorder>add_check</zorder>
   <zorder>address_combo</zorder>
   <zorder>add_depart_edit</zorder>
  </widget>

@@ -1,11 +1,14 @@
 import sys
 from PyQt5.uic import loadUi
 from PyQt5.QtWidgets import QDialog, QApplication
-from PyQt5.QtWidgets import QDialog, QApplication, QStackedWidget  # Import QStackedWidget
+from PyQt5.QtWidgets import (
+    QDialog,
+    QApplication,
+    QStackedWidget,
+)  # Import QStackedWidget
 from add_pat_med import _add_med_hist_win
 
 
-        
 class _add_patient_window(QDialog):
     def __init__(self):
         super(_add_patient_window, self).__init__()
@@ -21,21 +24,15 @@ class _add_patient_window(QDialog):
         self.reference = ""
         self.date_of_departure = ""
         self.chief_complain = ""
-        
-        #self.next_btn.clicked.connect(self.checkifnull)
-        
 
-            
+        # self.next_btn.clicked.connect(self.checkifnull)
 
     def proceed_to_medical_history(self):
-        
-            
-            
+
         # Retrieve patient data
         f_name = self.add_fname_edit.toPlainText()  # Change text() to toPlainText()
         l_name = self.add_lname_edit.toPlainText()
         phone = self.add_phn_edit.toPlainText()
-        address = self.add_address_edit.toPlainText()
         occupation = self.add_occu_edit.toPlainText()
         email = self.add_email_edit.toPlainText()
         age = self.add_age_edit.toPlainText()
@@ -43,12 +40,9 @@ class _add_patient_window(QDialog):
         reference = self.add_ref_edit.toPlainText()
         date_of_departure = self.add_depart_edit.toPlainText()
         chief_complain = self.add_complain_edit.toPlainText()
+        address = self.address_combo.currentText()
 
 
-
-
-        
-    
 """ 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
