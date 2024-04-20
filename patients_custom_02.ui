@@ -1036,17 +1036,24 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <string>  New  Medical Findings</string>
     </property>
    </widget>
-   <widget class="QTextBrowser" name="textBrowser">
+   <widget class="QTextEdit" name="med_find_edit">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>41</y>
-      <width>491</width>
+      <y>40</y>
+      <width>531</width>
       <height>411</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">QTextEdit:focus{
+background-color: rgb(255, 255, 255);
+}
+QTextEdit{
+background-color: rgb(255, 255, 255);
+	font: 12pt &quot;Segoe UI&quot;;
+}
+</string>
     </property>
    </widget>
   </widget>

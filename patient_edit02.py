@@ -18,7 +18,6 @@ class pat_edit2(QDialog):
         occupation,
         email,
         age,
-        sex,
         pat_id,
         reference,
         date_of_departure,
@@ -83,31 +82,36 @@ class pat_edit2(QDialog):
 
         # # Increment the last patient ID
         # new_p_id = last_p_id + 1
-        cursor.execute(
-            """
-            UPDATE patients SET ( f_name=?, l_name=?, phone=?, address=?, email=?, age=?, reference=?, date_of_departure=?, complain=?, occupation=?, med_find_=med_find || ?, 
-            blood_diseases=?, smoker=?, bleeding_disorder=?, hepatitis=?, diabetes=?, epilepsy=?, kidney_cardiac_diseases=?, abnormal_bp=?, currently_medicated=?, respiratory_diseases=?, gum_bleed_brush=?, allergies=?, nervous=?, pregnant=?, breastfeeding=?, none_prb_above=?) WHERE p_id=?
+        if self.f_name=='':
+            cursor.execute("""SELECT * FROM patients WHERE p_id=? """,(self.pat_id))
+            info=cursor.fetchone()
+            self.f_name=info[1]
             
-        """,
-            (
-                self.f_name,
-                self.l_name,
-                self.phone,
-                self.address,
-                self.email,
-                self.age,
-                self.reference,
-                self.date_of_departure,
-                self.chief_complain,
-                self.occupation,
-                medical_history,
-                *checkbox_values.values(),
-                self.pat_id,
-            ),
-        )
-        conn.commit()
-        conn.close()
-        print("Patient data and medical history saved successfully.")
+        # else:
+            cursor.execute(
+                """
+            UPDATE patients SET f_name=?, l_name=?, phone=?, address=?, email=?, age=?, reference=?, date_of_departure=?, complain=complain||?, occupation=?, med_find_=med_find_ || ?, 
+            blood_diseases=?, smoker=?, bleeding_disorder=?, hepatitis=?, diabetes=?, epilepsy=?, kidney_cardiac_diseases=?, abnormal_bp=?, currently_medicated=?, respiratory_diseases=?, gum_bleed_brush=?, allergies=?, nervous=?, pregnant=?, breastfeeding=?, none_prb_above=? WHERE p_id=?
+            """,
+                (
+                    self.f_name,
+                    self.l_name,
+                    self.phone,
+                    self.address,
+                    self.email,
+                    self.age,
+                    self.reference,
+                    self.date_of_departure,
+                    self.chief_complain,
+                    self.occupation,
+                    medical_history,
+                    *checkbox_values.values(),
+                    self.pat_id,
+                ),
+            )
+            conn.commit()
+            conn.close()
+            print("Patient data and medical history saved successfully.")
 
 
 """

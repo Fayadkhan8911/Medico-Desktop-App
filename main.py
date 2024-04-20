@@ -444,7 +444,7 @@ class _main_window(QDialog):
         date_of_departure = self.pat_cus1.add_depart_edit.toPlainText()
         chief_complain = self.pat_cus1.add_complain_edit.toPlainText()
         pat_id = self._patients.patid_srch_edit.toPlainText()
-        self._med_hist = add_pat_med._add_med_hist_win(
+        self._med_hist = patient_edit02.pat_edit2(
             f_name,
             l_name,
             phone,
@@ -459,7 +459,7 @@ class _main_window(QDialog):
         )
         widget.addWidget(self._med_hist)
         widget.setCurrentIndex(widget.currentIndex() + 1)
-        self._med_hist.restart_btn.clicked.connect(self.pat_custom1)
+        self._med_hist.return_btn.clicked.connect(self.pat_custom1)
         self._med_hist.patient_btn.clicked.connect(self._go_patient_window)
         self._med_hist.save_pat.clicked.connect(self._go_patient_window)
         self._med_hist.payment_btn.clicked.connect(self._go_make_payment)
