@@ -35,7 +35,8 @@ class pat_edit2(QDialog):
 
         self.reference = reference
         self.date_of_departure = date_of_departure
-        self.chief_complain = chief_complain
+        comp = chief_complain
+        self.chief_complain = "\n" + comp
         self.pat_id = pat_id
 
         self.new_info = [
@@ -44,12 +45,11 @@ class pat_edit2(QDialog):
             self.age,
             self.phone,
             self.address,
-            
             self.email,
             self.date_of_departure,
             self.reference,
             self.chief_complain,
-            self.occupation
+            self.occupation,
         ]
         # print(self.new_info)
         connect1 = sqlite3.connect("medico.db3")
@@ -57,7 +57,18 @@ class pat_edit2(QDialog):
         cur1.execute("SELECT * FROM Patients WHERE p_id=?", (self.pat_id))
         _q = cur1.fetchone()
 
-        self.old_info = [_q[1], _q[2], _q[3], _q[5], _q[6], _q[7], _q[9], _q[10], _q[11],_q[29]]
+        self.old_info = [
+            _q[1],
+            _q[2],
+            _q[3],
+            _q[5],
+            _q[6],
+            _q[7],
+            _q[9],
+            _q[10],
+            _q[11],
+            _q[29],
+        ]
 
         for i, F in enumerate(self.new_info):
             if F == "":
@@ -70,8 +81,9 @@ class pat_edit2(QDialog):
 
     def save_medical_history(self):
         # Retrieve medical history data
-        medical_history = self.med_find_edit.toPlainText()
+        medhist = self.med_find_edit.toPlainText()
 
+        medical_history = "\n" + medhist
         # Retrieve checkbox states
         checkbox_states = {
             "q1": self.q1_y_check.isChecked(),
