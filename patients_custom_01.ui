@@ -1153,6 +1153,11 @@ font:  12pt &quot;Segoe UI &quot;;</string>
    </property>
    <item>
     <property name="text">
+     <string/>
+    </property>
+   </item>
+   <item>
+    <property name="text">
      <string>Abdullahpur</string>
     </property>
    </item>

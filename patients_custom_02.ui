@@ -1041,7 +1041,7 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <rect>
       <x>10</x>
       <y>40</y>
-      <width>531</width>
+      <width>491</width>
       <height>411</height>
      </rect>
     </property>
@@ -1052,6 +1052,7 @@ background-color: rgb(255, 255, 255);
 QTextEdit{
 background-color: rgb(255, 255, 255);
 	font: 12pt &quot;Segoe UI&quot;;
+	color: rgb(0, 0, 0);
 }
 </string>
     </property>

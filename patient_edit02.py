@@ -38,6 +38,34 @@ class pat_edit2(QDialog):
         self.chief_complain = chief_complain
         self.pat_id = pat_id
 
+        self.new_info = [
+            self.f_name,
+            self.l_name,
+            self.age,
+            self.phone,
+            self.address,
+            
+            self.email,
+            self.date_of_departure,
+            self.reference,
+            self.chief_complain,
+            self.occupation
+        ]
+        # print(self.new_info)
+        connect1 = sqlite3.connect("medico.db3")
+        cur1 = connect1.cursor()
+        cur1.execute("SELECT * FROM Patients WHERE p_id=?", (self.pat_id))
+        _q = cur1.fetchone()
+
+        self.old_info = [_q[1], _q[2], _q[3], _q[5], _q[6], _q[7], _q[9], _q[10], _q[11],_q[29]]
+
+        for i, F in enumerate(self.new_info):
+            if F == "":
+                self.new_info[i] = self.old_info[i]
+
+        print(self.old_info)
+        print(self.new_info)
+
         self.save_pat.clicked.connect(self.save_medical_history)
 
     def save_medical_history(self):
@@ -82,36 +110,37 @@ class pat_edit2(QDialog):
 
         # # Increment the last patient ID
         # new_p_id = last_p_id + 1
-        if self.f_name=='':
-            cursor.execute("""SELECT * FROM patients WHERE p_id=? """,(self.pat_id))
-            info=cursor.fetchone()
-            self.f_name=info[1]
-            
+        # if self.f_name=='':
+        #     cursor.execute("""SELECT * FROM patients WHERE p_id=? """,(self.pat_id))
+        #     info=cursor.fetchone()
+        #     self.f_name=info[1]
+
         # else:
-            cursor.execute(
-                """
-            UPDATE patients SET f_name=?, l_name=?, phone=?, address=?, email=?, age=?, reference=?, date_of_departure=?, complain=complain||?, occupation=?, med_find_=med_find_ || ?, 
-            blood_diseases=?, smoker=?, bleeding_disorder=?, hepatitis=?, diabetes=?, epilepsy=?, kidney_cardiac_diseases=?, abnormal_bp=?, currently_medicated=?, respiratory_diseases=?, gum_bleed_brush=?, allergies=?, nervous=?, pregnant=?, breastfeeding=?, none_prb_above=? WHERE p_id=?
-            """,
-                (
-                    self.f_name,
-                    self.l_name,
-                    self.phone,
-                    self.address,
-                    self.email,
-                    self.age,
-                    self.reference,
-                    self.date_of_departure,
-                    self.chief_complain,
-                    self.occupation,
-                    medical_history,
-                    *checkbox_values.values(),
-                    self.pat_id,
-                ),
-            )
-            conn.commit()
-            conn.close()
-            print("Patient data and medical history saved successfully.")
+
+        cursor.execute(
+            """
+        UPDATE patients SET f_name=?, l_name=?, phone=?, address=?, email=?, age=?, reference=?, date_of_departure=?, complain=complain||?, occupation=?, med_find_=med_find_ || ?, 
+        blood_diseases=?, smoker=?, bleeding_disorder=?, hepatitis=?, diabetes=?, epilepsy=?, kidney_cardiac_diseases=?, abnormal_bp=?, currently_medicated=?, respiratory_diseases=?, gum_bleed_brush=?, allergies=?, nervous=?, pregnant=?, breastfeeding=?, none_prb_above=? WHERE p_id=?
+        """,
+            (
+                self.new_info[0],
+                self.new_info[1],
+                self.new_info[3],
+                self.new_info[4],
+                self.new_info[5],
+                self.new_info[2],
+                self.new_info[7],
+                self.new_info[6],
+                self.new_info[8],
+                self.new_info[9],
+                medical_history,
+                *checkbox_values.values(),
+                self.pat_id,
+            ),
+        )
+        conn.commit()
+        conn.close()
+        print("Patient data and medical history saved successfully.")
 
 
 """

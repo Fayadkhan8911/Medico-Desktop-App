@@ -897,6 +897,11 @@ background-color: rgb(255, 255, 255);
    </property>
    <item>
     <property name="text">
+     <string>...</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
      <string>Abdullahpur</string>
     </property>
    </item>

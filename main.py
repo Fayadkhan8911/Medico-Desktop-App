@@ -173,11 +173,11 @@ class _main_window(QDialog):
         self._indi_app = appointment_individual.appointment_individual(v_name, v_phone)
         widget.addWidget(self._indi_app)
         widget.setCurrentIndex(widget.currentIndex() + 1)
-        # self._indi_app.load_table(v_name, v_phone)
+        # self._indi_app.load_table(v_name,0 v_phone)
         print(v_name)
 
     def checkvalid_appnt(self):
-        # CHECK
+        # CHECK0
         vname_input = self._appointment.vname_edit.toPlainText().strip()
         phone_input = self._appointment.phone_edit.toPlainText().strip()
         # date_input = self._appointment.add_address_edit.toPlainText().strip()
