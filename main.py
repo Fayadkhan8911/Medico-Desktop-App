@@ -170,11 +170,23 @@ class _main_window(QDialog):
     def appointment_individual(self):
         v_name = self._appointment.search_name_edit.toPlainText()
         v_phone = self._appointment.search_phone_edit.toPlainText()
-        self._indi_app = appointment_individual.appointment_individual(v_name, v_phone)
+        p_id = self._appointment.search_pat_id.toPlainText()
+        self._indi_app = appointment_individual.appointment_individual(
+            v_name, v_phone, p_id
+        )
         widget.addWidget(self._indi_app)
         widget.setCurrentIndex(widget.currentIndex() + 1)
         # self._indi_app.load_table(v_name,0 v_phone)
         print(v_name)
+        self._indi_app.dash_btn.clicked.connect(self._go_dash)
+        self._indi_app.patient_btn.clicked.connect(self._go_patient_window)
+        # self._indi_app.search_btn.clicked.connect(self._go_pat_det)
+
+        self._indi_app.payment_btn.clicked.connect(self._go_make_payment)
+        self._indi_app.expense_btn.clicked.connect(self._go_spend_money)
+        self._indi_app.dentist_btn.clicked.connect(self.get_dentist)
+        self._indi_app.appointment_btn.clicked.connect(self._go_appointment)
+        self._indi_app.return_btn.clicked.connect(self._go_appointment)
 
     def checkvalid_appnt(self):
         # CHECK0

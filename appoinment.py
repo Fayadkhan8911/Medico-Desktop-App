@@ -30,24 +30,79 @@ class appointment_window(QDialog):
         self.add_appointment_btn.clicked.connect(self.save_appointment)
 
     #    self.search_btn.clicked.connect(self.search_date)
+    def show_error_window(self, message):
+        error_window = error._error_window(message)  # Adjusted to use the error module
+        error_window.ok_btn.clicked.connect(self.trigger_callback)
+        error_window.exec_()
 
     def save_appointment(self):
+        p_id = self.pat_id_edit.toPlainText()
         v_name_input = self.vname_edit.toPlainText()
         phone_input = self.phone_edit.toPlainText()
         v_time_input = self.timeEdit.time().toString()
         v_date_input = self.dateEdit.date().toString("dd-MM-yyyy")
+        dr_input = self.dname_edit.toPlainText()
         conn = sqlite3.connect("medico.db3")
         cursor = conn.cursor()
-        cursor.execute(
-            """
-            INSERT INTO appointments (reg_date,visitor_name,visitor_phone,visit_time,visit_date,status)
-            VALUES (DATE('now'), ?, ?, ?, ?, ?)
-        """,
-            (v_name_input, phone_input, v_time_input, v_date_input, "Active"),
-        )
-        conn.commit()
-        conn.close()
-        self.show_appt_success_dialog()
+        cur1 = conn.cursor()
+        if p_id == "":
+            cursor.execute(
+                """
+                INSERT INTO appointments (reg_date,visitor_name,visitor_phone,visit_time,visit_date,status,dentist_name)
+                VALUES (DATE('now'), ?, ?, ?, ?, ?,?)
+             """,
+                (
+                    v_name_input,
+                    phone_input,
+                    v_time_input,
+                    v_date_input,
+                    "Active",
+                    dr_input,
+                ),
+            )
+            conn.commit()
+            conn.close()
+            self.show_appt_success_dialog()
+        else:
+            cur1.execute(
+                """
+                           SELECT f_name , phone FROM patients WHERE p_id =?
+                           """,
+                (p_id,),
+            )
+            d = cur1.fetchone()
+
+            # _name = data[0]
+            # _phone = data[1]
+            # print(type(data))
+            if d:
+                data = list(d)
+                _name = data[0]
+                _phone = data[1]
+                print("testing")
+                cursor.execute(
+                    """
+                    INSERT INTO appointments (reg_date,visitor_name,visitor_phone,visit_time,visit_date,status,dentist_name,p_id)
+                    VALUES (DATE('now'), ?, ?, ?, ?, ?,?,?)
+                """,
+                    (
+                        _name,
+                        _phone,
+                        v_time_input,
+                        v_date_input,
+                        "Active",
+                        dr_input,
+                        p_id,
+                    ),
+                )
+                conn.commit()
+                conn.close()
+                self.show_appt_success_dialog()
+            #     print("testing")
+            else:
+                print("testing 2")
+                self.show_error_window("No patient found with Patient ID")
+                print("No patient found with Patient ID")
 
     def show_appt_success_dialog(self):
         success_dialog = appt_success._error_window("Appointment Success")
@@ -60,12 +115,15 @@ class appointment_window(QDialog):
     def load_table(self):
         _connect = sqlite3.connect("MEDICO.db3")
         _cur = _connect.cursor()
-        _query = "SELECT reg_date , visitor_name, visitor_phone,visit_date,visit_time,dentist_name FROM appointments ORDER BY visit_date DESC"
+        _query = "SELECT reg_date,p_id , visitor_name, visitor_phone,visit_date,visit_time,dentist_name,status FROM appointments ORDER BY visit_date DESC"
         # data = _cur.fetchall()  # Fetch data
         _tablerow = 0
         self.appointment_table.setRowCount(50)
-        self.appointment_table.setColumnWidth(4, 200)
-        self.appointment_table.setColumnWidth(3, 200)
+        self.appointment_table.setColumnWidth(4, 130)
+        self.appointment_table.setColumnWidth(3, 120)
+        self.appointment_table.setColumnWidth(1, 130)
+        self.appointment_table.setColumnWidth(0, 100)
+        self.appointment_table.setColumnWidth(2, 130)
 
         for col in _cur.execute(_query):
             self.appointment_table.setItem(
@@ -85,6 +143,12 @@ class appointment_window(QDialog):
             )
             self.appointment_table.setItem(
                 _tablerow, 5, QtWidgets.QTableWidgetItem(col[5])
+            )
+            self.appointment_table.setItem(
+                _tablerow, 6, QtWidgets.QTableWidgetItem(col[6])
+            )
+            self.appointment_table.setItem(
+                _tablerow, 7, QtWidgets.QTableWidgetItem(col[7])
             )
 
             _tablerow += 1

@@ -276,7 +276,7 @@ color: rgba(0, 0, 0,.85);
      <x>640</x>
      <y>50</y>
      <width>611</width>
-     <height>240</height>
+     <height>201</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -470,6 +470,102 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     <string>Payments of Today</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="print_appt">
+   <property name="geometry">
+    <rect>
+     <x>1100</x>
+     <y>260</y>
+     <width>140</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+
+
+font:  14pt &quot;Segoe UI &quot;;
+background-color: rgb(255, 255, 255);
+border-top-left-radius:10px;
+border-bottom-left-radius:10px;
+border-top-right-radius:10px;
+border-bottom-right-radius:10px;}
+QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Print</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Medico_modern/dashboard.png</normaloff>../Medico_modern/dashboard.png</iconset>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="print_pay">
+   <property name="geometry">
+    <rect>
+     <x>1110</x>
+     <y>630</y>
+     <width>140</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+
+
+font:  14pt &quot;Segoe UI &quot;;
+background-color: rgb(255, 255, 255);
+border-top-left-radius:10px;
+border-bottom-left-radius:10px;
+border-top-right-radius:10px;
+border-bottom-right-radius:10px;}
+QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Print</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Medico_modern/dashboard.png</normaloff>../Medico_modern/dashboard.png</iconset>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="print_expense">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>630</y>
+     <width>140</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+
+
+font:  14pt &quot;Segoe UI &quot;;
+background-color: rgb(255, 255, 255);
+border-top-left-radius:10px;
+border-bottom-left-radius:10px;
+border-top-right-radius:10px;
+border-bottom-right-radius:10px;}
+QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Print</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Medico_modern/dashboard.png</normaloff>../Medico_modern/dashboard.png</iconset>
+   </property>
+  </widget>
   <zorder>label_3</zorder>
   <zorder>side_bar</zorder>
   <zorder>calendarWidget</zorder>
@@ -479,6 +575,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
   <zorder>label_2</zorder>
   <zorder>tableWidget</zorder>
   <zorder>label_5</zorder>
+  <zorder>print_appt</zorder>
+  <zorder>print_pay</zorder>
+  <zorder>print_expense</zorder>
  </widget>
  <resources/>
  <connections/>

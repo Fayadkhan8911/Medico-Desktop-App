@@ -336,7 +336,7 @@ background-color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>530</x>
-     <y>30</y>
+     <y>70</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -356,7 +356,7 @@ font:  14pt &quot;Segoe UI &quot;;</string>
    <property name="geometry">
     <rect>
      <x>530</x>
-     <y>70</y>
+     <y>110</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -377,7 +377,7 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     <rect>
      <x>200</x>
      <y>320</y>
-     <width>901</width>
+     <width>971</width>
      <height>321</height>
     </rect>
    </property>
@@ -392,6 +392,11 @@ font:  12pt &quot;Segoe UI &quot;;</string>
    </column>
    <column>
     <property name="text">
+     <string>Patient ID</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
      <string>First Name</string>
     </property>
    </column>
@@ -402,7 +407,7 @@ font:  12pt &quot;Segoe UI &quot;;</string>
    </column>
    <column>
     <property name="text">
-     <string>Visit Date</string>
+     <string>Visit Date(m-d-y)</string>
     </property>
    </column>
    <column>
@@ -415,13 +420,18 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      <string>Dentist Name</string>
     </property>
    </column>
+   <column>
+    <property name="text">
+     <string>Status</string>
+    </property>
+   </column>
   </widget>
   <widget class="QLabel" name="visit_date_2">
    <property name="geometry">
     <rect>
      <x>200</x>
      <y>290</y>
-     <width>901</width>
+     <width>971</width>
      <height>31</height>
     </rect>
    </property>
@@ -439,8 +449,8 @@ font:  14pt &quot;Segoe UI &quot;;</string>
   <widget class="QTextEdit" name="search_name_edit">
    <property name="geometry">
     <rect>
-     <x>1030</x>
-     <y>30</y>
+     <x>1010</x>
+     <y>70</y>
      <width>141</width>
      <height>31</height>
     </rect>
@@ -459,8 +469,8 @@ background-color: rgb(255, 255, 255);
   <widget class="QPushButton" name="search_btn">
    <property name="geometry">
     <rect>
-     <x>1030</x>
-     <y>110</y>
+     <x>1165</x>
+     <y>220</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -560,8 +570,8 @@ color: rgb(255, 255, 255);
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>1035</x>
-     <y>120</y>
+     <x>1170</x>
+     <y>230</y>
      <width>100</width>
      <height>30</height>
     </rect>
@@ -583,8 +593,8 @@ color: rgb(255, 255, 255);
   <widget class="QLabel" name="visit_date_3">
    <property name="geometry">
     <rect>
-     <x>930</x>
-     <y>30</y>
+     <x>910</x>
+     <y>70</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -597,14 +607,14 @@ background-color: rgb(0, 0, 0);
 font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
-    <string>Fisrt Name</string>
+    <string>First Name</string>
    </property>
   </widget>
   <widget class="QLabel" name="visit_date_4">
    <property name="geometry">
     <rect>
-     <x>930</x>
-     <y>70</y>
+     <x>910</x>
+     <y>110</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -623,8 +633,8 @@ font:  14pt &quot;Segoe UI &quot;;</string>
   <widget class="QTextEdit" name="search_phone_edit">
    <property name="geometry">
     <rect>
-     <x>1030</x>
-     <y>70</y>
+     <x>1010</x>
+     <y>110</y>
      <width>141</width>
      <height>31</height>
     </rect>
@@ -638,61 +648,6 @@ background-color: rgb(255, 255, 255);
 	font: 12pt &quot;Segoe UI&quot;;
 }
 </string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_6">
-   <property name="geometry">
-    <rect>
-     <x>945</x>
-     <y>165</y>
-     <width>200</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 0, 0);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-color: rgb(255, 255, 255);
-</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="cancel_appointment">
-   <property name="geometry">
-    <rect>
-     <x>940</x>
-     <y>160</y>
-     <width>200</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton{
-
-
-font:  14pt &quot;Segoe UI &quot;;
-background-color: rgb(255, 255, 255);
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;}
-QPushButton:hover{
-	background-color: rgb(161, 161, 161);
-	color: rgb(255, 255, 255);
-}</string>
-   </property>
-   <property name="text">
-    <string>Update Appointment</string>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>../Medico_modern/patientdownload .png</normaloff>../Medico_modern/patientdownload .png</iconset>
    </property>
   </widget>
   <widget class="QLabel" name="dname">
@@ -739,7 +694,7 @@ background-color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>630</x>
-     <y>30</y>
+     <y>70</y>
      <width>131</width>
      <height>31</height>
     </rect>
@@ -753,7 +708,7 @@ background-color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>630</x>
-     <y>70</y>
+     <y>110</y>
      <width>131</width>
      <height>30</height>
     </rect>
@@ -767,7 +722,7 @@ background-color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>630</x>
-     <y>100</y>
+     <y>140</y>
      <width>131</width>
      <height>20</height>
     </rect>
@@ -781,6 +736,126 @@ font:  8pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
     <string>mm/dd/yyyy</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="pat_id_edit">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>30</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTextEdit:focus{
+background-color: rgb(255, 255, 255);
+}
+QTextEdit{
+background-color: rgb(255, 255, 255);
+	font: 12pt &quot;Segoe UI&quot;;
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="vname_2">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>30</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
+   </property>
+   <property name="text">
+    <string>Patient ID (If registered)</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="vname_3">
+   <property name="geometry">
+    <rect>
+     <x>910</x>
+     <y>180</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
+   </property>
+   <property name="text">
+    <string>Patient ID (If registered)</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="search_pat_id_edit">
+   <property name="geometry">
+    <rect>
+     <x>1130</x>
+     <y>180</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTextEdit:focus{
+background-color: rgb(255, 255, 255);
+}
+QTextEdit{
+background-color: rgb(255, 255, 255);
+	font: 12pt &quot;Segoe UI&quot;;
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="visit_date_6">
+   <property name="geometry">
+    <rect>
+     <x>910</x>
+     <y>150</y>
+     <width>21</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  8pt &quot;Segoe UI &quot;;</string>
+   </property>
+   <property name="text">
+    <string>OR</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="vname_4">
+   <property name="geometry">
+    <rect>
+     <x>910</x>
+     <y>30</y>
+     <width>361</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
+   </property>
+   <property name="text">
+    <string>Search for individual appointments</string>
    </property>
   </widget>
   <zorder>label</zorder>
@@ -801,13 +876,17 @@ font:  8pt &quot;Segoe UI &quot;;</string>
   <zorder>visit_date_3</zorder>
   <zorder>visit_date_4</zorder>
   <zorder>search_phone_edit</zorder>
-  <zorder>label_6</zorder>
-  <zorder>cancel_appointment</zorder>
   <zorder>dname</zorder>
   <zorder>dname_edit</zorder>
   <zorder>timeEdit</zorder>
   <zorder>dateEdit</zorder>
   <zorder>visit_date_5</zorder>
+  <zorder>pat_id_edit</zorder>
+  <zorder>vname_2</zorder>
+  <zorder>vname_3</zorder>
+  <zorder>search_pat_id_edit</zorder>
+  <zorder>visit_date_6</zorder>
+  <zorder>vname_4</zorder>
  </widget>
  <resources/>
  <connections/>
