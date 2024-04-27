@@ -165,12 +165,13 @@ class _main_window(QDialog):
         self._appointment.expense_btn.clicked.connect(self._go_spend_money)
         self._appointment.dentist_btn.clicked.connect(self.get_dentist)
         self._appointment.appointment_btn.clicked.connect(self._go_appointment)
-        self._appointment.search_btn.clicked.connect(self.appointment_individual)
+        self._appointment.search_btn.clicked.connect(self.valid_pat)
 
     def appointment_individual(self):
         v_name = self._appointment.search_name_edit.toPlainText()
         v_phone = self._appointment.search_phone_edit.toPlainText()
-        p_id = self._appointment.search_pat_id.toPlainText()
+        p_id = self._appointment.search_pat_id_edit.toPlainText()
+
         self._indi_app = appointment_individual.appointment_individual(
             v_name, v_phone, p_id
         )
@@ -187,6 +188,50 @@ class _main_window(QDialog):
         self._indi_app.dentist_btn.clicked.connect(self.get_dentist)
         self._indi_app.appointment_btn.clicked.connect(self._go_appointment)
         self._indi_app.return_btn.clicked.connect(self._go_appointment)
+
+    def valid_pat(self):  # for  patient details
+
+        f_name = self._appointment.search_name_edit.toPlainText()
+        # l_name = self._appointment.lname_srch_edit.toPlainText()
+        phone = self._appointment.search_phone_edit.toPlainText()
+        patient_id = self._appointment.search_pat_id_edit.toPlainText()
+
+        if patient_id:
+
+            conn = sqlite3.connect("medico.db3")
+            c = conn.cursor()
+            c.execute("SELECT * FROM appointments WHERE p_id=?", (patient_id,))
+            result = c.fetchone()
+            conn.close()
+
+            if result:
+                self.appointment_individual()
+            else:
+                self.show_error_window("No patient found with Patient ID")
+                print("No patient found with Patient ID")
+
+        elif f_name and phone:
+            conn = sqlite3.connect("medico.db3")
+            c = conn.cursor()
+            c.execute(
+                "SELECT * FROM appointments WHERE visitor_name=? AND visitor_phone=?",
+                (f_name, phone),
+            )
+            result = c.fetchone()
+            conn.close()
+            if result:
+                self.appointment_individual()
+            else:
+                self.show_error_window(
+                    "No patient found with First Name and Phone Number."
+                )
+                print("No patient found with First Name and Phone Number.")
+
+        else:
+            self.show_error_window(
+                "Please provide either First Name and Phone Number or Patient ID"
+            )
+            print("Please provide either first name and phone number or patient ID")
 
     def checkvalid_appnt(self):
         # CHECK0

@@ -37,18 +37,29 @@ class appointment_individual(QDialog):
     def cancel_appointment(self, v_name, v_phone):
         v_name = self.v_name
         v_phone = self.v_phone
-
+        p_id = self.p_id
         _connect = sqlite3.connect("MEDICO.db3")
         _cur = _connect.cursor()
-        _cur.execute(
-            """
-            UPDATE appointments  
-            SET Status='Cancelled' 
-            WHERE visit_date=(SELECT visit_date FROM appointments WHERE visitor_name=? AND visitor_phone=? ORDER BY visit_date DESC LIMIT 1)""",
-            (v_name, v_phone),
-        )
-        _connect.commit()
-        self.load_table(self.v_name, self.v_phone)
+
+        if p_id == "":
+            _cur.execute(
+                """
+                UPDATE appointments  
+                SET Status='Cancelled' 
+                WHERE visit_date=(SELECT visit_date FROM appointments WHERE visitor_name=? AND visitor_phone=? ORDER BY visit_date DESC LIMIT 1)""",
+                (v_name, v_phone),
+            )
+            _connect.commit()
+        else:
+            _cur.execute(
+                """
+                UPDATE appointments  
+                SET Status='Cancelled' 
+                WHERE visit_date=(SELECT visit_date FROM appointments WHERE p_id=?  ORDER BY visit_date DESC LIMIT 1)""",
+                (p_id),
+            )
+            _connect.commit()
+        self.load_table(self.v_name, self.v_phone, self.p_id)
 
     def load_table(self, v_name, v_phone, p_id):
         v_name = self.v_name
@@ -64,7 +75,7 @@ class appointment_individual(QDialog):
         self.appointment_table.setRowCount(50)
         self.appointment_table.setColumnWidth(4, 150)
         self.appointment_table.setColumnWidth(3, 150)
-        self.appointment_table.setColumnWidth(5, 150)
+        self.appointment_table.setColumnWidth(5, 100)
         self.appointment_table.setColumnWidth(6, 150)
 
         if p_id == "":
@@ -102,7 +113,7 @@ class appointment_individual(QDialog):
 
         else:
             for col in _cur.execute(
-                "SELECT appointments.reg_date,appointments.p_id, patients.f_name, patients.phone,appointments.visit_date,appointments.visit_time,appointments.dentist_name,appointments.status FROM appointments INNER JOIN patients ON appointments.p_id = patients.p_id WHERE p_id=? ORDER BY appointments.visit_date ",
+                "SELECT appointments.reg_date,appointments.p_id, patients.f_name, patients.phone,appointments.visit_date,appointments.visit_time,appointments.dentist_name,appointments.status FROM appointments INNER JOIN patients ON appointments.p_id = patients.p_id WHERE appointments.p_id=? ORDER BY appointments.visit_date ",
                 (p_id),
             ):
                 self.appointment_table.setItem(

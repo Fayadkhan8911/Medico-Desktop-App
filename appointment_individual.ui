@@ -272,6 +272,11 @@ font:  12pt &quot;Segoe UI &quot;;</string>
    </column>
    <column>
     <property name="text">
+     <string>Patient ID</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
      <string>First Name</string>
     </property>
    </column>
@@ -282,7 +287,7 @@ font:  12pt &quot;Segoe UI &quot;;</string>
    </column>
    <column>
     <property name="text">
-     <string>Visit Date</string>
+     <string>Visit Date(d-m-y)</string>
     </property>
    </column>
    <column>
