@@ -33,6 +33,7 @@ import files_add
 import files_updt
 import patient_edit01
 import patient_edit02
+import pdf_maker
 
 # import sys
 
@@ -56,6 +57,21 @@ class _main_window(QDialog):
         self.load_payment_table()
         # self.show_expenses()
         # Get the current date
+        self.print_appt.clicked.connect(self.print_present_appointments)
+        self.print_pay.clicked.connect(self.print_present_payments)
+
+    def print_present_appointments(self):
+        _query = "SELECT visitor_name,visitor_phone,visit_time,dentist_name,p_id,status FROM appointments WHERE visit_date=? "
+        suffix = "__Appointments "
+        file_location = "Appointments_PDF/"
+        pdf = pdf_maker.pdf_maker(_query, suffix, file_location)
+        pdf
+
+    def print_present_payments(self):
+        _query = "SELECT payment_history.p_id, patients.f_name, patients.phone,payment_history.payment_amount FROM payment_history INNER JOIN patients on payment_history.p_id = patients.p_id WHERE visit_date=? "
+        prefix = "Payments_of_ "
+        pdf = pdf_maker.pdf_maker(_query, prefix)
+        pdf
 
     current_date = QDate.currentDate()
 
@@ -130,7 +146,7 @@ class _main_window(QDialog):
         # cursor.execute("SELECT * FROM appointments WHERE appnt_date = ?", (self.current_date,))
 
         for col in _cur.execute(
-            "SELECT visitor_name, visitor_phone, visit_time,dentist_name FROM appointments WHERE visit_date=? ORDER BY visit_time ",
+            "SELECT visitor_name, visitor_phone, visit_time,dentist_name,p_id,status FROM appointments WHERE visit_date=? ORDER BY visit_time ",
             (self.formatted_date,),
         ):
             # self.appointment_table.setItem(_tablerow, 0, QtWidgets.QTableWidgetItem(col[0]))
@@ -146,6 +162,12 @@ class _main_window(QDialog):
             )
             self.appointment_table.setItem(
                 _tablerow, 3, QtWidgets.QTableWidgetItem(col[3])
+            )
+            self.appointment_table.setItem(
+                _tablerow, 4, QtWidgets.QTableWidgetItem(col[4])
+            )
+            self.appointment_table.setItem(
+                _tablerow, 5, QtWidgets.QTableWidgetItem(col[5])
             )
 
             _tablerow += 1

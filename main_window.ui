@@ -311,6 +311,16 @@ gridline-color: rgba(0, 0, 0,.4);</string>
      <string>Dentist Name</string>
     </property>
    </column>
+   <column>
+    <property name="text">
+     <string>Patient ID</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Status</string>
+    </property>
+   </column>
   </widget>
   <widget class="QTableWidget" name="expense_table">
    <property name="geometry">

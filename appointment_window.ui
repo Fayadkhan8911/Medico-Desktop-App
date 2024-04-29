@@ -872,13 +872,6 @@ font:  14pt &quot;Segoe UI &quot;;</string>
 alternate-background-color: rgb(0, 0, 0);
 color: rgb(255, 255, 255);</string>
    </property>
-   <property name="selectedDate">
-    <date>
-     <year>2024</year>
-     <month>4</month>
-     <day>29</day>
-    </date>
-   </property>
    <property name="gridVisible">
     <bool>false</bool>
    </property>
