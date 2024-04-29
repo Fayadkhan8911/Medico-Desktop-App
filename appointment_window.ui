@@ -357,7 +357,7 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     <rect>
      <x>530</x>
      <y>110</y>
-     <width>101</width>
+     <width>311</width>
      <height>31</height>
     </rect>
    </property>
@@ -376,9 +376,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
    <property name="geometry">
     <rect>
      <x>200</x>
-     <y>320</y>
+     <y>350</y>
      <width>971</width>
-     <height>321</height>
+     <height>311</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -430,7 +430,7 @@ font:  12pt &quot;Segoe UI &quot;;</string>
    <property name="geometry">
     <rect>
      <x>200</x>
-     <y>290</y>
+     <y>320</y>
      <width>971</width>
      <height>31</height>
     </rect>
@@ -858,6 +858,43 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     <string>Search for individual appointments</string>
    </property>
   </widget>
+  <widget class="QCalendarWidget" name="calendar">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>140</y>
+     <width>311</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 0);
+alternate-background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="selectedDate">
+    <date>
+     <year>2024</year>
+     <month>4</month>
+     <day>29</day>
+    </date>
+   </property>
+   <property name="gridVisible">
+    <bool>false</bool>
+   </property>
+   <property name="selectionMode">
+    <enum>QCalendarWidget::SingleSelection</enum>
+   </property>
+   <property name="horizontalHeaderFormat">
+    <enum>QCalendarWidget::SingleLetterDayNames</enum>
+   </property>
+   <property name="navigationBarVisible">
+    <bool>true</bool>
+   </property>
+   <property name="dateEditEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
   <zorder>label</zorder>
   <zorder>side_bar</zorder>
   <zorder>vname</zorder>
@@ -865,7 +902,6 @@ font:  14pt &quot;Segoe UI &quot;;</string>
   <zorder>phone</zorder>
   <zorder>phone_edit</zorder>
   <zorder>visit_time</zorder>
-  <zorder>visit_date</zorder>
   <zorder>appointment_table</zorder>
   <zorder>visit_date_2</zorder>
   <zorder>search_name_edit</zorder>
@@ -887,6 +923,8 @@ font:  14pt &quot;Segoe UI &quot;;</string>
   <zorder>search_pat_id_edit</zorder>
   <zorder>visit_date_6</zorder>
   <zorder>vname_4</zorder>
+  <zorder>calendar</zorder>
+  <zorder>visit_date</zorder>
  </widget>
  <resources/>
  <connections/>

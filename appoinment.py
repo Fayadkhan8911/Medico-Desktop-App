@@ -40,7 +40,7 @@ class appointment_window(QDialog):
         v_name_input = self.vname_edit.toPlainText()
         phone_input = self.phone_edit.toPlainText()
         v_time_input = self.timeEdit.time().toString()
-        v_date_input = self.dateEdit.date().toString("dd-MM-yyyy")
+        v_date_input = self.calendar.selectedDate().toString("dd-MM-yyyy")
         dr_input = self.dname_edit.toPlainText()
         conn = sqlite3.connect("medico.db3")
         cursor = conn.cursor()
