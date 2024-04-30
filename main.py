@@ -79,15 +79,16 @@ class _main_window(QDialog):
     formatted_date = current_date.toString("dd-MM-yyyy")
 
     def load_payment_table(self):
+        print("this is from payment table")
         _connect = sqlite3.connect("MEDICO.db3")
         _cur = _connect.cursor()
         # _query = ("SELECT * FROM appointments WHERE appnt_date = ?",(self.current_date,),)
-        self.expense_table.setColumnWidth(1, 125)
-        self.expense_table.setColumnWidth(0, 125)
+        self.payment_table.setColumnWidth(1, 125)
+        self.payment_table.setColumnWidth(0, 125)
 
         # data = _cur.fetchall()  # Fetch data
         tablerow = 0
-        self.expense_table.setRowCount(50)
+        self.payment_table.setRowCount(50)
         # cursor.execute("SELECT * FROM appointments WHERE appnt_date = ?", (self.current_date,))
 
         for col in _cur.execute(
@@ -95,9 +96,9 @@ class _main_window(QDialog):
             (self.formatted_date,),
         ):
             int_cost = str(col[2])
-            self.expense_table.setItem(tablerow, 0, QtWidgets.QTableWidgetItem(col[0]))
-            self.expense_table.setItem(tablerow, 1, QtWidgets.QTableWidgetItem(col[1]))
-            self.expense_table.setItem(
+            self.payment_table.setItem(tablerow, 0, QtWidgets.QTableWidgetItem(col[0]))
+            self.payment_table.setItem(tablerow, 1, QtWidgets.QTableWidgetItem(col[1]))
+            self.payment_table.setItem(
                 tablerow, 2, QtWidgets.QTableWidgetItem(int_cost)
             )
 
@@ -110,26 +111,35 @@ class _main_window(QDialog):
         _connect = sqlite3.connect("MEDICO.db3")
         _cur = _connect.cursor()
         # _query = ("SELECT * FROM appointments WHERE appnt_date = ?",(self.current_date,),)
-        self.expense_table.setColumnWidth(1, 125)
-        self.expense_table.setColumnWidth(0, 125)
-
+        self.expense_table.setColumnWidth(0, 150)
+        self.expense_table.setColumnWidth(1, 150)
+        self.expense_table.setColumnWidth(2, 100)
+        # self.expense_table.setColumnWidth(3, 150)
         # data = _cur.fetchall()  # Fetch data
-        tablerow = 0
+        _tablerow = 0
         self.expense_table.setRowCount(50)
         # cursor.execute("SELECT * FROM appointments WHERE appnt_date = ?", (self.current_date,))
 
         for col in _cur.execute(
-            "SELECT expense_description, expense_remarks, expense_cost FROM expense WHERE expense_date=?",
+            "SELECT expense_description,expense_remarks,expense_cost FROM expense WHERE expense_date=? ",
             (self.formatted_date,),
         ):
-            int_cost = str(col[2])
-            self.expense_table.setItem(tablerow, 0, QtWidgets.QTableWidgetItem(col[0]))
-            self.expense_table.setItem(tablerow, 1, QtWidgets.QTableWidgetItem(col[1]))
-            self.expense_table.setItem(
-                tablerow, 2, QtWidgets.QTableWidgetItem(int_cost)
-            )
+            # self.expense_table.setItem(_tablerow, 0, QtWidgets.QTableWidgetItem(col[0]))
 
-            tablerow += 1
+            self.expense_table.setItem(_tablerow, 0, QtWidgets.QTableWidgetItem(col[0]))
+            self.expense_table.setItem(_tablerow, 1, QtWidgets.QTableWidgetItem(col[1]))
+            self.expense_table.setItem(_tablerow, 2, QtWidgets.QTableWidgetItem(col[2]))
+            # self.expense_table.setItem(
+            #     _tablerow, 3, QtWidgets.QTableWidgetItem(col[3])
+            # )
+            # self.expense_table.setItem(
+            #     _tablerow, 4, QtWidgets.QTableWidgetItem(col[4])
+            # )
+            # self.expense_table.setItem(
+            #     _tablerow, 5, QtWidgets.QTableWidgetItem(col[5])
+            # )
+
+            _tablerow += 1
             pass
 
     def load_appointment_table(self):

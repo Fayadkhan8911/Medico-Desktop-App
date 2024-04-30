@@ -418,7 +418,7 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QTableWidget" name="tableWidget">
+  <widget class="QTableWidget" name="payment_table">
    <property name="geometry">
     <rect>
      <x>640</x>
@@ -583,7 +583,7 @@ QPushButton:hover{
   <zorder>expense_table</zorder>
   <zorder>label</zorder>
   <zorder>label_2</zorder>
-  <zorder>tableWidget</zorder>
+  <zorder>payment_table</zorder>
   <zorder>label_5</zorder>
   <zorder>print_appt</zorder>
   <zorder>print_pay</zorder>
