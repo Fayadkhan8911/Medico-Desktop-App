@@ -31,8 +31,13 @@ class _add_file_window(QDialog):
         
     def add_new_pat_file(self):
         
+        current_date = QDate.currentDate()
+        # Convert to 'yyyy-MM-dd' format
+        current_date = current_date.toString("dd-MM-yyyy")
         file_name = self.fname_srch_edit.toPlainText()
         file_desc = self.file_desc_edit.toPlainText()
+        if(file_desc != ''):
+            file_desc = current_date+ "\n" + "\n" + file_desc
         estimated_cost = self.estd_cost_edit.toPlainText()
         discount = self.discount_edit.toPlainText()
         
