@@ -36,6 +36,8 @@ class _updt_file_window(QDialog):
         print(self.patient_id)
         update_estd_cost = self.estd_cost_edit.toPlainText()
         update_discount = self.discount_edit.toPlainText()
+        update_description=self.desc_edit.toPlainnText()
+        
         
         if(update_estd_cost == '' and update_discount == ''):
             error_msg = "Nothing to update"
