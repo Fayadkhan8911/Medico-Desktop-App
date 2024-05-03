@@ -24,10 +24,10 @@ class _expense_view_window(QDialog):
         loadUi("view_expense.ui", self)
         self.expense_date = expense_date
         self._view_expense_table()
-        
-        
+
     def _view_expense_table(self):
         expense_date = self.expense_date
+        print(expense_date)
         conn = sqlite3.connect("medico.db3")
         cursor = conn.cursor()
         cursor.execute("SELECT * FROM expense WHERE expense_date = ?", (expense_date,))
@@ -39,27 +39,25 @@ class _expense_view_window(QDialog):
             print(row)
         conn.close()
         # Clear existing rows
-        self.expenseTable.setRowCount(0)
-        
+        self.expenseTable.setRowCount(100)
+
         # Set number of rows in the table
         self.expenseTable.setRowCount(len(results))
-        
+
         print("Expense Showed")
         self.expenseTable.setColumnWidth(0, 120)  # Expense Date
-        self.expenseTable.setColumnWidth(1, 140)  # Expense Amount
-        self.expenseTable.setColumnWidth(2, 180)  # Expense Description
-        self.expenseTable.setColumnWidth(3, 180)  # Expense Remarks
+        self.expenseTable.setColumnWidth(1, 500)  # Expense Description
+        self.expenseTable.setColumnWidth(2, 200)  # Expense Remarks
+        self.expenseTable.setColumnWidth(3, 180)  # Expense Amount
 
-        
         # Populate the table
         for row_index, row_data in enumerate(results):
             for col_index, data in enumerate(row_data):
                 item = QtWidgets.QTableWidgetItem(str(data))
                 self.expenseTable.setItem(row_index, col_index, item)
-                
+
         self.expenseTable.resizeColumnsToContents()
         self.expense_title.setText(f"Expense History of Date: {expense_date}")
-
 
 
 """

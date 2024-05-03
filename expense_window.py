@@ -39,7 +39,7 @@ class _expense_window(QDialog):
         expense_description = self.expense_desc_edit.toPlainText()
         expense_remarks = self.expense_remark_edit.toPlainText()
         expense_amount = self.expense_amount_edit.toPlainText()
-        expense_date = QDate.currentDate().toString("yyyy-MM-dd")
+        expense_date = QDate.currentDate().toString("dd-MM-yyyy")
 
         if expense_amount:
 

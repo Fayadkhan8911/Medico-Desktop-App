@@ -39,7 +39,8 @@ background-color: rgb(170, 170, 255);</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
+     <string notr="true">
+QPushButton{
 
 
 font:  14pt &quot;Segoe UI &quot;;
@@ -47,11 +48,17 @@ background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
-border-bottom-right-radius:10px;}
+border-bottom-right-radius:10px;
+
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+}
+
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
-}</string>
+}
+</string>
     </property>
     <property name="text">
      <string>Patients</string>
@@ -167,8 +174,7 @@ QPushButton:hover{
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">
-QPushButton{
+     <string notr="true">QPushButton{
 
 
 font:  14pt &quot;Segoe UI &quot;;
@@ -176,17 +182,11 @@ background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-
-	background-color: rgb(0, 0, 0);
-	color: rgb(255, 255, 255);
-}
-
+border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
-}
-</string>
+}</string>
     </property>
     <property name="text">
      <string>Expense</string>
@@ -251,7 +251,7 @@ color: rgb(255, 255, 255);
     </property>
    </widget>
   </widget>
-  <widget class="QTableWidget" name="expenseTable">
+  <widget class="QTableWidget" name="pay_hist_table">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -270,26 +270,31 @@ font:  12pt &quot;Segoe UI &quot;;</string>
    </attribute>
    <column>
     <property name="text">
-     <string>Expense Date</string>
+     <string>Payment Date</string>
     </property>
    </column>
    <column>
     <property name="text">
-     <string>Expense Description</string>
+     <string>File name</string>
     </property>
    </column>
    <column>
     <property name="text">
-     <string>Expense Remarks</string>
+     <string>Payment Amount</string>
     </property>
    </column>
    <column>
     <property name="text">
-     <string>Expense Amount</string>
+     <string>Due</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Payment Remarks</string>
     </property>
    </column>
   </widget>
-  <widget class="QLabel" name="expense_title">
+  <widget class="QLabel" name="payment_title">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -306,7 +311,7 @@ background-color: rgb(0, 0, 0);
 font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
-    <string>Expense History of Date: </string>
+    <string>Payment History of Patient: </string>
    </property>
   </widget>
   <widget class="QPushButton" name="return_btn">
@@ -385,8 +390,8 @@ color: rgb(255, 255, 255);
   </widget>
   <zorder>label</zorder>
   <zorder>side_bar</zorder>
-  <zorder>expenseTable</zorder>
-  <zorder>expense_title</zorder>
+  <zorder>pay_hist_table</zorder>
+  <zorder>payment_title</zorder>
   <zorder>label_3</zorder>
   <zorder>return_btn</zorder>
  </widget>

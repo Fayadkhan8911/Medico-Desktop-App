@@ -327,7 +327,7 @@ gridline-color: rgba(0, 0, 0,.4);</string>
     <rect>
      <x>210</x>
      <y>340</y>
-     <width>401</width>
+     <width>441</width>
      <height>281</height>
     </rect>
    </property>
@@ -364,7 +364,7 @@ gridline-color: rgba(0, 0, 0,.4);</string>
     <rect>
      <x>210</x>
      <y>310</y>
-     <width>401</width>
+     <width>441</width>
      <height>31</height>
     </rect>
    </property>
@@ -421,9 +421,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
   <widget class="QTableWidget" name="payment_table">
    <property name="geometry">
     <rect>
-     <x>640</x>
+     <x>680</x>
      <y>340</y>
-     <width>611</width>
+     <width>571</width>
      <height>281</height>
     </rect>
    </property>
@@ -463,9 +463,9 @@ gridline-color: rgba(0, 0, 0,.4);</string>
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>640</x>
+     <x>680</x>
      <y>310</y>
-     <width>611</width>
+     <width>571</width>
      <height>31</height>
     </rect>
    </property>

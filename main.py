@@ -34,6 +34,7 @@ import files_updt
 import patient_edit01
 import patient_edit02
 import pdf_maker
+import view_payments
 
 # import sys
 
@@ -50,8 +51,8 @@ class _main_window(QDialog):
         self.dentist_btn.clicked.connect(self.get_dentist)
         # self.add_patient_btn.clicked.connect(self._go_add_pat)
         current_day = QDate.currentDate()
-        formatted_date = current_day.toString("dd-MM-yyyy")
-        print(formatted_date)
+        self.formatted_date = current_day.toString("dd-MM-yyyy")
+        print(self.formatted_date)
         self.load_appointment_table()
         self.load_expense_table()
         self.load_payment_table()
@@ -79,7 +80,7 @@ class _main_window(QDialog):
     formatted_date = current_date.toString("dd-MM-yyyy")
 
     def load_payment_table(self):
-        print("this is from payment table")
+
         _connect = sqlite3.connect("MEDICO.db3")
         _cur = _connect.cursor()
         # _query = ("SELECT * FROM appointments WHERE appnt_date = ?",(self.current_date,),)
@@ -91,25 +92,37 @@ class _main_window(QDialog):
         self.payment_table.setRowCount(50)
         # cursor.execute("SELECT * FROM appointments WHERE appnt_date = ?", (self.current_date,))
 
-        for col in _cur.execute(
+        _cur.execute(
             "SELECT patients.p_id, patients.f_name, patients.phone, payment_history.payment_amount FROM patients JOIN  payment_history ON patients.p_id=payment_history.p_id WHERE payment_history.payment_date=?",
             (self.formatted_date,),
-        ):
-            int_cost = str(col[2])
-            self.payment_table.setItem(tablerow, 0, QtWidgets.QTableWidgetItem(col[0]))
-            self.payment_table.setItem(tablerow, 1, QtWidgets.QTableWidgetItem(col[1]))
-            self.payment_table.setItem(
-                tablerow, 2, QtWidgets.QTableWidgetItem(int_cost)
-            )
+        )
+        results = _cur.fetchall()
+        # _query = ("SELECT * FROM appointments WHERE appnt_date = ?",(self.current_date,),)
+        self.payment_table.setColumnWidth(0, 150)
+        self.payment_table.setColumnWidth(1, 150)
+        self.payment_table.setColumnWidth(2, 100)
+        # self.payment_table.setColumnWidth(3, 150)
+        # data = _cur.fetchall()  # Fetch data
+        _tablerow = 0
+        self.payment_table.setRowCount(50)
+        # cursor.execute("SELECT * FROM appointments WHERE appnt_date = ?", (self.current_date,))
+        print(self.formatted_date + " from expense")
+        for row_index, row_data in enumerate(results):
+            for col_index, data in enumerate(row_data):
+                item = QtWidgets.QTableWidgetItem(str(data))
+                self.payment_table.setItem(row_index, col_index, item)
 
-            self.expense_table.setItem(tablerow, 3, QtWidgets.QTableWidgetItem(col[3]))
-
-            tablerow += 1
+            _tablerow += 1
             pass
 
     def load_expense_table(self):
         _connect = sqlite3.connect("MEDICO.db3")
         _cur = _connect.cursor()
+        _cur.execute(
+            "SELECT expense_description, expense_remarks , expense_cost FROM expense WHERE expense_date = ?",
+            (self.formatted_date,),
+        )
+        results = _cur.fetchall()
         # _query = ("SELECT * FROM appointments WHERE appnt_date = ?",(self.current_date,),)
         self.expense_table.setColumnWidth(0, 150)
         self.expense_table.setColumnWidth(1, 150)
@@ -119,25 +132,11 @@ class _main_window(QDialog):
         _tablerow = 0
         self.expense_table.setRowCount(50)
         # cursor.execute("SELECT * FROM appointments WHERE appnt_date = ?", (self.current_date,))
-
-        for col in _cur.execute(
-            "SELECT expense_description,expense_remarks,expense_cost FROM expense WHERE expense_date=? ",
-            (self.formatted_date,),
-        ):
-            # self.expense_table.setItem(_tablerow, 0, QtWidgets.QTableWidgetItem(col[0]))
-
-            self.expense_table.setItem(_tablerow, 0, QtWidgets.QTableWidgetItem(col[0]))
-            self.expense_table.setItem(_tablerow, 1, QtWidgets.QTableWidgetItem(col[1]))
-            self.expense_table.setItem(_tablerow, 2, QtWidgets.QTableWidgetItem(col[2]))
-            # self.expense_table.setItem(
-            #     _tablerow, 3, QtWidgets.QTableWidgetItem(col[3])
-            # )
-            # self.expense_table.setItem(
-            #     _tablerow, 4, QtWidgets.QTableWidgetItem(col[4])
-            # )
-            # self.expense_table.setItem(
-            #     _tablerow, 5, QtWidgets.QTableWidgetItem(col[5])
-            # )
+        print(self.formatted_date + " from expense")
+        for row_index, row_data in enumerate(results):
+            for col_index, data in enumerate(row_data):
+                item = QtWidgets.QTableWidgetItem(str(data))
+                self.expense_table.setItem(row_index, col_index, item)
 
             _tablerow += 1
             pass
@@ -508,6 +507,22 @@ class _main_window(QDialog):
         self._details.new_file_btn.clicked.connect(self._new_patient_file)
         self._details.updt_file_btn.clicked.connect(self._update_existing_file)
         self._details.customize_btn.clicked.connect(self.pat_custom1)
+        self._details.pay_hist_btn.clicked.connect(self.grab_pay_hist)
+
+    def grab_pay_hist(self):
+        patient_id = self._patients.patid_srch_edit.toPlainText()
+
+        self._view_payment_window = view_payments._payments_view_window(patient_id)
+        widget.addWidget(self._view_payment_window)
+        widget.setCurrentIndex(widget.currentIndex() + 1)
+        self._view_payment_window.dash_btn.clicked.connect(self._go_dash)
+        self._view_payment_window.patient_btn.clicked.connect(self._go_patient_window)
+        self._view_payment_window.payment_btn.clicked.connect(self._go_make_payment)
+        self._view_payment_window.expense_btn.clicked.connect(self._go_spend_money)
+        # self._view_payment_window.calendar.clicked.connect(self.grab_expense)
+        self._view_payment_window.appointment_btn.clicked.connect(self._go_appointment)
+        self._view_payment_window.return_btn.clicked.connect(self._go_spend_money)
+        self._view_payment_window.dentist_btn.clicked.connect(self.get_dentist)
 
     def pat_custom1(self):
         f_name = self._patients.fname_srch_edit.toPlainText()
@@ -685,9 +700,9 @@ class _main_window(QDialog):
         self._spend_money.dentist_btn.clicked.connect(self.get_dentist)
 
     def grab_expense(self):
-        dateSelected = self._spend_money.calendar.selectedDate()
+        dateSelected = self._spend_money.calendar.selectedDate().toString("dd-MM-yyyy")
         print(dateSelected)
-        expense_date = str(dateSelected.toPyDate())
+        expense_date = dateSelected
         self._view_expense_window = view_expense._expense_view_window(expense_date)
         widget.addWidget(self._view_expense_window)
         widget.setCurrentIndex(widget.currentIndex() + 1)
