@@ -7,7 +7,7 @@ from datetime import date
 
 # Get the current date
 class pdf_maker:
-    def __init__(self, query, file_suffix,file_location) -> None:
+    def __init__(self, query, file_suffix, file_location) -> None:
 
         current_date = date.today().strftime("%d-%m-%Y")
 
@@ -23,7 +23,7 @@ class pdf_maker:
         # Define the SQL query
         sql_query = query
         suffix = file_suffix
-        file_location=file_location
+        file_location = file_location
         # Use pandas to execute the SQL query and get the result as a DataFrame
         df = pd.read_sql_query(sql_query, conn, params=params)
 
@@ -31,7 +31,7 @@ class pdf_maker:
         conn.close()
 
         # Create a PDF pages object (replace 'output.pdf' with your desired output file name)
-        file_name =  str(current_date) + suffix +".pdf"
+        file_name = str(current_date) + suffix + ".pdf"
         pdf_pages = PdfPages(file_location + file_name)
 
         # Create a new figure and axes for the plot
@@ -51,11 +51,10 @@ class pdf_maker:
 
         # Close the PDF pages object
         pdf_pages.close()
-        
-        
-        
+
+
 class pdf_maker_pat_id:
-    def __init__(self, query, file_suffix,file_location,p_id) -> None:
+    def __init__(self, query, file_suffix, file_location, p_id) -> None:
 
         current_date = date.today().strftime("%d-%m-%Y")
 
@@ -66,13 +65,13 @@ class pdf_maker_pat_id:
 
         # Define your SQL query
         # name = "Zidan"
-        p_id=p_id
+        p_id = p_id
         params = (p_id,)
 
         # Define the SQL query
         sql_query = query
         suffix = file_suffix
-        file_location=file_location
+        file_location = file_location
         # Use pandas to execute the SQL query and get the result as a DataFrame
         df = pd.read_sql_query(sql_query, conn, params=params)
 
@@ -80,7 +79,7 @@ class pdf_maker_pat_id:
         conn.close()
 
         # Create a PDF pages object (replace 'output.pdf' with your desired output file name)
-        file_name =  str(current_date) + suffix +".pdf"
+        file_name = str(p_id) + suffix + ".pdf"
         pdf_pages = PdfPages(file_location + file_name)
 
         # Create a new figure and axes for the plot

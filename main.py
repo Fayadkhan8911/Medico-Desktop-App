@@ -528,7 +528,7 @@ class _main_window(QDialog):
     def print_pat_pay_hist(self):
         patient_id = self._patients.patid_srch_edit.toPlainText()
         _query = "SELECT payment_date,file_name,payment_amount,due, payment_remarks FROM payment_history WHERE p_id = ? "
-        suffix = "_Payment_History "
+        suffix = "_Payments "
         file_location = "Payments_PDF/"
         pdf = pdf_maker.pdf_maker_pat_id(_query, suffix, file_location, patient_id)
         pdf
