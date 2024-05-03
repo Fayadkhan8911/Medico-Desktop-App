@@ -45,10 +45,10 @@ class _expense_view_window(QDialog):
         self.expenseTable.setRowCount(len(results))
 
         print("Expense Showed")
-        self.expenseTable.setColumnWidth(0, 120)  # Expense Date
-        self.expenseTable.setColumnWidth(1, 500)  # Expense Description
-        self.expenseTable.setColumnWidth(2, 200)  # Expense Remarks
-        self.expenseTable.setColumnWidth(3, 180)  # Expense Amount
+        # self.expenseTable.setColumnWidth(0, 120)  # Expense Date
+        # self.expenseTable.setColumnWidth(1, 500)  # Expense Description
+        # self.expenseTable.setColumnWidth(2, 200)  # Expense Remarks
+        # self.expenseTable.setColumnWidth(3, 180)  # Expense Amount
 
         # Populate the table
         for row_index, row_data in enumerate(results):

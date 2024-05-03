@@ -48,11 +48,11 @@ class _payments_view_window(QDialog):
         self.pay_hist_table.setRowCount(len(results))
 
         print("payments Showed")
-        self.pay_hist_table.setColumnWidth(0, 120)  # payments Date
-        self.pay_hist_table.setColumnWidth(1, 500)  # file name
-        self.pay_hist_table.setColumnWidth(2, 200)  # amount
-        self.pay_hist_table.setColumnWidth(3, 180)  # due
-        self.pay_hist_table.setColumnWidth(4, 180)  # remarks
+        # self.pay_hist_table.setColumnWidth(0, 120)  # payments Date
+        # self.pay_hist_table.setColumnWidth(1, 500)  # file name
+        # self.pay_hist_table.setColumnWidth(2, 200)  # amount
+        # self.pay_hist_table.setColumnWidth(3, 250)  # due
+        # self.pay_hist_table.setColumnWidth(4, 300)  # remarks
 
         # Populate the table
         for row_index, row_data in enumerate(results):
@@ -61,6 +61,7 @@ class _payments_view_window(QDialog):
                 self.pay_hist_table.setItem(row_index, col_index, item)
 
         self.pay_hist_table.resizeColumnsToContents()
+        
         self.payment_title.setText(f"payments History of Patient: {p_id}")
 
 

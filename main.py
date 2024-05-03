@@ -521,8 +521,17 @@ class _main_window(QDialog):
         self._view_payment_window.expense_btn.clicked.connect(self._go_spend_money)
         # self._view_payment_window.calendar.clicked.connect(self.grab_expense)
         self._view_payment_window.appointment_btn.clicked.connect(self._go_appointment)
-        self._view_payment_window.return_btn.clicked.connect(self._go_spend_money)
+        self._view_payment_window.return_btn.clicked.connect(self._go_pat_det)
         self._view_payment_window.dentist_btn.clicked.connect(self.get_dentist)
+        self._view_payment_window.print_btn.clicked.connect(self.print_pat_pay_hist)
+
+    def print_pat_pay_hist(self):
+        patient_id = self._patients.patid_srch_edit.toPlainText()
+        _query = "SELECT payment_date,file_name,payment_amount,due, payment_remarks FROM payment_history WHERE p_id = ? "
+        suffix = "_Payment_History "
+        file_location = "Payments_PDF/"
+        pdf = pdf_maker.pdf_maker_pat_id(_query, suffix, file_location, patient_id)
+        pdf
 
     def pat_custom1(self):
         f_name = self._patients.fname_srch_edit.toPlainText()
