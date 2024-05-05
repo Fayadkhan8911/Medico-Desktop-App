@@ -36,10 +36,16 @@ class _updt_file_window(QDialog):
         print(self.patient_id)
         update_estd_cost = self.estd_cost_edit.toPlainText()
         update_discount = self.discount_edit.toPlainText()
-        update_description=self.desc_edit.toPlainnText()
+        x=self.desc_edit.toPlainText()
+        if(x != ''):
+            current_date = QDate.currentDate()
+            # Convert to 'yyyy-MM-dd' format
+            current_date = current_date.toString("dd-MM-yyyy")
+            self.desc= "\n"+"\n"+current_date+"\n"+"\n"+x
+        else:
+            self.desc = x
         
-        
-        if(update_estd_cost == '' and update_discount == ''):
+        if(update_estd_cost == '' and update_discount == '' and x == ''):
             error_msg = "Nothing to update"
             self.show_error_window(error_msg)
             return
@@ -75,6 +81,9 @@ class _updt_file_window(QDialog):
                 self.show_error_window(error_msg)
                 return
             self.update_both(calc_estimated_cost, calc_discount, final_cost)
+        elif(x != ''):
+            self.update_only_desc()
+        
                 
             
     def update_estd_cost_only(self, calc_estimated_cost):
@@ -128,7 +137,7 @@ class _updt_file_window(QDialog):
             
             print(f"prvious due = {prev_due}\nEstimated Cost Change = {estd_cost_change_amount}\nFinal Due = {final_due}")
             
-            cursor.execute("""UPDATE patients SET estd_cost = ?, final_cost = ? WHERE p_id = ?""", (calc_estimated_cost, final_cost, self.patient_id))
+            cursor.execute("""UPDATE patients SET estd_cost = ?, final_cost = ?, file_desc=file_desc||? WHERE p_id = ?""", (calc_estimated_cost, final_cost, self.desc, self.patient_id))
             conn.commit()
             
             print("patients table update done")
@@ -185,7 +194,7 @@ class _updt_file_window(QDialog):
             print(f"fetched_estd_cost = {fetched_estd_cost}")
             final_cost = round((fetched_estd_cost - calc_discount), 3)
             print(f"final_cost = {final_cost}")
-            cursor.execute("""UPDATE patients SET discount = ?, final_cost = ? WHERE p_id = ?""", (calc_discount, final_cost, self.patient_id))
+            cursor.execute("""UPDATE patients SET discount = ?, final_cost = ?, file_desc=file_desc||? WHERE p_id = ?""", (calc_discount, final_cost, self.desc, self.patient_id))
             conn.commit()
             
             print("File update in patient table done")
@@ -296,7 +305,7 @@ class _updt_file_window(QDialog):
             
             
             
-            cursor.execute("""UPDATE patients SET estd_cost = ?, discount = ?, final_cost = ? WHERE p_id = ?""", (calc_estimated_cost, calc_discount, final_cost, self.patient_id))
+            cursor.execute("""UPDATE patients SET estd_cost = ?, discount = ?, final_cost = ?, file_desc=file_desc||? WHERE p_id = ?""", (calc_estimated_cost, calc_discount, final_cost, self.desc, self.patient_id))
             conn.commit()
             
             print("Patient table update done")
@@ -309,7 +318,7 @@ class _updt_file_window(QDialog):
             
             
             
-            msg = "File added successfully.\nEstimated Cost: " + str(calc_estimated_cost) + "\nDiscount: " + str(calc_discount) + " taka\nFinal Cost: " + str(final_cost) + "\nRemaining Due: " + str(final_due)
+            msg = "File updated successfully.\nEstimated Cost: " + str(calc_estimated_cost) + "\nDiscount: " + str(calc_discount) + " taka\nFinal Cost: " + str(final_cost) + "\nRemaining Due: " + str(final_due)
             self.show_error_window(msg)
         except Exception as e:
             print(f"There has been an error: {e}")
@@ -324,6 +333,35 @@ class _updt_file_window(QDialog):
         self.close()
         self._call_back_go_pat_det_fnc()
         
+    def update_only_desc(self):
+        try:
+            patient_id = self.patient_id
+            conn = sqlite3.connect("MEDICO.db3")
+            cursor = conn.cursor()
+            cursor.execute("""UPDATE patients SET file_desc=file_desc||? WHERE p_id = ?""", (self.desc, patient_id))
+            conn.commit()
+            print("Only Description Update")
+            
+            cursor.execute("SELECT file_desc FROM patients WHERE p_id = ?", (patient_id,))
+            current_description = cursor.fetchone()
+            current_description = str(current_description[0])
+            msg = "File updated successfully.\nCurrent Description: \n" + current_description
+            self.show_error_window(msg)
+            
+            
+            
+        except Exception as e:
+            print(f"There has been an error: {e}")
+            msg = "An error occured: " + str(e)
+            self.show_error_window(msg)
+            return
+
+        finally:
+            if conn:
+                conn.close()
+        
+        self.close()
+        self._call_back_go_pat_det_fnc()
         
         
         
