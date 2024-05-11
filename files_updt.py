@@ -91,14 +91,16 @@ class _updt_file_window(QDialog):
         try:
             conn = sqlite3.connect("MEDICO.db3")
             cursor = conn.cursor()
-            cursor.execute("SELECT discount, file_name, file_add_date FROM patients WHERE p_id = ?", (self.patient_id,))
+            cursor.execute("SELECT discount, file_name, file_add_date, previous_due FROM patients WHERE p_id = ?", (self.patient_id,))
             result = cursor.fetchone()
             fetched_disc = round(float(result[0]), 3)
             file_name = str(result[1])
             print(f"file_name = {file_name}")
             file_add_date = result[2]
             print(f"file_add_date = {file_add_date}")
-            final_cost = round((calc_estimated_cost - fetched_disc), 3)
+            file_prev_due = round(float(result[3]), 3)
+            print(f"file_prev_due = {file_prev_due}")
+            final_cost = round((calc_estimated_cost - fetched_disc + prev_due), 3)
             cursor.execute("SELECT estd_cost FROM patients WHERE p_id = ?", (self.patient_id,))
             result = cursor.fetchone()
             fetched_estd_cost = round(float(result[0]), 3)
@@ -120,7 +122,7 @@ class _updt_file_window(QDialog):
             print(f"payment id: {payment_id}")
             
             payment_date = QDate.currentDate().toString(
-                "yyyy-MM-dd"
+                "dd-MM-yyyy"
             )  # You need to implement this function
             
             estd_cost_change_amount = round((calc_estimated_cost - fetched_estd_cost), 3)
@@ -274,7 +276,7 @@ class _updt_file_window(QDialog):
             
             
             payment_date = QDate.currentDate().toString(
-                "yyyy-MM-dd"
+                "dd-MM-yyyy"
             )  # You need to implement this function
             
             
