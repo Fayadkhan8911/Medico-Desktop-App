@@ -508,45 +508,6 @@ color: rgb(255, 255, 255);</string>
     <string/>
    </property>
   </widget>
-  <widget class="QTableWidget" name="tableWidget">
-   <property name="geometry">
-    <rect>
-     <x>190</x>
-     <y>340</y>
-     <width>1041</width>
-     <height>291</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgba(255, 255, 255,.8);
-font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
-   </property>
-   <column>
-    <property name="text">
-     <string>Patient ID</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>First Name</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Phone</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Payment</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Remarks</string>
-    </property>
-   </column>
-  </widget>
   <zorder>label</zorder>
   <zorder>side_bar</zorder>
   <zorder>fname_srch</zorder>
@@ -561,7 +522,6 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
   <zorder>remarks_edit</zorder>
   <zorder>label_2</zorder>
   <zorder>makepayment_btn</zorder>
-  <zorder>tableWidget</zorder>
  </widget>
  <resources/>
  <connections/>

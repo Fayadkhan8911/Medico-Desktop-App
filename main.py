@@ -61,6 +61,14 @@ class _main_window(QDialog):
         # Get the current date
         self.print_appt.clicked.connect(self.print_present_appointments)
         self.print_pay.clicked.connect(self.print_present_payments)
+        self.print_expense.clicked.connect(self.print_present_expence)
+
+    def print_present_expence(self):
+        _query = "SELECT expense_description, expense_remarks , expense_cost FROM expense WHERE expense_date = ?"
+        prefix = " Expences "
+        file_location = "expence_pdf/"
+        pdf = pdf_maker.pdf_maker(_query, prefix, file_location)
+        pdf
 
     def print_present_appointments(self):
         _query = "SELECT visitor_name,visitor_phone,visit_time,dentist_name,p_id,status FROM appointments WHERE visit_date=? "
@@ -70,9 +78,10 @@ class _main_window(QDialog):
         pdf
 
     def print_present_payments(self):
-        _query = "SELECT payment_history.p_id, patients.f_name, patients.phone,payment_history.payment_amount FROM payment_history INNER JOIN patients on payment_history.p_id = patients.p_id WHERE visit_date=? "
-        prefix = "Payments_of_ "
-        pdf = pdf_maker.pdf_maker(_query, prefix)
+        _query = "SELECT payment_history.p_id, patients.f_name, patients.phone,payment_history.payment_amount FROM payment_history INNER JOIN patients on payment_history.p_id = patients.p_id WHERE payment_date=? "
+        prefix = " Payments "
+        file_location = "Payments_pdf/"
+        pdf = pdf_maker.pdf_maker(_query, prefix, file_location)
         pdf
 
     current_date = QDate.currentDate()

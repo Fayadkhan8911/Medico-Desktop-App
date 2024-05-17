@@ -2,7 +2,7 @@ import sys
 from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication, QWidget
-
+import pdf_maker
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import (
     QApplication,
@@ -24,6 +24,14 @@ class _payments_view_window(QDialog):
         loadUi("payment_history.ui", self)
         self.p_id = p_id
         self._view_payments_table()
+        self.print_btn.clicked.connect(self.print_payments)
+
+    def print_payments(self):
+        _query = " SELECT payment_date,file_name,payment_amount,due, payment_remarks FROM payment_history WHERE p_id = ?"
+        prefix = " Payments "
+        file_location = "Personal_Payments_pdf/"
+        pdf = pdf_maker.pdf_maker_pat_id(_query, prefix, file_location, self.p_id)
+        pdf
 
     def _view_payments_table(self):
         p_id = self.p_id
@@ -61,7 +69,7 @@ class _payments_view_window(QDialog):
                 self.pay_hist_table.setItem(row_index, col_index, item)
 
         self.pay_hist_table.resizeColumnsToContents()
-        
+
         self.payment_title.setText(f"payments History of Patient: {p_id}")
 
 
