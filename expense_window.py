@@ -12,13 +12,15 @@ import error_for_expense
 import pytz
 from PyQt5.QtCore import QTimeZone
 import requests
+import error
+import appt_success
 
 
 class _expense_window(QDialog):
-    def __init__(self):
+    def __init__(self, appt_callback_fnc):
         super(_expense_window, self).__init__()
         loadUi("expense_window.ui", self)
-
+        self.appt_callback_fnc = appt_callback_fnc
         self.calendar = self.findChild(QCalendarWidget, "calendarWidget")
         self.label = self.findChild(QLabel, "select_date")
 
@@ -64,6 +66,8 @@ class _expense_window(QDialog):
                     )
                     conn.commit()
                     conn.close()
+
+                    self.show_expence_success_dialog()
                     print("Expense Added")
                     message = (
                         "New Expense of "
@@ -101,6 +105,14 @@ class _expense_window(QDialog):
             print("Amount Must Be Filled.")
 
         # self.show_error_window("No patient found with First Name and Phone Number.")
+
+    def show_expence_success_dialog(self):
+        success_dialog = appt_success._error_window("Expence added successfully")
+        success_dialog.ok_btn.clicked.connect(self.trigger_callback)
+        success_dialog.exec_()
+
+    def trigger_callback(self):
+        self.appt_callback_fnc()
 
     def show_error_window(self, message):
         error_window = error_for_expense._error_window(

@@ -35,6 +35,7 @@ import patient_edit01
 import patient_edit02
 import pdf_maker
 import view_payments
+import view_files
 
 # import sys
 
@@ -132,7 +133,7 @@ class _main_window(QDialog):
         _tablerow = 0
         self.expense_table.setRowCount(50)
         # cursor.execute("SELECT * FROM appointments WHERE appnt_date = ?", (self.current_date,))
-        print(self.formatted_date + " from expense")
+        # print(self.formatted_date + " from expense")
         for row_index, row_data in enumerate(results):
             for col_index, data in enumerate(row_data):
                 item = QtWidgets.QTableWidgetItem(str(data))
@@ -508,6 +509,23 @@ class _main_window(QDialog):
         self._details.updt_file_btn.clicked.connect(self._update_existing_file)
         self._details.customize_btn.clicked.connect(self.pat_custom1)
         self._details.pay_hist_btn.clicked.connect(self.grab_pay_hist)
+        self._details.files_hist_btn.clicked.connect(self.grab_file_hist)
+
+    def grab_file_hist(self):
+        patient_id = self._patients.patid_srch_edit.toPlainText()
+
+        self._view_file_window = view_files._files_view_window(patient_id)
+        widget.addWidget(self._view_file_window)
+        widget.setCurrentIndex(widget.currentIndex() + 1)
+        self._view_file_window.dash_btn.clicked.connect(self._go_dash)
+        self._view_file_window.patient_btn.clicked.connect(self._go_patient_window)
+        # self._view_file_window.file_btn.clicked.connect(self._go_make_file)
+        self._view_file_window.expense_btn.clicked.connect(self._go_spend_money)
+        # self._view_file_window.calendar.clicked.connect(self.grab_expense)
+        self._view_file_window.appointment_btn.clicked.connect(self._go_appointment)
+        self._view_file_window.return_btn.clicked.connect(self._go_pat_det)
+        self._view_file_window.dentist_btn.clicked.connect(self.get_dentist)
+        # self._view_file_window.print_btn.clicked.connect(self.print_pat_pay_hist)
 
     def grab_pay_hist(self):
         patient_id = self._patients.patid_srch_edit.toPlainText()
@@ -696,8 +714,11 @@ class _main_window(QDialog):
         
      """
 
+    def expense_back(self):
+        self._go_spend_money()
+
     def _go_spend_money(self):
-        self._spend_money = expense_window._expense_window()
+        self._spend_money = expense_window._expense_window(self.expense_back)
         widget.addWidget(self._spend_money)
         widget.setCurrentIndex(widget.currentIndex() + 1)
         self._spend_money.dash_btn.clicked.connect(self._go_dash)

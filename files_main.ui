@@ -271,11 +271,11 @@ QPushButton:hover{
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="patient_list">
+  <widget class="QLabel" name="files_list">
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>90</y>
+     <y>10</y>
      <width>1071</width>
      <height>31</height>
     </rect>
@@ -288,16 +288,16 @@ background-color: rgb(0, 0, 0);
 font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
-    <string>Patients List</string>
+    <string>File List of</string>
    </property>
   </widget>
-  <widget class="QTableWidget" name="patient_table">
+  <widget class="QTableWidget" name="files_table">
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>120</y>
+     <y>40</y>
      <width>1071</width>
-     <height>511</height>
+     <height>581</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -306,7 +306,7 @@ font:  12pt &quot;Segoe UI &quot;;</string>
    </property>
    <column>
     <property name="text">
-     <string>PatID</string>
+     <string>Date added</string>
     </property>
    </column>
    <column>
@@ -326,7 +326,7 @@ font:  12pt &quot;Segoe UI &quot;;</string>
    </column>
    <column>
     <property name="text">
-     <string>Due</string>
+     <string>Final Cost</string>
     </property>
    </column>
    <column>
@@ -334,150 +334,6 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      <string>File Desciption</string>
     </property>
    </column>
-  </widget>
-  <widget class="QPushButton" name="add_file_btn">
-   <property name="geometry">
-    <rect>
-     <x>1095</x>
-     <y>40</y>
-     <width>150</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton{
-
-
-font:  14pt &quot;Segoe UI &quot;;
-background-color: rgb(255, 255, 255);
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-background-color: rgb(170, 255, 255);
-}
-QPushButton:hover{
-	background-color: rgb(161, 161, 161);
-	color: rgb(255, 255, 255);
-}</string>
-   </property>
-   <property name="text">
-    <string>Add New File</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>1100</x>
-     <y>45</y>
-     <width>150</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 0, 0);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-color: rgb(255, 255, 255);
-</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="fname_srch_edit">
-   <property name="geometry">
-    <rect>
-     <x>280</x>
-     <y>40</y>
-     <width>601</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QTextEdit:focus{
-background-color: rgb(255, 255, 255);
-}
-QTextEdit{
-background-color: rgb(255, 255, 255);
-	font: 12pt &quot;Segoe UI&quot;;
-}
-</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="fname_srch">
-   <property name="geometry">
-    <rect>
-     <x>180</x>
-     <y>40</y>
-     <width>101</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">
-color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);
-
-font:  14pt &quot;Segoe UI &quot;;</string>
-   </property>
-   <property name="text">
-    <string>File Name:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>895</x>
-     <y>45</y>
-     <width>150</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 0, 0);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-color: rgb(255, 255, 255);
-</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="srch_file_btn">
-   <property name="geometry">
-    <rect>
-     <x>890</x>
-     <y>40</y>
-     <width>150</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton{
-
-
-font:  14pt &quot;Segoe UI &quot;;
-background-color: rgb(255, 255, 255);
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;}
-QPushButton:hover{
-	background-color: rgb(161, 161, 161);
-	color: rgb(255, 255, 255);
-}</string>
-   </property>
-   <property name="text">
-    <string>Search File</string>
-   </property>
   </widget>
   <widget class="QPushButton" name="return_btn">
    <property name="geometry">
@@ -533,14 +389,8 @@ color: rgb(255, 255, 255);
   <zorder>label</zorder>
   <zorder>side_bar</zorder>
   <zorder>patient_btn</zorder>
-  <zorder>patient_list</zorder>
-  <zorder>patient_table</zorder>
-  <zorder>label_3</zorder>
-  <zorder>add_file_btn</zorder>
-  <zorder>fname_srch_edit</zorder>
-  <zorder>fname_srch</zorder>
-  <zorder>label_5</zorder>
-  <zorder>srch_file_btn</zorder>
+  <zorder>files_list</zorder>
+  <zorder>files_table</zorder>
   <zorder>label_6</zorder>
   <zorder>return_btn</zorder>
  </widget>

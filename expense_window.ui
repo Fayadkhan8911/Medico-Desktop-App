@@ -283,7 +283,8 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
   </widget>
   <widget class="QLabel" name="expense_remark">
@@ -316,7 +317,8 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
   </widget>
   <widget class="QLabel" name="expense_amount">
@@ -349,7 +351,8 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="add_expense_btn">

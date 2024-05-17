@@ -16,9 +16,8 @@ class _payments_window(QDialog):
         super(_payments_window, self).__init__()
         loadUi("payments_window.ui", self)
         self._call_back_go_make_payment = _call_back_go_make_payment
-        #kaj sheshe use self._call_back_go_make_payment()
+        # kaj sheshe use self._call_back_go_make_payment()
         self.makepayment_btn.clicked.connect(self.createpayment)
-
 
     def createpayment(self):
         self.f_name = self.fname_srch_edit.toPlainText()
@@ -26,25 +25,25 @@ class _payments_window(QDialog):
         self.amount = self.payment_edit.toPlainText()
         self.remarks = self.remarks_edit.toPlainText()
         self.patient_id = self.patid_srch_edit.toPlainText()
-        
-        if(self.patient_id != ''):
+
+        if self.patient_id != "":
             self.pay_with_patient_id()
-            
-        elif(self.f_name != '' and self.phone != ''):
+
+        elif self.f_name != "" and self.phone != "":
             self.pay_with_name_and_phone()
-            
+
         else:
             error_msg = "Please fill atleast one of the following:\n1. Patient ID\n2. Both First Name and Phone"
             self.show_error_window(error_msg)
             return
-        
-        
+
     def pay_with_patient_id(self):
         conn = sqlite3.connect("medico.db3")
         cursor = conn.cursor()
         # Retrieve the p_id using the provided first name and phone number
         cursor.execute(
-            "SELECT f_name, l_name, file_add_date, file_name, estd_cost, discount, final_cost FROM patients WHERE p_id = ?", (self.patient_id,)
+            "SELECT f_name, l_name, file_add_date, file_name, estd_cost, discount, final_cost FROM patients WHERE p_id = ?",
+            (self.patient_id,),
         )
         result = cursor.fetchone()
         if result:
@@ -56,25 +55,36 @@ class _payments_window(QDialog):
             discount = result[5]
             final_cost = result[6]
             print(f_name)
-            
-            cursor.execute("SELECT * FROM payment_history WHERE p_id = ? AND payment_date >= ? ORDER BY payment_date DESC, payment_id DESC", (self.patient_id, file_add_date))
-            
+
+            cursor.execute(
+                "SELECT * FROM payment_history WHERE p_id = ? AND payment_date >= ? ORDER BY payment_date DESC, payment_id DESC",
+                (self.patient_id, file_add_date),
+            )
+
             result = cursor.fetchone()
             print(f"result:\n{result}")
             prev_due = round(float(result[9]), 3)
             print(f"prev_due = {prev_due}")
             print("printed file name and patient id")
-            
-            
-            
-            error_msg = "Patient Found:" + "\nPatient ID: " + str(self.patient_id) + "\nPatient Name: " + str(f_name) + " " + str(l_name) + "\nCurrent Due: " + str(prev_due)
+
+            error_msg = (
+                "Patient Found:"
+                + "\nPatient ID: "
+                + str(self.patient_id)
+                + "\nPatient Name: "
+                + str(f_name)
+                + " "
+                + str(l_name)
+                + "\nCurrent Due: "
+                + str(prev_due)
+            )
             self.show_error_window(error_msg)
-            
-            if(prev_due <= 0.0):
+
+            if prev_due <= 0.0:
                 error_msg = "No Due Left!"
                 self.show_error_window(error_msg)
                 return
-            
+
             try:
                 self.amount = round(float(self.amount), 3)
             except Exception as e:
@@ -87,8 +97,6 @@ class _payments_window(QDialog):
             self.show_error_window(error_msg)
             return
 
-        
-        
         # Retrieve the last payment_id
         cursor.execute("SELECT MAX(CAST(payment_id AS INTEGER)) FROM payment_history")
         result = cursor.fetchone()
@@ -106,49 +114,63 @@ class _payments_window(QDialog):
 
         # Get the current date
         payment_date = QDate.currentDate().toString(
-            "yyyy-MM-dd"
+            "dd-MM-yyyy"
         )  # You need to implement this function
-        
-        
-        
-        
-        
-        if(self.remarks == ''):
+
+        if self.remarks == "":
             error_msg = "Please Input Payment Remarks."
             self.show_error_window(error_msg)
             return
-        
-        
+
         current_due = round(float(prev_due - self.amount), 3)
-        
 
         # Insert the payment record into the payment_history table
         cursor.execute(
             "INSERT INTO payment_history (payment_id, p_id, payment_date, payment_amount, payment_remarks, file_name, estd_cost, discount, final_cost, due) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-            (payment_id, self.patient_id, payment_date, self.amount, self.remarks, file_name, estimated_cost, discount, final_cost, current_due),
+            (
+                payment_id,
+                self.patient_id,
+                payment_date,
+                self.amount,
+                self.remarks,
+                file_name,
+                estimated_cost,
+                discount,
+                final_cost,
+                current_due,
+            ),
         )
 
         # Commit the transaction
         conn.commit()
-        
-        error_msg = "Payment Record Insert Successfull.\n" + "Patient ID: " + str(self.patient_id) + "\nPatient Name: " + str(f_name) + " " + str(l_name) + "\nPrevious Due: " + str(prev_due) + "\nPayment Amount: " + str(self.amount) + "\nCurrent Due: " + str(current_due)
+
+        error_msg = (
+            "Payment Record Insert Successfull.\n"
+            + "Patient ID: "
+            + str(self.patient_id)
+            + "\nPatient Name: "
+            + str(f_name)
+            + " "
+            + str(l_name)
+            + "\nPrevious Due: "
+            + str(prev_due)
+            + "\nPayment Amount: "
+            + str(self.amount)
+            + "\nCurrent Due: "
+            + str(current_due)
+        )
         self.show_error_window(error_msg)
 
         print("Payment record inserted successfully.")
         self._call_back_go_make_payment()
-    
-    
-    
-    
-    
-    
-            
+
     def pay_with_name_and_phone(self):
         conn = sqlite3.connect("medico.db3")
         cursor = conn.cursor()
         # Retrieve the p_id using the provided first name and phone number
         cursor.execute(
-            "SELECT p_id, l_name, file_add_date, file_name, estd_cost, discount, final_cost FROM patients WHERE f_name = ? AND phone = ?", (self.f_name, self.phone)
+            "SELECT p_id, l_name, file_add_date, file_name, estd_cost, discount, final_cost FROM patients WHERE f_name = ? AND phone = ?",
+            (self.f_name, self.phone),
         )
         result = cursor.fetchone()
         if result:
@@ -162,25 +184,36 @@ class _payments_window(QDialog):
             discount = result[5]
             final_cost = result[6]
             print(patient_id)
-            
-            cursor.execute("SELECT * FROM payment_history WHERE p_id = ? AND payment_date >= ? ORDER BY payment_date DESC, payment_id DESC", (patient_id, file_add_date))
-            
+
+            cursor.execute(
+                "SELECT * FROM payment_history WHERE p_id = ? AND payment_date >= ? ORDER BY payment_date DESC, payment_id DESC",
+                (patient_id, file_add_date),
+            )
+
             result = cursor.fetchone()
             print(f"result:\n{result}")
             prev_due = round(float(result[9]), 3)
             print(f"prev_due = {prev_due}")
             print("printed file name and patient id")
-            
-            
-            
-            error_msg = "Patient Found:" + "\nPatient ID: " + str(patient_id) + "\nPatient Name: " + str(f_name) + " " + str(l_name) + "\nCurrent Due: " + str(prev_due)
+
+            error_msg = (
+                "Patient Found:"
+                + "\nPatient ID: "
+                + str(patient_id)
+                + "\nPatient Name: "
+                + str(f_name)
+                + " "
+                + str(l_name)
+                + "\nCurrent Due: "
+                + str(prev_due)
+            )
             self.show_error_window(error_msg)
-            
-            if(prev_due <= 0.0):
+
+            if prev_due <= 0.0:
                 error_msg = "No Due Left!"
                 self.show_error_window(error_msg)
                 return
-            
+
             try:
                 self.amount = round(float(self.amount), 3)
             except Exception as e:
@@ -193,8 +226,6 @@ class _payments_window(QDialog):
             self.show_error_window(error_msg)
             return
 
-        
-        
         # Retrieve the last payment_id
         cursor.execute("SELECT MAX(CAST(payment_id AS INTEGER)) FROM payment_history")
         result = cursor.fetchone()
@@ -214,41 +245,60 @@ class _payments_window(QDialog):
         payment_date = QDate.currentDate().toString(
             "yyyy-MM-dd"
         )  # You need to implement this function
-        
-        
-        
-        
-        
-        if(self.remarks == ''):
+
+        if self.remarks == "":
             error_msg = "Please Input Payment Remarks."
             self.show_error_window(error_msg)
             return
-        
-        
+
         current_due = round(float(prev_due - self.amount), 3)
-        
 
         # Insert the payment record into the payment_history table
         cursor.execute(
             "INSERT INTO payment_history (payment_id, p_id, payment_date, payment_amount, payment_remarks, file_name, estd_cost, discount, final_cost, due) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-            (payment_id, patient_id, payment_date, self.amount, self.remarks, file_name, estimated_cost, discount, final_cost, current_due),
+            (
+                payment_id,
+                patient_id,
+                payment_date,
+                self.amount,
+                self.remarks,
+                file_name,
+                estimated_cost,
+                discount,
+                final_cost,
+                current_due,
+            ),
         )
 
         # Commit the transaction
         conn.commit()
-        
-        error_msg = "Payment Record Insert Successfull.\n" + "Patient ID: " + str(patient_id) + "\nPatient Name: " + str(f_name) + " " + str(l_name) + "\nPrevious Due: " + str(prev_due) + "\nPayment Amount: " + str(self.amount) + "\nCurrent Due: " + str(current_due)
+
+        error_msg = (
+            "Payment Record Insert Successfull.\n"
+            + "Patient ID: "
+            + str(patient_id)
+            + "\nPatient Name: "
+            + str(f_name)
+            + " "
+            + str(l_name)
+            + "\nPrevious Due: "
+            + str(prev_due)
+            + "\nPayment Amount: "
+            + str(self.amount)
+            + "\nCurrent Due: "
+            + str(current_due)
+        )
         self.show_error_window(error_msg)
 
         print("Payment record inserted successfully.")
         self._call_back_go_make_payment()
-    
-        
+
     def show_error_window(self, message):
-        error_window = value_error._error_window(message)  # Adjusted to use the error module
+        error_window = value_error._error_window(
+            message
+        )  # Adjusted to use the error module
         error_window.exec_()
-        
-        
+
         """ 
 
             conn = sqlite3.connect("medico.db3")
@@ -304,8 +354,7 @@ class _payments_window(QDialog):
         
         
          """
-    
-    
+
 
 """
 app = QApplication(sys.argv)

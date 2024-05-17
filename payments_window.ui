@@ -42,7 +42,9 @@ background-color: rgba(170, 170, 255,.5);
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
@@ -72,7 +74,9 @@ QPushButton:hover{
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
@@ -102,7 +106,9 @@ QPushButton:hover{
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
@@ -132,7 +138,9 @@ QPushButton:hover{
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
@@ -161,8 +169,11 @@ QPushButton:hover{
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+     <string notr="true">
+QPushButton{
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
@@ -198,7 +209,9 @@ QPushButton:hover{
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
@@ -273,7 +286,8 @@ border-bottom-right-radius:20px;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
   </widget>
   <widget class="QLabel" name="phn_srch">
@@ -309,7 +323,8 @@ border-bottom-right-radius:20px;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
   </widget>
   <widget class="QLabel" name="patid_srch">
@@ -345,7 +360,8 @@ border-bottom-right-radius:20px;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
   </widget>
   <widget class="QLabel" name="payment">
@@ -381,7 +397,8 @@ border-bottom-right-radius:20px;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
   </widget>
   <widget class="QLabel" name="remarks">
@@ -417,7 +434,8 @@ border-bottom-right-radius:20px;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="makepayment_btn">
