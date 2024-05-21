@@ -36,6 +36,7 @@ import patient_edit02
 import pdf_maker
 import view_payments
 import view_files
+import view_payment
 
 # import sys
 
@@ -661,6 +662,7 @@ class _main_window(QDialog):
         self._make_payment.expense_btn.clicked.connect(self._go_spend_money)
         self._make_payment.appointment_btn.clicked.connect(self._go_appointment)
         self._make_payment.dentist_btn.clicked.connect(self.get_dentist)
+        self._make_payment.calendar.clicked.connect(self.grab_payment)
 
     """ 
 
@@ -776,6 +778,15 @@ class _main_window(QDialog):
         self.new_dentist_tab.expense_btn.clicked.connect(self._go_spend_money)
         self.new_dentist_tab.appointment_btn.clicked.connect(self._go_appointment)
         self.new_dentist_tab.dentist_btn.clicked.connect(self.get_dentist)
+        
+    def grab_payment(self):
+        dateSelected = self._make_payment.calendar.selectedDate().toString("dd-MM-yyyy")
+        print(dateSelected)
+        payment_date = dateSelected
+        self._view_payment_window = view_payment._payment_view_window(payment_date)
+        widget.addWidget(self._view_payment_window)
+        widget.setCurrentIndex(widget.currentIndex() + 1)
+        
 
 
 """     this was for 'only one main.py' file format

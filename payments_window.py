@@ -1,7 +1,7 @@
 import sys
 from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QDialog, QApplication, QWidget
+from PyQt5.QtWidgets import QDialog, QApplication, QWidget, QCalendarWidget
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtCore import QDate
 
@@ -11,12 +11,14 @@ import value_error
 import sqlite3
 
 
+
 class _payments_window(QDialog):
     def __init__(self, _call_back_go_make_payment):
         super(_payments_window, self).__init__()
         loadUi("payments_window.ui", self)
         self._call_back_go_make_payment = _call_back_go_make_payment
         # kaj sheshe use self._call_back_go_make_payment()
+        self.calendar = self.findChild(QCalendarWidget, "calendarWidget")
         self.makepayment_btn.clicked.connect(self.createpayment)
 
     def createpayment(self):
@@ -298,6 +300,7 @@ class _payments_window(QDialog):
             message
         )  # Adjusted to use the error module
         error_window.exec_()
+        
 
         """ 
 
