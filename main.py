@@ -37,6 +37,7 @@ import pdf_maker
 import view_payments
 import view_files
 import view_payment
+import appt_date
 
 # import sys
 
@@ -208,6 +209,26 @@ class _main_window(QDialog):
         self._appointment.dentist_btn.clicked.connect(self.get_dentist)
         self._appointment.appointment_btn.clicked.connect(self._go_appointment)
         self._appointment.search_btn.clicked.connect(self.valid_pat)
+        self._appointment.calender_date.clicked.connect(self.appointment_date)
+
+    def appointment_date(self):
+        dateSelected = self._appointment.calender_date.selectedDate().toString(
+            "dd-MM-yyyy"
+        )
+        print(dateSelected)
+        # appt_date = dateSelected
+        self._appointment_date = appt_date.apt_date(dateSelected)
+        widget.addWidget(self._appointment_date)
+        widget.setCurrentIndex(widget.currentIndex() + 1)
+        self._appointment_date.dash_btn.clicked.connect(self._go_dash)
+        self._appointment_date.patient_btn.clicked.connect(self._go_patient_window)
+        self._appointment_date.payment_btn.clicked.connect(self._go_make_payment)
+        self._appointment_date.expense_btn.clicked.connect(self._go_spend_money)
+        # self._appointment_date.calendar.clicked.connect(self.grab_expense)
+        self._appointment_date.appointment_btn.clicked.connect(self._go_appointment)
+        self._appointment_date.return_btn.clicked.connect(self._go_spend_money)
+        self._appointment_date.dentist_btn.clicked.connect(self.get_dentist)
+        self._appointment_date.return_btn.clicked.connect(self._go_appointment)
 
     def appointment_individual(self):
         v_name = self._appointment.search_name_edit.toPlainText()
@@ -743,8 +764,8 @@ class _main_window(QDialog):
     def grab_expense(self):
         dateSelected = self._spend_money.calendar.selectedDate().toString("dd-MM-yyyy")
         print(dateSelected)
-        expense_date = dateSelected
-        self._view_expense_window = view_expense._expense_view_window(expense_date)
+        self.expense_date = dateSelected
+        self._view_expense_window = view_expense._expense_view_window(self.expense_date)
         widget.addWidget(self._view_expense_window)
         widget.setCurrentIndex(widget.currentIndex() + 1)
         self._view_expense_window.dash_btn.clicked.connect(self._go_dash)
@@ -755,6 +776,15 @@ class _main_window(QDialog):
         self._view_expense_window.appointment_btn.clicked.connect(self._go_appointment)
         self._view_expense_window.return_btn.clicked.connect(self._go_spend_money)
         self._view_expense_window.dentist_btn.clicked.connect(self.get_dentist)
+        self._view_expense_window.return_btn.clicked.connect(self._go_spend_money)
+        self._view_expense_window.print_btn.clicked.connect(self.print_date_expense)
+
+    def print_date_expense(self):
+        _query = "SELECT expense_description, expense_remarks , expense_cost FROM expense WHERE expense_date = ?"
+        prefix = " expense "
+        file_location = "Expence_pdf/"
+        pdf = pdf_maker.pdf_maker_date(_query, prefix, file_location, self.expense_date)
+        pdf
 
     def get_dentist(self):
         self.dentist_tab = dentist._dentist_window()
@@ -778,15 +808,29 @@ class _main_window(QDialog):
         self.new_dentist_tab.expense_btn.clicked.connect(self._go_spend_money)
         self.new_dentist_tab.appointment_btn.clicked.connect(self._go_appointment)
         self.new_dentist_tab.dentist_btn.clicked.connect(self.get_dentist)
-        
+
     def grab_payment(self):
         dateSelected = self._make_payment.calendar.selectedDate().toString("dd-MM-yyyy")
         print(dateSelected)
-        payment_date = dateSelected
-        self._view_payment_window = view_payment._payment_view_window(payment_date)
+        self.payment_date = dateSelected
+        self._view_payment_window = view_payment._payment_view_window(self.payment_date)
         widget.addWidget(self._view_payment_window)
         widget.setCurrentIndex(widget.currentIndex() + 1)
-        
+        self._view_payment_window.dash_btn.clicked.connect(self._go_dash)
+        self._view_payment_window.patient_btn.clicked.connect(self._go_patient_window)
+        self._view_payment_window.payment_btn.clicked.connect(self._go_make_payment)
+        self._view_payment_window.expense_btn.clicked.connect(self._go_spend_money)
+        self._view_payment_window.appointment_btn.clicked.connect(self._go_appointment)
+        self._view_payment_window.dentist_btn.clicked.connect(self.get_dentist)
+        self._view_payment_window.return_btn.clicked.connect(self._go_make_payment)
+        self._view_payment_window.print_btn.clicked.connect(self.print_date_payment)
+
+    def print_date_payment(self):
+        _query = "SELECT payment_history.payment_id,payment_history.p_id, patients.f_name, patients.phone,payment_history.payment_amount FROM payment_history INNER JOIN patients on payment_history.p_id = patients.p_id WHERE payment_date=? "
+        prefix = " payment "
+        file_location = "Payments_pdf/"
+        pdf = pdf_maker.pdf_maker_date(_query, prefix, file_location, self.payment_date)
+        pdf
 
 
 """     this was for 'only one main.py' file format

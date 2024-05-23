@@ -377,7 +377,7 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     <rect>
      <x>200</x>
      <y>350</y>
-     <width>971</width>
+     <width>671</width>
      <height>311</height>
     </rect>
    </property>
@@ -431,7 +431,7 @@ font:  12pt &quot;Segoe UI &quot;;</string>
     <rect>
      <x>200</x>
      <y>320</y>
-     <width>971</width>
+     <width>671</width>
      <height>31</height>
     </rect>
    </property>
@@ -888,6 +888,44 @@ color: rgb(255, 255, 255);</string>
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QCalendarWidget" name="calender_date">
+   <property name="geometry">
+    <rect>
+     <x>910</x>
+     <y>350</y>
+     <width>321</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+color: rgba(0, 0, 0,.85);
+</string>
+   </property>
+   <property name="gridVisible">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="visit_date_7">
+   <property name="geometry">
+    <rect>
+     <x>910</x>
+     <y>320</y>
+     <width>321</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
+   </property>
+   <property name="text">
+    <string>Search Appointment by date</string>
+   </property>
+  </widget>
   <zorder>label</zorder>
   <zorder>side_bar</zorder>
   <zorder>vname</zorder>
@@ -918,6 +956,8 @@ color: rgb(255, 255, 255);</string>
   <zorder>vname_4</zorder>
   <zorder>calendar</zorder>
   <zorder>visit_date</zorder>
+  <zorder>calender_date</zorder>
+  <zorder>visit_date_7</zorder>
  </widget>
  <resources/>
  <connections/>

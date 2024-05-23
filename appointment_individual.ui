@@ -287,7 +287,7 @@ font:  12pt &quot;Segoe UI &quot;;</string>
    </column>
    <column>
     <property name="text">
-     <string>Visit Date(d-m-y)</string>
+     <string>Visit Date</string>
     </property>
    </column>
    <column>
@@ -306,7 +306,7 @@ font:  12pt &quot;Segoe UI &quot;;</string>
     </property>
    </column>
   </widget>
-  <widget class="QLabel" name="visit_date_2">
+  <widget class="QLabel" name="visit_date">
    <property name="geometry">
     <rect>
      <x>200</x>
@@ -451,7 +451,7 @@ color: rgb(255, 255, 255);
   <zorder>label</zorder>
   <zorder>side_bar</zorder>
   <zorder>appointment_table</zorder>
-  <zorder>visit_date_2</zorder>
+  <zorder>visit_date</zorder>
   <zorder>label_2</zorder>
   <zorder>return_btn</zorder>
   <zorder>label_5</zorder>
