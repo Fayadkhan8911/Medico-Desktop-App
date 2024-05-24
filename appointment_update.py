@@ -24,7 +24,7 @@ class appointment_update(QDialog):
         self.appointment_table.setColumnWidth(1, 150)
 
         self.load_table(self.v_name, self.v_phone)
-        v_date = self.calendar.selectedDate()
+        self.v_date = self.calendar.selectedDate()
 
         # self._appointment.add_btn.clicked.connect(self.save_appointment)
         # self.add_appointment_btn.clicked.connect(self.save_appointment)
@@ -46,7 +46,7 @@ class appointment_update(QDialog):
 
         for col in _cur.execute(
             "SELECT reg_date,visitor_name,visitor_phone,visit_time,dentist_name FROM appointments WHERE visitor_date=? ",
-            (v_date),
+            (self.v_date),
         ):
             self.appointment_table.setItem(
                 _tablerow, 0, QtWidgets.QTableWidgetItem(col[0])

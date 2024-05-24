@@ -55,7 +55,7 @@ class _payments_view_window(QDialog):
         # Set number of rows in the table
         self.pay_hist_table.setRowCount(len(results))
 
-        print("payments Showed")
+        print("payments individual Showed")
         # self.pay_hist_table.setColumnWidth(0, 120)  # payments Date
         # self.pay_hist_table.setColumnWidth(1, 500)  # file name
         # self.pay_hist_table.setColumnWidth(2, 200)  # amount

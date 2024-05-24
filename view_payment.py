@@ -45,7 +45,7 @@ class _payment_view_window(QDialog):
         # Set number of rows in the table
         self.paymentTable.setRowCount(len(results))
 
-        print("Expense Showed")
+        print("Payment of date Showed")
         # self.expenseTable.setColumnWidth(0, 120)  # Expense Date
         # self.expenseTable.setColumnWidth(1, 500)  # Expense Description
         # self.expenseTable.setColumnWidth(2, 200)  # Expense Remarks
