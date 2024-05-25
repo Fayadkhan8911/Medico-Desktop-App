@@ -229,6 +229,17 @@ class _main_window(QDialog):
         self._appointment_date.return_btn.clicked.connect(self._go_spend_money)
         self._appointment_date.dentist_btn.clicked.connect(self.get_dentist)
         self._appointment_date.return_btn.clicked.connect(self._go_appointment)
+        self._appointment_date.cancel_btn.clicked.connect(
+            lambda: self.print_date_appt(dateSelected)
+        )
+
+    def print_date_appt(self, date):
+        date = date
+        _query = "SELECT visitor_name,visitor_phone,visit_time,dentist_name,p_id,status FROM appointments WHERE visit_date=? "
+        suffix = "__Appointments "
+        file_location = "Appointments_PDF/"
+        pdf = pdf_maker.pdf_maker_date(_query, suffix, file_location, date)
+        pdf
 
     def appointment_individual(self):
         v_name = self._appointment.search_name_edit.toPlainText()
@@ -556,7 +567,19 @@ class _main_window(QDialog):
         self._view_file_window.appointment_btn.clicked.connect(self._go_appointment)
         self._view_file_window.return_btn.clicked.connect(self._go_pat_det)
         self._view_file_window.dentist_btn.clicked.connect(self.get_dentist)
+        self._view_file_window.print_btn.clicked.connect(
+            lambda: self.print_file_hist(patient_id)
+        )
+
         # self._view_file_window.print_btn.clicked.connect(self.print_pat_pay_hist)
+
+    def print_file_hist(self, p_id):
+        p_id = p_id
+        _query = "SELECT file_name,file_desc,estd_cost,final_cost,file_add_date FROM files_hist WHERE patient_id = ? "
+        suffix = "_files "
+        file_location = "Files_PDF/"
+        pdf = pdf_maker.pdf_maker_pat_id(_query, suffix, file_location, p_id)
+        pdf
 
     def grab_pay_hist(self):
         patient_id = self._patients.patid_srch_edit.toPlainText()

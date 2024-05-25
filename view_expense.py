@@ -35,9 +35,9 @@ class _expense_view_window(QDialog):
         results = cursor.fetchall()
 
         # Print the results
-        for row in results:
-            print(row)
-        conn.close()
+        # for row in results:
+        #     print(row)
+        # conn.close()
         # Clear existing rows
         self.expenseTable.setRowCount(100)
 
@@ -57,6 +57,7 @@ class _expense_view_window(QDialog):
                 self.expenseTable.setItem(row_index, col_index, item)
 
         self.expenseTable.resizeColumnsToContents()
+        self.expenseTable.resizeRowsToContents()
         self.expense_title.setText(f"Expense History of Date: {expense_date}")
 
 

@@ -27,7 +27,8 @@ class apt_date(QDialog):
 
     def _view_appt_table(self):
         appt_date = self.appt_date
-        print(appt_date)
+        # print("testing appointment date", appt_date)
+        print(type(appt_date))
         conn = sqlite3.connect("medico.db3")
         cursor = conn.cursor()
         cursor.execute("SELECT * FROM appointments WHERE visit_date = ?", (appt_date,))
@@ -44,7 +45,7 @@ class apt_date(QDialog):
         # Set number of rows in the table
         self.appointment_table.setRowCount(len(results))
 
-        print("Expense Showed")
+        # print("Expense Showed")
         # self.appointment_table.setColumnWidth(0, 120)  # Expense Date
         # self.appointment_table.setColumnWidth(1, 500)  # Expense Description
         # self.appointment_table.setColumnWidth(2, 200)  # Expense Remarks
@@ -55,9 +56,9 @@ class apt_date(QDialog):
             for col_index, data in enumerate(row_data):
                 item = QtWidgets.QTableWidgetItem(str(data))
                 self.appointment_table.setItem(row_index, col_index, item)
-
+                # print("testing appointment date", appt_date)
         self.appointment_table.resizeColumnsToContents()
-        self.visit_date.setText(f"Expense History of Date: {appt_date}")
+        self.visit_date.setText(f"Appointment of Date: {appt_date}")
         self.cancel_btn.setText(f"Print")
 
 
