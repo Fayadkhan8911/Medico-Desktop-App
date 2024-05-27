@@ -202,6 +202,10 @@ background-color: rgb(170, 255, 255);
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -274,6 +278,10 @@ border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;}
 QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>

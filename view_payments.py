@@ -25,6 +25,11 @@ class _payments_view_window(QDialog):
         self.p_id = p_id
         self._view_payments_table()
         self.print_btn.clicked.connect(self.print_payments)
+        
+        def showEvent(self, event):
+            #init line chilo super(_add_med_hist_win, self).__init__()
+            super(_payments_view_window, self).showEvent(event)
+            self.patient_btn.setFocus()
 
     def print_payments(self):
         _query = " SELECT payment_date,file_name,payment_amount,due, payment_remarks FROM payment_history WHERE p_id = ?"

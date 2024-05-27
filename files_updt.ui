@@ -145,6 +145,10 @@ background-color: rgb(170, 255, 255);
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -219,6 +223,10 @@ border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -271,6 +279,13 @@ font:  14pt &quot;Segoe UI &quot;;</string>
   <zorder>desc_edit</zorder>
   <zorder>est_cost_2</zorder>
  </widget>
+ <tabstops>
+  <tabstop>estd_cost_edit</tabstop>
+  <tabstop>discount_edit</tabstop>
+  <tabstop>desc_edit</tabstop>
+  <tabstop>updt_file_btn</tabstop>
+  <tabstop>cancel_btn</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

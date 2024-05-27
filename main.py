@@ -46,6 +46,7 @@ class _main_window(QDialog):
     def __init__(self):
         super(_main_window, self).__init__()
         loadUi("main_window.ui", self)
+        
 
         self.patient_btn.clicked.connect(self._go_patient_window)
         self.payment_btn.clicked.connect(self._go_make_payment)
@@ -61,6 +62,7 @@ class _main_window(QDialog):
         self.load_payment_table()
         # self.show_expenses()
         # Get the current date
+        self.dash_btn.setFocus()
         self.print_appt.clicked.connect(self.print_present_appointments)
         self.print_pay.clicked.connect(self.print_present_payments)
         self.print_expense.clicked.connect(self.print_present_expence)
@@ -519,6 +521,7 @@ class _main_window(QDialog):
             date_of_departure,
             chief_complain,
         )
+        self.patient_btn.setFocus()
         widget.addWidget(self._med_hist)
         widget.setCurrentIndex(widget.currentIndex() + 1)
         self._med_hist.restart_btn.clicked.connect(self._go_add_pat)

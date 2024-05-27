@@ -58,6 +58,10 @@ QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }
+QPushButton:focus{
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+}
 </string>
     </property>
     <property name="text">
@@ -88,6 +92,10 @@ border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;}
 QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>
@@ -122,6 +130,10 @@ border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -152,6 +164,10 @@ border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;}
 QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>
@@ -186,6 +202,10 @@ border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -216,6 +236,10 @@ border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;}
 QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>
@@ -259,6 +283,9 @@ color: rgb(255, 255, 255);
      <width>991</width>
      <height>441</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgba(255, 255, 255,.9);
@@ -336,6 +363,10 @@ border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -410,10 +441,14 @@ border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
-    <string>print</string>
+    <string>Print</string>
    </property>
    <property name="icon">
     <iconset>
@@ -452,6 +487,16 @@ color: rgb(255, 255, 255);
   <zorder>label_5</zorder>
   <zorder>print_btn</zorder>
  </widget>
+ <tabstops>
+  <tabstop>print_btn</tabstop>
+  <tabstop>return_btn</tabstop>
+  <tabstop>dash_btn</tabstop>
+  <tabstop>patient_btn</tabstop>
+  <tabstop>payment_btn</tabstop>
+  <tabstop>expense_btn</tabstop>
+  <tabstop>appointment_btn</tabstop>
+  <tabstop>dentist_btn</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

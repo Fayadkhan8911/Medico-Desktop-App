@@ -33,6 +33,8 @@ class _add_med_hist_win(QDialog):
     ):
         super(_add_med_hist_win, self).__init__()
         loadUi("add_patients_med_hist_window.ui", self)
+        self.med_find_edit.setTabChangesFocus(True)
+        
         self.f_name = f_name
         self.l_name = l_name
         self.phone = phone
@@ -45,8 +47,14 @@ class _add_med_hist_win(QDialog):
         self.date_of_departure = date_of_departure
         self.chief_complain = chief_complain
         self.pat_id = pat_id
+        
 
         self.save_pat.clicked.connect(self.save_medical_history)
+        
+    def showEvent(self, event):
+        #init line chilo super(_add_med_hist_win, self).__init__()
+        super(_add_med_hist_win, self).showEvent(event)
+        self.patient_btn.setFocus()
 
     def save_medical_history(self):
         # Retrieve medical history data

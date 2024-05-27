@@ -53,6 +53,10 @@ border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -83,6 +87,10 @@ border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;}
 QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>
@@ -117,6 +125,10 @@ border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -147,6 +159,10 @@ border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;}
 QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>
@@ -188,6 +204,10 @@ QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }
+QPushButton:focus{
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+}
 </string>
     </property>
     <property name="text">
@@ -218,6 +238,10 @@ border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;}
 QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>
@@ -449,13 +473,19 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;}
 QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>
@@ -537,6 +567,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <height>211</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
 color: rgba(0, 0, 0,.9);
@@ -560,6 +593,20 @@ color: rgba(0, 0, 0,.9);
   <zorder>select_date</zorder>
   <zorder>calendarWidget</zorder>
  </widget>
+ <tabstops>
+  <tabstop>fname_srch_edit</tabstop>
+  <tabstop>phone_srch_edit</tabstop>
+  <tabstop>patid_srch_edit</tabstop>
+  <tabstop>payment_edit</tabstop>
+  <tabstop>remarks_edit</tabstop>
+  <tabstop>makepayment_btn</tabstop>
+  <tabstop>dash_btn</tabstop>
+  <tabstop>patient_btn</tabstop>
+  <tabstop>payment_btn</tabstop>
+  <tabstop>expense_btn</tabstop>
+  <tabstop>appointment_btn</tabstop>
+  <tabstop>dentist_btn</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

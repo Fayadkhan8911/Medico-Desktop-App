@@ -50,6 +50,9 @@ border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}QPushButton:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -80,6 +83,9 @@ border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;}
 QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}QPushButton:focus{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>
@@ -114,6 +120,9 @@ border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}QPushButton:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -144,6 +153,9 @@ border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;}
 QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}QPushButton:focus{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>
@@ -178,6 +190,9 @@ border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}QPushButton:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -196,6 +211,9 @@ QPushButton:hover{
       <width>161</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 20pt &quot;MS Shell Dlg 2&quot;;
@@ -240,7 +258,10 @@ QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }
-</string>
+QPushButton:focus{
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+}</string>
    </property>
    <property name="text">
     <string>Patients</string>
@@ -300,7 +321,13 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
+     <string notr="true">QCheckBox{
+	background-color: rgba(0, 0, 0,0);
+}
+QCheckBox:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -337,7 +364,13 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
+     <string notr="true">QCheckBox{
+	background-color: rgba(0, 0, 0,0);
+}
+QCheckBox:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -374,7 +407,13 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
+     <string notr="true">QCheckBox{
+	background-color: rgba(0, 0, 0,0);
+}
+QCheckBox:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -411,7 +450,13 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
+     <string notr="true">QCheckBox{
+	background-color: rgba(0, 0, 0,0);
+}
+QCheckBox:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -448,7 +493,13 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
+     <string notr="true">QCheckBox{
+	background-color: rgba(0, 0, 0,0);
+}
+QCheckBox:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -485,7 +536,13 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
+     <string notr="true">QCheckBox{
+	background-color: rgba(0, 0, 0,0);
+}
+QCheckBox:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -522,7 +579,13 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
+     <string notr="true">QCheckBox{
+	background-color: rgba(0, 0, 0,0);
+}
+QCheckBox:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -559,7 +622,13 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
+     <string notr="true">QCheckBox{
+	background-color: rgba(0, 0, 0,0);
+}
+QCheckBox:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -596,7 +665,13 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
+     <string notr="true">QCheckBox{
+	background-color: rgba(0, 0, 0,0);
+}
+QCheckBox:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -633,7 +708,13 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
+     <string notr="true">QCheckBox{
+	background-color: rgba(0, 0, 0,0);
+}
+QCheckBox:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -670,7 +751,13 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
+     <string notr="true">QCheckBox{
+	background-color: rgba(0, 0, 0,0);
+}
+QCheckBox:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -707,7 +794,13 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
+     <string notr="true">QCheckBox{
+	background-color: rgba(0, 0, 0,0);
+}
+QCheckBox:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -744,7 +837,13 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
+     <string notr="true">QCheckBox{
+	background-color: rgba(0, 0, 0,0);
+}
+QCheckBox:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -781,7 +880,13 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
+     <string notr="true">QCheckBox{
+	background-color: rgba(0, 0, 0,0);
+}
+QCheckBox:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -818,7 +923,13 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
+     <string notr="true">QCheckBox{
+	background-color: rgba(0, 0, 0,0);
+}
+QCheckBox:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -855,7 +966,13 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(0, 0, 0,0);</string>
+     <string notr="true">QCheckBox{
+	background-color: rgba(0, 0, 0,0);
+}
+QCheckBox:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -904,6 +1021,9 @@ border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}QPushButton:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -930,6 +1050,9 @@ border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;}
 QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}QPushButton:focus{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>
@@ -1058,6 +1181,27 @@ background-color: rgb(255, 255, 255);
     </property>
    </widget>
   </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>0</y>
+     <width>47</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+	background-color: rgba(255, 255, 255,0);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
   <zorder>label</zorder>
   <zorder>side_bar</zorder>
   <zorder>patient_btn</zorder>
@@ -1067,7 +1211,35 @@ background-color: rgb(255, 255, 255);
   <zorder>label_5</zorder>
   <zorder>save_pat</zorder>
   <zorder>widget_3</zorder>
+  <zorder>label_2</zorder>
  </widget>
+ <tabstops>
+  <tabstop>q1_y_check</tabstop>
+  <tabstop>q2_y_check</tabstop>
+  <tabstop>q3_y_check</tabstop>
+  <tabstop>q4_y_check</tabstop>
+  <tabstop>q5_y_check</tabstop>
+  <tabstop>q6_y_check</tabstop>
+  <tabstop>q7_y_check</tabstop>
+  <tabstop>q8_y_check</tabstop>
+  <tabstop>q9_y_check</tabstop>
+  <tabstop>q10_y_check</tabstop>
+  <tabstop>q11_y_check</tabstop>
+  <tabstop>q12_y_check</tabstop>
+  <tabstop>q13_y_check</tabstop>
+  <tabstop>q14_y_check</tabstop>
+  <tabstop>q15_y_check</tabstop>
+  <tabstop>q16_y_check</tabstop>
+  <tabstop>med_find_edit</tabstop>
+  <tabstop>save_pat</tabstop>
+  <tabstop>return_btn</tabstop>
+  <tabstop>dash_btn</tabstop>
+  <tabstop>patient_btn</tabstop>
+  <tabstop>payment_btn</tabstop>
+  <tabstop>expense_btn</tabstop>
+  <tabstop>appointment_btn</tabstop>
+  <tabstop>dentist_btn</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

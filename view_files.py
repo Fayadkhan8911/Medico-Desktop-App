@@ -24,6 +24,7 @@ class _files_view_window(QDialog):
         loadUi("files_main.ui", self)
         self.p_id = p_id
         self._view_files_table()
+        
 
     def _view_files_table(self):
         p_id = self.p_id

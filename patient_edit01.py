@@ -12,6 +12,16 @@ class pat_edit1(QDialog):
     def __init__(self, fname=None, lname=None, phone=None, pat_id=None):
         super(pat_edit1, self).__init__()
         loadUi("patients_custom_01.ui", self)
+        self.add_fname_edit.setTabChangesFocus(True)
+        self.add_email_edit.setTabChangesFocus(True)
+        self.add_lname_edit.setTabChangesFocus(True)
+        self.add_occu_edit.setTabChangesFocus(True)
+        self.add_phn_edit.setTabChangesFocus(True)
+        self.add_age_edit.setTabChangesFocus(True)
+        self.add_ref_edit.setTabChangesFocus(True)
+        self.add_depart_edit.setTabChangesFocus(True)
+        self.add_complain_edit.setTabChangesFocus(True)
+        self.patient_btn.setFocus()
         self.fname = fname
         self.lname = lname
         self.phone = phone

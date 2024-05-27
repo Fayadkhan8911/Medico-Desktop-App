@@ -20,6 +20,11 @@ class _expense_window(QDialog):
     def __init__(self, appt_callback_fnc):
         super(_expense_window, self).__init__()
         loadUi("expense_window.ui", self)
+        
+        self.expense_desc_edit.setTabChangesFocus(True)
+        self.expense_remark_edit.setTabChangesFocus(True)
+        self.expense_amount_edit.setTabChangesFocus(True)
+        
         self.appt_callback_fnc = appt_callback_fnc
         self.calendar = self.findChild(QCalendarWidget, "calendarWidget")
         self.label = self.findChild(QLabel, "select_date")

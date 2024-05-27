@@ -52,6 +52,10 @@ border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -82,6 +86,10 @@ border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;}
 QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>
@@ -116,6 +124,10 @@ border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -148,6 +160,10 @@ border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -178,6 +194,10 @@ border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;}
 QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>
@@ -242,6 +262,10 @@ QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }
+QPushButton:focus{
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+}
 </string>
    </property>
    <property name="text">
@@ -280,6 +304,9 @@ QPushButton:hover{
      <height>31</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">
 color: rgb(255, 255, 255);
@@ -299,6 +326,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <width>111</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">
@@ -320,6 +350,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <height>31</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">
 color: rgb(255, 255, 255);
@@ -339,6 +372,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <width>111</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">
@@ -360,6 +396,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <height>31</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">
 color: rgb(255, 255, 255);
@@ -379,6 +418,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <width>111</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">
@@ -400,6 +442,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <height>31</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">
 color: rgb(255, 255, 255);
@@ -419,6 +464,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <width>301</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">
@@ -440,6 +488,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <height>31</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">
 color: rgb(255, 255, 255);
@@ -459,6 +510,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <width>111</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">
@@ -480,6 +534,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <height>31</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">
 color: rgb(255, 255, 255);
@@ -500,6 +557,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <height>31</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">
 color: rgb(255, 255, 255);
@@ -519,6 +579,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <width>111</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">
@@ -576,6 +639,10 @@ border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -602,6 +669,10 @@ border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;}
 QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>
@@ -642,6 +713,9 @@ color: rgb(255, 255, 255);
      <height>221</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
 font:  10pt &quot;Segoe UI &quot;;</string>
@@ -663,6 +737,9 @@ p, li { white-space: pre-wrap; }
      <height>31</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">
 color: rgb(255, 255, 255);
@@ -682,6 +759,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <width>101</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">
@@ -703,6 +783,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <height>31</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">
 color: rgb(255, 255, 255);
@@ -722,6 +805,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <width>531</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">
@@ -743,6 +829,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <height>31</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">
 color: rgb(255, 255, 255);
@@ -762,6 +851,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <width>101</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">
@@ -783,6 +875,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <height>31</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">
 color: rgb(255, 255, 255);
@@ -802,6 +897,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <width>111</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">
@@ -823,6 +921,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <height>31</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">
 color: rgb(255, 255, 255);
@@ -842,6 +943,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <width>111</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">
@@ -863,6 +967,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <height>31</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">
 color: rgb(255, 255, 255);
@@ -882,6 +989,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <width>541</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">
@@ -943,6 +1053,9 @@ background-color: rgb(255, 255, 255);
      <height>31</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
 font:  12pt &quot;Segoe UI &quot;;</string>
@@ -959,6 +1072,9 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      <width>151</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
@@ -977,6 +1093,9 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      <height>31</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
 font:  12pt &quot;Segoe UI &quot;;</string>
@@ -993,6 +1112,9 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      <width>151</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
@@ -1011,6 +1133,9 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      <height>31</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
 font:  12pt &quot;Segoe UI &quot;;</string>
@@ -1027,6 +1152,9 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      <width>151</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
@@ -1045,6 +1173,9 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      <height>31</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
 font:  12pt &quot;Segoe UI &quot;;</string>
@@ -1061,6 +1192,9 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      <width>151</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
@@ -1079,6 +1213,9 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      <height>31</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
 font:  12pt &quot;Segoe UI &quot;;</string>
@@ -1095,6 +1232,9 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      <width>151</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
@@ -1113,6 +1253,9 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      <height>31</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
 font:  12pt &quot;Segoe UI &quot;;</string>
@@ -1129,6 +1272,9 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      <width>151</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
@@ -1713,6 +1859,26 @@ background-color: rgb(255, 255, 255);
   <zorder>add_depart_edit</zorder>
   <zorder>add_complain_edit</zorder>
  </widget>
+ <tabstops>
+  <tabstop>add_fname_edit</tabstop>
+  <tabstop>add_lname_edit</tabstop>
+  <tabstop>add_phn_edit</tabstop>
+  <tabstop>add_age_edit</tabstop>
+  <tabstop>address_combo</tabstop>
+  <tabstop>add_ref_edit</tabstop>
+  <tabstop>add_email_edit</tabstop>
+  <tabstop>add_occu_edit</tabstop>
+  <tabstop>add_depart_edit</tabstop>
+  <tabstop>add_complain_edit</tabstop>
+  <tabstop>next_btn</tabstop>
+  <tabstop>return_btn</tabstop>
+  <tabstop>dash_btn</tabstop>
+  <tabstop>patient_btn</tabstop>
+  <tabstop>payment_btn</tabstop>
+  <tabstop>expense_btn</tabstop>
+  <tabstop>appointment_btn</tabstop>
+  <tabstop>dentist_btn</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

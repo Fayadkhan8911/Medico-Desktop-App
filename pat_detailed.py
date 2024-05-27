@@ -1,8 +1,9 @@
 import sys
 from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QDialog, QApplication, QWidget
+from PyQt5.QtWidgets import QDialog, QApplication, QWidget, QPushButton
 from PyQt5.QtGui import QPixmap
+from PyQt5.QtCore import Qt
 
 import sqlite3
 
@@ -16,6 +17,29 @@ class _pat_detailed_win(QDialog):
         self.phone = phone
         self.patient_id = patient_id
         self.search_patient()
+        self.f_name_labl.setFocus()
+        self.buttons = self.findChildren(QPushButton)
+        for button in self.buttons:
+            button.pressed.connect(self.on_button_pressed)
+        
+    def keyPressEvent(self, event):
+        if event.modifiers() == Qt.ControlModifier and event.key() == Qt.Key_C:
+            # Loop through the buttons to find the focused one
+            for button in self.buttons:
+                if button.hasFocus():
+                    # Copy the button text to the clipboard
+                    QApplication.clipboard().setText(button.text())
+                    break  # Stop searching after finding the focused button
+        else:
+            # Pass the event to the base class for default handling
+            super().keyPressEvent(event)
+            
+    def on_button_pressed(self):
+        # Set the focus to the button that was pressed
+        button = self.sender()
+        if button:
+            button.setFocus()
+
 
 
 

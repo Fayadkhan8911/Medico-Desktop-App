@@ -1,6 +1,6 @@
 import sys
 from PyQt5.uic import loadUi
-from PyQt5 import QtWidgets
+from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtWidgets import QDialog, QApplication, QWidget
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtCore import QTimer, QDate
@@ -26,6 +26,10 @@ class _updt_file_window(QDialog):
         
         self.patient_id = patient_id
         self._call_back_go_pat_det_fnc = _call_back_go_pat_det_fnc
+        
+        self.estd_cost_edit.setTabChangesFocus(True)
+        self.discount_edit.setTabChangesFocus(True)
+        self.desc_edit.setTabChangesFocus(True)
         
         self.cancel_btn.clicked.connect(self.cancel_update_pat_file)
         

@@ -13,6 +13,20 @@ class _add_patient_window(QDialog):
     def __init__(self):
         super(_add_patient_window, self).__init__()
         loadUi("add_patients_window.ui", self)
+        
+        self.add_fname_edit.setTabChangesFocus(True)
+        self.add_lname_edit.setTabChangesFocus(True)
+        self.add_occu_edit.setTabChangesFocus(True)
+        self.add_ref_edit.setTabChangesFocus(True)
+        self.add_phn_edit.setTabChangesFocus(True)
+        self.add_email_edit.setTabChangesFocus(True)
+        self.add_age_edit.setTabChangesFocus(True)
+        self.add_pat_id_edit.setTabChangesFocus(True)
+        self.add_depart_edit.setTabChangesFocus(True)
+        self.add_complain_edit.setTabChangesFocus(True)
+        
+        self.patient_btn.setFocus()
+        
         self.f_name = ""
         self.l_name = ""
         self.phone = ""

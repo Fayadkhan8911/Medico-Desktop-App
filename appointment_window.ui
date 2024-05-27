@@ -53,6 +53,10 @@ border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -83,6 +87,10 @@ border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;}
 QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>
@@ -123,6 +131,10 @@ border-bottom-right-radius:10px;
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}
+QPushButton:hover{
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -153,6 +165,10 @@ border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;}
 QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>
@@ -187,6 +203,10 @@ border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -217,6 +237,10 @@ border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;}
 QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>
@@ -381,6 +405,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <height>311</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgba(255, 255, 255,.85);
 font:  12pt &quot;Segoe UI &quot;;</string>
@@ -488,6 +515,10 @@ border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -524,14 +555,19 @@ QPushButton:hover{
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-
-font:  14pt &quot;Segoe UI &quot;;}
+border-bottom-right-radius:10px;}
 QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>
@@ -699,19 +735,8 @@ background-color: rgb(255, 255, 255);
      <height>31</height>
     </rect>
    </property>
-   <property name="styleSheet">
-    <string notr="true">font: 12pt &quot;Segoe UI&quot;;
-background-color: rgb(255, 255, 255);</string>
-   </property>
-  </widget>
-  <widget class="QDateEdit" name="dateEdit">
-   <property name="geometry">
-    <rect>
-     <x>630</x>
-     <y>110</y>
-     <width>131</width>
-     <height>30</height>
-    </rect>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">font: 12pt &quot;Segoe UI&quot;;
@@ -867,6 +892,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <height>171</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(0, 0, 0);
 alternate-background-color: rgb(0, 0, 0);
@@ -896,6 +924,9 @@ color: rgb(255, 255, 255);</string>
      <width>321</width>
      <height>171</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
@@ -946,7 +977,6 @@ font:  14pt &quot;Segoe UI &quot;;</string>
   <zorder>dname</zorder>
   <zorder>dname_edit</zorder>
   <zorder>timeEdit</zorder>
-  <zorder>dateEdit</zorder>
   <zorder>visit_date_5</zorder>
   <zorder>pat_id_edit</zorder>
   <zorder>vname_2</zorder>
@@ -959,6 +989,24 @@ font:  14pt &quot;Segoe UI &quot;;</string>
   <zorder>calender_date</zorder>
   <zorder>visit_date_7</zorder>
  </widget>
+ <tabstops>
+  <tabstop>appointment_btn</tabstop>
+  <tabstop>dentist_btn</tabstop>
+  <tabstop>vname_edit</tabstop>
+  <tabstop>phone_edit</tabstop>
+  <tabstop>dname_edit</tabstop>
+  <tabstop>pat_id_edit</tabstop>
+  <tabstop>timeEdit</tabstop>
+  <tabstop>add_appointment_btn</tabstop>
+  <tabstop>search_name_edit</tabstop>
+  <tabstop>search_phone_edit</tabstop>
+  <tabstop>search_pat_id_edit</tabstop>
+  <tabstop>search_btn</tabstop>
+  <tabstop>dash_btn</tabstop>
+  <tabstop>patient_btn</tabstop>
+  <tabstop>payment_btn</tabstop>
+  <tabstop>expense_btn</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

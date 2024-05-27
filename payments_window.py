@@ -16,10 +16,22 @@ class _payments_window(QDialog):
     def __init__(self, _call_back_go_make_payment):
         super(_payments_window, self).__init__()
         loadUi("payments_window.ui", self)
+        
+        self.fname_srch_edit.setTabChangesFocus(True)
+        self.phone_srch_edit.setTabChangesFocus(True)
+        self.patid_srch_edit.setTabChangesFocus(True)
+        self.payment_edit.setTabChangesFocus(True)
+        self.remarks_edit.setTabChangesFocus(True)
+        
         self._call_back_go_make_payment = _call_back_go_make_payment
         # kaj sheshe use self._call_back_go_make_payment()
         self.calendar = self.findChild(QCalendarWidget, "calendarWidget")
         self.makepayment_btn.clicked.connect(self.createpayment)
+        
+        def showEvent(self, event):
+            #init line chilo super(_add_med_hist_win, self).__init__()
+            super(_payments_window, self).showEvent(event)
+            self.payment_btn.setFocus()
 
     def createpayment(self):
         self.f_name = self.fname_srch_edit.toPlainText()
