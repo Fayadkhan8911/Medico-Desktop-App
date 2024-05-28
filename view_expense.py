@@ -33,6 +33,9 @@ class _expense_view_window(QDialog):
         cursor.execute("SELECT * FROM expense WHERE expense_date = ?", (expense_date,))
         # Fetch all rows
         results = cursor.fetchall()
+        
+        if not results:
+            self.print_btn.setEnabled(False)
 
         # Print the results
         # for row in results:

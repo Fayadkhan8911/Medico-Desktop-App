@@ -57,9 +57,13 @@ class _patient_window(QDialog):
         self.patient_table.setColumnWidth(5, 200)
         self.patient_table.setColumnWidth(1, 200)
         self.patient_table.setColumnWidth(2, 200)
-        for col in _cur.execute(
-            "SELECT p_id,f_name,l_name,sex,age,phone FROM patients"
-        ):
+        
+        _cur.execute("SELECT p_id,f_name,l_name,sex,age,phone FROM patients")
+        
+        rows = _cur.fetchall()
+        
+        
+        for col in rows:
             # self.patient_table.setItem(_tablerow, 0, QtWidgets.QTableWidgetItem(col[0]))
             item = str(col[0])
             self.patient_table.setItem(_tablerow, 0, QtWidgets.QTableWidgetItem(item))

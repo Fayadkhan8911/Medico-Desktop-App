@@ -21,7 +21,7 @@ import sqlite3
 class apt_date(QDialog):
     def __init__(self, appt_date):
         super(apt_date, self).__init__()
-        loadUi("appointment_individual.ui", self)
+        loadUi("appointment_date.ui", self)
         self.appt_date = appt_date
         self._view_appt_table()
 
@@ -34,6 +34,23 @@ class apt_date(QDialog):
         cursor.execute("SELECT * FROM appointments WHERE visit_date = ?", (appt_date,))
         # Fetch all rows
         results = cursor.fetchall()
+        
+        if not results:
+            self.print_btn.setEnabled(False)
+            self.print_btn.setStyleSheet("""
+                                        QPushButton {
+                                            background-color: lightgray;
+                                            font: 14pt "Segoe UI";
+                                            color: gray;
+                                            border-top-left-radius: 10px;
+                                            border-bottom-left-radius: 10px;
+                                            border-top-right-radius: 10px;
+                                            border-bottom-right-radius: 10px;
+                                        }
+                                    """)
+        
+        """ if not results:
+            self.print_btn.setEnabled(False) """
 
         # Print the results
         for row in results:
@@ -59,7 +76,6 @@ class apt_date(QDialog):
                 # print("testing appointment date", appt_date)
         self.appointment_table.resizeColumnsToContents()
         self.visit_date.setText(f"Appointment of Date: {appt_date}")
-        self.cancel_btn.setText(f"Print")
 
 
 """

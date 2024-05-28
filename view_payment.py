@@ -34,6 +34,7 @@ class _payment_view_window(QDialog):
         cursor.execute("SELECT payment_date, p_id, file_name, payment_amount, due FROM payment_history WHERE payment_date = ?", (payment_date,))
         # Fetch all rows
         results = cursor.fetchall()
+        
 
         # Print the results
         for row in results:

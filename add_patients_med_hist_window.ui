@@ -1199,6 +1199,11 @@ color: rgb(255, 255, 255);
   <zorder>save_pat</zorder>
  </widget>
  <tabstops>
+  <tabstop>patient_btn</tabstop>
+  <tabstop>payment_btn</tabstop>
+  <tabstop>expense_btn</tabstop>
+  <tabstop>appointment_btn</tabstop>
+  <tabstop>dentist_btn</tabstop>
   <tabstop>q1_y_check</tabstop>
   <tabstop>q2_y_check</tabstop>
   <tabstop>q3_y_check</tabstop>
@@ -1219,11 +1224,6 @@ color: rgb(255, 255, 255);
   <tabstop>save_pat</tabstop>
   <tabstop>restart_btn</tabstop>
   <tabstop>dash_btn</tabstop>
-  <tabstop>patient_btn</tabstop>
-  <tabstop>payment_btn</tabstop>
-  <tabstop>expense_btn</tabstop>
-  <tabstop>appointment_btn</tabstop>
-  <tabstop>dentist_btn</tabstop>
  </tabstops>
  <resources/>
  <connections/>

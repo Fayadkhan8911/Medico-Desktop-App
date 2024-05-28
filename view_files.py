@@ -37,6 +37,9 @@ class _files_view_window(QDialog):
         )
         # Fetch all rows
         results = cursor.fetchall()
+        
+        if not results:
+            self.print_btn.setEnabled(False)
 
         # Print the results
         for row in results:

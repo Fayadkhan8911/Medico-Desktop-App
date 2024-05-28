@@ -434,7 +434,7 @@ font:  12pt &quot;Segoe UI &quot;;</string>
    </column>
    <column>
     <property name="text">
-     <string>Visit Date(m-d-y)</string>
+     <string>Visit Date(dd-MM-yyyy)</string>
     </property>
    </column>
    <column>

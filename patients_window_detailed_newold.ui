@@ -918,7 +918,7 @@ background-color: rgb(255, 255, 255);</string>
     </rect>
    </property>
    <property name="focusPolicy">
-    <enum>Qt::ClickFocus</enum>
+    <enum>Qt::StrongFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">
@@ -2043,11 +2043,6 @@ color: rgb(255, 255, 255);
   <zorder>files_hist_btn</zorder>
  </widget>
  <tabstops>
-  <tabstop>patient_btn</tabstop>
-  <tabstop>payment_btn</tabstop>
-  <tabstop>expense_btn</tabstop>
-  <tabstop>appointment_btn</tabstop>
-  <tabstop>dentist_btn</tabstop>
   <tabstop>updt_f_name</tabstop>
   <tabstop>updt_l_name</tabstop>
   <tabstop>updt_pat_id</tabstop>
@@ -2071,6 +2066,26 @@ color: rgb(255, 255, 255);
   <tabstop>customize_btn</tabstop>
   <tabstop>delete_pat</tabstop>
   <tabstop>dash_btn</tabstop>
+  <tabstop>patient_btn</tabstop>
+  <tabstop>payment_btn</tabstop>
+  <tabstop>expense_btn</tabstop>
+  <tabstop>appointment_btn</tabstop>
+  <tabstop>dentist_btn</tabstop>
+  <tabstop>email_labl</tabstop>
+  <tabstop>refr_labl</tabstop>
+  <tabstop>age_labl</tabstop>
+  <tabstop>l_name_labl</tabstop>
+  <tabstop>occu_labl</tabstop>
+  <tabstop>file_name_labl</tabstop>
+  <tabstop>phn_labl</tabstop>
+  <tabstop>pat_id_labl</tabstop>
+  <tabstop>comp_labl</tabstop>
+  <tabstop>addr_labl</tabstop>
+  <tabstop>gender_labl</tabstop>
+  <tabstop>findings_label</tabstop>
+  <tabstop>depart_labl</tabstop>
+  <tabstop>reg_dt_labl</tabstop>
+  <tabstop>f_name_labl</tabstop>
  </tabstops>
  <resources/>
  <connections/>

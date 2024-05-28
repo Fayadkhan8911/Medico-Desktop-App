@@ -26,15 +26,24 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-background-color: rgb(255, 0, 0);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-color: rgb(255, 255, 255);
-</string>
+    <string notr="true">QPushButton{
+	background-color: rgb(255, 255, 255);
+	background-color: rgb(255, 0, 0);
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+	border-top-left-radius:10px;
+	border-bottom-left-radius:10px;
+	border-top-right-radius:10px;
+	border-bottom-right-radius:10px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+	background-color: rgba(255,0, 0, 200);
+}
+
+QPushButton:focus{
+	background-color: rgba(255,0, 0, 200);
+}</string>
    </property>
    <property name="text">
     <string>Yes</string>
@@ -66,9 +75,9 @@ color: rgb(255, 255, 255);
   <widget class="QLabel" name="warning_label">
    <property name="geometry">
     <rect>
-     <x>50</x>
+     <x>40</x>
      <y>30</y>
-     <width>471</width>
+     <width>481</width>
      <height>71</height>
     </rect>
    </property>
@@ -76,7 +85,7 @@ color: rgb(255, 255, 255);
     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
    <property name="text">
-    <string>Are you sure you want to delete this patient and their information</string>
+    <string>Are you sure you want to delete this patient and their information?</string>
    </property>
   </widget>
   <widget class="QPushButton" name="cnf_no_btn">
@@ -89,14 +98,24 @@ color: rgb(255, 255, 255);
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
+    <string notr="true">QPushButton{
+	background-color: rgb(255, 255, 255);
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+	border-top-left-radius:10px;
+	border-bottom-left-radius:10px;
+	border-top-right-radius:10px;
+	border-bottom-right-radius:10px;
+}
 
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
+QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
 
+QPushButton:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
 </string>
    </property>
    <property name="text">

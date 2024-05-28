@@ -130,10 +130,14 @@ class appointment_window(QDialog):
         self.appt_callback_fnc()
 
     def load_table(self):
-        current_date = self.current_date.toString("dd-MM-yyyy")
+        current_date = self.current_date.toString("yyyy-MM-dd")
         _connect = sqlite3.connect("MEDICO.db3")
         _cur = _connect.cursor()
-        _cur.execute("""SELECT reg_date, p_id , visitor_name, visitor_phone, visit_date, visit_time, dentist_name, status FROM appointments ORDER BY visit_date DESC""")
+        _cur.execute(("""SELECT reg_date, p_id , visitor_name, visitor_phone, visit_date, visit_time, dentist_name, status FROM appointments WHERE strftime('%Y-%m-%d', substr(visit_date, 7, 4) || '-' || substr(visit_date, 4, 2) || '-' || substr(visit_date, 1, 2)) >= ? ORDER BY visit_date DESC"""), (current_date,))
+        
+        rows = _cur.fetchall()
+        print(rows)
+        
         _tablerow = 0
         self.appointment_table.setRowCount(50)
         self.appointment_table.setColumnWidth(4, 130)
@@ -142,8 +146,6 @@ class appointment_window(QDialog):
         self.appointment_table.setColumnWidth(0, 100)
         self.appointment_table.setColumnWidth(2, 130)
         
-        rows = _cur.fetchall()
-        print(rows)
 
         for col in rows:
             self.appointment_table.setItem(
