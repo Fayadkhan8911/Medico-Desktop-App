@@ -14,6 +14,18 @@ class appointment_window(QDialog):
     def __init__(self, appt_callback_fnc):
         super(appointment_window, self).__init__()
         loadUi("appointment_window.ui", self)
+        
+        self.vname_edit.setTabChangesFocus(True)
+        self.phone_edit.setTabChangesFocus(True)
+        self.dname_edit.setTabChangesFocus(True)
+        self.pat_id_edit.setTabChangesFocus(True)
+        self.search_name_edit.setTabChangesFocus(True)
+        self.search_phone_edit.setTabChangesFocus(True)
+        self.search_pat_id_edit.setTabChangesFocus(True)
+        
+        self.current_date = QDate.currentDate()
+        self.reg_date = self.current_date.toString('dd-MM-yyyy')
+        
         """self.v_name = ""
         self.v_time = ""
         self.phone = ""
@@ -28,6 +40,8 @@ class appointment_window(QDialog):
 
         # self._appointment.add_btn.clicked.connect(self.save_appointment)
         self.add_appointment_btn.clicked.connect(self.save_appointment)
+        
+        
 
     #    self.search_btn.clicked.connect(self.search_date)
     def show_error_window(self, message):
@@ -50,9 +64,10 @@ class appointment_window(QDialog):
             cursor.execute(
                 """
                 INSERT INTO appointments (reg_date,visitor_name,visitor_phone,visit_time,visit_date,status,dentist_name)
-                VALUES (DATE('now'), ?, ?, ?, ?, ?,?)
+                VALUES (?, ?, ?, ?, ?, ?,?)
              """,
                 (
+                    self.reg_date,
                     v_name_input,
                     phone_input,
                     v_time_input,
@@ -84,9 +99,10 @@ class appointment_window(QDialog):
                 cursor.execute(
                     """
                     INSERT INTO appointments (reg_date,visitor_name,visitor_phone,visit_time,visit_date,status,dentist_name,p_id)
-                    VALUES (DATE('now'), ?, ?, ?, ?, ?,?,?)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                     (
+                        self.reg_date,
                         _name,
                         _phone,
                         v_time_input,
@@ -114,10 +130,10 @@ class appointment_window(QDialog):
         self.appt_callback_fnc()
 
     def load_table(self):
+        current_date = self.current_date.toString("dd-MM-yyyy")
         _connect = sqlite3.connect("MEDICO.db3")
         _cur = _connect.cursor()
-        _query = "SELECT reg_date,p_id , visitor_name, visitor_phone,visit_date,visit_time,dentist_name,status FROM appointments ORDER BY visit_date DESC"
-        # data = _cur.fetchall()  # Fetch data
+        _cur.execute("""SELECT reg_date, p_id , visitor_name, visitor_phone, visit_date, visit_time, dentist_name, status FROM appointments ORDER BY visit_date DESC""")
         _tablerow = 0
         self.appointment_table.setRowCount(50)
         self.appointment_table.setColumnWidth(4, 130)
@@ -125,8 +141,11 @@ class appointment_window(QDialog):
         self.appointment_table.setColumnWidth(1, 130)
         self.appointment_table.setColumnWidth(0, 100)
         self.appointment_table.setColumnWidth(2, 130)
+        
+        rows = _cur.fetchall()
+        print(rows)
 
-        for col in _cur.execute(_query):
+        for col in rows:
             self.appointment_table.setItem(
                 _tablerow, 0, QtWidgets.QTableWidgetItem(col[0])
             )

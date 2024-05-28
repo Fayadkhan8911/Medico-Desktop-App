@@ -4,7 +4,7 @@ from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication, QWidget
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QApplication, QCalendarWidget
-from PyQt5.QtCore import QDate
+from PyQt5.QtCore import QDate, Qt
 import sqlite3
 
 
@@ -25,6 +25,8 @@ class pat_edit2(QDialog):
     ):
         super(pat_edit2, self).__init__()
         loadUi("patients_custom_02.ui", self)
+        self.label_2.setFocus(True)
+        self.med_find_edit.setTabChangesFocus(True)
         self.f_name = f_name
         self.l_name = l_name
         self.phone = phone

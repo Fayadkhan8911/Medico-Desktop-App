@@ -28,6 +28,10 @@ class _add_file_window(QDialog):
         #self.add_file_btn.clicked.connect(self.addfile_popup_callback_fnc)
         self.add_file_btn.clicked.connect(self.add_new_pat_file)
         self.cancel_btn.clicked.connect(self.cancel_new_pat_file)
+        self.fname_srch_edit.setTabChangesFocus(True)
+        self.file_desc_edit.setTabChangesFocus(True)
+        self.estd_cost_edit.setTabChangesFocus(True)
+        self.discount_edit.setTabChangesFocus(True)
         
     def add_new_pat_file(self):
         current_date = QDate.currentDate()

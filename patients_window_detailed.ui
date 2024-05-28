@@ -52,6 +52,10 @@ border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -82,6 +86,10 @@ border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;}
 QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>
@@ -116,6 +124,10 @@ border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -148,6 +160,10 @@ border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}
+QPushButton:focus {
+    background-color: rgb(161, 161, 161);
+    color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -178,6 +194,10 @@ border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;}
 QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>
@@ -239,6 +259,10 @@ border-bottom-right-radius:10px;
 }
 
 QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }
@@ -893,6 +917,9 @@ background-color: rgb(255, 255, 255);</string>
      <height>31</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">
 color: rgb(255, 255, 255);
@@ -914,8 +941,14 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  12pt &quot;Segoe UI &quot;;</string>
+    <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+font:  12pt &quot;Segoe UI &quot;;
+}
+QPushButton:focus {
+    background-color: rgb(161, 161, 161);
+    color: rgb(255, 255, 255);
+}</string>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -929,6 +962,9 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      <width>111</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">
@@ -951,8 +987,14 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  12pt &quot;Segoe UI &quot;;</string>
+    <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+font:  12pt &quot;Segoe UI &quot;;
+}
+QPushButton:focus {
+    background-color: rgb(161, 161, 161);
+    color: rgb(255, 255, 255);
+}</string>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -966,6 +1008,9 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      <width>101</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">
@@ -986,6 +1031,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <width>111</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">
@@ -1008,8 +1056,14 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  12pt &quot;Segoe UI &quot;;</string>
+    <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+font:  12pt &quot;Segoe UI &quot;;
+}
+QPushButton:focus {
+    background-color: rgb(161, 161, 161);
+    color: rgb(255, 255, 255);
+}</string>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -1025,8 +1079,14 @@ font:  12pt &quot;Segoe UI &quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  12pt &quot;Segoe UI &quot;;</string>
+    <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+font:  12pt &quot;Segoe UI &quot;;
+}
+QPushButton:focus {
+    background-color: rgb(161, 161, 161);
+    color: rgb(255, 255, 255);
+}</string>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -1042,8 +1102,14 @@ font:  12pt &quot;Segoe UI &quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  12pt &quot;Segoe UI &quot;;</string>
+    <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+font:  12pt &quot;Segoe UI &quot;;
+}
+QPushButton:focus {
+    background-color: rgb(161, 161, 161);
+    color: rgb(255, 255, 255);
+}</string>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -1057,6 +1123,9 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      <width>101</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">
@@ -1079,8 +1148,14 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  12pt &quot;Segoe UI &quot;;</string>
+    <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+font:  12pt &quot;Segoe UI &quot;;
+}
+QPushButton:focus {
+    background-color: rgb(161, 161, 161);
+    color: rgb(255, 255, 255);
+}</string>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -1096,8 +1171,14 @@ font:  12pt &quot;Segoe UI &quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  12pt &quot;Segoe UI &quot;;</string>
+    <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+font:  12pt &quot;Segoe UI &quot;;
+}
+QPushButton:focus {
+    background-color: rgb(161, 161, 161);
+    color: rgb(255, 255, 255);
+}</string>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -1111,6 +1192,9 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      <width>111</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">
@@ -1132,6 +1216,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <height>31</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">
 color: rgb(255, 255, 255);
@@ -1151,6 +1238,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <width>301</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">
@@ -1173,8 +1263,14 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  12pt &quot;Segoe UI &quot;;</string>
+    <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+font:  12pt &quot;Segoe UI &quot;;
+}
+QPushButton:focus {
+    background-color: rgb(161, 161, 161);
+    color: rgb(255, 255, 255);
+}</string>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -1188,6 +1284,9 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      <width>481</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">
@@ -1208,6 +1307,9 @@ font:  14pt &quot;Segoe UI &quot;;</string>
      <width>101</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">
@@ -1230,8 +1332,14 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  12pt &quot;Segoe UI &quot;;</string>
+    <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+font:  12pt &quot;Segoe UI &quot;;
+}
+QPushButton:focus {
+    background-color: rgb(161, 161, 161);
+    color: rgb(255, 255, 255);
+}</string>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -1245,6 +1353,9 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      <width>101</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">
@@ -1267,8 +1378,14 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  12pt &quot;Segoe UI &quot;;</string>
+    <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+font:  12pt &quot;Segoe UI &quot;;
+}
+QPushButton:focus {
+    background-color: rgb(161, 161, 161);
+    color: rgb(255, 255, 255);
+}</string>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -1282,6 +1399,9 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      <width>111</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">
@@ -1304,8 +1424,14 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  12pt &quot;Segoe UI &quot;;</string>
+    <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+font:  12pt &quot;Segoe UI &quot;;
+}
+QPushButton:focus {
+    background-color: rgb(161, 161, 161);
+    color: rgb(255, 255, 255);
+}</string>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -1319,6 +1445,9 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      <width>111</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">
@@ -1341,8 +1470,14 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  12pt &quot;Segoe UI &quot;;</string>
+    <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+font:  12pt &quot;Segoe UI &quot;;
+}
+QPushButton:focus {
+    background-color: rgb(161, 161, 161);
+    color: rgb(255, 255, 255);
+}</string>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -1356,6 +1491,9 @@ font:  12pt &quot;Segoe UI &quot;;</string>
      <width>481</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">
@@ -1413,6 +1551,10 @@ border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}
+QPushButton:focus {
+    background-color: rgb(161, 161, 161);
+    color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -1465,6 +1607,11 @@ QPushButton:hover{
 	background-color: rgb(255, 0, 0);
 	background-color: rgb(255, 85, 0);
 	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
+	background-color: rgb(255, 0, 0);
+	background-color: rgb(255, 85, 0);
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -1481,8 +1628,14 @@ QPushButton:hover{
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  10pt &quot;Segoe UI &quot;;</string>
+    <string notr="true">QTextBrowser{
+background-color: rgb(255, 255, 255);
+font:  10pt &quot;Segoe UI &quot;;
+}
+QTextBrowser:focus {
+    background-color: rgb(161, 161, 161);
+    color: rgb(255, 255, 255);
+}</string>
    </property>
    <property name="html">
     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -1514,6 +1667,10 @@ border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}
+QPushButton:focus {
+    background-color: rgb(161, 161, 161);
+    color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -1565,6 +1722,10 @@ border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}
+QPushButton:focus {
+    background-color: rgb(161, 161, 161);
+    color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -1604,8 +1765,14 @@ color: rgb(255, 255, 255);
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  10pt &quot;Segoe UI &quot;;</string>
+    <string notr="true">QTextBrowser{
+background-color: rgb(255, 255, 255);
+font:  10pt &quot;Segoe UI &quot;;
+}
+QTextBrowser:focus {
+    background-color: rgb(161, 161, 161);
+    color: rgb(255, 255, 255);
+}</string>
    </property>
    <property name="html">
     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -1623,6 +1790,9 @@ p, li { white-space: pre-wrap; }
      <width>111</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">
@@ -1645,8 +1815,14 @@ font:  14pt &quot;Segoe UI &quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font:  12pt &quot;Segoe UI &quot;;</string>
+    <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+font:  12pt &quot;Segoe UI &quot;;
+}
+QPushButton:focus {
+    background-color: rgb(161, 161, 161);
+    color: rgb(255, 255, 255);
+}</string>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -1674,6 +1850,10 @@ border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}
+QPushButton:focus {
+    background-color: rgb(161, 161, 161);
+    color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -1748,6 +1928,10 @@ border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}
+QPushButton:focus {
+    background-color: rgb(161, 161, 161);
+    color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -1776,6 +1960,10 @@ border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
+}
+QPushButton:focus {
+    background-color: rgb(161, 161, 161);
+    color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -1854,6 +2042,51 @@ color: rgb(255, 255, 255);
   <zorder>label_11</zorder>
   <zorder>files_hist_btn</zorder>
  </widget>
+ <tabstops>
+  <tabstop>updt_f_name</tabstop>
+  <tabstop>updt_l_name</tabstop>
+  <tabstop>updt_pat_id</tabstop>
+  <tabstop>updt_gender</tabstop>
+  <tabstop>updt_phn</tabstop>
+  <tabstop>updt_email</tabstop>
+  <tabstop>updt_age</tabstop>
+  <tabstop>updt_reg_dt</tabstop>
+  <tabstop>updt_addr</tabstop>
+  <tabstop>updt_occu</tabstop>
+  <tabstop>updt_refr</tabstop>
+  <tabstop>updt_file_name</tabstop>
+  <tabstop>updt_depart</tabstop>
+  <tabstop>updt_comp</tabstop>
+  <tabstop>updt_med_findings</tabstop>
+  <tabstop>return_pat</tabstop>
+  <tabstop>files_hist_btn</tabstop>
+  <tabstop>pay_hist_btn</tabstop>
+  <tabstop>updt_file_btn</tabstop>
+  <tabstop>new_file_btn</tabstop>
+  <tabstop>customize_btn</tabstop>
+  <tabstop>delete_pat</tabstop>
+  <tabstop>dash_btn</tabstop>
+  <tabstop>patient_btn</tabstop>
+  <tabstop>payment_btn</tabstop>
+  <tabstop>expense_btn</tabstop>
+  <tabstop>appointment_btn</tabstop>
+  <tabstop>dentist_btn</tabstop>
+  <tabstop>email_labl</tabstop>
+  <tabstop>refr_labl</tabstop>
+  <tabstop>age_labl</tabstop>
+  <tabstop>l_name_labl</tabstop>
+  <tabstop>occu_labl</tabstop>
+  <tabstop>file_name_labl</tabstop>
+  <tabstop>phn_labl</tabstop>
+  <tabstop>pat_id_labl</tabstop>
+  <tabstop>comp_labl</tabstop>
+  <tabstop>addr_labl</tabstop>
+  <tabstop>gender_labl</tabstop>
+  <tabstop>findings_label</tabstop>
+  <tabstop>depart_labl</tabstop>
+  <tabstop>reg_dt_labl</tabstop>
+  <tabstop>f_name_labl</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
