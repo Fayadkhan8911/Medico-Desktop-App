@@ -42,13 +42,19 @@ background-color: rgba(170, 170, 255,.5);
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;}
 QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>
@@ -72,13 +78,19 @@ QPushButton:hover{
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;}
 QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>
@@ -102,13 +114,19 @@ QPushButton:hover{
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;}
 QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>
@@ -132,13 +150,19 @@ QPushButton:hover{
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;}
 QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>
@@ -161,8 +185,11 @@ QPushButton:hover{
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+     <string notr="true">
+QPushButton{
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
@@ -175,6 +202,10 @@ border-bottom-right-radius:10px;
 
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
+	background-color: rgb(0, 0, 0);
 	color: rgb(255, 255, 255);
 }
 </string>
@@ -198,13 +229,19 @@ QPushButton:hover{
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;}
 QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>
@@ -273,7 +310,8 @@ border-bottom-right-radius:20px;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
   </widget>
   <widget class="QLabel" name="phn_srch">
@@ -309,7 +347,8 @@ border-bottom-right-radius:20px;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
   </widget>
   <widget class="QLabel" name="patid_srch">
@@ -345,44 +384,8 @@ border-bottom-right-radius:20px;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="file_srch">
-   <property name="geometry">
-    <rect>
-     <x>470</x>
-     <y>80</y>
-     <width>100</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
-font: 16pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);
-
-
-border-top-right-radius:20px;
-border-bottom-right-radius:20px;
-</string>
-   </property>
-   <property name="text">
-    <string>File.</string>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="file_srch_edit">
-   <property name="geometry">
-    <rect>
-     <x>570</x>
-     <y>80</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
   </widget>
   <widget class="QLabel" name="payment">
@@ -390,7 +393,7 @@ border-bottom-right-radius:20px;
     <rect>
      <x>190</x>
      <y>130</y>
-     <width>101</width>
+     <width>181</width>
      <height>31</height>
     </rect>
    </property>
@@ -405,20 +408,21 @@ border-top-right-radius:20px;
 border-bottom-right-radius:20px;</string>
    </property>
    <property name="text">
-    <string>Payment</string>
+    <string>Payment Amount:</string>
    </property>
   </widget>
   <widget class="QTextEdit" name="payment_edit">
    <property name="geometry">
     <rect>
-     <x>290</x>
+     <x>371</x>
      <y>130</y>
      <width>141</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
   </widget>
   <widget class="QLabel" name="remarks">
@@ -454,13 +458,14 @@ border-bottom-right-radius:20px;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="makepayment">
+  <widget class="QPushButton" name="makepayment_btn">
    <property name="geometry">
     <rect>
-     <x>295</x>
+     <x>190</x>
      <y>245</y>
      <width>191</width>
      <height>41</height>
@@ -468,13 +473,19 @@ border-bottom-right-radius:20px;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+
+font:  14pt &quot;Segoe UI &quot;;
 background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
 border-bottom-right-radius:10px;}
 QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>
@@ -496,7 +507,7 @@ QPushButton:hover{
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Images/Designer_1.png</pixmap>
+    <pixmap>../Images/Designer.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -505,7 +516,7 @@ QPushButton:hover{
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>300</x>
+     <x>195</x>
      <y>250</y>
      <width>190</width>
      <height>40</height>
@@ -527,44 +538,43 @@ color: rgb(255, 255, 255);</string>
     <string/>
    </property>
   </widget>
-  <widget class="QTableWidget" name="tableWidget">
+  <widget class="QLabel" name="select_date">
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>340</y>
-     <width>1041</width>
-     <height>291</height>
+     <y>390</y>
+     <width>371</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgba(255, 255, 255,.8);
-font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
-   <column>
-    <property name="text">
-     <string>Patient ID</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>First Name</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Phone</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Payment</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Remarks</string>
-    </property>
-   </column>
+   <property name="text">
+    <string>Select a date to see expenses of that day:</string>
+   </property>
+  </widget>
+  <widget class="QCalendarWidget" name="calendarWidget">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>420</y>
+     <width>371</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+color: rgba(0, 0, 0,.9);
+</string>
+   </property>
   </widget>
   <zorder>label</zorder>
   <zorder>side_bar</zorder>
@@ -574,16 +584,29 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
   <zorder>phone_srch_edit</zorder>
   <zorder>patid_srch</zorder>
   <zorder>patid_srch_edit</zorder>
-  <zorder>file_srch</zorder>
-  <zorder>file_srch_edit</zorder>
   <zorder>payment</zorder>
   <zorder>payment_edit</zorder>
   <zorder>remarks</zorder>
   <zorder>remarks_edit</zorder>
   <zorder>label_2</zorder>
-  <zorder>makepayment</zorder>
-  <zorder>tableWidget</zorder>
+  <zorder>makepayment_btn</zorder>
+  <zorder>select_date</zorder>
+  <zorder>calendarWidget</zorder>
  </widget>
+ <tabstops>
+  <tabstop>fname_srch_edit</tabstop>
+  <tabstop>phone_srch_edit</tabstop>
+  <tabstop>patid_srch_edit</tabstop>
+  <tabstop>payment_edit</tabstop>
+  <tabstop>remarks_edit</tabstop>
+  <tabstop>makepayment_btn</tabstop>
+  <tabstop>dash_btn</tabstop>
+  <tabstop>patient_btn</tabstop>
+  <tabstop>payment_btn</tabstop>
+  <tabstop>expense_btn</tabstop>
+  <tabstop>appointment_btn</tabstop>
+  <tabstop>dentist_btn</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

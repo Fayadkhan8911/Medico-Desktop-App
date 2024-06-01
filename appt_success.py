@@ -19,7 +19,7 @@ import sqlite3
 class _error_window(QDialog):
     def __init__(self, message):
         super(_error_window, self).__init__()
-        loadUi("appt_success.ui", self)
+        loadUi("gui/appt_success.ui", self)
         self.error_msg_text.setText(message)
         self.ok_btn.clicked.connect(self.close)  # Close the dialog when Ok button is clicked
         

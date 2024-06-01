@@ -8,12 +8,13 @@ from PyQt5.QtCore import QDate
 import sqlite3
 import appt_success
 import error
+import re
 
 
 class appointment_window(QDialog):
     def __init__(self, appt_callback_fnc):
         super(appointment_window, self).__init__()
-        loadUi("appointment_window.ui", self)
+        loadUi("gui/appointment_window.ui", self)
         
         self.vname_edit.setTabChangesFocus(True)
         self.phone_edit.setTabChangesFocus(True)
@@ -24,7 +25,7 @@ class appointment_window(QDialog):
         self.search_pat_id_edit.setTabChangesFocus(True)
         
         self.current_date = QDate.currentDate()
-        self.reg_date = self.current_date.toString('dd-MM-yyyy')
+        self.reg_date = self.current_date.toString('yyyy-MM-dd')
         
         """self.v_name = ""
         self.v_time = ""
@@ -42,11 +43,20 @@ class appointment_window(QDialog):
         self.add_appointment_btn.clicked.connect(self.save_appointment)
         
         
+    def match_mobile_pattern(self, phone_input):
+        phone_pattern = re.compile(r'^(?:\+8801[3-9]\d{8}|01[3-9]\d{8})$')
+        # Check if the input matches the phone number pattern
+        if phone_pattern.match(phone_input):
+            return True
+        else:
+            return False
+        
+        
 
     #    self.search_btn.clicked.connect(self.search_date)
     def show_error_window(self, message):
         error_window = error._error_window(message)  # Adjusted to use the error module
-        error_window.ok_btn.clicked.connect(self.trigger_callback)
+        #error_window.ok_btn.clicked.connect(self.trigger_callback)
         error_window.exec_()
 
     def save_appointment(self):
@@ -54,13 +64,24 @@ class appointment_window(QDialog):
         v_name_input = self.vname_edit.toPlainText()
         phone_input = self.phone_edit.toPlainText()
         v_time_input = self.timeEdit.time().toString()
-        v_date_input = self.calendar.selectedDate().toString("dd-MM-yyyy")
+        v_date_input = self.calendar.selectedDate().toString("yyyy-MM-dd")
         print(v_date_input)
         dr_input = self.dname_edit.toPlainText()
         conn = sqlite3.connect("medico.db3")
         cursor = conn.cursor()
         cur1 = conn.cursor()
         if p_id == "":
+            
+            if not v_name_input or not phone_input:
+                message = "Please Input both Name and Phone Number"
+                self.show_error_window(message)
+                return
+            
+            elif not self.match_mobile_pattern(phone_input):
+                message = "Please Input valid Phone Number"
+                self.show_error_window(message)
+                return
+            
             cursor.execute(
                 """
                 INSERT INTO appointments (reg_date,visitor_name,visitor_phone,visit_time,visit_date,status,dentist_name)
@@ -133,7 +154,7 @@ class appointment_window(QDialog):
         current_date = self.current_date.toString("yyyy-MM-dd")
         _connect = sqlite3.connect("MEDICO.db3")
         _cur = _connect.cursor()
-        _cur.execute(("""SELECT reg_date, p_id , visitor_name, visitor_phone, visit_date, visit_time, dentist_name, status FROM appointments WHERE strftime('%Y-%m-%d', substr(visit_date, 7, 4) || '-' || substr(visit_date, 4, 2) || '-' || substr(visit_date, 1, 2)) >= ? ORDER BY visit_date DESC"""), (current_date,))
+        _cur.execute(("""SELECT reg_date, p_id , visitor_name, visitor_phone, visit_date, visit_time, dentist_name, status FROM appointments WHERE visit_date >= ? ORDER BY visit_date DESC"""), (current_date,))
         
         rows = _cur.fetchall()
         print(rows)
@@ -149,7 +170,7 @@ class appointment_window(QDialog):
 
         for col in rows:
             self.appointment_table.setItem(
-                _tablerow, 0, QtWidgets.QTableWidgetItem(col[0])
+                _tablerow, 0, QtWidgets.QTableWidgetItem(QDate.fromString(col[0], "yyyy-MM-dd").toString("dd-MM-yyyy"))
             )
             self.appointment_table.setItem(
                 _tablerow, 1, QtWidgets.QTableWidgetItem(col[1])
@@ -161,7 +182,7 @@ class appointment_window(QDialog):
                 _tablerow, 3, QtWidgets.QTableWidgetItem(col[3])
             )
             self.appointment_table.setItem(
-                _tablerow, 4, QtWidgets.QTableWidgetItem(col[4])
+                _tablerow, 4, QtWidgets.QTableWidgetItem(QDate.fromString(col[4], "yyyy-MM-dd").toString("dd-MM-yyyy"))
             )
             self.appointment_table.setItem(
                 _tablerow, 5, QtWidgets.QTableWidgetItem(col[5])
@@ -175,6 +196,8 @@ class appointment_window(QDialog):
 
             _tablerow += 1
             pass
+        
+        self.appointment_table.resizeColumnsToContents()
 
 
 """

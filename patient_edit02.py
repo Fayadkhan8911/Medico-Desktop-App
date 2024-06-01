@@ -24,7 +24,7 @@ class pat_edit2(QDialog):
         chief_complain,
     ):
         super(pat_edit2, self).__init__()
-        loadUi("patients_custom_02.ui", self)
+        loadUi("gui/patients_custom_02.ui", self)
         self.label_2.setFocus(True)
         self.med_find_edit.setTabChangesFocus(True)
         self.f_name = f_name

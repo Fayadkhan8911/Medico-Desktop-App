@@ -1,6 +1,7 @@
 import sys
 from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
+from PyQt5.QtCore import QDate
 from PyQt5.QtWidgets import QDialog, QApplication, QWidget, QCalendarWidget
 
 from PyQt5.QtGui import QPixmap
@@ -21,8 +22,9 @@ import sqlite3
 class _payment_view_window(QDialog):
     def __init__(self, payment_date):
         super(_payment_view_window, self).__init__()
-        loadUi("view_payment.ui", self)
+        loadUi("gui/view_payment.ui", self)
         self.payment_date = payment_date
+        self.label_payment_date = QDate.fromString(self.payment_date, "yyyy-MM-dd").toString("dd-MM-yyyy")
         self._view_payment_table()
         self.calendar = self.findChild(QCalendarWidget, "calendarWidget")
 
@@ -55,11 +57,19 @@ class _payment_view_window(QDialog):
         # Populate the table
         for row_index, row_data in enumerate(results):
             for col_index, data in enumerate(row_data):
-                item = QtWidgets.QTableWidgetItem(str(data))
+                # Check if the column index is 0 or 4 (date columns)
+                if col_index == 0:
+                    # Convert the date string to QDate and then to the desired format
+                    date = QDate.fromString(data, "yyyy-MM-dd")
+                    formatted_date = date.toString("dd-MM-yyyy")
+                    item = QtWidgets.QTableWidgetItem(formatted_date)
+                else:
+                    item = QtWidgets.QTableWidgetItem(str(data))
                 self.paymentTable.setItem(row_index, col_index, item)
 
+
         self.paymentTable.resizeColumnsToContents()
-        self.payment_title.setText(f"Payment History of Date: {payment_date}")
+        self.payment_title.setText(f"Payment History of Date: {self.label_payment_date}")
 
 
 """

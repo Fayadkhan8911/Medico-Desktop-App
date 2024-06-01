@@ -289,7 +289,7 @@ QPushButton:focus{
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Images/daniel-frank-wKbWAMlHgNo-unsplash.jpg</pixmap>
+    <pixmap>../Images/daniel-frank-wKbWAMlHgNo-unsplash.jpg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>

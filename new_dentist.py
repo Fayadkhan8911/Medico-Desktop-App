@@ -11,7 +11,7 @@ import sqlite3
 class new_dentist_window(QDialog):
     def __init__(self):
         super(new_dentist_window, self).__init__()
-        loadUi("new_dentist.ui", self)
+        loadUi("gui/new_dentist.ui", self)
         self.pushButton.clicked.connect(self.attempt_add_dentist)
         
         

@@ -45,7 +45,7 @@ import appt_date
 class _main_window(QDialog):
     def __init__(self):
         super(_main_window, self).__init__()
-        loadUi("main_window.ui", self)
+        loadUi("gui/main_window.ui", self)
         
 
         self.patient_btn.clicked.connect(self._go_patient_window)
@@ -55,7 +55,7 @@ class _main_window(QDialog):
         self.dentist_btn.clicked.connect(self.get_dentist)
         # self.add_patient_btn.clicked.connect(self._go_add_pat)
         current_day = QDate.currentDate()
-        self.formatted_date = current_day.toString("dd-MM-yyyy")
+        self.formatted_date = current_day.toString("yyyy-MM-dd")
         print(self.formatted_date)
         self.load_appointment_table()
         self.load_expense_table()
@@ -91,7 +91,7 @@ class _main_window(QDialog):
     current_date = QDate.currentDate()
 
     # Convert to 'yyyy-MM-dd' format
-    formatted_date = current_date.toString("dd-MM-yyyy")
+    formatted_date = current_date.toString("yyyy-MM-dd")
 
     def load_payment_table(self):
 
@@ -224,7 +224,7 @@ class _main_window(QDialog):
 
     def appointment_date(self):
         dateSelected = self._appointment.calender_date.selectedDate().toString(
-            "dd-MM-yyyy"
+            "yyyy-MM-dd"
         )
         print(dateSelected)
         # appt_date = dateSelected
@@ -817,7 +817,7 @@ class _main_window(QDialog):
         self._spend_money.dentist_btn.clicked.connect(self.get_dentist)
 
     def grab_expense(self):
-        dateSelected = self._spend_money.calendar.selectedDate().toString("dd-MM-yyyy")
+        dateSelected = self._spend_money.calendar.selectedDate().toString("yyyy-MM-dd")
         print(dateSelected)
         self.expense_date = dateSelected
         self._view_expense_window = view_expense._expense_view_window(self.expense_date)
@@ -865,7 +865,7 @@ class _main_window(QDialog):
         self.new_dentist_tab.dentist_btn.clicked.connect(self.get_dentist)
 
     def grab_payment(self):
-        dateSelected = self._make_payment.calendar.selectedDate().toString("dd-MM-yyyy")
+        dateSelected = self._make_payment.calendar.selectedDate().toString("yyyy-MM-dd")
         print(dateSelected)
         self.payment_date = dateSelected
         self._view_payment_window = view_payment._payment_view_window(self.payment_date)

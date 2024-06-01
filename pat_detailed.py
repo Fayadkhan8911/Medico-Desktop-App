@@ -3,7 +3,7 @@ from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication, QWidget, QPushButton
 from PyQt5.QtGui import QPixmap
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, QDate
 
 import sqlite3
 
@@ -11,7 +11,7 @@ import sqlite3
 class _pat_detailed_win(QDialog):
     def __init__(self, f_name=None, l_name=None, phone=None, patient_id=None):
         super(_pat_detailed_win, self).__init__()
-        loadUi("patients_window_detailed.ui", self)        
+        loadUi("gui/patients_window_detailed.ui", self)        
         self.f_name = f_name
         self.l_name = l_name
         self.phone = phone
@@ -64,7 +64,7 @@ class _pat_detailed_win(QDialog):
             # Fetch the results
             result = c.fetchone()
             
-            
+            reg_date = QDate.fromString(result[8], "yyyy-MM-dd").toString("dd-MM-yyyy")
             
             if result:
                 # Display the details of the found patient
@@ -79,7 +79,7 @@ class _pat_detailed_win(QDialog):
                     self.updt_addr.setText(str(result[6]))
                     if result[7] is not None:
                         self.updt_email.setText(str(result[7]))
-                    self.updt_reg_dt.setText(str(result[8]))
+                    self.updt_reg_dt.setText(reg_date)
                     if result[9] is not None:
                         self.updt_depart.setText(str(result[9]))
                     if result[10] is not None:

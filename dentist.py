@@ -10,7 +10,7 @@ import sqlite3
 class _dentist_window(QDialog):
     def __init__(self):
         super(_dentist_window, self).__init__()
-        loadUi("dentists_window.ui", self)
+        loadUi("gui/dentists_window.ui", self)
         self.dentist_table.setColumnWidth(6, 200)
 
         self.dentist_table.setColumnWidth(7, 200)

@@ -40,7 +40,8 @@ background-color: rgba(170, 170, 255,.5);
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
+     <string notr="true">
+QPushButton{
 
 
 font:  14pt &quot;Segoe UI &quot;;
@@ -48,12 +49,13 @@ background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
-border-bottom-right-radius:10px;}
-QPushButton:hover{
-	background-color: rgb(161, 161, 161);
+border-bottom-right-radius:10px;
+
+	background-color: rgb(0, 0, 0);
 	color: rgb(255, 255, 255);
 }
-QPushButton:focus{
+
+QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }</string>
@@ -112,8 +114,7 @@ QPushButton:focus{
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">
-QPushButton{
+     <string notr="true">QPushButton{
 
 
 font:  14pt &quot;Segoe UI &quot;;
@@ -121,22 +122,15 @@ background-color: rgb(255, 255, 255);
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-
-	background-color: rgb(0, 0, 0);
-	color: rgb(255, 255, 255);
-}
-
+border-bottom-right-radius:10px;}
 QPushButton:hover{
 	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
 }
-
 QPushButton:focus{
-	background-color: rgb(0, 0, 0);
+	background-color: rgb(161, 161, 161);
 	color: rgb(255, 255, 255);
-}
-</string>
+}</string>
     </property>
     <property name="text">
      <string>Appointments</string>
@@ -264,8 +258,7 @@ QPushButton:focus{
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 20pt &quot;MS Shell Dlg 2&quot;;
-font: 75 20pt &quot;MS Shell Dlg 2&quot;;
+     <string notr="true">
 text-decoration: underline;
 font: 22pt &quot;MS Shell Dlg 2&quot;;
 background-color: rgba(255, 255, 255,0);
@@ -277,13 +270,13 @@ color: rgb(255, 255, 255);
     </property>
    </widget>
   </widget>
-  <widget class="QTableWidget" name="appointment_table">
+  <widget class="QTableWidget" name="patient_table">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>60</y>
-     <width>1051</width>
-     <height>561</height>
+     <x>260</x>
+     <y>180</y>
+     <width>911</width>
+     <height>431</height>
     </rect>
    </property>
    <property name="focusPolicy">
@@ -295,7 +288,7 @@ font:  12pt &quot;Segoe UI &quot;;</string>
    </property>
    <column>
     <property name="text">
-     <string>Date Registered</string>
+     <string>PatID</string>
     </property>
    </column>
    <column>
@@ -305,41 +298,31 @@ font:  12pt &quot;Segoe UI &quot;;</string>
    </column>
    <column>
     <property name="text">
+     <string>Last Name</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Sex</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Age</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
      <string>Phone</string>
     </property>
    </column>
-   <column>
-    <property name="text">
-     <string>Visit time</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Visit Date</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Dentist Name</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Status</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Patient ID</string>
-    </property>
-   </column>
   </widget>
-  <widget class="QLabel" name="visit_date">
+  <widget class="QLabel" name="fname_srch">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>30</y>
-     <width>901</width>
+     <x>180</x>
+     <y>20</y>
+     <width>101</width>
      <height>31</height>
     </rect>
    </property>
@@ -351,33 +334,114 @@ background-color: rgb(0, 0, 0);
 font:  14pt &quot;Segoe UI &quot;;</string>
    </property>
    <property name="text">
-    <string>Appointment Table</string>
+    <string>First Name</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QTextEdit" name="fname_srch_edit">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1281</width>
-     <height>680</height>
+     <x>280</x>
+     <y>20</y>
+     <width>141</width>
+     <height>31</height>
     </rect>
    </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>Images/jonathan-borba-W9YEY6G8LVM-unsplash.jpg</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
+   <property name="styleSheet">
+    <string notr="true">QTextEdit:focus{
+background-color: rgb(255, 255, 255);
+}
+QTextEdit{
+background-color: rgb(255, 255, 255);
+	font: 12pt &quot;Segoe UI&quot;;
+}
+</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="return_btn">
+  <widget class="QLabel" name="lname_srch">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>630</y>
+     <x>460</x>
+     <y>20</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
+   </property>
+   <property name="text">
+    <string>Last Name</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="lname_srch_edit">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>20</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTextEdit:focus{
+background-color: rgb(255, 255, 255);
+}
+QTextEdit{
+background-color: rgb(255, 255, 255);
+	font: 12pt &quot;Segoe UI&quot;;
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="phn_srch">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>60</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
+   </property>
+   <property name="text">
+    <string>Phone</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="phone_srch_edit">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>60</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTextEdit:focus{
+background-color: rgb(255, 255, 255);
+}
+QTextEdit{
+background-color: rgb(255, 255, 255);
+	font: 12pt &quot;Segoe UI&quot;;
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="search_btn">
+   <property name="geometry">
+    <rect>
+     <x>195</x>
+     <y>105</y>
      <width>75</width>
      <height>30</height>
     </rect>
@@ -402,14 +466,111 @@ QPushButton:focus{
 }</string>
    </property>
    <property name="text">
-    <string>Return</string>
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="patid_srch">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>60</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
+   </property>
+   <property name="text">
+    <string>Patient ID</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="patid_srch_edit">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>60</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTextEdit:focus{
+background-color: rgb(255, 255, 255);
+}
+QTextEdit{
+background-color: rgb(255, 255, 255);
+	font: 12pt &quot;Segoe UI&quot;;
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="add_patient_btn">
+   <property name="geometry">
+    <rect>
+     <x>1025</x>
+     <y>615</y>
+     <width>140</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+
+
+font:  14pt &quot;Segoe UI &quot;;
+background-color: rgb(255, 255, 255);
+border-top-left-radius:10px;
+border-bottom-left-radius:10px;
+border-top-right-radius:10px;
+border-bottom-right-radius:10px;
+background-color: rgb(170, 255, 255);
+}
+QPushButton:hover{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}
+QPushButton:focus{
+	background-color: rgb(161, 161, 161);
+	color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Add Patients</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Medico_modern/patientdownload .png</normaloff>../Medico_modern/patientdownload .png</iconset>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1281</width>
+     <height>720</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../Images/sam-moghadam-khamseh-I-kDEBUMAaQ-unsplash.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>640</y>
+     <x>200</x>
+     <y>110</y>
      <width>75</width>
      <height>30</height>
     </rect>
@@ -428,57 +589,79 @@ color: rgb(255, 255, 255);
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="print_btn">
+  <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>1176</x>
-     <y>630</y>
-     <width>75</width>
+     <x>1030</x>
+     <y>620</y>
+     <width>140</width>
      <height>30</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton{
-	background-color: rgb(255, 0, 0);
-
-font:  14pt &quot;Segoe UI &quot;;
-	color: rgb(255, 255, 255);
+    <string notr="true">background-color: rgb(0, 0, 0);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
 border-top-left-radius:10px;
 border-bottom-left-radius:10px;
 border-top-right-radius:10px;
-border-bottom-right-radius:10px;}
-QPushButton:hover{
-	background-color: rgb(255, 0, 0);
-	background-color: rgb(255, 85, 0);
-	color: rgb(255, 255, 255);
-}
-QPushButton:focus{
-	background-color: rgb(255, 0, 0);
-	background-color: rgb(255, 85, 0);
-	color: rgb(255, 255, 255);
-}</string>
+border-bottom-right-radius:10px;
+color: rgb(255, 255, 255);
+</string>
    </property>
    <property name="text">
-    <string>Print</string>
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="patient_list">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>150</y>
+     <width>911</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+font:  14pt &quot;Segoe UI &quot;;</string>
+   </property>
+   <property name="text">
+    <string>Patients List</string>
    </property>
   </widget>
   <zorder>label</zorder>
   <zorder>side_bar</zorder>
-  <zorder>appointment_table</zorder>
-  <zorder>visit_date</zorder>
+  <zorder>patient_table</zorder>
+  <zorder>fname_srch</zorder>
+  <zorder>fname_srch_edit</zorder>
+  <zorder>lname_srch</zorder>
+  <zorder>lname_srch_edit</zorder>
+  <zorder>phn_srch</zorder>
+  <zorder>phone_srch_edit</zorder>
+  <zorder>patid_srch</zorder>
+  <zorder>patid_srch_edit</zorder>
   <zorder>label_2</zorder>
-  <zorder>return_btn</zorder>
-  <zorder>print_btn</zorder>
+  <zorder>search_btn</zorder>
+  <zorder>label_3</zorder>
+  <zorder>add_patient_btn</zorder>
+  <zorder>patient_list</zorder>
  </widget>
  <tabstops>
-  <tabstop>appointment_btn</tabstop>
-  <tabstop>dentist_btn</tabstop>
-  <tabstop>return_btn</tabstop>
-  <tabstop>print_btn</tabstop>
+  <tabstop>fname_srch_edit</tabstop>
+  <tabstop>lname_srch_edit</tabstop>
+  <tabstop>phone_srch_edit</tabstop>
+  <tabstop>patid_srch_edit</tabstop>
+  <tabstop>search_btn</tabstop>
+  <tabstop>add_patient_btn</tabstop>
   <tabstop>dash_btn</tabstop>
   <tabstop>patient_btn</tabstop>
   <tabstop>payment_btn</tabstop>
   <tabstop>expense_btn</tabstop>
+  <tabstop>appointment_btn</tabstop>
+  <tabstop>dentist_btn</tabstop>
  </tabstops>
  <resources/>
  <connections/>

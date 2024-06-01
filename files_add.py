@@ -22,7 +22,7 @@ import value_error
 class _add_file_window(QDialog):
     def __init__(self, patient_id, _call_back_go_pat_det_fnc):
         super(_add_file_window, self).__init__()
-        loadUi("files_add.ui", self)
+        loadUi("gui/files_add.ui", self)
         self.patient_id = patient_id
         self._call_back_go_pat_det_fnc = _call_back_go_pat_det_fnc
         #self.add_file_btn.clicked.connect(self.addfile_popup_callback_fnc)
@@ -35,9 +35,11 @@ class _add_file_window(QDialog):
         
     def add_new_pat_file(self):
         current_date = QDate.currentDate()
+        current_date_for_desc = current_date.toString("dd-MM-yyyy")
         # Convert to 'yyyy-MM-dd' format
-        current_date = current_date.toString("dd-MM-yyyy")
-        file_add_date = QDate.currentDate().toString("dd-MM-yyyy")
+        current_date = current_date.toString("yyyy-MM-dd")
+        file_add_date = current_date
+        file_add_date_for_change_log = current_date_for_desc
         
         conn = sqlite3.connect("MEDICO.db3")
         cursor = conn.cursor()
@@ -69,12 +71,15 @@ class _add_file_window(QDialog):
         
         
         
+        
         file_name = self.fname_srch_edit.toPlainText()
         file_desc = self.file_desc_edit.toPlainText()
         if(file_desc != ''):
-            file_desc = current_date+ "\n" + "\n" + file_desc
+            file_desc = current_date_for_desc + "\n" + "\n" + file_desc
         estimated_cost = self.estd_cost_edit.toPlainText()
         discount = self.discount_edit.toPlainText()
+        
+        
         
         if(discount != ''):
             discount = discount
@@ -148,11 +153,13 @@ class _add_file_window(QDialog):
             cursor.execute("""INSERT INTO payment_history (payment_id, p_id, payment_date, payment_amount, payment_remarks, file_name, estd_cost, discount, final_cost, due) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",(payment_id, self.patient_id, file_add_date, "0", change_log, file_name, calc_estimated_cost, calc_discount, final_cost, final_cost))
             conn.commit()
             
+            
+            
             file_hist_remarks = ''
             if(prev_due != 0):
-                file_hist_remarks = str(file_add_date) + "\nNew File" + "\nPrevious File Name: " + self.prev_file + "\nPrevious File Due: " + str(prev_due)
+                file_hist_remarks = file_add_date_for_change_log + "\nNew File" + "\nPrevious File Name: " + self.prev_file + "\nPrevious File Due: " + str(prev_due)
             else:
-                file_hist_remarks = str(file_add_date) + "New File"
+                file_hist_remarks = file_add_date_for_change_log + "\nNew File"
                 
             
             cursor.execute("SELECT MAX(CAST(hist_id AS INTEGER)) FROM files_hist")

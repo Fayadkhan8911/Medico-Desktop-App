@@ -14,6 +14,7 @@ from PyQt5.QtWidgets import (
     QSizePolicy,
     QTableWidget,
 )
+from PyQt5.QtCore import QDate
 
 import sqlite3
 
@@ -21,7 +22,7 @@ import sqlite3
 class _expense_view_window(QDialog):
     def __init__(self, expense_date):
         super(_expense_view_window, self).__init__()
-        loadUi("view_expense.ui", self)
+        loadUi("gui/view_expense.ui", self)
         self.expense_date = expense_date
         self._view_expense_table()
 
@@ -56,7 +57,14 @@ class _expense_view_window(QDialog):
         # Populate the table
         for row_index, row_data in enumerate(results):
             for col_index, data in enumerate(row_data):
-                item = QtWidgets.QTableWidgetItem(str(data))
+                
+                if col_index == 0 or col_index == 4:
+                    # Convert the date string to QDate and then to the desired format
+                    date = QDate.fromString(data, "yyyy-MM-dd")
+                    formatted_date = date.toString("dd-MM-yyyy")
+                    item = QtWidgets.QTableWidgetItem(formatted_date)
+                else:
+                    item = QtWidgets.QTableWidgetItem(str(data))
                 self.expenseTable.setItem(row_index, col_index, item)
 
         self.expenseTable.resizeColumnsToContents()

@@ -22,7 +22,7 @@ import value_error
 class _updt_file_window(QDialog):
     def __init__(self, patient_id, _call_back_go_pat_det_fnc):
         super(_updt_file_window, self).__init__()
-        loadUi("files_updt.ui", self)
+        loadUi("gui/files_updt.ui", self)
         
         self.patient_id = patient_id
         self._call_back_go_pat_det_fnc = _call_back_go_pat_det_fnc
@@ -44,17 +44,18 @@ class _updt_file_window(QDialog):
         payment_remarks = ''
         
         current_date = QDate.currentDate()
+        converted_current_date = current_date.toString("dd-MM-yyyy")
         # Convert to 'yyyy-MM-dd' format
-        current_date = current_date.toString("dd-MM-yyyy")
+        current_date = current_date.toString("yyyy-MM-dd")
         
         old_x = x
         old_update_estd_cost = update_estd_cost
         old_update_discount = update_discount
         
-        file_hist_change_log = "\n" + current_date + "\n"
+        file_hist_change_log = "\n\n" + converted_current_date + "\n"
         
         if(x != ''):
-            update_desc= "\n"+"\n"+current_date+"\n"+"\n"+x
+            update_desc= "\n"+"\n"+converted_current_date+"\n"+"\n"+x
         else:
             update_desc = x
         
@@ -134,7 +135,7 @@ class _updt_file_window(QDialog):
             
             
             payment_date = QDate.currentDate().toString(
-                "dd-MM-yyyy"
+                "yyyy-MM-dd"
             )  # You need to implement this function
             
             

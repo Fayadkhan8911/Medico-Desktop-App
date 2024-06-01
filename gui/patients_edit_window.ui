@@ -1073,7 +1073,7 @@ border-bottom-right-radius:10px;</string>
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Images/erick-tang-Of7fPGRSz_4-unsplash.jpg</pixmap>
+    <pixmap>../Images/erick-tang-Of7fPGRSz_4-unsplash.jpg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>

@@ -4,6 +4,7 @@ from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication, QWidget
 import pdf_maker
 from PyQt5.QtGui import QPixmap
+from PyQt5.QtCore import QDate
 from PyQt5.QtWidgets import (
     QApplication,
     QWidget,
@@ -21,7 +22,7 @@ import sqlite3
 class _payments_view_window(QDialog):
     def __init__(self, p_id):
         super(_payments_view_window, self).__init__()
-        loadUi("payment_history.ui", self)
+        loadUi("gui/payment_history.ui", self)
         self.p_id = p_id
         self._view_payments_table()
         self.print_btn.clicked.connect(self.print_payments)
@@ -73,7 +74,13 @@ class _payments_view_window(QDialog):
         # Populate the table
         for row_index, row_data in enumerate(results):
             for col_index, data in enumerate(row_data):
-                item = QtWidgets.QTableWidgetItem(str(data))
+                if col_index == 0:
+                    # Convert the date string to QDate and then to the desired format
+                    date = QDate.fromString(data, "yyyy-MM-dd")
+                    formatted_date = date.toString("dd-MM-yyyy")
+                    item = QtWidgets.QTableWidgetItem(formatted_date)
+                else:
+                    item = QtWidgets.QTableWidgetItem(str(data))
                 self.pay_hist_table.setItem(row_index, col_index, item)
 
         self.pay_hist_table.resizeColumnsToContents()

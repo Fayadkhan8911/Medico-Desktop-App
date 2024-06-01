@@ -12,7 +12,7 @@ from add_pat_med import _add_med_hist_win
 class _add_patient_window(QDialog):
     def __init__(self):
         super(_add_patient_window, self).__init__()
-        loadUi("add_patients_window.ui", self)
+        loadUi("gui/add_patients_window.ui", self)
         
         self.add_fname_edit.setTabChangesFocus(True)
         self.add_lname_edit.setTabChangesFocus(True)

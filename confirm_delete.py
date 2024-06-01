@@ -21,7 +21,7 @@ import sqlite3
 class _warning_window(QDialog):
     def __init__(self, f_name, l_name, phone, dlt_callback_function):
         super(_warning_window, self).__init__()
-        loadUi("confirm_delete.ui", self)
+        loadUi("gui/confirm_delete.ui", self)
         self.f_name = f_name
         self.l_name = l_name
         self.phone = phone

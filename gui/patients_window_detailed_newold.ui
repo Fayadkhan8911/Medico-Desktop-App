@@ -902,7 +902,7 @@ background-color: rgb(255, 255, 255);</string>
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Images/daniel-frank-wKbWAMlHgNo-unsplash.jpg</pixmap>
+    <pixmap>../Images/daniel-frank-wKbWAMlHgNo-unsplash.jpg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>

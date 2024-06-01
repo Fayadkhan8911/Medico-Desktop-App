@@ -11,7 +11,7 @@ import sqlite3
 class _patient_window(QDialog):
     def __init__(self):
         super(_patient_window, self).__init__()
-        loadUi("patients_window.ui", self)
+        loadUi("gui/patients_window.ui", self)
         self.fname_srch_edit.setFocusPolicy(QtCore.Qt.StrongFocus)
         self.lname_srch_edit.setFocusPolicy(QtCore.Qt.StrongFocus)
         self.phone_srch_edit.setFocusPolicy(QtCore.Qt.StrongFocus)

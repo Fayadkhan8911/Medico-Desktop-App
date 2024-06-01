@@ -4,6 +4,8 @@ from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication, QWidget
 
 from PyQt5.QtGui import QPixmap
+
+from PyQt5.QtCore import QDate
 from PyQt5.QtWidgets import (
     QApplication,
     QWidget,
@@ -21,7 +23,7 @@ import sqlite3
 class _files_view_window(QDialog):
     def __init__(self, p_id):
         super(_files_view_window, self).__init__()
-        loadUi("files_main.ui", self)
+        loadUi("gui/files_main.ui", self)
         self.p_id = p_id
         self._view_files_table()
         
@@ -61,12 +63,19 @@ class _files_view_window(QDialog):
         # Populate the table
         for row_index, row_data in enumerate(results):
             for col_index, data in enumerate(row_data):
-                item = QtWidgets.QTableWidgetItem(str(data))
+                
+                if col_index == 0:
+                    # Convert the date string to QDate and then to the desired format
+                    date = QDate.fromString(data, "yyyy-MM-dd")
+                    formatted_date = date.toString("dd-MM-yyyy")
+                    item = QtWidgets.QTableWidgetItem(formatted_date)
+                else:
+                    item = QtWidgets.QTableWidgetItem(str(data))
                 self.files_table.setItem(row_index, col_index, item)
 
         self.files_table.resizeColumnsToContents()
 
-        self.files_list.setText(f"files History of Patient: {p_id}")
+        self.files_list.setText(f"File List of {p_id}")
 
 
 """

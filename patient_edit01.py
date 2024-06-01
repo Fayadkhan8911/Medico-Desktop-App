@@ -11,7 +11,7 @@ import sqlite3
 class pat_edit1(QDialog):
     def __init__(self, fname=None, lname=None, phone=None, pat_id=None):
         super(pat_edit1, self).__init__()
-        loadUi("patients_custom_01.ui", self)
+        loadUi("gui/patients_custom_01.ui", self)
         self.add_fname_edit.setTabChangesFocus(True)
         self.add_email_edit.setTabChangesFocus(True)
         self.add_lname_edit.setTabChangesFocus(True)

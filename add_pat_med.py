@@ -32,7 +32,7 @@ class _add_med_hist_win(QDialog):
         chief_complain,
     ):
         super(_add_med_hist_win, self).__init__()
-        loadUi("add_patients_med_hist_window.ui", self)
+        loadUi("gui/add_patients_med_hist_window.ui", self)
         self.med_find_edit.setTabChangesFocus(True)
         
         self.f_name = f_name

@@ -11,7 +11,7 @@ import sqlite3
 class appointment_individual(QDialog):
     def __init__(self, v_name, v_phone, p_id):
         super(appointment_individual, self).__init__()
-        loadUi("appointment_individual.ui", self)
+        loadUi("gui/appointment_individual.ui", self)
         """self.v_name = ""
         self.v_time = ""
         self.phone = ""
@@ -85,7 +85,7 @@ class appointment_individual(QDialog):
                 (v_name, v_phone),
             ):
                 self.appointment_table.setItem(
-                    _tablerow, 0, QtWidgets.QTableWidgetItem(col[0])
+                    _tablerow, 0, QtWidgets.QTableWidgetItem(QDate.fromString(col[0], "yyyy-MM-dd").toString("dd-MM-yyyy"))
                 )
                 self.appointment_table.setItem(
                     _tablerow, 1, QtWidgets.QTableWidgetItem(col[1])
@@ -97,7 +97,7 @@ class appointment_individual(QDialog):
                     _tablerow, 3, QtWidgets.QTableWidgetItem(col[3])
                 )
                 self.appointment_table.setItem(
-                    _tablerow, 4, QtWidgets.QTableWidgetItem(col[4])
+                    _tablerow, 4, QtWidgets.QTableWidgetItem(QDate.fromString(col[4], "yyyy-MM-dd").toString("dd-MM-yyyy"))
                 )
                 self.appointment_table.setItem(
                     _tablerow, 5, QtWidgets.QTableWidgetItem(col[5])
@@ -117,7 +117,7 @@ class appointment_individual(QDialog):
                 (p_id),
             ):
                 self.appointment_table.setItem(
-                    _tablerow, 0, QtWidgets.QTableWidgetItem(col[0])
+                    _tablerow, 0, QtWidgets.QTableWidgetItem(QDate.fromString(col[0], "yyyy-MM-dd").toString("dd-MM-yyyy"))
                 )
                 self.appointment_table.setItem(
                     _tablerow, 1, QtWidgets.QTableWidgetItem(col[1])
@@ -129,7 +129,7 @@ class appointment_individual(QDialog):
                     _tablerow, 3, QtWidgets.QTableWidgetItem(col[3])
                 )
                 self.appointment_table.setItem(
-                    _tablerow, 4, QtWidgets.QTableWidgetItem(col[4])
+                    _tablerow, 4, QtWidgets.QTableWidgetItem(QDate.fromString(col[4], "yyyy-MM-dd").toString("dd-MM-yyyy"))
                 )
                 self.appointment_table.setItem(
                     _tablerow, 5, QtWidgets.QTableWidgetItem(col[5])

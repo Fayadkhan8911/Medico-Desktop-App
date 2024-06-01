@@ -14,6 +14,7 @@ from PyQt5.QtWidgets import (
     QSizePolicy,
     QTableWidget,
 )
+from PyQt5.QtCore import QDate
 
 import sqlite3
 
@@ -21,7 +22,7 @@ import sqlite3
 class apt_date(QDialog):
     def __init__(self, appt_date):
         super(apt_date, self).__init__()
-        loadUi("appointment_date.ui", self)
+        loadUi("gui/appointment_date.ui", self)
         self.appt_date = appt_date
         self._view_appt_table()
 
@@ -71,7 +72,14 @@ class apt_date(QDialog):
         # Populate the table
         for row_index, row_data in enumerate(results):
             for col_index, data in enumerate(row_data):
-                item = QtWidgets.QTableWidgetItem(str(data))
+                
+                if col_index == 0 or col_index == 4:
+                    # Convert the date string to QDate and then to the desired format
+                    date = QDate.fromString(data, "yyyy-MM-dd")
+                    formatted_date = date.toString("dd-MM-yyyy")
+                    item = QtWidgets.QTableWidgetItem(formatted_date)
+                else:
+                    item = QtWidgets.QTableWidgetItem(str(data))
                 self.appointment_table.setItem(row_index, col_index, item)
                 # print("testing appointment date", appt_date)
         self.appointment_table.resizeColumnsToContents()

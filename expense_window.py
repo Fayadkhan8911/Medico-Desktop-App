@@ -19,7 +19,7 @@ import appt_success
 class _expense_window(QDialog):
     def __init__(self, appt_callback_fnc):
         super(_expense_window, self).__init__()
-        loadUi("expense_window.ui", self)
+        loadUi("gui/expense_window.ui", self)
         
         self.expense_desc_edit.setTabChangesFocus(True)
         self.expense_remark_edit.setTabChangesFocus(True)
@@ -46,7 +46,7 @@ class _expense_window(QDialog):
         expense_description = self.expense_desc_edit.toPlainText()
         expense_remarks = self.expense_remark_edit.toPlainText()
         expense_amount = self.expense_amount_edit.toPlainText()
-        expense_date = QDate.currentDate().toString("dd-MM-yyyy")
+        expense_date = QDate.currentDate().toString("yyyy-MM-dd")
 
         if expense_amount:
 

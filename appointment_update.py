@@ -11,7 +11,7 @@ import sqlite3
 class appointment_update(QDialog):
     def __init__(self, v_name, v_phone):
         super(appointment_update, self).__init__()
-        loadUi("appointment_update.ui", self)
+        loadUi("gui/appointment_update.ui", self)
         """self.v_name = ""
         self.v_time = ""
         self.phone = ""
