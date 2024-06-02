@@ -6,12 +6,13 @@ from PyQt5.QtGui import QPixmap
 from PyQt5.QtCore import Qt
 
 import sqlite3
+from patients_window_ui import Ui_Dialog
 
 
-class _patient_window(QDialog):
+class _patient_window(QDialog, Ui_Dialog):
     def __init__(self):
         super(_patient_window, self).__init__()
-        loadUi("patients_window.ui", self)
+        self.setupUi(self)
         self.fname_srch_edit.setFocusPolicy(QtCore.Qt.StrongFocus)
         self.lname_srch_edit.setFocusPolicy(QtCore.Qt.StrongFocus)
         self.phone_srch_edit.setFocusPolicy(QtCore.Qt.StrongFocus)
@@ -57,9 +58,13 @@ class _patient_window(QDialog):
         self.patient_table.setColumnWidth(5, 200)
         self.patient_table.setColumnWidth(1, 200)
         self.patient_table.setColumnWidth(2, 200)
-        for col in _cur.execute(
-            "SELECT p_id,f_name,l_name,sex,age,phone FROM patients"
-        ):
+        
+        _cur.execute("SELECT p_id,f_name,l_name,sex,age,phone FROM patients")
+        
+        rows = _cur.fetchall()
+        
+        
+        for col in rows:
             # self.patient_table.setItem(_tablerow, 0, QtWidgets.QTableWidgetItem(col[0]))
             item = str(col[0])
             self.patient_table.setItem(_tablerow, 0, QtWidgets.QTableWidgetItem(item))

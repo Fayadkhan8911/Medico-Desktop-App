@@ -1,5 +1,4 @@
 import sys
-from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication, QWidget
 
@@ -14,14 +13,15 @@ from PyQt5.QtWidgets import (
     QSizePolicy,
     QTableWidget,
 )
-
+from PyQt5.QtCore import QDate
 import sqlite3
+from appointment_date_ui import Ui_Dialog  # Import your UI class
 
 
-class apt_date(QDialog):
+class apt_date(QDialog, Ui_Dialog):
     def __init__(self, appt_date):
         super(apt_date, self).__init__()
-        loadUi("appointment_individual.ui", self)
+        self.setupUi(self)  # Initialize the UI
         self.appt_date = appt_date
         self._view_appt_table()
 
@@ -34,6 +34,23 @@ class apt_date(QDialog):
         cursor.execute("SELECT * FROM appointments WHERE visit_date = ?", (appt_date,))
         # Fetch all rows
         results = cursor.fetchall()
+        
+        if not results:
+            self.print_btn.setEnabled(False)
+            self.print_btn.setStyleSheet("""
+                                        QPushButton {
+                                            background-color: lightgray;
+                                            font: 14pt "Segoe UI";
+                                            color: gray;
+                                            border-top-left-radius: 10px;
+                                            border-bottom-left-radius: 10px;
+                                            border-top-right-radius: 10px;
+                                            border-bottom-right-radius: 10px;
+                                        }
+                                    """)
+        
+        """ if not results:
+            self.print_btn.setEnabled(False) """
 
         # Print the results
         for row in results:
@@ -54,12 +71,19 @@ class apt_date(QDialog):
         # Populate the table
         for row_index, row_data in enumerate(results):
             for col_index, data in enumerate(row_data):
-                item = QtWidgets.QTableWidgetItem(str(data))
+                
+                if col_index == 0 or col_index == 4:
+                    # Convert the date string to QDate and then to the desired format
+                    date = QDate.fromString(data, "yyyy-MM-dd")
+                    formatted_date = date.toString("dd-MM-yyyy")
+                    item = QtWidgets.QTableWidgetItem(formatted_date)
+                else:
+                    item = QtWidgets.QTableWidgetItem(str(data))
                 self.appointment_table.setItem(row_index, col_index, item)
                 # print("testing appointment date", appt_date)
         self.appointment_table.resizeColumnsToContents()
         self.visit_date.setText(f"Appointment of Date: {appt_date}")
-        self.cancel_btn.setText(f"Print")
+
 
 
 """

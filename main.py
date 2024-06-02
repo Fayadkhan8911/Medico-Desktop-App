@@ -38,14 +38,15 @@ import view_payments
 import view_files
 import view_payment
 import appt_date
+from main_window_ui import Ui_Dialog
 
 # import sys
 
 
-class _main_window(QDialog):
+class _main_window(QDialog, Ui_Dialog):
     def __init__(self):
         super(_main_window, self).__init__()
-        loadUi("main_window.ui", self)
+        self.setupUi(self)
         
 
         self.patient_btn.clicked.connect(self._go_patient_window)
@@ -55,7 +56,7 @@ class _main_window(QDialog):
         self.dentist_btn.clicked.connect(self.get_dentist)
         # self.add_patient_btn.clicked.connect(self._go_add_pat)
         current_day = QDate.currentDate()
-        self.formatted_date = current_day.toString("dd-MM-yyyy")
+        self.formatted_date = current_day.toString("yyyy-MM-dd")
         print(self.formatted_date)
         self.load_appointment_table()
         self.load_expense_table()
@@ -76,7 +77,7 @@ class _main_window(QDialog):
 
     def print_present_appointments(self):
         _query = "SELECT visitor_name,visitor_phone,visit_time,dentist_name,p_id,status FROM appointments WHERE visit_date=? "
-        suffix = "__Appointments "
+        suffix = "_Appointments "
         file_location = "Appointments_PDF/"
         pdf = pdf_maker.pdf_maker(_query, suffix, file_location)
         pdf
@@ -91,7 +92,7 @@ class _main_window(QDialog):
     current_date = QDate.currentDate()
 
     # Convert to 'yyyy-MM-dd' format
-    formatted_date = current_date.toString("dd-MM-yyyy")
+    formatted_date = current_date.toString("yyyy-MM-dd")
 
     def load_payment_table(self):
 
@@ -111,6 +112,10 @@ class _main_window(QDialog):
             (self.formatted_date,),
         )
         results = _cur.fetchall()
+        
+        if not results:
+            self.print_pay.setEnabled(False)
+        
         # _query = ("SELECT * FROM appointments WHERE appnt_date = ?",(self.current_date,),)
         self.payment_table.setColumnWidth(0, 150)
         self.payment_table.setColumnWidth(1, 150)
@@ -132,11 +137,12 @@ class _main_window(QDialog):
     def load_expense_table(self):
         _connect = sqlite3.connect("MEDICO.db3")
         _cur = _connect.cursor()
-        _cur.execute(
-            "SELECT expense_description, expense_remarks , expense_cost FROM expense WHERE expense_date = ?",
-            (self.formatted_date,),
-        )
+        _cur.execute("SELECT expense_description, expense_remarks , expense_cost FROM expense WHERE expense_date = ?", (self.formatted_date,))
         results = _cur.fetchall()
+        
+        if not results:
+            self.print_expense.setEnabled(False)
+        
         # _query = ("SELECT * FROM appointments WHERE appnt_date = ?",(self.current_date,),)
         self.expense_table.setColumnWidth(0, 150)
         self.expense_table.setColumnWidth(1, 150)
@@ -167,11 +173,15 @@ class _main_window(QDialog):
         _tablerow = 0
         self.appointment_table.setRowCount(50)
         # cursor.execute("SELECT * FROM appointments WHERE appnt_date = ?", (self.current_date,))
+        
+        _cur.execute("SELECT visitor_name, visitor_phone, visit_time,dentist_name,p_id,status FROM appointments WHERE visit_date=? ORDER BY visit_time ", (self.formatted_date,),)
+        
+        rows = _cur.fetchall()
+        
+        if not rows:
+            self.print_appt.setEnabled(False)
 
-        for col in _cur.execute(
-            "SELECT visitor_name, visitor_phone, visit_time,dentist_name,p_id,status FROM appointments WHERE visit_date=? ORDER BY visit_time ",
-            (self.formatted_date,),
-        ):
+        for col in rows:
             # self.appointment_table.setItem(_tablerow, 0, QtWidgets.QTableWidgetItem(col[0]))
 
             self.appointment_table.setItem(
@@ -215,7 +225,7 @@ class _main_window(QDialog):
 
     def appointment_date(self):
         dateSelected = self._appointment.calender_date.selectedDate().toString(
-            "dd-MM-yyyy"
+            "yyyy-MM-dd"
         )
         print(dateSelected)
         # appt_date = dateSelected
@@ -231,14 +241,14 @@ class _main_window(QDialog):
         self._appointment_date.return_btn.clicked.connect(self._go_spend_money)
         self._appointment_date.dentist_btn.clicked.connect(self.get_dentist)
         self._appointment_date.return_btn.clicked.connect(self._go_appointment)
-        self._appointment_date.cancel_btn.clicked.connect(
+        self._appointment_date.print_btn.clicked.connect(
             lambda: self.print_date_appt(dateSelected)
         )
 
     def print_date_appt(self, date):
         date = date
         _query = "SELECT visitor_name,visitor_phone,visit_time,dentist_name,p_id,status FROM appointments WHERE visit_date=? "
-        suffix = "__Appointments "
+        suffix = "_Appointments "
         file_location = "Appointments_PDF/"
         pdf = pdf_maker.pdf_maker_date(_query, suffix, file_location, date)
         pdf
@@ -456,6 +466,7 @@ class _main_window(QDialog):
             print("Missing Information")
 
         else:
+            
             conn = sqlite3.connect("medico.db3")
             c = conn.cursor()
             # Search for the patient using first name , phone number
@@ -463,10 +474,22 @@ class _main_window(QDialog):
                 "SELECT * FROM patients WHERE f_name=? AND phone=?",
                 (f_name_input, phone_input),
             )
-            existing_patient = c.fetchone()
-            if existing_patient:
-                patient_id = existing_patient[0]
+            existing_patient_withnamenumber = c.fetchone()
+            
+            c.execute(
+                "SELECT * FROM patients WHERE p_id=?",
+                (pat_id_input,),
+            )
+            
+            existing_patient_withpatid = c.fetchone()
+            
+            if existing_patient_withnamenumber:
+                patient_id = existing_patient_withnamenumber[0]
                 message = f"Patient Already Exists with First Name = {f_name_input} and Phone Number = {phone_input}. Patient ID = {patient_id}"
+                self.show_error_window(message)
+            elif existing_patient_withpatid:
+                patient_id = existing_patient_withpatid[0]
+                message = f"Patient Already Exists with Patient ID = {patient_id}\nInput Unique Patient ID"
                 self.show_error_window(message)
             else:
                 self._go_med_hist()
@@ -618,6 +641,13 @@ class _main_window(QDialog):
         widget.setCurrentIndex(widget.currentIndex() + 1)
         self.pat_cus1.return_btn.clicked.connect(self._go_pat_det)
         self.pat_cus1.next_btn.clicked.connect(self.pat_custom2)
+        self.pat_cus1.dash_btn.clicked.connect(self._go_dash)
+        self.pat_cus1.patient_btn.clicked.connect(self._go_patient_window)
+        self.pat_cus1.payment_btn.clicked.connect(self._go_make_payment)
+        self.pat_cus1.expense_btn.clicked.connect(self._go_spend_money)
+        self.pat_cus1.appointment_btn.clicked.connect(self._go_appointment)
+        self.pat_cus1.dentist_btn.clicked.connect(self.get_dentist)
+        
 
     def pat_custom2(self):
         f_name = self.pat_cus1.add_fname_edit.toPlainText()
@@ -788,7 +818,7 @@ class _main_window(QDialog):
         self._spend_money.dentist_btn.clicked.connect(self.get_dentist)
 
     def grab_expense(self):
-        dateSelected = self._spend_money.calendar.selectedDate().toString("dd-MM-yyyy")
+        dateSelected = self._spend_money.calendar.selectedDate().toString("yyyy-MM-dd")
         print(dateSelected)
         self.expense_date = dateSelected
         self._view_expense_window = view_expense._expense_view_window(self.expense_date)
@@ -836,7 +866,7 @@ class _main_window(QDialog):
         self.new_dentist_tab.dentist_btn.clicked.connect(self.get_dentist)
 
     def grab_payment(self):
-        dateSelected = self._make_payment.calendar.selectedDate().toString("dd-MM-yyyy")
+        dateSelected = self._make_payment.calendar.selectedDate().toString("yyyy-MM-dd")
         print(dateSelected)
         self.payment_date = dateSelected
         self._view_payment_window = view_payment._payment_view_window(self.payment_date)

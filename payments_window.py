@@ -10,12 +10,12 @@ import value_error
 
 import sqlite3
 
+from payments_window_ui import Ui_Dialog
 
-
-class _payments_window(QDialog):
+class _payments_window(QDialog, Ui_Dialog):
     def __init__(self, _call_back_go_make_payment):
         super(_payments_window, self).__init__()
-        loadUi("payments_window.ui", self)
+        self.setupUi(self)
         
         self.fname_srch_edit.setTabChangesFocus(True)
         self.phone_srch_edit.setTabChangesFocus(True)
@@ -69,6 +69,16 @@ class _payments_window(QDialog):
             discount = result[5]
             final_cost = result[6]
             print(f_name)
+            
+            cursor.execute(("SELECT file_name FROM patients WHERE p_id = ?"), (self.patient_id,))
+            file_name = cursor.fetchone()
+            file_name = file_name[0]
+            print(f"debug file_name = {file_name}")
+            if not file_name:
+                error_msg = "This patient has no file opened yet.\nFollow the instruction:\n1. Go to Patients and Search Patient\n2. Add New File\n3.Come back here after adding file"
+                self.show_error_window(error_msg)
+                return
+            
 
             cursor.execute(
                 "SELECT * FROM payment_history WHERE p_id = ? AND payment_date >= ? ORDER BY payment_date DESC, payment_id DESC",
@@ -77,7 +87,9 @@ class _payments_window(QDialog):
 
             result = cursor.fetchone()
             print(f"result:\n{result}")
-            prev_due = round(float(result[9]), 3)
+            prev_due = result[9]
+            print(f"Debug previous due = f{prev_due}")
+            prev_due = round(float(prev_due), 3)
             print(f"prev_due = {prev_due}")
             print("printed file name and patient id")
 
@@ -105,6 +117,12 @@ class _payments_window(QDialog):
                 error_msg = "Enter Valid Amount\nError: " + str(e)
                 self.show_error_window(error_msg)
                 return
+            
+            if self.amount > prev_due:
+                error_msg = "Payment Amount is bigger than due"
+                self.show_error_window(error_msg)
+                return
+            
         else:
             # Handle the case where the patient is not found
             error_msg = "Patient Not Found"
@@ -128,7 +146,7 @@ class _payments_window(QDialog):
 
         # Get the current date
         payment_date = QDate.currentDate().toString(
-            "dd-MM-yyyy"
+            "yyyy-MM-dd"
         )  # You need to implement this function
 
         if self.remarks == "":
@@ -198,6 +216,18 @@ class _payments_window(QDialog):
             discount = result[5]
             final_cost = result[6]
             print(patient_id)
+            
+            cursor.execute(("SELECT file_name FROM patients WHERE p_id = ?"), (patient_id,))
+            file_name = cursor.fetchone()
+            file_name = file_name[0]
+            print(f"debug file_name = {file_name}")
+            if not file_name:
+                error_msg = "This patient has no file opened yet.\nFollow the instruction:\n1. Go to Patients and Search Patient\n2. Add New File\n3.Come back here after adding file"
+                self.show_error_window(error_msg)
+                return
+                
+
+                
 
             cursor.execute(
                 "SELECT * FROM payment_history WHERE p_id = ? AND payment_date >= ? ORDER BY payment_date DESC, payment_id DESC",

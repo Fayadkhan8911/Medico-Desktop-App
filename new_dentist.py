@@ -6,12 +6,13 @@ from PyQt5.QtGui import QPixmap
 from PyQt5.QtCore import QDate
 
 import sqlite3
+from new_dentist_ui import Ui_Dialog
 
 
-class new_dentist_window(QDialog):
+class new_dentist_window(QDialog, Ui_Dialog):
     def __init__(self):
         super(new_dentist_window, self).__init__()
-        loadUi("new_dentist.ui", self)
+        self.setupUi(self)
         self.pushButton.clicked.connect(self.attempt_add_dentist)
         
         

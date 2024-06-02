@@ -14,14 +14,16 @@ from PyQt5.QtWidgets import (
     QSizePolicy,
     QTableWidget,
 )
+from PyQt5.QtCore import QDate
 
 import sqlite3
 
+from view_expense_ui import Ui_Dialog
 
-class _expense_view_window(QDialog):
+class _expense_view_window(QDialog, Ui_Dialog):
     def __init__(self, expense_date):
         super(_expense_view_window, self).__init__()
-        loadUi("view_expense.ui", self)
+        self.setupUi(self)
         self.expense_date = expense_date
         self._view_expense_table()
 
@@ -33,6 +35,9 @@ class _expense_view_window(QDialog):
         cursor.execute("SELECT * FROM expense WHERE expense_date = ?", (expense_date,))
         # Fetch all rows
         results = cursor.fetchall()
+        
+        if not results:
+            self.print_btn.setEnabled(False)
 
         # Print the results
         # for row in results:
@@ -53,7 +58,14 @@ class _expense_view_window(QDialog):
         # Populate the table
         for row_index, row_data in enumerate(results):
             for col_index, data in enumerate(row_data):
-                item = QtWidgets.QTableWidgetItem(str(data))
+                
+                if col_index == 0 or col_index == 4:
+                    # Convert the date string to QDate and then to the desired format
+                    date = QDate.fromString(data, "yyyy-MM-dd")
+                    formatted_date = date.toString("dd-MM-yyyy")
+                    item = QtWidgets.QTableWidgetItem(formatted_date)
+                else:
+                    item = QtWidgets.QTableWidgetItem(str(data))
                 self.expenseTable.setItem(row_index, col_index, item)
 
         self.expenseTable.resizeColumnsToContents()

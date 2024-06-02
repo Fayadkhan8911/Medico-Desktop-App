@@ -17,12 +17,13 @@ from PyQt5.QtWidgets import (
 
 import sqlite3
 import value_error
+from files_updt_ui import Ui_Dialog
 
 
-class _updt_file_window(QDialog):
+class _updt_file_window(QDialog, Ui_Dialog):
     def __init__(self, patient_id, _call_back_go_pat_det_fnc):
         super(_updt_file_window, self).__init__()
-        loadUi("files_updt.ui", self)
+        self.setupUi(self)
         
         self.patient_id = patient_id
         self._call_back_go_pat_det_fnc = _call_back_go_pat_det_fnc
@@ -40,7 +41,7 @@ class _updt_file_window(QDialog):
         if(x != ''):
             current_date = QDate.currentDate()
             # Convert to 'yyyy-MM-dd' format
-            current_date = current_date.toString("dd-MM-yyyy")
+            current_date = current_date.toString("yyyy-MM-dd")
             self.desc= "\n"+"\n"+current_date+"\n"+"\n"+x
         else:
             self.desc = x
@@ -122,7 +123,7 @@ class _updt_file_window(QDialog):
             print(f"payment id: {payment_id}")
             
             payment_date = QDate.currentDate().toString(
-                "dd-MM-yyyy"
+                "yyyy-MM-dd"
             )  # You need to implement this function
             
             estd_cost_change_amount = round((calc_estimated_cost - fetched_estd_cost), 3)
@@ -276,7 +277,7 @@ class _updt_file_window(QDialog):
             
             
             payment_date = QDate.currentDate().toString(
-                "dd-MM-yyyy"
+                "yyyy-MM-dd"
             )  # You need to implement this function
             
             

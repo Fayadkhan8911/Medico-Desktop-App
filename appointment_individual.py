@@ -1,35 +1,25 @@
 import sys
-from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication, QWidget
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QApplication, QCalendarWidget
 from PyQt5.QtCore import QDate
 import sqlite3
+from appointment_individual_ui import Ui_Dialog  # Import your UI class
 
 
-class appointment_individual(QDialog):
+class appointment_individual(QDialog, Ui_Dialog):
     def __init__(self, v_name, v_phone, p_id):
         super(appointment_individual, self).__init__()
-        loadUi("appointment_individual.ui", self)
-        """self.v_name = ""
-        self.v_time = ""
-        self.phone = ""
-        self.v_date = ""
-        """
+        self.setupUi(self)  # Initialize the UI
+
         self.v_name = v_name
         self.v_phone = v_phone
         self.p_id = p_id
         self.appointment_table.setColumnWidth(0, 150)
-
         self.appointment_table.setColumnWidth(1, 150)
-
         self.load_table(self.v_name, self.v_phone, self.p_id)
 
-        # self._appointment.add_btn.clicked.connect(self.save_appointment)
-        # self.add_appointment_btn.clicked.connect(self.save_appointment)
-        # self.search_btn.clicked.connect(self.search_date)
-        # self
         self.cancel_btn.clicked.connect(
             lambda: self.cancel_appointment(self.v_name, self.v_phone)
         )
@@ -56,7 +46,7 @@ class appointment_individual(QDialog):
                 UPDATE appointments  
                 SET Status='Cancelled' 
                 WHERE visit_date=(SELECT visit_date FROM appointments WHERE p_id=?  ORDER BY visit_date DESC LIMIT 1)""",
-                (p_id),
+                (p_id,),
             )
             _connect.commit()
         self.load_table(self.v_name, self.v_phone, self.p_id)
@@ -65,12 +55,10 @@ class appointment_individual(QDialog):
         v_name = self.v_name
         v_phone = self.v_phone
         p_id = self.p_id
-        print(f"v_name = {self.v_name}")
 
         _connect = sqlite3.connect("MEDICO.db3")
         _cur = _connect.cursor()
-        # _query = "SELECT appointment_date , visitor_name, visitor_phone,visit_date,visit_time FROM appointments ORDER BY visit_date DESC"
-        # data = _cur.fetchall()  # Fetch data
+
         _tablerow = 0
         self.appointment_table.setRowCount(50)
         self.appointment_table.setColumnWidth(4, 150)
@@ -79,13 +67,12 @@ class appointment_individual(QDialog):
         self.appointment_table.setColumnWidth(6, 150)
 
         if p_id == "":
-
             for col in _cur.execute(
                 "SELECT reg_date,p_id,visitor_name,visitor_phone,visit_date,visit_time,dentist_name,status FROM appointments WHERE visitor_name=? AND visitor_phone=? ORDER BY visit_date ",
                 (v_name, v_phone),
             ):
                 self.appointment_table.setItem(
-                    _tablerow, 0, QtWidgets.QTableWidgetItem(col[0])
+                    _tablerow, 0, QtWidgets.QTableWidgetItem(QDate.fromString(col[0], "yyyy-MM-dd").toString("dd-MM-yyyy"))
                 )
                 self.appointment_table.setItem(
                     _tablerow, 1, QtWidgets.QTableWidgetItem(col[1])
@@ -97,7 +84,7 @@ class appointment_individual(QDialog):
                     _tablerow, 3, QtWidgets.QTableWidgetItem(col[3])
                 )
                 self.appointment_table.setItem(
-                    _tablerow, 4, QtWidgets.QTableWidgetItem(col[4])
+                    _tablerow, 4, QtWidgets.QTableWidgetItem(QDate.fromString(col[4], "yyyy-MM-dd").toString("dd-MM-yyyy"))
                 )
                 self.appointment_table.setItem(
                     _tablerow, 5, QtWidgets.QTableWidgetItem(col[5])
@@ -109,15 +96,14 @@ class appointment_individual(QDialog):
                     _tablerow, 7, QtWidgets.QTableWidgetItem(col[7])
                 )
                 _tablerow += 1
-                pass
 
         else:
             for col in _cur.execute(
                 "SELECT appointments.reg_date,appointments.p_id, patients.f_name, patients.phone,appointments.visit_date,appointments.visit_time,appointments.dentist_name,appointments.status FROM appointments INNER JOIN patients ON appointments.p_id = patients.p_id WHERE appointments.p_id=? ORDER BY appointments.visit_date ",
-                (p_id),
+                (p_id,),
             ):
                 self.appointment_table.setItem(
-                    _tablerow, 0, QtWidgets.QTableWidgetItem(col[0])
+                    _tablerow, 0, QtWidgets.QTableWidgetItem(QDate.fromString(col[0], "yyyy-MM-dd").toString("dd-MM-yyyy"))
                 )
                 self.appointment_table.setItem(
                     _tablerow, 1, QtWidgets.QTableWidgetItem(col[1])
@@ -129,7 +115,7 @@ class appointment_individual(QDialog):
                     _tablerow, 3, QtWidgets.QTableWidgetItem(col[3])
                 )
                 self.appointment_table.setItem(
-                    _tablerow, 4, QtWidgets.QTableWidgetItem(col[4])
+                    _tablerow, 4, QtWidgets.QTableWidgetItem(QDate.fromString(col[4], "yyyy-MM-dd").toString("dd-MM-yyyy"))
                 )
                 self.appointment_table.setItem(
                     _tablerow, 5, QtWidgets.QTableWidgetItem(col[5])
@@ -141,7 +127,7 @@ class appointment_individual(QDialog):
                     _tablerow, 7, QtWidgets.QTableWidgetItem(col[7])
                 )
                 _tablerow += 1
-                pass
+
 
 
 """

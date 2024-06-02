@@ -8,11 +8,12 @@ from PyQt5.QtWidgets import (
 )  # Import QStackedWidget
 from add_pat_med import _add_med_hist_win
 
+from add_patients_ui import Ui_Dialog
 
-class _add_patient_window(QDialog):
+class _add_patient_window(QDialog, Ui_Dialog):
     def __init__(self):
         super(_add_patient_window, self).__init__()
-        loadUi("add_patients_window.ui", self)
+        self.setupUi(self)
         
         self.add_fname_edit.setTabChangesFocus(True)
         self.add_lname_edit.setTabChangesFocus(True)

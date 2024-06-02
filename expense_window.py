@@ -13,13 +13,13 @@ import pytz
 from PyQt5.QtCore import QTimeZone
 import requests
 import error
-import appt_success
+from expense_window_ui import Ui_Dialog
 
 
-class _expense_window(QDialog):
+class _expense_window(QDialog, Ui_Dialog):
     def __init__(self, appt_callback_fnc):
         super(_expense_window, self).__init__()
-        loadUi("expense_window.ui", self)
+        self.setupUi(self)
         
         self.expense_desc_edit.setTabChangesFocus(True)
         self.expense_remark_edit.setTabChangesFocus(True)
@@ -46,7 +46,7 @@ class _expense_window(QDialog):
         expense_description = self.expense_desc_edit.toPlainText()
         expense_remarks = self.expense_remark_edit.toPlainText()
         expense_amount = self.expense_amount_edit.toPlainText()
-        expense_date = QDate.currentDate().toString("dd-MM-yyyy")
+        expense_date = QDate.currentDate().toString("yyyy-MM-dd")
 
         if expense_amount:
 
@@ -112,7 +112,7 @@ class _expense_window(QDialog):
         # self.show_error_window("No patient found with First Name and Phone Number.")
 
     def show_expence_success_dialog(self):
-        success_dialog = appt_success._error_window("Expence added successfully")
+        success_dialog = error._error_window("Expense added successfully")
         success_dialog.ok_btn.clicked.connect(self.trigger_callback)
         success_dialog.exec_()
 
