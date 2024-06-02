@@ -19,11 +19,12 @@ from PyQt5.QtWidgets import (
 
 import sqlite3
 
+from files_main_ui import Ui_Dialog
 
-class _files_view_window(QDialog):
+class _files_view_window(QDialog, Ui_Dialog):
     def __init__(self, p_id):
         super(_files_view_window, self).__init__()
-        loadUi("gui/files_main.ui", self)
+        self.setupUi(self)
         self.p_id = p_id
         self._view_files_table()
         

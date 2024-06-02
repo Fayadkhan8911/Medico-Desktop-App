@@ -6,12 +6,13 @@ from PyQt5.QtGui import QPixmap
 from PyQt5.QtCore import Qt
 
 import sqlite3
+from patients_window_ui import Ui_Dialog
 
 
-class _patient_window(QDialog):
+class _patient_window(QDialog, Ui_Dialog):
     def __init__(self):
         super(_patient_window, self).__init__()
-        loadUi("gui/patients_window.ui", self)
+        self.setupUi(self)
         self.fname_srch_edit.setFocusPolicy(QtCore.Qt.StrongFocus)
         self.lname_srch_edit.setFocusPolicy(QtCore.Qt.StrongFocus)
         self.phone_srch_edit.setFocusPolicy(QtCore.Qt.StrongFocus)

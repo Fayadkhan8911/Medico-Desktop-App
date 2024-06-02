@@ -17,12 +17,13 @@ from PyQt5.QtWidgets import (
 )
 
 import sqlite3
+from view_payment_ui import Ui_Dialog
 
 
-class _payment_view_window(QDialog):
+class _payment_view_window(QDialog, Ui_Dialog):
     def __init__(self, payment_date):
         super(_payment_view_window, self).__init__()
-        loadUi("gui/view_payment.ui", self)
+        self.setupUi(self)
         self.payment_date = payment_date
         self.label_payment_date = QDate.fromString(self.payment_date, "yyyy-MM-dd").toString("dd-MM-yyyy")
         self._view_payment_table()

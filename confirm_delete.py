@@ -16,12 +16,12 @@ from PyQt5.QtWidgets import (
 )
 
 import sqlite3
+from confirm_delete_ui import Ui_Dialog
 
-
-class _warning_window(QDialog):
+class _warning_window(QDialog, Ui_Dialog):
     def __init__(self, f_name, l_name, phone, dlt_callback_function):
         super(_warning_window, self).__init__()
-        loadUi("gui/confirm_delete.ui", self)
+        self.setupUi(self)
         self.f_name = f_name
         self.l_name = l_name
         self.phone = phone

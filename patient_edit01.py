@@ -6,12 +6,12 @@ from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QApplication, QCalendarWidget
 from PyQt5.QtCore import QDate
 import sqlite3
+from patients_custom_01_ui import Ui_Dialog
 
-
-class pat_edit1(QDialog):
+class pat_edit1(QDialog, Ui_Dialog):
     def __init__(self, fname=None, lname=None, phone=None, pat_id=None):
         super(pat_edit1, self).__init__()
-        loadUi("gui/patients_custom_01.ui", self)
+        self.setupUi(self)
         self.add_fname_edit.setTabChangesFocus(True)
         self.add_email_edit.setTabChangesFocus(True)
         self.add_lname_edit.setTabChangesFocus(True)

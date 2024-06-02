@@ -17,12 +17,12 @@ from PyQt5.QtWidgets import (
 )
 
 import sqlite3
+from payment_history_ui import Ui_Dialog
 
-
-class _payments_view_window(QDialog):
+class _payments_view_window(QDialog, Ui_Dialog):
     def __init__(self, p_id):
         super(_payments_view_window, self).__init__()
-        loadUi("gui/payment_history.ui", self)
+        self.setupUi(self)
         self.p_id = p_id
         self._view_payments_table()
         self.print_btn.clicked.connect(self.print_payments)

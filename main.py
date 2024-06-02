@@ -38,14 +38,15 @@ import view_payments
 import view_files
 import view_payment
 import appt_date
+from main_window_ui import Ui_Dialog
 
 # import sys
 
 
-class _main_window(QDialog):
+class _main_window(QDialog, Ui_Dialog):
     def __init__(self):
         super(_main_window, self).__init__()
-        loadUi("gui/main_window.ui", self)
+        self.setupUi(self)
         
 
         self.patient_btn.clicked.connect(self._go_patient_window)
@@ -76,7 +77,7 @@ class _main_window(QDialog):
 
     def print_present_appointments(self):
         _query = "SELECT visitor_name,visitor_phone,visit_time,dentist_name,p_id,status FROM appointments WHERE visit_date=? "
-        suffix = "__Appointments "
+        suffix = "_Appointments "
         file_location = "Appointments_PDF/"
         pdf = pdf_maker.pdf_maker(_query, suffix, file_location)
         pdf
@@ -247,7 +248,7 @@ class _main_window(QDialog):
     def print_date_appt(self, date):
         date = date
         _query = "SELECT visitor_name,visitor_phone,visit_time,dentist_name,p_id,status FROM appointments WHERE visit_date=? "
-        suffix = "__Appointments "
+        suffix = "_Appointments "
         file_location = "Appointments_PDF/"
         pdf = pdf_maker.pdf_maker_date(_query, suffix, file_location, date)
         pdf

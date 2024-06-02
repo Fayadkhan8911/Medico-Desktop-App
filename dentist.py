@@ -5,12 +5,13 @@ from PyQt5.QtWidgets import QDialog, QApplication, QWidget
 from PyQt5.QtGui import QPixmap
 
 import sqlite3
+from dentists_window_ui import Ui_Dialog
 
 
-class _dentist_window(QDialog):
+class _dentist_window(QDialog, Ui_Dialog):
     def __init__(self):
         super(_dentist_window, self).__init__()
-        loadUi("gui/dentists_window.ui", self)
+        self.setupUi(self)
         self.dentist_table.setColumnWidth(6, 200)
 
         self.dentist_table.setColumnWidth(7, 200)

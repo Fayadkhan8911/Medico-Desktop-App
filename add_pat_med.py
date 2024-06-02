@@ -14,8 +14,9 @@ from PyQt5.QtWidgets import (
 from PyQt5.QtCore import QDate
 import requests
 
+from add_pat_med_ui import Ui_Dialog
 
-class _add_med_hist_win(QDialog):
+class _add_med_hist_win(QDialog, Ui_Dialog):
     def __init__(
         self,
         f_name,
@@ -32,7 +33,7 @@ class _add_med_hist_win(QDialog):
         chief_complain,
     ):
         super(_add_med_hist_win, self).__init__()
-        loadUi("gui/add_patients_med_hist_window.ui", self)
+        self.setupUi(self)
         self.med_find_edit.setTabChangesFocus(True)
         
         self.f_name = f_name

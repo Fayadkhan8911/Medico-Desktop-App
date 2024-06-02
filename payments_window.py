@@ -10,12 +10,12 @@ import value_error
 
 import sqlite3
 
+from payments_window_ui import Ui_Dialog
 
-
-class _payments_window(QDialog):
+class _payments_window(QDialog, Ui_Dialog):
     def __init__(self, _call_back_go_make_payment):
         super(_payments_window, self).__init__()
-        loadUi("gui/payments_window.ui", self)
+        self.setupUi(self)
         
         self.fname_srch_edit.setTabChangesFocus(True)
         self.phone_srch_edit.setTabChangesFocus(True)

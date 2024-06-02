@@ -9,12 +9,12 @@ import sqlite3
 import appt_success
 import error
 import re
+from appointment_window_ui import Ui_Dialog
 
-
-class appointment_window(QDialog):
+class appointment_window(QDialog, Ui_Dialog):
     def __init__(self, appt_callback_fnc):
         super(appointment_window, self).__init__()
-        loadUi("gui/appointment_window.ui", self)
+        self.setupUi(self)
         
         self.vname_edit.setTabChangesFocus(True)
         self.phone_edit.setTabChangesFocus(True)

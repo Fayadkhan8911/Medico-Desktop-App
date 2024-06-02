@@ -18,11 +18,12 @@ from PyQt5.QtCore import QDate
 
 import sqlite3
 
+from view_expense_ui import Ui_Dialog
 
-class _expense_view_window(QDialog):
+class _expense_view_window(QDialog, Ui_Dialog):
     def __init__(self, expense_date):
         super(_expense_view_window, self).__init__()
-        loadUi("gui/view_expense.ui", self)
+        self.setupUi(self)
         self.expense_date = expense_date
         self._view_expense_table()
 

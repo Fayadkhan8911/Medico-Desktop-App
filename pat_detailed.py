@@ -6,12 +6,12 @@ from PyQt5.QtGui import QPixmap
 from PyQt5.QtCore import Qt, QDate
 
 import sqlite3
+from patients_window_detailed_ui import Ui_Dialog
 
-
-class _pat_detailed_win(QDialog):
+class _pat_detailed_win(QDialog, Ui_Dialog):
     def __init__(self, f_name=None, l_name=None, phone=None, patient_id=None):
         super(_pat_detailed_win, self).__init__()
-        loadUi("gui/patients_window_detailed.ui", self)        
+        self.setupUi(self)       
         self.f_name = f_name
         self.l_name = l_name
         self.phone = phone

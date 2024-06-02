@@ -1,5 +1,4 @@
 import sys
-from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication, QWidget
 
@@ -15,14 +14,14 @@ from PyQt5.QtWidgets import (
     QTableWidget,
 )
 from PyQt5.QtCore import QDate
-
 import sqlite3
+from appointment_date_ui import Ui_Dialog  # Import your UI class
 
 
-class apt_date(QDialog):
+class apt_date(QDialog, Ui_Dialog):
     def __init__(self, appt_date):
         super(apt_date, self).__init__()
-        loadUi("gui/appointment_date.ui", self)
+        self.setupUi(self)  # Initialize the UI
         self.appt_date = appt_date
         self._view_appt_table()
 
@@ -84,6 +83,7 @@ class apt_date(QDialog):
                 # print("testing appointment date", appt_date)
         self.appointment_table.resizeColumnsToContents()
         self.visit_date.setText(f"Appointment of Date: {appt_date}")
+
 
 
 """

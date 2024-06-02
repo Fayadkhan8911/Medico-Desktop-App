@@ -6,9 +6,9 @@ from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QApplication, QCalendarWidget
 from PyQt5.QtCore import QDate, Qt
 import sqlite3
+from patients_custom_02_ui import Ui_Dialog
 
-
-class pat_edit2(QDialog):
+class pat_edit2(QDialog, Ui_Dialog):
     def __init__(
         self,
         f_name,
@@ -24,7 +24,7 @@ class pat_edit2(QDialog):
         chief_complain,
     ):
         super(pat_edit2, self).__init__()
-        loadUi("gui/patients_custom_02.ui", self)
+        self.setupUi(self)
         self.label_2.setFocus(True)
         self.med_find_edit.setTabChangesFocus(True)
         self.f_name = f_name

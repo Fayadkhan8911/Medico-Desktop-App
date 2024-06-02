@@ -17,12 +17,12 @@ from PyQt5.QtWidgets import (
 
 import sqlite3
 import value_error
+from files_updt_ui import Ui_Dialog
 
-
-class _updt_file_window(QDialog):
+class _updt_file_window(QDialog, Ui_Dialog):
     def __init__(self, patient_id, _call_back_go_pat_det_fnc):
         super(_updt_file_window, self).__init__()
-        loadUi("gui/files_updt.ui", self)
+        self.setupUi(self)
         
         self.patient_id = patient_id
         self._call_back_go_pat_det_fnc = _call_back_go_pat_det_fnc
